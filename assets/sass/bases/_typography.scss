@@ -1,0 +1,200 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Typography
+// * @font-face
+//   - Pen of Truth
+//   - VAG Rounded Bold
+//   - VAG Rounded Light
+// * Mixins
+// * Calibration
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// @font-face
+// ==================================================================================================
+
+// Pen of Truth
+// ------------------------------------------------
+@font-face {
+    font-family: 'Pen-of-Truth';
+    src: url('#{path-file(fonts)}/pen-of-truth/pen-of-truth.eot');
+    src: url('#{path-file(fonts)}/pen-of-truth/pen-of-truth.eot') format('embedded-opentype'),
+        url('#{path-file(fonts)}/pen-of-truth/pen-of-truth.woff2') format('woff2'),
+        url('#{path-file(fonts)}/pen-of-truth/pen-of-truth.woff') format('woff'),
+        url('#{path-file(fonts)}/pen-of-truth/pen-of-truth.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// VAG Rounded
+// - Bold
+// - Light
+// ------------------------------------------------
+@font-face {
+    font-family: 'VAG-Rounded-BT';
+    src: url('#{path-file(fonts)}/vag-rounded-bt/vag-rounded-bt.eot');
+    src: url('#{path-file(fonts)}/vag-rounded-bt/vag-rounded-bt.eot') format('embedded-opentype'),
+        url('#{path-file(fonts)}/vag-rounded-bt/vag-rounded-bt.woff2') format('woff2'),
+        url('#{path-file(fonts)}/vag-rounded-bt/vag-rounded-bt.woff') format('woff'),
+        url('#{path-file(fonts)}/vag-rounded-bt/vag-rounded-bt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VAG-Rounded-Light-Ssi-Light';
+    src: url('#{path-file(fonts)}/vag-rounded-light-ssi-light/vag-rounded-light-ssi-light.eot');
+    src: url('#{path-file(fonts)}/vag-rounded-light-ssi-light/vag-rounded-light-ssi-light.eot') format('embedded-opentype'),
+        url('#{path-file(fonts)}/vag-rounded-light-ssi-light/vag-rounded-light-ssi-light.woff2') format('woff2'),
+        url('#{path-file(fonts)}/vag-rounded-light-ssi-light/vag-rounded-light-ssi-light.woff') format('woff'),
+        url('#{path-file(fonts)}/vag-rounded-light-ssi-light/vag-rounded-light-ssi-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Mixins
+// ==================================================================================================
+@mixin text-variant(
+    $text-font-family: font-family(secondary),
+    $text-font-size: font-secondary-size(size-5),
+    $text-line-height: 1.3,
+    $text-color: color-text(default)
+) {
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    font-family: $text-font-family !important;
+    font-size: $text-font-size;
+    line-height: $text-line-height;
+    color: $text-color;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Contextual variations
+// ==================================================================================================
+
+// Default
+// ------------------------------------------------
+.text-default {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include text-variant;
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Title
+// ------------------------------------------------
+.text-title {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include text-variant(
+        $text-font-family: font-family(primary),
+        $text-font-size: font-primary-size(size-1)
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Calibration
+// - Base
+// - Window
+// - Mac
+// - iPhone/iPad
+// - Android
+// - 2 font in 2 language
+// ==================================================================================================
+
+// Base
+// ------------------------------------------------
+
+// Window
+// ------------------------------------------------
+
+// Mac
+// ------------------------------------------------
+
+// iPhone/iPad
+// ------------------------------------------------
+
+// Android
+// ------------------------------------------------
+
+// 2 font in 2 language
+// ------------------------------------------------

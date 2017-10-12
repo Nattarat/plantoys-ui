@@ -1,0 +1,120 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Home
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Class name
+// ------------------------------------------------
+.subscribe {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    position: relative;
+    background: url('#{path-file(backgrounds)}/home/home-subscribe.jpg') no-repeat center;
+    background-size: cover;
+
+    &:before,
+    &:after {
+        content: ' ';
+        position: absolute;
+        z-index: zindex(lv1);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+
+    // Toy
+    &:before {
+        top: 45px;
+        right: 2vw;
+        width: 24vw; // 458px
+        height: 21vw; // 406px
+        background-image: url('#{path-file(backgrounds)}/home/home-subcribe-toy.png');
+        background-size: contain;
+    }
+
+    // Tablet
+    &:after {
+        bottom: 0;
+        left: 8vw;
+        width: 35vw; // 685px
+        height: 22vw; // 425px
+        background-image: url('#{path-file(backgrounds)}/home/home-subcribe-tablet.png');
+        background-size: contain;
+    }
+
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .subscribe-segment {
+        &.is-email {
+            margin-bottom: 7vw;
+        }
+
+        &.is-catalogue {
+            margin-left: 35vw;
+        }
+    }
+
+    .subscribe-title {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .subscribe-description {
+        margin-bottom: 35px;
+        text-align: center;
+
+        .text-default {
+            display: block;
+        }
+    }
+
+    .subscribe-field {
+        margin-bottom: 40px;
+
+        [class^="field"] {
+            width: 690px;
+        }
+    }
+
+    .subscribe-button {
+        text-align: center;
+
+        a[class^="button"],
+        button[class^="button"] {
+            min-width: 300px;
+
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

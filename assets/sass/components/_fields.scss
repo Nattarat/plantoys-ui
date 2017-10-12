@@ -1,0 +1,134 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Fields
+// * Mixins
+// * Contextual variations
+//   - Primary
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Mixins
+// ==================================================================================================
+@mixin field-variant(
+    $field-display: block,
+    $field-width: auto,
+    $field-min-width: 150px,
+    $field-max-width: inherit,
+    $field-height: 57px,
+    $field-min-height: inherit,
+    $field-max-height: inherit,
+    $field-padding: 0 20px,
+    $field-margin: 0,
+    $field-background-color: $color-white,
+    $field-border: 0 solid $color-white,
+    $field-border-radius: border-radius(size-1),
+    $field-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) inset,
+
+    // Typography
+    $field-text-font-family: font-family(secondary),
+    $field-text-font-size: font-secondary-size(size-4),
+    $field-text-line-height: 1,
+    $field-text-color: color-text(default)
+) {
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &[type=email],
+    &[type=search],
+    &[type=number],
+    &[type=password],
+    &[type=tel],
+    &[type=text] {
+        display: $field-display;
+        width: $field-width;
+        min-width: $field-min-width;
+        max-width: $field-max-width;
+        height: $field-height;
+        min-height: $field-min-height;
+        max-height: $field-max-height;
+        padding: $field-padding;
+        margin: $field-margin;
+        background-color: $field-background-color;
+        border: $field-border;
+        border-radius: $field-border-radius;
+        box-shadow: $field-box-shadow;
+
+        // Typography
+        font-family: $field-text-font-family;
+        font-size: $field-text-font-size;
+        line-height: $field-text-line-height;
+        color: $field-text-color;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-fluid {
+        width: 100%;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Contextual variations
+// ==================================================================================================
+
+// Primary
+// ------------------------------------------------
+.field-primary {
+  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MIXINS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include field-variant;
+
+  // STYLES OF COMPONENT ITSELF
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF CHILD CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE WITH MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

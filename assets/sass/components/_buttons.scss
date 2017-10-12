@@ -1,0 +1,214 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Buttons
+// * Mixins
+// * Contextual variations
+//   - Primary
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// <button class="button-XXXXX" type="button">
+//     <span class="button-body">
+//         <span class="button-icon">...</span>
+//         <img src="..." alt="Icon">
+//         <span class="button-text">...</span>
+//     </span>
+// </button>
+
+// Mixins
+// ==================================================================================================
+@mixin button-variant(
+    // Body
+    $button-width: 150px,
+    $button-height: 73px,
+    $button-padding: 0 45px,
+    $button-background-color: color-button(primary),
+    $button-border-width: 0,
+    $button-border-color: color-button(primary),
+    $button-border-radius: border-radius(size-1),
+    $button-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35),
+
+    // Body hover
+    $button-background-color-hover: color-button(primary-hover),
+    $button-border-width-hover: 0,
+    $button-border-color-hover: color-button(primary-hover),
+
+    // Text
+    $button-text-font-family: font-family(primary),
+    $button-text-font-size: font-primary-size(size-3),
+    $button-text-line-height: 1,
+    $button-text-color: $color-white,
+
+    // Text hover
+    $button-text-color-hover: $color-white
+) {
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    display: inline-block;
+    min-width: $button-width;
+    height: $button-height;
+    padding: $button-padding;
+    background-color: $button-background-color;
+    border-style: solid;
+    border-width: $button-border-width;
+    border-color: $button-border-color;
+    border-radius: $button-border-radius;
+    vertical-align: middle;
+    box-shadow: $button-box-shadow;
+    cursor: pointer;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .button-body {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .button-icon {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    .button-text {
+        display: inline-block;
+        font-family: $button-text-font-family;
+        font-size: $button-text-font-size;
+        line-height: $button-text-line-height;
+        color: $button-text-color;
+        vertical-align: middle;
+
+        &.is-uppercase {
+            text-transform: uppercase;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &:hover {
+        background-color: $button-background-color-hover;
+        border-width: $button-border-width-hover;
+        border-color: $button-border-color-hover;
+        text-decoration: none;
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .button-text {
+            color: $button-text-color-hover;
+        }
+    }
+
+    &:active,
+    &:focus {
+        box-shadow: $button-box-shadow;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Contextual variations
+// ==================================================================================================
+
+// Primary
+// ------------------------------------------------
+.button-primary {
+  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MIXINS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include button-variant;
+
+  // STYLES OF COMPONENT ITSELF
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF CHILD CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE WITH MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Primary light
+// ------------------------------------------------
+.button-primary-light {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include button-variant(
+        // Body
+        $button-background-color: color-button(primary-light),
+        $button-border-color: color-button(primary-light),
+
+        // Body hover
+        $button-background-color-hover: color-button(primary-light-hover),
+        $button-border-color-hover: color-button(primary-light-hover)
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  }
+
+  // Browser variations
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  // IE
+  // Safari
+  // Firefox
