@@ -8,7 +8,7 @@
 
 @charset 'utf-8';
 
-// Class name
+// Subscribe
 // ------------------------------------------------
 .subscribe {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
@@ -98,6 +98,61 @@
                 margin-right: 20px;
             }
         }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// News
+// ------------------------------------------------
+.news {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    position: relative;
+    background: url('#{path-file(backgrounds)}/home/home-news-aligator.png') no-repeat left bottom;
+    background-size: 41vw;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .news-segment {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+
+        width: 59vw;
+        height: 45vw;
+        background-image: url('#{path-file(backgrounds)}/home/home-news-board.png');
+        background-size: cover;
+    }
+
+    .news-segment-inner {
+        max-width: 59%;
+        padding-top: 10px;
+        margin: auto auto auto 25%;
     }
 
     // STYLES OF STATE

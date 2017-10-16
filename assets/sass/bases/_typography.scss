@@ -61,7 +61,7 @@
 @mixin text-variant(
     $text-font-family: font-family(secondary),
     $text-font-size: font-secondary-size(size-5),
-    $text-line-height: 1.3,
+    $text-line-height: 1.5,
     $text-color: color-text(default)
 ) {
     // MIXINS
@@ -73,6 +73,7 @@
     font-size: $text-font-size;
     line-height: $text-line-height;
     color: $text-color;
+    text-transform: none;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -82,6 +83,9 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-white {
+        color: $color-white;
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -158,6 +162,61 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Carousel
+// ------------------------------------------------
+.text-carousel {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include text-variant(
+        $text-font-family: font-family(tertiary),
+        $text-font-size: 2.5vw, // font-tertiary-size(size-6) = 48px
+        $text-line-height: 1,
+        $text-color: color-text(yellow-1)
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-large {
+        font-size: 3.1vw; // font-tertiary-size(size-7) = 60px
+    }
+
+    &.is-title {
+        font-family: font-family(primary) !important;
+        font-size: 2.25vw; // font-primary-size(size-1) = 40px
+        line-height: 1.5;
+    }
+
+    &.is-paragraph {
+        font-family: font-family(secondary) !important;
+        font-size: 1.15vw; // font-secondary-size(size-5) = 22px
+        line-height: 1.5;
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

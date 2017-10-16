@@ -35,6 +35,8 @@
 
     <!-- Plantoys style -->
     <link rel="stylesheet" type="text/css" href="../assets/css/reset.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick-theme.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" media="all" />
 
     <script type="text/javascript" src="http://ptoys.maywz.info/js/prototype/prototype.js"></script>
@@ -84,12 +86,116 @@
         var Translator = new Translate([]);
         //]]>
     </script>
+
+    <!-- Plantoys javascript -->
+    <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
+    <script type="text/javascript">
+        $j(function() {
+            $j('.carousel-news').slick({
+                dots: true
+            });
+
+            $j('.carousel-development').slick({
+                dots: true,
+                arrows: false,
+                vertical: true,
+                verticalSwiping: true
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="page">
             <!-- HTML start ========================================================================== -->
+            <!-- Development -->
+            <div class="development">
+                <div class="block-container for-development-home">
+                    <div class="carousel-development">
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm-6 is-padding-right-blank">
+                                    <div class="carousel-image">
+                                        <img class="carousel-image-item" src="../assets/images/content/home/development-carousel-1.jpg" alt="Development">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 is-padding-left-blank">
+                                    <div class="carousel-description">
+                                        <h2 class="carousel-title"><span class="text-carousel is-title is-white">Child Development</span></h2>
+                                        <h3 class="carousel-sub-title"><span class="text-carousel is-large">Birth to 6 months</span></h3>
+                                        <p class="carousel-paragraph text-carousel is-paragraph is-white">
+                                            During the first six months, babies learn how to control their muscles, understand sensory stimuli, and express their physical and emotional needs. In the first few weeks of life, babies need physical and visual contact with people – their best focusing distance with their eyes is only about 8 – 10 inches. From about five weeks on, , they gain new skills that help them explore their bodies and their surroundings. Toys that are designed to match your baby’s emerging abilities will help keep him happy, interested and stimulate rapid learning. 
+                                        </p>
+                                        <a class="button-secondary" href="#">
+                                            <span class="button-body">
+                                                <span class="button-text">Read more</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm-6 is-padding-right-blank">
+                                    <div class="carousel-image">
+                                        <img class="carousel-image-item" src="../assets/images/content/home/development-carousel-2.jpg" alt="Development">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 is-padding-left-blank">
+                                    <div class="carousel-description">
+                                        <h2 class="carousel-title"><span class="text-carousel is-title is-white">Child Development</span></h2>
+                                        <h3 class="carousel-sub-title"><span class="text-carousel is-large">Birth to 6 months</span></h3>
+                                        <p class="carousel-paragraph text-carousel is-paragraph is-white">
+                                            During the first six months, babies learn how to control their muscles, understand sensory stimuli, and express their physical and emotional needs. In the first few weeks of life, babies need physical and visual contact with people – their best focusing distance with their eyes is only about 8 – 10 inches. From about five weeks on, , they gain new skills that help them explore their bodies and their surroundings. Toys that are designed to match your baby’s emerging abilities will help keep him happy, interested and stimulate rapid learning. 
+                                        </p>
+                                        <a class="button-secondary" href="#">
+                                            <span class="button-body">
+                                                <span class="button-text">Read more</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News -->
+            <div class="news">
+                <div class="block-viewport is-row-center-right">
+                    <div class="news-segment">
+                        <div class="news-segment-inner">
+                            <div class="carousel-news">
+                                <div class="carousel-item">
+                                    <div class="carousel-image">
+                                        <img class="carousel-image-item" src="../assets/images/content/home/news-carousel-1.jpg" alt="News">
+                                    </div>
+                                    <div class="carousel-description">
+                                        <p class="text-carousel">
+                                            Let’s Celebrate Easter Naturally or Celebrating Easter
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="carousel-image">
+                                        <img class="carousel-image-item" src="../assets/images/content/home/news-carousel-2.jpg" alt="News">
+                                    </div>
+                                    <div class="carousel-description">
+                                        <p class="text-carousel">
+                                            Let’s Celebrate Easter Naturally or Celebrating Easter
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscribe -->
             <div class="subscribe">
                 <div class="block-viewport is-column-center-all for-subscribe-home">
                     <div class="subscribe-segment is-email">
@@ -129,10 +235,8 @@
                             </a>
                         </div>
                     </div>
-
                 </div>
             </div>
-
             <!-- HTML end ============================================================================ -->
         </div>
     </div>

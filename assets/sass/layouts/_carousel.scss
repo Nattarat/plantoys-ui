@@ -1,0 +1,304 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Carousel
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// News
+// ------------------------------------------------
+.carousel-news {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    $pagination-size: 0.9vw; // 17px
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.slick-slider {
+        margin-bottom: 0;
+    }
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .carousel-item {
+
+    }
+
+    .carousel-image {
+        border: 7px solid $color-white;
+        border-radius: 7px;
+    }
+
+    .carousel-image-item {
+    }
+
+    .carousel-description {
+        padding: 1.3vw 1.55vw 0 1.55px; // 25px 30px 0 30px
+        text-align: center;
+    }
+
+    // Slick
+    .slick-arrow {
+        @include text-hide;
+        top: 38%;
+        width: 1.7vw; // 32px
+        height: 2.85vw; // 55px
+
+        &:before {
+            display: none;
+        }
+
+        &.slick-prev,
+        &.slick-next {
+            background-size: contain;
+        }
+
+        &.slick-prev {
+            left: -4.5vw; // -85px
+            background-image: url('../images/icon/icon-arrow-carousel-prev.png');
+            background-repeat: no-repeat;
+        }
+
+        &.slick-next {
+            right: -4.5vw;
+            background-image: url('../images/icon/icon-arrow-carousel-next.png');
+            background-repeat: no-repeat;
+        }
+    }
+
+
+    .slick-dots {
+        position: static;
+        bottom: 0;
+        padding: 0.9vw 0; // 15px 0
+        line-height: 1;
+
+        li {
+            width: $pagination-size;
+            height: $pagination-size;
+            margin: 0 8px;
+            vertical-align: middle;
+
+            &.slick-active {
+                button {
+                    &:before {
+                        background-color: $color-white;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        button {
+            width: $pagination-size;
+            height: $pagination-size;
+            padding: 0;
+
+            &:before {
+                content: ' ';
+                width: $pagination-size;
+                height: $pagination-size;
+                background-color: $color-gray-2;
+                border: 3px solid $color-white;
+                border-radius: 50%;
+                opacity: 1;
+            }
+        }
+    }
+
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Development
+// ------------------------------------------------
+.carousel-development {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    $pagination-size: 0.9vw; // 17px
+    $carousel-height: 79vh; // 850px
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.slick-slider {
+        margin-bottom: 0;
+        max-height: $carousel-height; // 850px
+    }
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .carousel-item {
+
+    }
+
+    .carousel-image {
+        overflow: hidden;
+        position: relative;
+        min-height: $carousel-height;
+    }
+
+    .carousel-image-item {
+        @include translate(-50%, -50%);
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 50%;
+        left: 50%;
+        width: auto;
+        max-width: inherit;
+        height: 100%;
+    }
+
+    .carousel-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+        min-height: $carousel-height; // 850px
+        padding: 30px 10.5%;
+        background-image: url('../images/background/home/home-development-detail.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .carousel-title {
+
+    }
+
+    .carousel-sub-title {
+        padding-top: 1.8vw; // 35px
+        padding-bottom: 1.8vw; // 35px
+    }
+
+    .carousel-paragraph {
+        padding-right: 30px;
+        padding-bottom: 3.9vw; // 75px
+    }
+
+    // Slick
+    .slick-list,
+    .slick-slide,
+    .slick-slide > div {
+        max-height: $carousel-height;
+    }
+
+    .slick-slide {
+        border-width: 0;
+    }
+
+    .slick-arrow {
+        @include text-hide;
+        top: 38%;
+        width: 1.7vw; // 32px
+        height: 2.85vw; // 55px
+
+        &:before {
+            display: none;
+        }
+
+        &.slick-prev,
+        &.slick-next {
+            background-size: contain;
+        }
+
+        &.slick-prev {
+            left: -4.5vw; // -85px
+            background-image: url('../images/icon/icon-arrow-carousel-prev.png');
+            background-repeat: no-repeat;
+        }
+
+        &.slick-next {
+            right: -4.5vw;
+            background-image: url('../images/icon/icon-arrow-carousel-next.png');
+            background-repeat: no-repeat;
+        }
+    }
+
+    .slick-dots {
+        top: 50%;
+        bottom: inherit;
+        right: 35px;
+        width: auto;
+        line-height: 1;
+
+        li {
+            display: block;
+            width: $pagination-size;
+            height: $pagination-size;
+            margin: 0 0 18px 0;
+            vertical-align: middle;
+
+            &:last-child {
+                margin-bottom: 0;
+
+                button {
+                    &:before {
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            &.slick-active {
+                button {
+                    &:before {
+                        background-color: $color-white;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        button {
+            width: $pagination-size;
+            height: $pagination-size;
+            padding: 0;
+
+            &:before {
+                content: ' ';
+                width: $pagination-size;
+                height: $pagination-size;
+                border: 3px solid $color-white;
+                border-radius: 50%;
+                opacity: 1;
+            }
+        }
+    }
+
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

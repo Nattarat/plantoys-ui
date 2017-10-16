@@ -231,10 +231,14 @@ $color-black: #000000;
 $color-white: #ffffff;
 // Gray
 $color-gray-1: #58585b;
+$color-gray-2: #3c3630;
 // Blue
 $color-blue-1: #0e66a3;
 $color-blue-2: #0294c7;
-
+// Yellow
+$color-yellow-1: #fff799;
+// Orange
+$color-orange-1: #ed9a2d;
 
 // Primary
 // ------------------------------------------------
@@ -312,13 +316,16 @@ $color-button-maps: (
     'primary': $color-blue-1,
     'primary-hover': $color-blue-1,
     'primary-light': $color-blue-2,
-    'primary-light-hover': $color-blue-2
+    'primary-light-hover': $color-blue-2,
+    'secondary': $color-orange-1,
+    'secondary-hover': $color-orange-1
 );
 
 // Text maps
 // ------------------------------------------------
 $color-text-maps: (
-    'default': $color-gray-1
+    'default': $color-gray-1,
+    'yellow-1': $color-yellow-1
 );
 
 // Typography (size & line-height)
@@ -341,6 +348,8 @@ $font-size-2: 24px;
 $font-size-3: 28px;
 $font-size-4: 20px;
 $font-size-5: 22px;
+$font-size-6: 48px;
+$font-size-7: 60px;
 
 // Primary(VAG-Rounded-BT) maps
 $font-primary-size-maps: (
@@ -348,7 +357,9 @@ $font-primary-size-maps: (
     'size-2': $font-size-2,
     'size-3': $font-size-3,
     'size-4': $font-size-4,
-    'size-5': $font-size-5
+    'size-5': $font-size-5,
+    'size-6': $font-size-6,
+    'size-7': $font-size-7
 );
 
 // Secondary(VAG-Rounded-Light-Ssi-Light) maps
@@ -357,7 +368,9 @@ $font-secondary-size-maps: (
     'size-2': $font-size-2,
     'size-3': $font-size-3,
     'size-4': $font-size-4,
-    'size-5': $font-size-5
+    'size-5': $font-size-5,
+    'size-6': $font-size-6,
+    'size-7': $font-size-7
 );
 
 // Tertiary(Pen-of-Truth) maps
@@ -366,5 +379,7 @@ $font-tertiary-size-maps: (
     'size-2': $font-size-2,
     'size-3': $font-size-3,
     'size-4': $font-size-4,
-    'size-5': $font-size-5
+    'size-5': $font-size-5,
+    'size-6': $font-size-6,
+    'size-7': $font-size-7
 );

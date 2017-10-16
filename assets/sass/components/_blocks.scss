@@ -93,6 +93,10 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.for-development-home {
+        height: auto;
+        height: 78.7vh; // 850px
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -138,9 +142,22 @@
         align-content: center;
     }
 
+    &.is-row-center-right {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+    }
+
     &.for-subscribe-home {
         height: auto;
         min-height: 850px;
+    }
+
+    &.for-news-home {
+        // height: auto;
+        // padding-top: 85px;
+        // padding-bottom: 85px;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

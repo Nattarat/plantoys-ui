@@ -11,13 +11,15 @@
 
 @charset 'utf-8';
 
-// <button class="button-XXXXX" type="button">
-//     <span class="button-body">
-//         <span class="button-icon">...</span>
-//         <img src="..." alt="Icon">
-//         <span class="button-text">...</span>
-//     </span>
-// </button>
+/*
+<button class="button-XXXXX" type="button">
+    <span class="button-body">
+        <span class="button-icon">...</span>
+        <img src="..." alt="Icon">
+        <span class="button-text">...</span>
+    </span>
+</button>
+*/
 
 // Mixins
 // ==================================================================================================
@@ -138,30 +140,30 @@
 // Primary
 // ------------------------------------------------
 .button-primary {
-  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // MIXINS
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  @include button-variant;
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include button-variant;
 
-  // STYLES OF COMPONENT ITSELF
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF CHILD CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF STATE
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF MODIFIER CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF STATE WITH MODIFIER CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // MEDIA QUERY
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations
@@ -205,10 +207,53 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-  }
+}
 
-  // Browser variations
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  // IE
-  // Safari
-  // Firefox
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Secondary
+// ------------------------------------------------
+.button-secondary {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include button-variant(
+        // Body
+        $button-background-color: color-button(secondary),
+        $button-border-color: color-button(secondary),
+
+        // Body hover
+        $button-background-color-hover: color-button(secondary-hover),
+        $button-border-color-hover: color-button(secondary-hover)
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
