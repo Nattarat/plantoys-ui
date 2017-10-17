@@ -87,22 +87,36 @@
         //]]>
     </script>
 
-    <!-- Plantoys javascript -->
-    <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
-    <script type="text/javascript">
-        $j(function() {
-            $j('.carousel-news').slick({
-                dots: true
-            });
 
-            $j('.carousel-development').slick({
-                dots: true,
-                arrows: false,
-                vertical: true,
-                verticalSwiping: true
-            });
-        });
-    </script>
+    <style>
+        /* test layout */
+        .test-section {
+
+        }
+        .test-section-content {
+            display: flex;
+        }
+        .test-section-column {
+            width: 50%;
+        }
+
+        .test-section-cover {
+            height: 100vh;
+            background-size: 50%;
+            background-position: left center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: red;
+        }
+
+        #navigation li.is-active a {
+            color: red;
+        }
+    </style>
+
+
+
+
 </head>
 
 <body>
@@ -110,57 +124,114 @@
         <div class="page">
             <!-- HTML start ========================================================================== -->
 
-            <div style="height: 300px;"></div>
 
-            <!-- Development -->
-            <div class="development">
-                <div class="block-container for-development-home">
-                    <div class="carousel-development">
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-sm-6 is-padding-right-blank">
-                                    <div class="carousel-image" style="background-image: url('../assets/images/content/home/development-carousel-1.jpg');"></div>
-                                </div>
-                                <div class="col-sm-6 is-padding-left-blank">
-                                    <div class="carousel-description">
-                                        <h2 class="carousel-title"><span class="text-carousel is-title is-white">Child Development</span></h2>
-                                        <h3 class="carousel-sub-title"><span class="text-carousel is-large">Birth to 6 months</span></h3>
-                                        <p class="carousel-paragraph text-carousel is-paragraph is-white">
-                                            During the first six months, babies learn how to control their muscles, understand sensory stimuli, and express their physical and emotional needs. In the first few weeks of life, babies need physical and visual contact with people – their best focusing distance with their eyes is only about 8 – 10 inches. From about five weeks on, , they gain new skills that help them explore their bodies and their surroundings. Toys that are designed to match your baby’s emerging abilities will help keep him happy, interested and stimulate rapid learning. 
-                                        </p>
-                                        <a class="button-secondary" href="#">
-                                            <span class="button-body">
-                                                <span class="button-text">Read more</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+
+
+            <div style="height: 1000px; background-color: #eee;"></div>
+
+
+
+            <div id="developments-container" class="developments">
+                <!-- Segment navigation -->
+                <div id="navigation-developments" class="pagination-carousel for-home-developments">
+                    <div class="pagination-list">
+                        <div class="pagination-list-item">
+                            <a href="#" class="pagination-bullet scroll-to"></a>
                         </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-sm-6 is-padding-right-blank">
-                                    <div class="carousel-image" style="background-image: url('../assets/images/content/home/development-carousel-2.jpg');"></div>
-                                </div>
-                                <div class="col-sm-6 is-padding-left-blank">
-                                    <div class="carousel-description">
-                                        <h2 class="carousel-title"><span class="text-carousel is-title is-white">Child Development</span></h2>
-                                        <h3 class="carousel-sub-title"><span class="text-carousel is-large">Birth to 6 months</span></h3>
-                                        <p class="carousel-paragraph text-carousel is-paragraph is-white">
-                                            During the first six months, babies learn how to control their muscles, understand sensory stimuli, and express their physical and emotional needs. In the first few weeks of life, babies need physical and visual contact with people – their best focusing distance with their eyes is only about 8 – 10 inches. From about five weeks on, , they gain new skills that help them explore their bodies and their surroundings. Toys that are designed to match your baby’s emerging abilities will help keep him happy, interested and stimulate rapid learning. 
-                                        </p>
-                                        <a class="button-secondary" href="#">
-                                            <span class="button-body">
-                                                <span class="button-text">Read more</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="pagination-list-item">
+                            <a href="#" class="pagination-bullet scroll-to"></a>
+                        </div>
+                        <div class="pagination-list-item">
+                            <a href="#" class="pagination-bullet is-square scroll-to"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Segment -->
+                <div class="block-viewport">
+                    <!-- <div class="developments-segment">
+                        <div class="developments-image" style="background-image: url('../assets/images/content/home/development-carousel-1.jpg');"></div>
+                    </div> -->
+                    <div id="developments-1" class="developments-segment">
+                        <div class="developments-content">
+                            <h2 class="developments-title">
+                                <span class="text-carousel is-title is-white">Child Development</span>
+                            </h2>
+                            <h3 class="developments-sub-title">
+                                <span class="text-carousel is-large">Birth to 6 months</span>
+                            </h3>
+                            <p class="developments-paragraph text-carousel is-paragraph is-white">
+                                During the first six months, babies learn how to control their muscles, understand sensory stimuli, and express their physical
+                                and emotional needs. In the first few weeks of life, babies need physical and visual contact with people
+                                – their best focusing distance with their eyes is only about 8 – 10 inches. From about five weeks on,
+                                , they gain new skills that help them explore their bodies and their surroundings. Toys that are designed
+                                to match your baby’s emerging abilities will help keep him happy, interested and stimulate rapid learning.
+                            </p>
+                            <a class="button-secondary" href="#">
+                                <span class="button-body">
+                                    <span class="button-text">Read more</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Segment -->
+                <div class="block-viewport">
+                    <!-- <div class="developments-segment">
+                        <div class="developments-image" style="background-image: url('../assets/images/content/home/development-carousel-2.jpg');"></div>
+                    </div> -->
+                    <div id="developments-2" class="developments-segment">
+                        <div class="developments-content">
+                            <h2 class="developments-title">
+                                <span class="text-carousel is-title is-white">Child Development</span>
+                            </h2>
+                            <h3 class="developments-sub-title">
+                                <span class="text-carousel is-large">Birth to 6 months</span>
+                            </h3>
+                            <p class="developments-paragraph text-carousel is-paragraph is-white">
+                                During the first six months, babies learn how to control their muscles, understand sensory stimuli, and express their physical
+                                and emotional needs. In the first few weeks of life, babies need physical and visual contact with people
+                                – their best focusing distance with their eyes is only about 8 – 10 inches. From about five weeks on,
+                                , they gain new skills that help them explore their bodies and their surroundings. Toys that are designed
+                                to match your baby’s emerging abilities will help keep him happy, interested and stimulate rapid learning.
+                            </p>
+                            <a class="button-secondary" href="#">
+                                <span class="button-body">
+                                    <span class="button-text">Read more</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Segment -->
+                <div class="block-viewport">
+                    <!-- <div class="developments-segment">
+                        <div class="developments-image" style="background-image: url('../assets/images/content/home/development-carousel-1.jpg');"></div>
+                    </div> -->
+                    <div id="developments-3" class="developments-segment">
+                        <div class="developments-content">
+                            <h2 class="developments-title">
+                                <span class="text-carousel is-title is-white">Child Development</span>
+                            </h2>
+                            <h3 class="developments-sub-title">
+                                <span class="text-carousel is-large">Birth to 6 months</span>
+                            </h3>
+                            <p class="developments-paragraph text-carousel is-paragraph is-white">
+                                During the first six months, babies learn how to control their muscles, understand sensory stimuli, and express their physical
+                                and emotional needs. In the first few weeks of life, babies need physical and visual contact with people
+                                – their best focusing distance with their eyes is only about 8 – 10 inches. From about five weeks on,
+                                , they gain new skills that help them explore their bodies and their surroundings. Toys that are designed
+                                to match your baby’s emerging abilities will help keep him happy, interested and stimulate rapid learning.
+                            </p>
+                            <a class="button-secondary" href="#">
+                                <span class="button-body">
+                                    <span class="button-text">Read more</span>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- News -->
             <div class="news">
@@ -239,6 +310,35 @@
             <!-- HTML end ============================================================================ -->
         </div>
     </div>
+
+    <!-- Plantoys javascript -->
+    <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
+    <script type="text/javascript" src="../assets/js/scrollmonitor/scrollMonitor.js"></script>
+    <!-- <script type="text/javascript" src="../assets/js/smooth-scroll/smooth-scroll.min.js"></script> -->
+    <script type="text/javascript">
+        $j(function() {
+            // Carousel
+            // =====================================================
+            // News
+            $j('.carousel-news').slick({
+                dots: true
+            });
+
+            // Development
+            $j('.carousel-development').slick({
+                dots: true,
+                arrows: false,
+                vertical: true,
+                verticalSwiping: true
+            });
+
+            // Smooth scroll
+            // =====================================================
+            // var scroll = new SmoothScroll('.scroll-to[href*="#"]');
+
+
+        });
+    </script>
 </body>
 
 </html>

@@ -69,7 +69,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    font-family: $text-font-family !important;
+    font-family: $text-font-family;
     font-size: $text-font-size;
     line-height: $text-line-height;
     color: $text-color;
@@ -207,13 +207,13 @@
     }
 
     &.is-title {
-        font-family: font-family(primary) !important;
+        font-family: font-family(primary);
         font-size: 2.25vw; // font-primary-size(size-1) = 40px
         line-height: 1.5;
     }
 
     &.is-paragraph {
-        font-family: font-family(secondary) !important;
+        font-family: font-family(secondary);
         font-size: 1.15vw; // font-secondary-size(size-5) = 22px
         line-height: 1.5;
     }
