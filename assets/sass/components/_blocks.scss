@@ -121,7 +121,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include block-variant(
         $block-display: flex,
-        $block-height: 100vh
+        $block-min-height: 100vh
     );
 
     // STYLES OF COMPONENT ITSELF
@@ -155,9 +155,8 @@
     }
 
     &.for-news-home {
-        // height: auto;
-        // padding-top: 85px;
-        // padding-bottom: 85px;
+        padding-top: 4.45vw; // 85px
+        padding-bottom: 4.45vw; // 85px
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
