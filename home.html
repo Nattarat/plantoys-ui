@@ -86,72 +86,36 @@
         var Translator = new Translate([]);
         //]]>
     </script>
-
-
-    <style>
-        /* test layout */
-        .test-section {
-
-        }
-        .test-section-content {
-            display: flex;
-        }
-        .test-section-column {
-            width: 50%;
-        }
-
-        .test-section-cover {
-            height: 100vh;
-            background-size: 50%;
-            background-position: left center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-color: red;
-        }
-
-        #navigation li.is-active a {
-            color: red;
-        }
-    </style>
-
-
-
-
 </head>
 
 <body>
     <div class="wrapper">
         <div class="page">
             <!-- HTML start ========================================================================== -->
+            <div style="height: 100vh; background-color: #ddd;"></div>
 
-
-
-
-            <div style="height: 1000px; background-color: #eee;"></div>
-
-
-
+            <!-- Developments -->
             <div id="developments-container" class="developments">
                 <!-- Segment navigation -->
                 <div id="navigation-developments" class="pagination-carousel for-home-developments">
                     <div class="pagination-list">
                         <div class="pagination-list-item">
-                            <a href="#" class="pagination-bullet scroll-to"></a>
+                            <a href="#developments-1" class="pagination-bullet scroll-to"></a>
                         </div>
                         <div class="pagination-list-item">
-                            <a href="#" class="pagination-bullet scroll-to"></a>
+                            <a href="#developments-2" class="pagination-bullet scroll-to"></a>
                         </div>
                         <div class="pagination-list-item">
-                            <a href="#" class="pagination-bullet is-square scroll-to"></a>
+                            <a href="#developments-3" class="pagination-bullet is-square scroll-to"></a>
                         </div>
                     </div>
                 </div>
                 <!-- Segment -->
-                <div class="block-viewport">
-                    <!-- <div class="developments-segment">
+                <div id="developments-1" class="block-viewport">
+                    <div class="developments-segment">
                         <div class="developments-image" style="background-image: url('../assets/images/content/home/development-carousel-1.jpg');"></div>
-                    </div> -->
-                    <div id="developments-1" class="developments-segment">
+                    </div>
+                    <div class="developments-segment">
                         <div class="developments-content">
                             <h2 class="developments-title">
                                 <span class="text-carousel is-title is-white">Child Development</span>
@@ -175,11 +139,11 @@
                     </div>
                 </div>
                 <!-- Segment -->
-                <div class="block-viewport">
-                    <!-- <div class="developments-segment">
+                <div id="developments-2" class="block-viewport">
+                    <div class="developments-segment">
                         <div class="developments-image" style="background-image: url('../assets/images/content/home/development-carousel-2.jpg');"></div>
-                    </div> -->
-                    <div id="developments-2" class="developments-segment">
+                    </div>
+                    <div class="developments-segment">
                         <div class="developments-content">
                             <h2 class="developments-title">
                                 <span class="text-carousel is-title is-white">Child Development</span>
@@ -203,11 +167,11 @@
                     </div>
                 </div>
                 <!-- Segment -->
-                <div class="block-viewport">
-                    <!-- <div class="developments-segment">
+                <div id="developments-3" class="block-viewport">
+                    <div class="developments-segment">
                         <div class="developments-image" style="background-image: url('../assets/images/content/home/development-carousel-1.jpg');"></div>
-                    </div> -->
-                    <div id="developments-3" class="developments-segment">
+                    </div>
+                    <div class="developments-segment">
                         <div class="developments-content">
                             <h2 class="developments-title">
                                 <span class="text-carousel is-title is-white">Child Development</span>
@@ -231,7 +195,6 @@
                     </div>
                 </div>
             </div>
-
 
             <!-- News -->
             <div class="news">
@@ -314,7 +277,8 @@
     <!-- Plantoys javascript -->
     <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
     <script type="text/javascript" src="../assets/js/scrollmonitor/scrollMonitor.js"></script>
-    <!-- <script type="text/javascript" src="../assets/js/smooth-scroll/smooth-scroll.min.js"></script> -->
+    <script type="text/javascript" src="../assets/js/scrollspy-js/scrollspy.js"></script>
+    <script type="text/javascript" src="../assets/js/smooth-scroll/smooth-scroll.min.js"></script>
     <script type="text/javascript">
         $j(function() {
             // Carousel
@@ -323,7 +287,6 @@
             $j('.carousel-news').slick({
                 dots: true
             });
-
             // Development
             $j('.carousel-development').slick({
                 dots: true,
@@ -332,11 +295,40 @@
                 verticalSwiping: true
             });
 
+            // Scroll monitor
+            // =====================================================
+            // Developments content
+            // Set selector
+            // ------------------------------
+            var elementContent = document.getElementById("developments-container");
+            // Set scroll monitor to selector (for watching)
+            // ------------------------------
+            var elementContentWatcher = scrollMonitor.create(elementContent, {top: 450, bottom: 450});
+            // Set scroll monitor event (more event see in https://github.com/stutrek/scrollMonitor#events)
+            // ------------------------------
+            // enterViewport
+            elementContentWatcher.fullyEnterViewport(function() {
+                console.log( 'Development content in viewport');
+                $j('#navigation-developments').addClass('is-active');
+            });
+            // exitViewport
+            elementContentWatcher.partiallyExitViewport (function() {
+                console.log( 'Development content out viewport');
+                $j('#navigation-developments').removeClass('is-active');
+            });
+
             // Smooth scroll
             // =====================================================
-            // var scroll = new SmoothScroll('.scroll-to[href*="#"]');
+            var scroll = new SmoothScroll('.scroll-to[href*="#"]');
 
-
+            // Scroll spy
+            // =====================================================
+            var developmentSpy = new ScrollSpy('#developments-container', {
+                    nav: '#navigation-developments .pagination-list-item .pagination-bullet',
+                    className: 'is-active',
+                    callback: function () {
+				}
+            });
         });
     </script>
 </body>
