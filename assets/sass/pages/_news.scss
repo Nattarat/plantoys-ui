@@ -1,0 +1,177 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// News
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// news-home
+// ------------------------------------------------
+.news-home{
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    background-image:  url('#{path-file(images)}/background/news/news_kid.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    padding: 0px 124px;
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .head-title{
+        text-transform: unset;
+        font-family: map-get($font-family-maps,primary);
+        font-size: map-get($font-primary-size-maps,size-7);
+        color: $color-white;
+    }
+    .sub-title{
+        text-transform: unset;
+        font-family: map-get($font-family-maps,secondary);
+        font-size: 30px;
+        color: $color-white;
+    }
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .head-title{
+        margin-top: 13px;
+        margin-bottom: 12px;
+    }
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+
+// news-card
+// ------------------------------------------------
+.new-card {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    max-width: 480px;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .thumbnail-img{
+        width: 100%;
+        max-height: 380px;
+    }
+    .card-detail{
+        font-family: 'VAG-Rounded-BT';
+        font-size: 24px;
+        color: $color-black;
+    }
+    .caption{
+        width: 100%;
+        min-height: 146px;
+    }
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &:hover{
+        background: $color-pink-flower;
+        cursor: pointer;
+    }
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .caption{
+        padding-top: 30px;
+        padding-left: 38px;
+        padding-right: 38px;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+
+
+// sort-by
+// ------------------------------------------------
+.container-sortby{
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 50px;
+    background-image:  url('#{path-file(images)}/content/news/news-rubber-Wood.jpg') ;
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .form-container{
+        width: 100%;
+        max-width: 290px;
+        .form-control{
+            height: 55px;   
+        }
+    }
+    .title-select{
+        font-family: map-get($font-family-maps , primary );
+        font-size: 30px;
+    }
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .form-container{
+        margin-left: 16px;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
