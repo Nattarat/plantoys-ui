@@ -169,7 +169,7 @@
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 0px 50px;
     background-image:  url('#{path-file(images)}/content/tipsforparents/tipsforparents-rubber-wood.jpg') ;
     background-size: cover;
@@ -182,11 +182,11 @@
         font-size: 30px;
     }
     .selectParent{
-        width: 100%;
-        max-width: 290px;
-        overflow:hidden; 
+        display: flex;
+        align-items: center;
         select{
-            width: 100%;
+            font-size: 24px;
+            width: 290px;
             height: 55px; 
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -195,8 +195,10 @@
             border: none;
             border-radius: 5px;
             background: $color-white 
-            url('#{path-file(images)}/icon/icon-arrow-down.png') 
-             no-repeat 95%;
+            url('#{path-file(images)}/icon/icon-arrow-down.png') no-repeat 95%;
+            &.category-height{
+                width: 556px;
+            }
         }
     }
   
@@ -205,8 +207,12 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .form-container{
+    .selectParent{
+        // width: 290px;
+        // overflow:hidden; 
+        select{
         margin-left: 16px;
+        }
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

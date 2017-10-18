@@ -149,12 +149,16 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .title-select{
+        font-family: map-get($font-family-maps , primary );
+        font-size: 30px;
+    }
     .selectParent{
-        width: 100%;
-        max-width: 290px;
-        overflow:hidden; 
+        display: flex;
+        align-items: center;
         select{
-            width: 100%;
+            font-size: 24px;
+            width: 290px;
             height: 55px; 
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -163,21 +167,19 @@
             border: none;
             border-radius: 5px;
             background: $color-white 
-            url('#{path-file(images)}/icon/icon-arrow-down.png') 
-             no-repeat 95%;
+            url('#{path-file(images)}/icon/icon-arrow-down.png') no-repeat 95%;
         }
     }
-    .title-select{
-        font-family: map-get($font-family-maps , primary );
-        font-size: 30px;
-    }
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .form-container{
-        margin-left: 16px;
+    .selectParent{
+        select{
+            margin-left: 16px;
+        }
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
