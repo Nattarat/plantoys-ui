@@ -142,6 +142,13 @@
         align-content: center;
     }
 
+    &.is-column-top-center {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+    }
+
     &.is-row-center-right {
         flex-direction: row;
         justify-content: flex-end;

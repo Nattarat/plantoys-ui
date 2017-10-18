@@ -71,6 +71,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     font-family: $text-font-family;
     font-size: $text-font-size;
+    font-weight: normal;
     line-height: $text-line-height;
     color: $text-color;
     text-transform: none;
@@ -80,11 +81,24 @@
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-error {
+        color: color-validation(error);
+    }
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-bold {
+        font-family: font-family(primary);
+    }
+
+    // Colors
     &.is-white {
         color: $color-white;
+    }
+
+    // Sizes
+    &.is-extra-small {
+        font-size: font-secondary-size(size-8);
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -217,6 +231,48 @@
         font-size: 1.15vw; // font-secondary-size(size-5) = 22px
         line-height: 1.5;
     }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Link
+// ------------------------------------------------
+.text-link {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include text-variant(
+        $text-color: color-text(link)
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &:hover,
+    &:focus {
+        color: color-text(link);
+        text-decoration: none;
+    }
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

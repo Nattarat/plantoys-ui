@@ -1,0 +1,124 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Partitions
+// * Mixins
+// * Contextual variations
+//   - Primary
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Mixins
+// ==================================================================================================
+@mixin partition-variant(
+    $partition-padding: 35px 0,
+    $partition-height: 1px,
+    $partition-color: $color-gray-5,
+    $partition-text: ' ',
+    $partition-font-background-color: $color-white,
+    $partition-font-family: font-family(secondary),
+    $partition-font-size: font-secondary-size(size-5),
+    $partition-font-color: $color-gray-1
+) {
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    position: relative;
+    display: block;
+    padding: $partition-padding;
+
+    &:before,
+    &:after {
+        display: block;
+    }
+
+    // Line
+    &:before {
+        content: ' ';
+        height: $partition-height;
+        background-color: $partition-color;
+    }
+
+    // Text
+    &:after {
+        @include translate(-50%, -50%);
+        content: $partition-text;
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 50%;
+        left: 50%;
+        padding: 10px;
+        background-color: $partition-font-background-color;
+        font-family: $partition-font-family;
+        font-size: $partition-font-size;
+        line-height: 1;
+        color: $partition-font-color;
+        vertical-align: middle;
+    }
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Contextual variations
+// ==================================================================================================
+
+// Or
+// ------------------------------------------------
+.partition-or {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include partition-variant(
+        $partition-text: 'Or'
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

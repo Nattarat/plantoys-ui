@@ -42,12 +42,16 @@
 @import 'components/buttons';
 @import 'components/fields';
 @import 'components/paginations';
+@import 'components/lists';
+@import 'components/partitions';
+@import 'components/checkboxs';
 
 // Pages
 // ==================================================================================================
 @import 'pages/home';
 @import 'pages/news';
 @import 'pages/news_detail';
+@import 'pages/login';
 @import 'pages/tipsforparents';
 
 // Quick fix

@@ -19,6 +19,14 @@
         <span class="button-text">...</span>
     </span>
 </button>
+
+<a class="button-XXXXX" href="#">
+    <span class="button-body">
+        <span class="button-icon">...</span>
+        <img src="..." alt="Icon">
+        <span class="button-text">...</span>
+    </span>
+</a>
 */
 
 // Mixins
@@ -46,7 +54,10 @@
     $button-text-color: $color-white,
 
     // Text hover
-    $button-text-color-hover: $color-white
+    $button-text-color-hover: $color-white,
+
+    // Button icon
+    $button-icon-spacing-right: 15px
 ) {
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -80,7 +91,7 @@
 
     .button-icon {
         display: inline-block;
-        margin-right: 10px;
+        margin-right: $button-icon-spacing-right;
         vertical-align: middle;
     }
 
@@ -94,6 +105,10 @@
 
         &.is-uppercase {
             text-transform: uppercase;
+        }
+
+        &.is-small {
+            font-size: font-primary-size(size-5);
         }
     }
 
@@ -123,6 +138,18 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-padding-blank {
+        padding: 0;
+    }
+
+    // Sizes
+    &.is-fluid {
+        width: 100%;
+    }
+
+    &.is-small {
+        height: 48px;
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -244,6 +271,62 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// background-image
+// ------------------------------------------------
+.button-background-image {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include button-variant(
+        // Body
+        $button-background-color: transparent,
+        $button-border-color: transparent,
+
+        // Body hover
+        $button-background-color-hover: transparent,
+        $button-border-width-hover: 0,
+        $button-border-color-hover: transparent
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    background-size: 100% 100%;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-wood-blue {
+        background-image: url('#{path-file(backgrounds)}/button/wood-blue.jpg');
+    }
+
+    &.is-wood-red {
+        background-image: url('#{path-file(backgrounds)}/button/wood-red.jpg');
+    }
+
+    &.is-wood-green {
+        background-image: url('#{path-file(backgrounds)}/button/wood-green.jpg');
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
