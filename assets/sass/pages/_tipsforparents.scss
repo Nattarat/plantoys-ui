@@ -10,7 +10,7 @@
 
 // news-home
 // ------------------------------------------------
-.news-home{
+.tipsforparent-home{
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -19,7 +19,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    background-image:  url('#{path-file(images)}/background/news/news_kid.jpg') ;
+    background-image:  url('#{path-file(images)}/background/tipsforparents/tipsforparents-kid.jpg') ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -41,13 +41,36 @@
         font-size: 30px;
         color: $color-white;
     }
+    .form-email{
+        position: relative;
+        width: 100%;
+        max-width: 650px;
+        height: 58px;
+        margin-top: 24px;
+        input{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px; 
+            border: none;
+            padding: 0px 23px;
+            font-size: 24px;
+        }
+    }
+    .icon-search{
+        position: absolute;
+        font-size: 22px;
+        z-index: 3;
+        top: 19px;
+        right:23px; 
+        color: $color-gray-1;
+    }
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .head-title{
-        margin-top: 13px;
+        margin-top: -43px;
         margin-bottom: 12px;
     }
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -72,7 +95,7 @@
 
 // news-card
 // ------------------------------------------------
-.new-card {
+.tipsforparents-card {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -94,6 +117,11 @@
         font-size: 24px;
         color: $color-black;
     }
+    .card-sub-detail{
+        font-family: map-get($font-family-maps,secondary);
+        font-size: 20px;
+        color:$color-grey;
+    }
     .caption{
         width: 100%;
         min-height: 146px;
@@ -101,7 +129,7 @@
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
     &:hover{
-        background: $color-pink-flower;
+        background: $color-blue-flower;
         cursor: pointer;
     }
     // STYLES OF MODIFIER CLASS
@@ -129,7 +157,7 @@
 
 // sort-by
 // ------------------------------------------------
-.container-sortby{
+.tipsforparent-container-sortby{
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -143,12 +171,16 @@
     align-items: center;
     justify-content: flex-end;
     padding: 0px 50px;
-    background-image:  url('#{path-file(images)}/content/news/news-rubber-Wood.jpg') ;
+    background-image:  url('#{path-file(images)}/content/tipsforparents/tipsforparents-rubber-wood.jpg') ;
     background-size: cover;
     background-repeat: repeat-x;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .title-select{
+        font-family: map-get($font-family-maps , primary );
+        font-size: 30px;
+    }
     .selectParent{
         width: 100%;
         max-width: 290px;
@@ -167,10 +199,7 @@
              no-repeat 95%;
         }
     }
-    .title-select{
-        font-family: map-get($font-family-maps , primary );
-        font-size: 30px;
-    }
+  
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
