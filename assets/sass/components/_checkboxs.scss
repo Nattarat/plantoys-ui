@@ -1,0 +1,155 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Checkboxs
+// * Mixins
+// * Contextual variations
+//   - Primary
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Mixins
+// ==================================================================================================
+@mixin checkbox-variant(
+    // Label text
+    $checkbox-label-padding: 0 0 0 30px,
+    $checkbox-label-margin: 0,
+    $checkbox-label-font-family: font-family(secondary),
+    $checkbox-label-font-size: font-secondary-size(size-5),
+    $checkbox-label-font-color: color-text(default),
+
+    // Box
+    $checkbox-box-width: 16px,
+    $checkbox-box-height: 16px,
+    $checkbox-box-color: $color-blue-3,
+    $checkbox-box-border: 0,
+    $checkbox-box-border-radius: 4px,
+
+    // icon
+    $checkbox-icon-width: 16px,
+    $checkbox-icon-height: 16px,
+    $checkbox-icon-image: url('#{path-file(icons)}/icon-check-white.png')
+) {
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    input[type=checkbox],
+    input[type=radio] {
+        display: none;
+
+        &:checked {
+            + .checkbox-label {
+                &:after {
+                    @include opacity(1);
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .checkbox-label {
+        position: relative;
+        display: inline-block;
+        padding: $checkbox-label-padding;
+        margin: $checkbox-label-margin;
+        font-family: $checkbox-label-font-family;
+        font-size: $checkbox-label-font-size;
+        line-height: 1.5;
+        color: $checkbox-label-font-color;
+        vertical-align: middle;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+            @include translate(0, -50%);
+            content: ' ';
+            display: block;
+            position: absolute;
+            z-index: zindex(lv1);
+            top: 50%;
+            left: 0;
+        }
+
+        // Box
+        &:before {
+            width: $checkbox-box-width;
+            height: $checkbox-box-height;
+            background-color: $checkbox-box-color;
+            border: $checkbox-box-border;
+            border-radius: $checkbox-box-border-radius;
+        }
+
+        // Check icon
+        &:after {
+            @include transition(all 0.3s ease);
+            @include opacity(0);
+            visibility: hidden;
+            width: $checkbox-icon-width;
+            height: $checkbox-icon-height;
+            background-image: $checkbox-icon-image;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Contextual variations
+// ==================================================================================================
+
+// Primary
+// ------------------------------------------------
+.checkbox-primary {
+  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MIXINS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include checkbox-variant;
+
+  // STYLES OF COMPONENT ITSELF
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF CHILD CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE WITH MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

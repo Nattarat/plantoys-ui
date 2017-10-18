@@ -27,18 +27,23 @@
     $field-border: 0 solid $color-white,
     $field-border-radius: border-radius(size-1),
     $field-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) inset,
+    $field-placeholder-color: $color-gray-4,
 
     // Typography
     $field-text-font-family: font-family(secondary),
     $field-text-font-size: font-secondary-size(size-4),
     $field-text-line-height: 1,
-    $field-text-color: color-text(default)
+    $field-text-color: color-text(default),
+
+    // Validation
+    $field-border-error: 1px solid color-validation(error)
 ) {
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @include placeholder($field-placeholder-color);
     &[type=email],
     &[type=search],
     &[type=number],
@@ -75,6 +80,9 @@
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-error {
+        border: $field-border-error;
+    }
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -97,6 +105,18 @@
 
 // Contextual variations
 // ==================================================================================================
+
+// Component utilities
+// - utility classes for use in component scope
+// ------------------------------------------------
+.field-validation {
+    display: none;
+    margin-top: 5px;
+
+    &.is-active {
+        display: inline-block;
+    }
+}
 
 // Primary
 // ------------------------------------------------
@@ -125,6 +145,44 @@
 
   // MEDIA QUERY
   // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Secondary
+// ------------------------------------------------
+.field-secondary {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include field-variant(
+        $field-border: 1px solid $color-gray-3,
+        $field-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations
