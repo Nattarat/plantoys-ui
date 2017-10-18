@@ -16,21 +16,24 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .head-title{
-        font-family: 'MyriadPro-Regular'; 
+        font-family: map-get($font-family-maps , primary );
         text-transform: unset;
         font-size: 48px;
         color: $color-grey-head;
     }
     .text-credit{
-        font-family: 'MyriadPro-Regular'; 
+        font-family: map-get($font-family-maps , secondary );
         font-size: 24px;
         color: $color-gray-1;
     }
     .text-detail{
-        font-family: 'MyriadPro-Regular'; 
+        font-family: map-get($font-family-maps , secondary );
         font-size: 24px;
         color: $color-gray-1;
         line-height:44px; 
+        .text-mark{
+            font-family: map-get($font-family-maps , primary );
+        }
     }
     .img-head-container{
         width: 100%;
