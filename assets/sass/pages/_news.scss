@@ -55,6 +55,12 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    // screen lg
+    @media (max-width: map-get($screen-maps, tablet-lg)){
+        .sub-title{
+            display: inline;
+        }
+    }
 }
 
 // Browser variations
@@ -84,7 +90,7 @@
         max-height: 380px;
     }
     .card-detail{
-        font-family: 'VAG-Rounded-BT';
+        font-family: map-get($font-family-maps , primary );
         font-size: 24px;
         color: $color-black;
     }
