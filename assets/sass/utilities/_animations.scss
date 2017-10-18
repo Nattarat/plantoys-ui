@@ -30,6 +30,7 @@
         }
     }
 
+    // Trigger class from AOS javascript plugin
     &.aos-animate {
         > * {
             @include translate(0, 0);
