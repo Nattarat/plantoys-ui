@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/reset.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick-theme.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/aos/aos.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" media="all" />
 
     <script type="text/javascript" src="http://ptoys.maywz.info/js/prototype/prototype.js"></script>
@@ -116,7 +117,7 @@
                         <div class="developments-image" style="background-image: url('../assets/images/content/home/development-carousel-1.jpg');"></div>
                     </div>
                     <div class="developments-segment">
-                        <div class="developments-content">
+                        <div class="developments-content animation-sequences" data-aos="animation">
                             <h2 class="developments-title">
                                 <span class="text-carousel is-title is-white">Child Development</span>
                             </h2>
@@ -144,7 +145,7 @@
                         <div class="developments-image" style="background-image: url('../assets/images/content/home/development-carousel-2.jpg');"></div>
                     </div>
                     <div class="developments-segment">
-                        <div class="developments-content">
+                        <div class="developments-content animation-sequences" data-aos="animation">
                             <h2 class="developments-title">
                                 <span class="text-carousel is-title is-white">Child Development</span>
                             </h2>
@@ -172,7 +173,7 @@
                         <div class="developments-image" style="background-image: url('../assets/images/content/home/development-carousel-1.jpg');"></div>
                     </div>
                     <div class="developments-segment">
-                        <div class="developments-content">
+                        <div class="developments-content animation-sequences" data-aos="animation">
                             <h2 class="developments-title">
                                 <span class="text-carousel is-title is-white">Child Development</span>
                             </h2>
@@ -279,6 +280,7 @@
     <script type="text/javascript" src="../assets/js/scrollmonitor/scrollMonitor.js"></script>
     <script type="text/javascript" src="../assets/js/scrollspy-js/scrollspy.js"></script>
     <script type="text/javascript" src="../assets/js/smooth-scroll/smooth-scroll.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
     <script type="text/javascript">
         $j(function() {
             // Carousel
@@ -294,6 +296,8 @@
                 vertical: true,
                 verticalSwiping: true
             });
+
+            AOS.init();
 
             // Scroll monitor
             // =====================================================
