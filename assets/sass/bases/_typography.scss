@@ -55,15 +55,7 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-	font-family: 'MyriadPro-Regular';
-	src: url('#{path-file(fonts)}/my-riad-pro/MYRIADPROREGULAR.eot');
-    src: url('#{path-file(fonts)}/my-riad-pro/MYRIADPROREGULAR'), 
-       url('#{path-file(fonts)}/my-riad-pro/MYRIADPROREGULAR.woff') format('woff'), 
-       url('#{path-file(fonts)}/my-riad-pro/MYRIADPROREGULAR.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+
 // Mixins
 // ==================================================================================================
 @mixin text-variant(
