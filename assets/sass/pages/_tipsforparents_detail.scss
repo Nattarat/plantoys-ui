@@ -15,13 +15,13 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .head-title{
+    .head-title {
         font-family: font-family(primary);
         text-transform: unset;
         font-size: 48px;
         color: $color-grey-head;
     }
-    .text-credit{
+    .text-credit {
         font-family: font-family(primary);
         font-size: 24px;
         color: $color-gray-1;
@@ -30,21 +30,21 @@
             color: $color-blue-flower;
         }
     }
-    .text-detail{
+    .text-detail {
         font-family: font-family(secondary);
         font-size: 24px;
         color: $color-gray-1;
         line-height:44px; 
-        .text-mark{
+        .text-mark {
             font-family: font-family(primary);
         }
     }
-    .img-head-container{
+    .img-head-container {
         width: 100%;
         max-width: 1438px;
         max-height: 958px;
     }
-    .img-sub-container{
+    .img-sub-container {
         width: 100%;
         max-width: 597px;
         max-height: 380px;
@@ -55,22 +55,22 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .text-credit{
+    .text-credit {
         margin-top: 21px;
     }
-    .img-head-container{
+    .img-head-container {
         margin-top: 37px;
     }
-    .text-detail{
-        &:first-child{
+    .text-detail {
+        &:first-child {
             margin-top: 54px;
         }
-        &.except{
+        &.except {
             margin-top: 28px;
         }
         margin-top: 73px;
     }
-    .img-sub-container{
+    .img-sub-container {
         margin-top: 47px;
         margin-right: 48px;
     }
@@ -87,7 +87,7 @@
 // Safari
 // Firefox
 
-.tip-detail-recoment{
+.tip-detail-recomment {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -100,9 +100,11 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .head-title{
+    .head-title {
         font-family: font-family(primary);
         font-size: 32px;
+        margin-bottom: 30px;
+        padding-left: 33px;
     }
 
     // STYLES OF STATE
@@ -110,10 +112,6 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .head-title{
-        margin-bottom: 30px;
-        padding-left: 33px;
-    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

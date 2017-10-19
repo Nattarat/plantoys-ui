@@ -13,7 +13,7 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .icon{
+    .icon {
         width: 47px;
         height: 47px;
         display: flex;
@@ -24,6 +24,7 @@
         font-size: 25px;
         color: $color-white;
         text-decoration-line: none;
+        margin-bottom: 5px;
         &.is-color-face{
             background: $color-facebook;
         }
@@ -40,9 +41,6 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .icon{
-        margin-bottom: 5px;
-    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

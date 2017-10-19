@@ -10,7 +10,7 @@
 
 // news-home
 // ------------------------------------------------
-.news-home{
+.news-home {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -19,7 +19,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    background-image:  url('#{path-file(images)}/background/news/news_kid.jpg') ;
+    background-image: url('#{path-file(images)}/background/news/news_kid.jpg') ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,13 +29,13 @@
     padding: 0px 124px;
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .head-title{
+    .head-title {
         text-transform: unset;
         font-family: font-family(primary);
         font-size: font-primary-size(size-7);
         color: $color-white;
     }
-    .sub-title{
+    .sub-title {
         text-transform: unset;
         font-family: font-family(secondary);
         font-size: 30px;
@@ -46,7 +46,7 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .head-title{
+    .head-title {
         margin-top: 30px;
         margin-bottom: 12px;
     }
@@ -58,10 +58,10 @@
     // screen lg
     @media (max-width: map-get($screen-maps, tablet-lg)){
         // padding: 0px 30px;
-        .head-title{
+        .head-title {
             font-size: 55px;
         }
-        .sub-title{
+        .sub-title {  
             display: inline;
             font-size: 25px;
         }
@@ -70,10 +70,10 @@
         padding: 0px 50px;
     }
     @media (max-width: map-get($screen-maps, phablet-xs)){
-        .head-title{
+        .head-title {
             font-size: 50px;
         }
-        .sub-title{
+        .sub-title {
             font-size: 20px;
         }
     }
@@ -117,7 +117,7 @@
 
 // sort-by
 // ------------------------------------------------
-.container-sortby{
+.container-sortby {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -137,26 +137,8 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .title-select{
-        font-family: font-family(primary);
-        font-size: 30px;
-    }
-    .selectParent{
-        display: flex;
-        align-items: center;
-        select{
-            font-size: 24px;
-            width: 290px;
-            height: 55px; 
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            padding: 2px 2px 2px 18px;
-            border: none;
-            border-radius: 5px;
-            background: $color-white 
-            url('#{path-file(images)}/icon/icon-arrow-down.png') no-repeat 95%;
-        }
+    .news-select {
+        @include select-form-group($form-group-align:flex-end);
     }
 
     // STYLES OF STATE
@@ -164,11 +146,6 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .selectParent{
-        select{
-            margin-left: 16px;
-        }
-    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
