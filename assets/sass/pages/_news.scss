@@ -56,7 +56,7 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     // screen lg
-    @media (max-width: map-get($screen-maps, tablet-lg)){
+    @media (max-width: screen(tablet-lg)) {
         // padding: 0px 30px;
         .head-title {
             font-size: 55px;
@@ -66,10 +66,10 @@
             font-size: 25px;
         }
     }
-    @media (max-width: map-get($screen-maps, tablet-sm)){
+    @media (max-width: screen(tablet-sm)) {
         padding: 0px 50px;
     }
-    @media (max-width: map-get($screen-maps, phablet-xs)){
+    @media (max-width: screen(phablet-xs)) {
         .head-title {
             font-size: 50px;
         }
@@ -152,6 +152,7 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+  
 }
 
 // Browser variations

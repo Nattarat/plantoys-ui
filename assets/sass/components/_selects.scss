@@ -10,7 +10,8 @@
     $select-padding: 2px 2px 2px 18px,
     $select-border-radius: 5px,
     $select-background: $color-white,
-    $select-position-icon: 95% 
+    $select-position-icon: 95%,
+    $space-text-select: 16px 
   ){
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -37,7 +38,7 @@
         height: 100%;
         font-size: $select-font-size;
         padding: $select-padding;
-        margin-left: 16px;  
+        margin-left: $space-text-select;  
         border-radius: $select-border-radius;
         background: $select-background url('#{path-file(images)}/icon/icon-arrow-down.png') no-repeat $select-position-icon;
     }
@@ -75,7 +76,8 @@
     $select-padding: 2px 2px 2px 18px,
     $select-border-radius: 5px,
     $select-background: $color-white,
-    $select-position-icon: 95% 
+    $select-position-icon:95% ,
+    $space-text-select: 16px
   ){
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -102,7 +104,8 @@
             $select-padding,
             $select-border-radius,
             $select-background,
-            $select-position-icon
+            $select-position-icon,
+            $space-text-select
         );
     }
     .select-title {
@@ -122,6 +125,7 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+
 }
     
 // Browser variations
