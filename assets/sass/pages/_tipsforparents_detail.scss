@@ -22,9 +22,13 @@
         color: $color-grey-head;
     }
     .text-credit{
-        font-family: map-get($font-family-maps , secondary );
+        font-family: map-get($font-family-maps , primary );
         font-size: 24px;
         color: $color-gray-1;
+        .text-sub-credit{
+            font-family: map-get($font-family-maps , secondary );
+            color: $color-blue-flower;
+        }
     }
     .text-detail{
         font-family: map-get($font-family-maps , secondary );
