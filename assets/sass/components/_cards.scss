@@ -1,0 +1,67 @@
+// Secondary
+// ------------------------------------------------
+@mixin card {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    max-width: 480px;
+    margin: auto;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .thumbnail-img{
+        width: 100%;
+        max-height: 380px;
+    }
+    .card-detail{
+        font-family: map-get($font-family-maps , primary );
+        font-size: 24px;
+        color: $color-black;
+    }
+    .card-sub-detail{
+        font-family: map-get($font-family-maps,secondary);
+        font-size: 20px;
+        color:$color-grey;
+    }
+    .caption{
+        width: 100%;
+        min-height: 146px;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-hover:hover{   
+        cursor: pointer;
+        &.is-blue{
+            background: $color-blue-flower;
+        }
+        &.is-pink{
+            background: $color-pink-flower;
+        }
+    }
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .caption{
+        padding-top: 30px;
+        padding-left: 38px;
+        padding-right: 38px;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

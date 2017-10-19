@@ -16,23 +16,23 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .head-title{
-        font-family: map-get($font-family-maps , primary );
+        font-family: font-family(primary);
         text-transform: unset;
         font-size: 48px;
         color: $color-grey-head;
     }
     .text-credit{
-        font-family: map-get($font-family-maps , secondary );
+        font-family: font-family(secondary);
         font-size: 24px;
         color: $color-gray-1;
     }
     .text-detail{
-        font-family: map-get($font-family-maps , secondary );
+        font-family: font-family(secondary);
         font-size: 24px;
         color: $color-gray-1;
         line-height:44px; 
         .text-mark{
-            font-family: map-get($font-family-maps , primary );
+            font-family: font-family(primary);
         }
     }
     .img-head-container{
@@ -97,7 +97,7 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .head-title{
-        font-family: map-get($font-family-maps , primary );
+        font-family: font-family(primary);
         font-size: 32px;
     }
 

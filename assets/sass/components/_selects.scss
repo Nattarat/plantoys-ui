@@ -1,0 +1,64 @@
+// form-select
+// 
+// ------------------------------------------------
+@mixin select-icon(
+    $label-font-family: font-family(primary),
+    $label-font-size: 30px,
+    $select-width: 290px,
+    $select-height: 55px ,
+    $select-font-size: 24px,
+    $select-padding: 2px 2px 2px 18px,
+    $select-border-radius: 5px,
+    $select-background: $color-white,
+    $select-position-icon: 95% 
+  ){
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>     
+    display: flex;
+    align-items: center;
+        
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .title-select{
+        font-family: $label-font-family;
+        font-size: $label-font-size;
+    }
+    select{         
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;         
+        border: none;
+    }
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    select{
+        width: $select-width;
+        height: $select-height; 
+        font-size: $select-font-size;
+        padding: $select-padding;
+        margin-left: 16px;  
+        border-radius: $select-border-radius;
+        background: $select-background url('#{path-file(images)}/icon/icon-arrow-down.png') no-repeat $select-position-icon;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+    
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
