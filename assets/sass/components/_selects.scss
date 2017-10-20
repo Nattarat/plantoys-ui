@@ -67,9 +67,11 @@
 // ------------------------------------------------
 @mixin select-form-group(
     $form-group-align: flex-start,
+    $form-group-padding: 0px,
     // select
     $label-font-family: font-family(primary),
     $label-font-size: 30px,
+    $label-min-height:100px,
     $select-width: 290px,
     $select-height: 55px ,
     $select-font-size: 24px,
@@ -90,6 +92,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>     
     display:flex;
     width:100%;
+    padding: $form-group-padding;
     justify-content: $form-group-align;
 
     // STYLES OF CHILD CLASS
@@ -110,7 +113,9 @@
     }
     .select-title {
         font-family: font-family(primary);
-        font-size: 30px;
+        font-size: $label-font-size;
+        min-width: $label-min-height;
+        padding-top: 6px;
     }
  
     // STYLES OF STATE

@@ -66,8 +66,11 @@
             font-size: 25px;
         }
     }
-    @media (max-width: screen(tablet-sm)) {
+    @media (max-width: screen(tablet-md)) {
         padding: 0px 50px;
+    }
+    @media (max-width: screen(phablet-sm)) {
+        padding: 0px 15px;
     }
     @media (max-width: screen(phablet-xs)) {
         .head-title {
@@ -152,7 +155,17 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-  
+    // @media (max-width: screen(phablet-md)) {
+    //     padding: 0px 15px;
+    // }
+    @media (max-width: screen(phablet-sm)) {
+        padding: 0px 15px;
+    }
+    @media (max-width: screen(phablet-xs)) {
+        .news-select {
+            @include select-form-group($label-font-size: 25px,$select-font-size: 18px);
+        }
+    }
 }
 
 // Browser variations

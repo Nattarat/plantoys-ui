@@ -59,9 +59,7 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    // screen lg
     @media (max-width: screen(tablet-lg)) {
-        // padding: 0px 30px;
         .head-title {
             font-size: 55px;
         }
@@ -71,11 +69,11 @@
         }
     }
     @media (max-width: screen(tablet-sm)) {
-        padding: 0px 50px;
+        padding: 0px 15px;
     }
     @media (max-width: screen(phablet-xs)) {
         .head-title {
-            font-size: 50px;
+            font-size: 40px;
         }
         .sub-title {
             font-size: 20px;
@@ -130,7 +128,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    height: 100px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -138,7 +136,7 @@
     background-image:  url('#{path-file(images)}/content/tipsforparents/tipsforparents-rubber-wood.jpg') ;
     background-size: cover;
     background-repeat: repeat-x;
-
+    
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .tips-select-category {
@@ -159,6 +157,24 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media (max-width:screen(tablet-lg)){
+        flex-direction: column;
+        padding: 0px 15px;
+        .tips-select-category {
+            @include select-form-group($label-font-size: 25px,$select-font-size: 18px,$select-width: 100%,$form-group-padding: 15px 0px 0px 0px);
+        }
+        .tips-select-sortby {
+            @include select-form-group($label-font-size: 25px,$select-font-size: 18px,$select-width: 100%,$form-group-padding: 15px 0px 15px 0px);
+        }
+    }
+    // @media (max-width: screen(phablet-xs)) {
+    //     .tips-select-category {
+    //         @include select-form-group($label-font-size: 25px,$select-font-size: 20px);
+    //     }
+    //     .tips-select-sortby {
+    //         @include select-form-group($label-font-size: 25px,$select-font-size: 20px);
+    //     }
+    // }
 }
 
 // Browser variations
