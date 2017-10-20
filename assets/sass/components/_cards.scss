@@ -12,6 +12,7 @@
     max-width: 480px;
     margin: auto;
     height: 100%;
+
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .thumbnail-img{
@@ -32,9 +33,7 @@
     .caption{
         width: 100%;
         min-height: 146px;
-        padding-top: 30px;
-        padding-left: 38px;
-        padding-right: 38px;
+        padding: 30px 38px;
     }
 
     // STYLES OF STATE
