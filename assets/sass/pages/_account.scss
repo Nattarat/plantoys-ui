@@ -21,14 +21,28 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    background: url('#{path-file(backgrounds)}/login/footer.png') no-repeat center bottom;
+    background: url('#{path-file(backgrounds)}/account/footer.png') no-repeat center bottom;
     background-size: 100%;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .account-form {
+        position: relative;
         width: 490px;
         margin: 70px auto 150px auto;
+
+        &:before {
+            content: ' ';
+            position: absolute;
+            z-index: zindex(lv1);
+            top: 140px;
+            right: 100%;
+            width: 248px;
+            height: 200px;
+            margin-right: 120px;
+            background: url('#{path-file(backgrounds)}/account/helicopter.png') no-repeat center;
+            background-size: 100%;
+        }
     }
 
     .account-footer {
