@@ -19,14 +19,14 @@
         max-height: 380px;
     }
     .card-detail{
-        font-family: map-get($font-family-maps , primary );
-        font-size: 24px;
+        font-family: font-family(primary);
+        font-size: font-primary-size(size-2); // 24px
         color: $color-black;
     }
     .card-sub-detail{
-        font-family: map-get($font-family-maps,secondary);
-        font-size: 20px;
-        color:$color-grey;
+        font-family: font-family(seccondary);
+        font-size: font-secondary-size(size-4); // 20px
+        color: $color-grey;
     }
     .caption{
         width: 100%;
@@ -38,7 +38,7 @@
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
-    &.is-hover:hover{   
+    &.is-hover:hover{
         cursor: pointer;
         &.is-blue{
             background: $color-blue-flower;
