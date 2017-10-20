@@ -21,7 +21,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    background: url('#{path-file(backgrounds)}/account/footer.png') no-repeat center bottom;
+    background: url('#{path-file(backgrounds)}/account/account-footer.png') no-repeat center bottom;
     background-size: 100%;
 
     // STYLES OF CHILD CLASS
@@ -40,7 +40,7 @@
             width: 248px;
             height: 200px;
             margin-right: 120px;
-            background: url('#{path-file(backgrounds)}/account/helicopter.png') no-repeat center;
+            background: url('#{path-file(backgrounds)}/account/account-helicopter.png') no-repeat center;
             background-size: 100%;
         }
     }
