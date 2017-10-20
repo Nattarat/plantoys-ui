@@ -151,11 +151,18 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .row-flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
     .head-title{
         font-family: font-family(primary);
         font-size: 32px;
         margin-bottom: 30px;
         padding-left: 33px;
+    }
+    .new-card{
+        @include card();
     }
 
     // STYLES OF STATE
@@ -173,6 +180,11 @@
         .head-title{
             padding:0px;
             font-size: 30px;
+        }
+    }
+    @media (max-width: screen(tablet-sm)){
+        .row-flex{
+            justify-content: center;
         }
     }
     @media (max-width: screen(mobile-lg)){
