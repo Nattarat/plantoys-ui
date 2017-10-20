@@ -192,11 +192,11 @@
 // Firefox
 
 // form-icon
-// 
+//
 // ------------------------------------------------
 @mixin form-icon(
     $form-icon-max-width: 650px,
-    $form-icon-height: 58px, 
+    $form-icon-height: 58px,
     $form-icon-border: none,
     $form-icon-border-radius: 5px,
     $form-icon-font-size: 24px,
@@ -206,56 +206,57 @@
     $icon-top: 15px,
     $icon-right: 23px,
     $icon-color: $color-gray-1
-  ){
-      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
-      // >>>>>>>>>>>>>>>>>>>>>>>
-    
-      // MIXINS
-      // >>>>>>>>>>>>>>>>>>>>>>>
-    
-      // STYLES OF COMPONENT ITSELF
-      // >>>>>>>>>>>>>>>>>>>>>>>
-      position: relative;
-      width: 100%;
-      height: $form-icon-height;
-      max-width: $form-icon-max-width;
-      &::before {
+) {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    position: relative;
+    width: 100%;
+    height: $form-icon-height;
+    max-width: $form-icon-max-width;
+
+    &::before {
         content: $icon-code;
         font-family: FontAwesome;
         position: absolute;
         right: 0px;
         font-size: $icon-size;
         top: $icon-top;
-        right: $icon-right; 
+        right: $icon-right;
         color: $icon-color;
-      }
+    }
 
-      // STYLES OF CHILD CLASS
-      // >>>>>>>>>>>>>>>>>>>>>>>
-      input {
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    input {
         width: 100%;
         height: 100%;
         border: $form-icon-border;
-        border-radius: $form-icon-border-radius; 
+        border-radius: $form-icon-border-radius;
         padding: $place-holder-padding;
         font-size: $form-icon-font-size;
-      }
-
-      // STYLES OF STATE
-      // >>>>>>>>>>>>>>>>>>>>>>>
-    
-      // STYLES OF MODIFIER CLASS
-      // >>>>>>>>>>>>>>>>>>>>>>>
-  
-      // STYLES OF STATE WITH MODIFIER CLASS
-      // >>>>>>>>>>>>>>>>>>>>>>>
-    
-      // MEDIA QUERY
-      // >>>>>>>>>>>>>>>>>>>>>>>
     }
-    
-    // Browser variations
+
+    // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
-    // IE
-    // Safari
-    // Firefox
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
