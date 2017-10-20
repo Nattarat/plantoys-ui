@@ -91,19 +91,26 @@
 
 // news-card
 // ------------------------------------------------
-.new-card {
+.new-cards
+ {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @include card();
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .row-flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .new-card{
+        @include card();
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
