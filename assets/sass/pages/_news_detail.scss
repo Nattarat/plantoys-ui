@@ -1,6 +1,6 @@
 // acitivities container
 // ------------------------------------------------
-.activities-container {
+.news-detail-container{
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -15,121 +15,20 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .head-title{
-        font-family: font-family(primary);
-        text-transform: unset;
-        font-size: 48px;
-        color: $color-grey-head;
-    }
-    .text-credit{
-        font-family: font-family(secondary);
-        font-size: 24px;
-        color: $color-gray-1;
-    }
-    .text-detail{
-        font-family: font-family(secondary);
-        font-size: 24px;
-        color: $color-gray-1;
-        line-height:44px; 
-        .text-mark{
-            font-family: font-family(primary);
-        }
-    }
-    .img-head-container{
-        width: 100%;
-        max-width: 1438px;
-        max-height: 958px;
-    }
-    .img-sub-container{
-        width: 100%;
-        max-width: 597px;
-        max-height: 380px;
-    }
+    @include detail-page-header();
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .text-credit{
-        margin-top: 21px;
-    }
-    .img-head-container{
-        margin-top: 37px;
-    }
-    .text-detail{
-        &:first-child{
-            margin-top: 54px;
-        }
-        &.except{
-            margin-top: 28px;
-        }
-        margin-top: 73px;
-    }
-    .img-sub-container{
-        margin-top: 47px;
-        margin-right: 48px;
-    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @media (max-width: screen(labtop-lg)){
-        .head-title{
-            display: inline;
-        }
-    }
-    @media (max-width: screen(labtop-md)){
-        .head-title{
-            font-size: 44px;
-        }
-        .text-credit{
-            font-size: 20px;
-        }
-        .text-detail{
-            font-size: 20px;
-        }
-    }
-    @media (max-width: screen(labtop-sm)){
-        .head-title{
-            font-size: 38px;
-        }
-        .text-credit{
-            font-size: 20px;
-        }
-        .text-detail{
-            font-size: 20px;
-        }
-    }
-    @media (max-width: screen(phablet-md)){
-        padding: 60px 15px;
-        .head-title{
-            font-size: 33px;
-        }
-    }
-    @media (max-width: screen(phablet-sm)){
-        .head-title{
-            font-size: 30px;
-        }
-        .text-credit{
-            font-size: 18px;
-        }
-        .text-detail{
-            font-size: 18px;
-        }
-    }
-    @media (max-width: screen(mobile-lg)){
-        .head-title{
-            font-size: 22px;
-        }
-        .text-credit{
-            font-size: 16px;
-        }
-        .text-detail{
-            font-size: 16px;
-        }
-    }
+
 }
 
 // Browser variations
