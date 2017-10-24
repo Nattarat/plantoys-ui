@@ -1,0 +1,9 @@
+diff a/assets/sass/main.scss b/assets/sass/main.scss	(rejected hunks)
+@@ -48,6 +48,7 @@
+ @import 'components/menu_bars';
+ @import 'components/selects';
+ @import 'components/cards';
++@import 'components/header_content';
+ 
+ // Pages
+ // ==================================================================================================
