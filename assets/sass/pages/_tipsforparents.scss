@@ -16,37 +16,20 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @include container-header($container-background:url('#{path-file(images)}/background/tipsforparents/tipsforparents-kid.jpg'));
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    background-image:  url('#{path-file(images)}/background/tipsforparents/tipsforparents-kid.jpg') ;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 540px;
-    display: flex;
-    align-items: center;
-    padding: 0px 124px;
+   
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .head-title {
-        text-transform: unset;
-        font-family: font-family(primary);
-        font-size: font-primary-size(size-7);
-        color: $color-white;
-        margin-top: -43px;
-        margin-bottom: 12px;
-    }
-    .sub-title {
-        text-transform: unset;
-        font-family: font-family(secondary);
-        font-size: 30px;
-        color: $color-white;
-    }
-    .form-email {
-        @include form-icon;
-        margin-top: 24px;
+    .tipsforparent-header{
+        @include text-header($text-header-margin-top:-43px);
+        .form-email {
+            @include form-icon;
+            margin-top: 24px;
+        }
     }
 
     // STYLES OF STATE
@@ -61,26 +44,6 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
 
-    @media (max-width: screen(tablet-lg)) {
-        .head-title {
-            font-size: 55px;
-        }
-        .sub-title {  
-            display: inline;
-            font-size: 25px;
-        }
-    }
-    @media (max-width: screen(tablet-sm)) {
-        padding: 0px 15px;
-    }
-    @media (max-width: screen(phablet-xs)) {
-        .head-title {
-            font-size: 40px;
-        }
-        .sub-title {
-            font-size: 20px;
-        }
-    }
 }
 
 // Browser variations
