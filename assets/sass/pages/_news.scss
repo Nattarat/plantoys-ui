@@ -16,70 +16,29 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-
+    @include container-header($container-background:url('#{path-file(images)}/background/news/news_kid.jpg'));
+    
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    background-image: url('#{path-file(images)}/background/news/news_kid.jpg') ;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 540px;
-    display: flex;
-    align-items: center;
-    padding: 0px 124px;
+ 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .head-title {
-        text-transform: unset;
-        font-family: font-family(primary);
-        font-size: font-primary-size(size-7);
-        color: $color-white;
-    }
-    .sub-title {
-        text-transform: unset;
-        font-family: font-family(secondary);
-        font-size: 30px;
-        color: $color-white;
-    }
+    .news-header{
+        @include text-header($text-header-margin-top:30px);
+    }    
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .head-title {
-        margin-top: 30px;
-        margin-bottom: 12px;
-    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    // screen lg
-    @media (max-width: screen(tablet-lg)) {
-        // padding: 0px 30px;
-        .head-title {
-            font-size: 55px;
-        }
-        .sub-title {  
-            display: inline;
-            font-size: 25px;
-        }
-    }
-    @media (max-width: screen(tablet-md)) {
-        padding: 0px 50px;
-    }
-    @media (max-width: screen(phablet-sm)) {
-        padding: 0px 15px;
-    }
-    @media (max-width: screen(phablet-xs)) {
-        .head-title {
-            font-size: 50px;
-        }
-        .sub-title {
-            font-size: 20px;
-        }
-    }
+
 }
 
 // Browser variations

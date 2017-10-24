@@ -1,0 +1,127 @@
+// container-header
+// ------------------------------------------------
+@mixin container-header(
+    $container-background: none,
+    $container-height: 540px,
+    $container-padding: 0px 124px 
+) {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    background-image: $container-background;
+    height: $container-height;
+    padding: $container-padding;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @media (max-width: screen(tablet-md)) {
+        padding: 0px 50px;
+    }
+    @media (max-width: screen(phablet-sm)) {
+        padding: 0px 15px;
+    }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+
+// text-header
+// ------------------------------------------------
+@mixin text-header(
+    $text-header-font: font-family(primary),
+    $text-header-size: font-primary-size(size-7),
+    $text-header-color: $color-white,
+    $text-header-margin-top: 0px,
+    $text-header-margin-bottom: 12px,
+    $text-sub-font: font-family(secondary),
+    $text-sub-size: 30px,
+    $text-sub-color: $color-white
+) {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .head-title {
+        text-transform: unset;
+        font-family: $text-header-font;
+        font-size: $text-header-size;
+        color: $text-header-color;
+        margin-top: $text-header-margin-top;
+        margin-bottom: $text-header-margin-bottom;
+    }
+    .sub-title {
+        text-transform: unset;
+        font-family: $text-sub-font;
+        font-size: $text-sub-size;
+        color: $text-sub-color;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @media (max-width: screen(tablet-lg)) {
+        // padding: 0px 30px;
+        .head-title {
+            font-size: 55px;
+        }
+        .sub-title {  
+            display: inline;
+            font-size: 25px;
+        }
+    }
+    @media (max-width: screen(phablet-xs)) {
+        .head-title {
+            font-size: 50px;
+        }
+        .sub-title {
+            font-size: 20px;
+        }
+    }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
