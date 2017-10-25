@@ -1,10 +1,10 @@
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // ==================================================================================================
 //
-// Blocks
+// Container
 // * Mixins
 // * Contextual variations
-//   - Primary
+//   - Content
 //
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -13,16 +13,16 @@
 
 // Mixins
 // ==================================================================================================
-@mixin block-variant(
+@mixin container-variant(
     $block-display: block,
-    $block-width: auto,
-    $block-min-width: inherit,
-    $block-max-width: inherit,
+    $block-width: 100%,
+    $block-min-width: initial,
+    $block-max-width: 1440px,
     $block-height: auto,
-    $block-min-height: inherit,
-    $block-max-height: inherit,
-    $block-padding: 0,
-    $block-margin: 0,
+    $block-min-height: initial,
+    $block-max-height: initial,
+    $block-padding: 0 15px,
+    $block-margin: auto,
     $block-background-color: transparent
 ) {
     // MIXINS
@@ -49,8 +49,9 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    &.is-viewport-full {
-        height: 100vh;
+    &.is-fluid {
+        max-width: initial;
+        padding: 0;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -69,15 +70,15 @@
 // Contextual variations
 // ==================================================================================================
 
-// Container
+// Content
 // ------------------------------------------------
-.block-container {
+.container-content {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @include block-variant;
+    @include container-variant;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -90,79 +91,6 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-
-    &.for-development-home {
-        height: auto;
-        height: 78.7vh; // 850px
-    }
-
-    // STYLES OF STATE WITH MODIFIER CLASS
-    // >>>>>>>>>>>>>>>>>>>>>>>
-
-    // MEDIA QUERY
-    // >>>>>>>>>>>>>>>>>>>>>>>
-}
-
-// Browser variations
-// >>>>>>>>>>>>>>>>>>>>>>>
-// IE
-// Safari
-// Firefox
-
-// Viewport
-// ------------------------------------------------
-.block-viewport {
-    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
-    // >>>>>>>>>>>>>>>>>>>>>>>
-
-    // MIXINS
-    // >>>>>>>>>>>>>>>>>>>>>>>
-    @include block-variant(
-        $block-display: flex,
-        $block-min-height: 100vh
-    );
-
-    // STYLES OF COMPONENT ITSELF
-    // >>>>>>>>>>>>>>>>>>>>>>>
-
-    // STYLES OF CHILD CLASS
-    // >>>>>>>>>>>>>>>>>>>>>>>
-
-    // STYLES OF STATE
-    // >>>>>>>>>>>>>>>>>>>>>>>
-
-    // STYLES OF MODIFIER CLASS
-    // >>>>>>>>>>>>>>>>>>>>>>>
-    &.is-column-center-all {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    &.is-column-top-center {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        align-content: center;
-    }
-
-    &.is-row-center-right {
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        align-content: center;
-    }
-
-    &.for-subscribe-home {
-        height: auto;
-        min-height: 850px;
-    }
-
-    &.for-news-home {
-        padding-top: 4.45vw; // 85px
-        padding-bottom: 4.45vw; // 85px
-    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

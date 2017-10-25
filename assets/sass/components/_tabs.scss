@@ -1,0 +1,518 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Tabs
+// * Mixins
+// * Contextual variations
+//   - Content
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Mixins
+// ==================================================================================================
+@mixin tabs-variant(
+    // Container
+    $tabs-container-padding: 0,
+
+    // Button
+    $tabs-button-padding: 0,
+    $tabs-button-background-color: transparent,
+    $tabs-button-border: 0,
+    $tabs-button-border-radius: 0,
+    // Button active
+    $tabs-button-background-color-active: transparent,
+    $tabs-button-border-active: 0,
+
+    // Content
+    $tabs-content-padding: 0,
+    $tabs-content-background: transparent,
+    $tabs-content-border: 0,
+    $tabs-content-border-radius: 0
+) {
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    padding: $tabs-container-padding;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .tabs {
+        margin-bottom: 0;
+    }
+
+    .tab {
+        &.active {
+            .tab-button {
+                background-color: $tabs-button-background-color-active;
+                border: $tabs-button-border-active;
+            }
+
+            .tab-content {
+
+            }
+        }
+    }
+
+    .tab-button {
+        padding: $tabs-button-padding;
+        margin-bottom: 0; // -1px
+        background-color: $tabs-button-background-color;
+        border: $tabs-button-border;
+        border-radius: $tabs-button-border-radius;
+        font-weight: normal;
+        color: initial;
+    }
+
+    .tab-content {
+        padding: $tabs-content-padding;
+        background: $tabs-content-background;
+        border: $tabs-content-border;
+        border-radius: $tabs-content-border-radius;
+        white-space: normal;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Contextual variations
+// ==================================================================================================
+
+// About
+// ------------------------------------------------
+.tabs-icon {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include tabs-variant(
+        $tabs-container-padding: 0 7vw 90px,
+
+        // Content
+        $tabs-content-padding: 45px 10vw 0
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .tabs {
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .tab {
+        &.active {
+            .tab-button {
+                &:before {
+                    @include opacity(0);
+                }
+
+                &:after {
+                    @include opacity(1);
+                }
+            }
+        }
+    }
+
+    .tab-button {
+        position: relative;
+
+        &:before,
+        &:after {
+            @include transition(opacity .3s ease);
+            content: ' ';
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+
+        &:before {
+            @include opacity(1);
+        }
+
+        &:after {
+            @include opacity(0);
+            @include translate(-50%, -50%);
+            position: absolute;
+            z-index: zindex(lv1);
+            top: 50%;
+            left: 50%;
+            margin-top: -2.5px;
+        }
+    }
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-material {
+        .tab-button {
+            &:before,
+            &:after {
+                width: 11.97vw; // (100vw - 7*2 vw) / 7 icons = 12.2
+                height: 13vw;
+                background-size: 82%;
+            }
+        }
+
+        .tab {
+            &:nth-child(1) {
+                .tab-button {
+                    &:before,
+                    &:after {
+                        background-size: contain;
+                    }
+
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-rubbertrees-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-rubbertrees-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-chemicalfreekilndried-inactive.png');
+
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-chemicalfreekilndried-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-planwood-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-planwood-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-nonformaldehydeglue-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-nonformaldehydeglue-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(5) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-organiccolorpigment-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-organiccolorpigment-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(6) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-waterbaseddyes-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-waterbaseddyes-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(7) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-soyinkandrecycledpaper-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-whoweare-soyinkandrecycledpaper-active.png');
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-manufacturing,
+    &.is-mind {
+        .tab-button {
+            &:before,
+            &:after {
+                width: 17.2vw; // (100vw - 7*2 vw) / 5 icons = 17.2
+                height: 10.4vw; // 18vw
+                background-size: 58%;
+            }
+        }
+    }
+
+    &.is-manufacturing {
+        .tab {
+            &:nth-child(1) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-solarenergy-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-solarenergy-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-astmanden71-inactive.png');
+
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-astmanden71-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-ecoefficiencymanufacturing-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-ecoefficiencymanufacturing-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-ohsas18001-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-ohsas18001-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(5) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-iso9001andiso14001-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-iso9001andiso14001-active.png');
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-mind {
+        .tab {
+            &:nth-child(1) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-plantoychildren-museam-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-plantoychildren-museam-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-sarnsaengarun-inactive.png');
+
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-sarnsaengarun-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-childrenandcommunityclub-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-childrenandcommunityclub-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-reforestationprogram-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-reforestationprogram-active.png');
+                    }
+                }
+            }
+
+            &:nth-child(5) {
+                .tab-button {
+                    &:before {
+                        background-image: url('#{path-file(icons)}/about/about-mommadetoysproject-inactive.png');
+                    }
+
+                    &:after {
+                        background-image: url('#{path-file(icons)}/about/about-mommadetoysproject-active.png');
+                    }
+                }
+            }
+        }
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .tabs {
+        @media screen {
+            border: 0;
+        }
+    }
+
+    .tab {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            display: block;
+        }
+
+        @media (min-width: screen(tablet-sm)) {
+            display: inline;
+        }
+    }
+
+    .tab-button {
+        &:before {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                @include opacity(0);
+            }
+        }
+
+        &:after {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                @include opacity(1);
+            }
+        }
+    }
+
+    .tab-content {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            display: block;
+            float: none;
+            padding: 15px 0 45px 0;
+        }
+    }
+
+    &.is-material {
+        .tab {
+            .tab-button {
+                &:before,
+                &:after {
+                    @media screen and (max-width: screen(phablet-lg-max)) {
+                        width: 200px;
+                        height: 219px;
+                    }
+                }
+            }
+
+            &:nth-child(1) {
+                .tab-button {
+                    &:before,
+                    &:after {
+                        @media screen and (max-width: screen(phablet-lg-max)) {
+                            width: 200px;
+                            height: 260px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-manufacturing,
+    &.is-mind {
+        .tab {
+            .tab-button {
+                &:before,
+                &:after {
+                    @media screen and (max-width: screen(phablet-lg-max)) {
+                        width: 203px;
+                        height: 212px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-material,
+    &.is-manufacturing,
+    &.is-mind {
+        .tab-button {
+            &:before,
+            &:after {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
