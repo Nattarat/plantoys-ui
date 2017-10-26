@@ -35,6 +35,7 @@
 
     <!-- Plantoys style -->
     <link rel="stylesheet" type="text/css" href="../assets/css/reset.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/tabs/tabs.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" media="all" />
 
     <script type="text/javascript" src="http://ptoys.maywz.info/js/prototype/prototype.js"></script>
@@ -90,37 +91,50 @@
     <div class="wrapper">
         <div class="page">
             <!-- HTML start ========================================================================== -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <h1 class="text-title">Pages:</h1>
-                        <ul class="list">
-                            <li class="list-item"><a class="text-link" href="home.html" target="_blank">Home</a></li>
-                            <li class="list-item"><a class="text-link" href="login.html" target="_blank">Log in</a></li>
-                            <li class="list-item"><a class="text-link" href="register.html" target="_blank">Register</a></li>
-                            <li class="list-item"><a class="text-link" href="news.html" target="_blank">News</a></li>
-                            <li class="list-item"><a class="text-link" href="news_detail.html" target="_blank">News detail</a></li>
-                            <li class="list-item"><a class="text-link" href="tipsforparents.html" target="_blank">Tips for parents</a></li>
-                            <li class="list-item"><a class="text-link" href="tipsforparents_detail.html" target="_blank">Tips for parents detail</a></li>
-                            <li class="list-item"><a class="text-link" href="ourbrand-whoweare.html" target="_blank">Who We Are</a></li>
-                            <li class="list-item"><a class="text-link" href="ourbrand-howwework.html" target="_blank">How We Work</a></li>
-                            <li class="list-item"><a class="text-link" href="ourbrand-whatawardswegot.html" target="_blank">What Awards We Got</a></li>
-                        </ul>
+            <div class="container-fluid about-whoweare">
+                <div class="about-header">
+                    <h1 class="head-title">Our Brand</h1>
+                    <h2 class="sub-title">Sustainable Play</h2>
+                </div>
+            </div>
+
+            <div class="about-container-sortby">
+                <div class="container-content">
+                    <div class="row">
+                        <div class="col-sm-4 is-text-align-center">
+                            <a href="ourbrand-whoweare.html" class="text-submenu">Who We Are</a>
+                        </div>
+                        <div class="col-sm-4 is-text-align-center">
+                            <a href="ourbrand-howwework.html" class="text-submenu is-active">How We Work</a>
+                        </div>
+                        <div class="col-sm-4 is-text-align-center">
+                            <a href="ourbrand-whatawardswegot.html" class="text-submenu">What Awards We got</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <div class="container-content">
+                <div class="about-segment is-introduction">
+                    <p class="text-title is-paragraph is-green is-text-align-center is-introduction">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo fugit quidem, animi ea fuga omnis? Enim qui provident quos, asperiores similique, quia vitae illo cupiditate, nihil molestias aliquid id vel.
+                    </p>
+                    <p class="text-default is-paragraph is-medium is-text-align-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo fugit quidem, animi ea fuga omnis? Enim qui provident quos, asperiores similique, quia vitae illo cupiditate, nihil molestias aliquid id vel.
+                    </p>
+                    <img class="img-responsive" src="../assets/images/content/about/about-infographic-howwework.jpg" alt="Infographic How We Work" />
+                </div>
+            </div>
             <!-- HTML end ============================================================================ -->
         </div>
     </div>
 
     <!-- Plantoys javascript -->
-    <!-- <script type="text/javascript" src="../assets/js/..."></script>
     <script type="text/javascript">
         $j(function() {
             // Script...
         });
-    </script> -->
+    </script>
 </body>
 
 </html>

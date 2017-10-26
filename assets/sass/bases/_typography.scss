@@ -100,12 +100,20 @@
         margin-bottom: 35px;
     }
 
+    &.is-paragraph-nospacing {
+        display: block;
+    }
+
     // Weight
     &.is-bold {
         font-family: font-family(primary);
     }
 
     // Colors
+    &.is-black {
+        color: $color-black;
+    }
+
     &.is-white {
         color: $color-white;
     }

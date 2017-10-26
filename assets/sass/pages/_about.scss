@@ -27,7 +27,9 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .about-header {
         @include text-header(
-            $text-header-margin-top: 30px
+            $text-header-color: color-text(title-page),
+            $text-header-margin-top: 30px,
+            $text-sub-color: color-text(title-page)
         );
     }
 

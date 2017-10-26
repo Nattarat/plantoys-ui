@@ -116,3 +116,65 @@
 // IE
 // Safari
 // Firefox
+
+// Award
+// ------------------------------------------------
+.list-award {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include list-variant(
+        $list-display: flex,
+
+        // List item
+        $list-item-display: block,
+        $list-item-padding: 0 0 35px
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include clearfix;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        width: 20%;
+        min-height: 330px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            width: 100%;
+            min-height: initial;
+        }
+
+        @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-lg-max)) {
+            width: 33.33%;
+        }
+    }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

@@ -8,9 +8,10 @@
 
 @charset 'utf-8';
 
-// News
+// News & Awards
 // ------------------------------------------------
-.carousel-news {
+.carousel-news,
+.carousel-awards {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
     $pagination-size: 0.9vw; // 17px
@@ -36,6 +37,11 @@
     }
 
     .carousel-image-item {
+    }
+
+    .carousel-content-image {
+        display: inline-block;
+        margin-bottom: 15px;
     }
 
     .carousel-description {
@@ -118,12 +124,68 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-arrow-inner {
+        padding-left: 4.5vw; // 85px
+        padding-right: 4.5vw; // 85px
+
+        .slick-arrow {
+            &.slick-prev {
+                left: 1.25vw;
+            }
+
+            &.slick-next {
+                right: 1.25vw;
+            }
+        }
+    }
+
+    &.is-theme-dark {
+        .slick-arrow {
+            &.slick-prev {
+                background-image: url('../images/icon/icon-arrow-carousel-prev-theme-dark.png');
+            }
+
+            &.slick-next {
+                background-image: url('../images/icon/icon-arrow-carousel-next-theme-dark.png');
+            }
+        }
+
+
+        .slick-dots {
+            li {
+                &.slick-active {
+                    button {
+                        &:before {
+                            background-color: $color-black;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            button {
+                &:before {
+                    background-color: $color-white;
+                    border-color: $color-black;
+                }
+            }
+        }
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .slick-dots {
+        button {
+            &:before {
+                @media screen and (max-width: screen(tablet-lg-max)) {
+                    border-width: 1px;
+                }
+            }
+        }
+    }
 }
 
 // Development
