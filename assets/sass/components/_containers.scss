@@ -96,11 +96,19 @@
         padding-right: 2.5vw;
     }
 
+    &.is-submenu {}
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-submenu {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
 }
 
 // Browser variations

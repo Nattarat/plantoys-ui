@@ -148,6 +148,10 @@
         padding-left: 15px;
         padding-right: 15px;
         text-align: center;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     // STYLES OF STATE
