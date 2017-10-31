@@ -225,8 +225,18 @@
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-introduction,
-    &.is-tabs {
+    &.is-tabs,
+    &.is-tabs-mobile {
         font-size: font-primary-size(size-9);
+    }
+
+    &.is-tabs,
+    &.is-tabs-mobile {
+        margin-bottom: 35px;
+    }
+
+    &.is-tabs-mobile {
+        display: none;
     }
 
     &.is-cover {
@@ -239,6 +249,17 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-tabs {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            display: none;
+        }
+    }
+
+    &.is-tabs-mobile {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            display: block;
+        }
+    }
 }
 
 // Browser variations
