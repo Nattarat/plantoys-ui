@@ -278,3 +278,365 @@
 // IE
 // Safari
 // Firefox
+
+// Roadmap
+// ------------------------------------------------
+.about-roadmap {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    position: relative;
+
+    &:before {
+        content: ' ';
+        position: absolute;
+        z-index: zindex(lv2);
+        top: 100px;
+        bottom: 100px;
+        left: 50%;
+        display: block;
+        width: 4px;
+        margin-left: -2px;
+        background: url('#{path-file(images)}/content/about/road-line.png') repeat-y;
+    }
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 100px;
+        bottom: 100px;
+        left: 50%;
+        display: none;
+        width: 30px;
+        margin-left: -15px;
+        background-color: $color-gray-7;
+    }
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .about-roadmap-inner {
+        position: absolute;
+        z-index: zindex(lv2);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .road {
+        max-width: 100%;
+    }
+
+    .roadmap-infographic {
+        position: absolute;
+        z-index: zindex(lv1);
+        cursor: pointer;
+
+        .infographic-image {
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+        &.infographic-1 {
+            top: 0.3%;
+            left: 12.5%;
+            width: 25%;
+        }
+
+        &.infographic-2 {
+            top: 13.0%;
+            left: 4.3%;
+            width: 16%;
+        }
+
+        &.infographic-3 {
+            top: 13.5%;
+            left: 31.4%;
+            width: 16%;
+        }
+
+        &.infographic-4 {
+            top: 19.75%;
+            left: 51.2%;
+            width: 16%;
+        }
+
+        &.infographic-5 {
+            top: 15.25%;
+            left: 72.2%;
+            width: 21.5%;
+        }
+
+        &.infographic-6 {
+            top: 29.7%;
+            left: 86.9%;
+            width: 12.8%;
+        }
+
+        &.infographic-7 {
+            top: 34.6%;
+            left: 60.2%;
+            width: 33.2%;
+        }
+
+        &.infographic-7-1 {
+            top: 49.6%;
+            left: 64.7%;
+            width: 4.8%;
+        }
+
+        &.infographic-7-2 {
+            top: 47.8%;
+            left: 78.7%;
+            width: 5.8%;
+        }
+
+        &.infographic-8 {
+            top: 48.2%;
+            left: 43.2%;
+            width: 18%;
+        }
+
+        &.infographic-9 {
+            top: 50.2%;
+            left: 12.8%;
+            width: 26%;
+        }
+
+        &.infographic-15 {
+            top: 38%;
+            left: 0%;
+            width: 36.7%;
+        }
+
+        &.infographic-10 {
+            top: 67.3%;
+            left: 2.5%;
+            width: 13%;
+        }
+
+        &.infographic-11 {
+            top: 69.6%;
+            left: 17.3%;
+            width: 19.9%;
+        }
+
+        &.infographic-12 {
+            top: 69%;
+            left: 44.1%;
+            width: 15.5%;
+        }
+
+        &.infographic-13 {
+            top: 70.6%;
+            left: 74.3%;
+            width: 12.8%;
+        }
+
+        &.infographic-14 {
+            top: 83.8%;
+            left: 66%;
+            width: 31%;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(phablet-lg-max)) {
+        text-align: center;
+
+        &:after {
+            display: block;
+        }
+    }
+
+    .road {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            display: none;
+        }
+    }
+
+    .about-roadmap-inner {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            position: relative;
+        }
+    }
+
+    .roadmap-infographic {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            position: static;
+        }
+
+        &[class*="infographic-"] {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                width: 90%;
+                padding: 30px 0;
+                margin: auto;
+            }
+        }
+
+        &.infographic-1 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 35%;
+            }
+        }
+
+        &.infographic-2 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        &.infographic-3 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        &.infographic-4 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        &.infographic-5 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 40%;
+            }
+        }
+
+        &.infographic-6 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        &.infographic-7 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        &.infographic-7-1,
+        &.infographic-7-2 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                position: relative;
+                display: inline-block;
+            }
+
+            .infographic-image {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &.infographic-7-1 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                left: -20vw;
+                width: 11%;
+            }
+
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                top: -31vw;
+            }
+
+            @media (min-width: screen(phablet-xs)) and (max-width: screen(phablet-lg-max)) {
+                top: -26vw;
+            }
+        }
+
+        &.infographic-7-2 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // left: 3vw;
+                left: 20vw;
+                width: 12.5%;
+            }
+
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                top: -37vw;
+            }
+
+            @media (min-width: screen(phablet-xs)) and (max-width: screen(phablet-lg-max)) {
+                top: -31.5vw;
+            }
+        }
+
+        &.infographic-8 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+                margin-top: -150px;
+            }
+        }
+
+        &.infographic-9 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        &.infographic-15 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        &.infographic-10 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        &.infographic-11 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        &.infographic-12 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        &.infographic-13 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        &.infographic-14 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // width: 30%;
+            }
+        }
+
+        .infographic-image {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                width: auto;
+            }
+        }
+    }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

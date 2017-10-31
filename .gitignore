@@ -8,4 +8,5 @@ main.css
 build
 test
 node_modules
+assets/videos
 .vscode
