@@ -8,30 +8,82 @@
 
 @charset 'utf-8';
 
-.class-name {
-  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
-  // >>>>>>>>>>>>>>>>>>>>>>>
+.footer-main {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // MIXINS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF COMPONENT ITSELF
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    padding-top: 70px;
+    padding-bottom: 45px;
 
-  // STYLES OF CHILD CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .footer-segment {
+        &.is-left,
+        &.is-right {
 
-  // STYLES OF STATE
-  // >>>>>>>>>>>>>>>>>>>>>>>
+        }
 
-  // STYLES OF MODIFIER CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-left {
 
-  // STYLES OF STATE WITH MODIFIER CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+        }
 
-  // MEDIA QUERY
-  // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-right {
+
+        }
+    }
+
+    .footer-subscribe {
+        position: relative;
+        padding-right: 25px;
+
+        .footer-subscribe-title {
+            padding-right: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-subscribe-description {
+            padding-right: 200px;
+            margin-bottom: 40px;
+        }
+
+        .footer-subscribe-form {
+            position: relative;
+            padding-right: 160px;
+            margin-right: 185px;
+        }
+
+        .footer-subscribe-button {
+            position: absolute;
+            z-index: zindex(lv1);
+            top: -17px;
+            right: 0;
+            max-width: 160px;
+        }
+
+        .footer-subscribe-toy {
+            position: absolute;
+            z-index: zindex(lv2);
+            top: -35px;
+            right: 25px;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations

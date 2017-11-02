@@ -75,6 +75,7 @@
     font-size: $text-font-size;
     font-weight: normal;
     line-height: $text-line-height;
+    vertical-align: middle;
     color: $text-color;
     text-transform: none;
 
@@ -144,8 +145,26 @@
     &.is-extra-small {
         font-size: font-secondary-size(size-8); // 12px
     }
+
+    &.is-small {
+        font-size: font-secondary-size(size-4); // 20px
+    }
+
     &.is-medium {
         font-size: font-secondary-size(size-2); // 24px
+    }
+
+    // Transform
+    &.is-uppercase {
+        text-transform: uppercase;
+    }
+
+    &.is-super {
+        vertical-align: super;
+    }
+
+    &.is-sub {
+        vertical-align: sub;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -294,6 +313,10 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-big {
+        font-size: 3.75vw; // font-tertiary-size(size-10) = 72px
+    }
+
     &.is-large {
         font-size: 3.1vw; // font-tertiary-size(size-7) = 60px
     }
@@ -302,6 +325,13 @@
         font-family: font-family(primary);
         font-size: 2.25vw; // font-primary-size(size-1) = 40px
         line-height: 1.5;
+    }
+
+    &.is-title-icon {
+        font-family: font-family(primary);
+        font-size: 1.67vw; // font-primary-size(size-9) = 32px
+        line-height: 1.5;
+        color: color-text(default);
     }
 
     &.is-paragraph {
@@ -350,9 +380,18 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-gray {
+        color: color-text(default);
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &:hover,
+    &:focus {
+        &.is-gray {
+            color: color-text(default);
+        }
+    }
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>

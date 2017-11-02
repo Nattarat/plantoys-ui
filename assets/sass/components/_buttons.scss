@@ -93,6 +93,10 @@
         display: inline-block;
         margin-right: $button-icon-spacing-right;
         vertical-align: middle;
+
+        &.is-text-blank {
+            margin-right: 0;
+        }
     }
 
     .button-text {
@@ -285,7 +289,7 @@
 // Safari
 // Firefox
 
-// background-image
+// Background image
 // ------------------------------------------------
 .button-background-image {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
@@ -340,3 +344,65 @@
 // IE
 // Safari
 // Firefox
+
+// Text
+// ------------------------------------------------
+.button-typography {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include button-variant(
+        // Body
+        $button-width: auto,
+        $button-height: auto,
+        $button-padding: 0,
+        $button-background-color: transparent,
+        $button-border-width: 0,
+        $button-border-color: transparent,
+        $button-border-radius: 0,
+        $button-box-shadow: 0 0 0 rgba(0, 0, 0, 0),
+
+        // Body hover
+        $button-background-color-hover: transparent,
+        $button-border-width-hover: 0,
+        $button-border-color-hover: transparent,
+
+        // Text
+        $button-text-font-family: font-family(primary),
+        $button-text-font-size: font-primary-size(size-4),
+        $button-text-line-height: 1,
+        $button-text-color: $color-gray-1,
+
+        // Text hover
+        $button-text-color-hover: $color-gray-1,
+
+        // Button icon
+        $button-icon-spacing-right: 10px
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .button-icon {
+        &.is-language {
+            width: 27px;
+            height: 27px;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}

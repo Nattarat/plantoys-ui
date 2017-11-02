@@ -191,6 +191,58 @@
 // Safari
 // Firefox
 
+// Line bottom
+// ------------------------------------------------
+.field-line-bottom {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include field-variant(
+        $field-height: auto,
+        $field-padding: 0 0 5px 0,
+        $field-border: 2px solid $color-gray-1,
+        $field-border-radius: 0,
+        $field-box-shadow: 0 0 0 rgba(0, 0, 0, 0),
+        $field-placeholder-color: $color-gray-1
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &[type=email],
+    &[type=search],
+    &[type=number],
+    &[type=password],
+    &[type=tel],
+    &[type=text] {
+        border-top-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+    }
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
 // form-icon
 //
 // ------------------------------------------------

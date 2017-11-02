@@ -387,6 +387,7 @@ $font-size-6: 48px;
 $font-size-7: 60px;
 $font-size-8: 12px;
 $font-size-9: 32px;
+$font-size-10: 72px;
 
 // Primary(VAG-Rounded-BT) maps
 $font-primary-size-maps: (
@@ -398,7 +399,8 @@ $font-primary-size-maps: (
     'size-6': $font-size-6,
     'size-7': $font-size-7,
     'size-8': $font-size-8,
-    'size-9': $font-size-9
+    'size-9': $font-size-9,
+    'size-10': $font-size-10
 );
 
 // Secondary(VAG-Rounded-Light-Ssi-Light) maps
@@ -411,7 +413,8 @@ $font-secondary-size-maps: (
     'size-6': $font-size-6,
     'size-7': $font-size-7,
     'size-8': $font-size-8,
-    'size-9': $font-size-9
+    'size-9': $font-size-9,
+    'size-10': $font-size-10
 );
 
 // Tertiary(Pen-of-Truth) maps
@@ -424,5 +427,6 @@ $font-tertiary-size-maps: (
     'size-6': $font-size-6,
     'size-7': $font-size-7,
     'size-8': $font-size-8,
-    'size-9': $font-size-9
+    'size-9': $font-size-9,
+    'size-10': $font-size-10
 );

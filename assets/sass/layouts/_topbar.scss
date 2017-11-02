@@ -8,30 +8,105 @@
 
 @charset 'utf-8';
 
-.class-name {
-  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
-  // >>>>>>>>>>>>>>>>>>>>>>>
+.topbar {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // MIXINS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF COMPONENT ITSELF
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include transition(transform 0.5s ease);
+    position: fixed;
+    z-index: zindex(lv3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 125px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: $color-white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .15);
 
-  // STYLES OF CHILD CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .topbar-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
 
-  // STYLES OF STATE
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    .logo-brand {
+        @include translate(-50%, -50%);
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 50%;
+        left: 50%;
+        display: block;
+        margin-top: 3px;
 
-  // STYLES OF MODIFIER CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+        &:hover {
+            .logo-brand-color {
+                opacity: 1;
+            }
+        }
+    }
 
-  // STYLES OF STATE WITH MODIFIER CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    .logo-brand-blackwhite,
+    .logo-brand-color {
+        @include transition(opacity 0.5s ease);
+    }
 
-  // MEDIA QUERY
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    .logo-brand-color {
+        opacity: 0;
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 0;
+        left: 0;
+    }
+
+    .icon-hamburger {
+        display: inline-block;
+        width: 34px;
+        margin-right: 35px;
+        vertical-align: middle;
+
+        span,
+        &:before,
+        &:after {
+            content: ' ';
+            display: block;
+            height: 5px;
+            background-color: $color-gray-1;
+            border-radius: 5px;
+        }
+
+        span,
+        &:before {
+            margin-bottom: 4px;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.headroom--pinned {
+        // style
+    }
+
+    &.headroom--unpinned {
+        @include translate(0, -105%);
+    }
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations

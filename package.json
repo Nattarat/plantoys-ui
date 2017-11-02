@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "aos": "^2.2.0",
+    "headroom.js": "^0.9.4",
     "is_js": "^0.9.0",
     "ress": "^1.2.2",
     "scrollmonitor": "^1.2.3",
