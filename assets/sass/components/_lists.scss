@@ -258,6 +258,9 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(phablet-lg-max)) {
+        margin-bottom: 30px;
+    }
 }
 
 // Browser variations

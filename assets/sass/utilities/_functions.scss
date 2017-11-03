@@ -4,6 +4,7 @@
 // Functions
 // * Path file
 // * Z index
+// * Animation timing
 // * Screens
 // * Border radius
 // * Colors
@@ -28,6 +29,12 @@
 // ==================================================================================================
 @function zindex($layer) {
     @return map-get($zindex-maps, $layer);
+}
+
+// Animation timing
+// ==================================================================================================
+@function animation-timing($layer) {
+    @return map-get($animation-timing-maps, $layer);
 }
 
 // Screen

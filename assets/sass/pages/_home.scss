@@ -188,6 +188,87 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(mobile-lg-max)) {
+        padding-top: 50vw;
+        padding-bottom: 50vw;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media (min-width: screen(phablet-sm)) and (max-width: screen(phablet-lg-max)) {
+        padding-top: 20vw;
+        padding-bottom: 20vw;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-sm-max)) {
+        padding-bottom: 8vw;
+    }
+
+    @media (min-width: screen(tablet-md)) and (max-width: screen(tablet-lg-max)) {
+        padding-bottom: 16vw;
+    }
+
+    // Toy
+    &:before {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            top: 30px;
+            width: 50vw;
+            height: 43.75vw;
+        }
+    }
+
+    // Tablet
+    &:after {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            width: 70vw;
+            height: 43.4vw;
+        }
+    }
+
+    .subscribe-segment {
+        &.is-catalogue {
+            @media screen and (max-width: screen(tablet-lg-max)) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .subscribe-field {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            margin-bottom: 30px;
+        }
+
+        [class^="field"] {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                width: 100%;
+            }
+        }
+    }
+
+    .subscribe-button {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            max-width: 280px;
+            margin: auto;
+        }
+
+        a[class^="button"],
+        button[class^="button"] {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                min-width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            &:first-child {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
 }
 
 // Browser variations
@@ -207,9 +288,13 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    // @include transition(background-position-x 0.5s ease);
     position: relative;
-    background: url('#{path-file(backgrounds)}/home/home-news-aligator.png') no-repeat left bottom;
-    background-size: 41vw;
+    // background-image: url('#{path-file(backgrounds)}/home/home-news-aligator-full.png');
+    // background-repeat: no-repeat;
+    // background-position-x: -150%;
+    // background-position-y: bottom;
+    // background-size: 60vw;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -232,8 +317,26 @@
         margin: auto auto auto 25%;
     }
 
+    .aligator {
+        @include transition(transform 1s animation-timing(smooth), opacity 0.7s animation-timing(smooth) .3s);
+        @include translate(-100%, 0);
+        opacity: 0;
+        position: absolute;
+        z-index: zindex(lv1);
+        bottom: 0;
+        left: 0;
+        width: 60vw;
+        height: auto;
+    }
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.aos-animate {
+        .aligator {
+            @include translate(-29%, 0);
+            opacity: 1;
+        }
+    }
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -243,6 +346,18 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .news-segment {
+        @media screen and (max-width: screen(tablet-sm)) {
+            width: 95vw;
+            height: 72vw;
+        }
+    }
+
+    .aligator {
+        @media screen and (max-width: screen(tablet-sm)) {
+            z-index: zindex(lv2);
+        }
+    }
 }
 
 // Browser variations
@@ -303,7 +418,6 @@
     }
 
     .developments-title {
-
     }
 
     .developments-sub-title {
@@ -327,6 +441,55 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .developments-segment {
+        @media screen and (max-width: screen(phablet-md-max)) {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    .developments-image {
+        @media screen and (max-width: screen(phablet-md-max)) {
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (min-width: screen(phablet-lg)) and (max-width: screen(tablet-sm)) {
+            background-size: 100%;
+            background-position: -25vw center;
+        }
+    }
+
+    .developments-title {
+        .text-carousel {
+            &.is-title {
+                @media screen and (max-width: screen(tablet-sm)) {
+                    font-size: font-primary-size(size-4); // 20px
+                }
+            }
+        }
+    }
+
+    .developments-sub-title {
+        .text-carousel {
+            &.is-large  {
+                @media screen and (max-width: screen(tablet-sm)) {
+                    font-size: font-primary-size(size-2); // 24px
+                }
+            }
+        }
+    }
+
+    .developments-paragraph {
+        &.text-carousel {
+            &.is-paragraph {
+                @media screen and (max-width: screen(tablet-sm)) {
+                    font-size: font-primary-size(size-8); // 12px
+                }
+            }
+        }
+    }
 }
 
 // Browser variations

@@ -4,6 +4,7 @@
 // Variables
 // * Path file
 // * Z index
+// * Animation timing
 // * Screens (Physical width of device screens)
 // * Border radius
 // * Colors
@@ -43,11 +44,22 @@ $zindex-lv-5: 9999 !default;
 
 // Z index maps
 $zindex-maps: (
-    'lv1': 1,
-    'lv2': 9,
-    'lv3': 99,
-    'lv4': 999,
-    'lv5': 9999
+    'lv1': $zindex-lv-1,
+    'lv2': $zindex-lv-2,
+    'lv3': $zindex-lv-3,
+    'lv4': $zindex-lv-4,
+    'lv5': $zindex-lv-5
+);
+
+// Animation timing
+// ==================================================================================================
+$animation-timing-1: cubic-bezier(.75, 0, .25, 1);
+$animation-timing-2: cubic-bezier(.38, -0.11, .5, 1.59);
+
+// Animation timing maps
+$animation-timing-maps: (
+    'smooth': $animation-timing-1,
+    'spring': $animation-timing-2
 );
 
 // Screens (Physical width of device screens)

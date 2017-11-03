@@ -154,6 +154,11 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .pagination-bullet {
+        @media screen and (max-width: screen(tablet-lg-max)) {
+            border-width: 1px;
+        }
+    }
 }
 
 // Browser variations

@@ -35,6 +35,11 @@
         &.is-viewport-full {
             height: 100vh;
         }
+
+        &.is-item-horizontal {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
     }
 
     .carousel-link {
@@ -85,6 +90,11 @@
             &:hover {
                 text-decoration: none;
             }
+        }
+
+        &.is-padding-horizontal-blank {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 
@@ -184,7 +194,7 @@
             padding-right: 0;
 
             .slick-arrow {
-                top: calc(38% + 125px);
+                top: calc(50% + 60px);
             }
         }
 
@@ -281,6 +291,14 @@
                 @media screen and (max-width: screen(tablet-lg-max)) {
                     border-width: 1px;
                 }
+            }
+        }
+    }
+
+    .carousel-description {
+        &.is-link {
+            @media screen and (max-width: screen(tablet-lg-max)) {
+                justify-content: center;
             }
         }
     }

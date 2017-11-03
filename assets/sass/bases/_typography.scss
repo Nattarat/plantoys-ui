@@ -204,6 +204,9 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-trademark {
+        font-size: 0.625vw; // 12px
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -340,11 +343,27 @@
         line-height: 1.5;
     }
 
+    &.for-hero-banner {
+        margin-top: 125px;
+        font-size: 3.1vw; // font-tertiary-size(size-7) = 60px
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.for-hero-banner {
+        @media screen and (max-width: screen(tablet-lg-max)) {
+            font-size: font-primary-size(size-7); // 60px
+        }
+    }
+
+    &.is-title-icon {
+        @media screen and (max-width: screen(tablet-lg-max)) {
+            font-size: font-primary-size(size-4); // 20px
+        }
+    }
 }
 
 // Browser variations

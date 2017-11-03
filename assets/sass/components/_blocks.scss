@@ -154,12 +154,18 @@
         align-content: center;
     }
 
+    &.for-home-developments {
+        // style
+    }
+
     &.for-subscribe-home {
         height: auto;
         min-height: 850px;
     }
 
     &.for-news-home {
+        position: relative;
+        z-index: zindex(lv2);
         padding-top: 4.45vw; // 85px
         padding-bottom: 4.45vw; // 85px
     }
@@ -169,6 +175,21 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.for-home-developments {
+        @media screen and (max-width: screen(phablet-md-max)) {
+            flex-direction: column;
+        }
+
+        @media (min-width: screen(phablet-lg)) and (max-width: screen(tablet-sm)) {
+            min-height: 50vh;
+        }
+    }
+
+    &.for-news-home {
+        @media screen and (max-width: screen(tablet-sm)) {
+            min-height: auto;
+        }
+    }
 }
 
 // Browser variations
