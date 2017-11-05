@@ -31,7 +31,8 @@
     }
 
     // Trigger class from AOS javascript plugin
-    &.aos-animate {
+    &.aos-animate,
+    &.is-active {
         > * {
             @include translate(0, 0);
             @include opacity(1);

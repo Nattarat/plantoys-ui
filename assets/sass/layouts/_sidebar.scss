@@ -8,30 +8,252 @@
 
 @charset 'utf-8';
 
-.class-name {
-  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
-  // >>>>>>>>>>>>>>>>>>>>>>>
+body {
+    &.is-sidebar-lock {
+        // overflow: hidden;
+        // margin-right: 16px;
+    }
+}
 
-  // MIXINS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+.sidebar {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF COMPONENT ITSELF
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF CHILD CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include transition(all 0.5s ease);
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: zindex(lv5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
 
-  // STYLES OF STATE
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .sidebar-overlay {
+        position: fixed;
+        z-index: zindex(lv1);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .5);
+    }
 
-  // STYLES OF MODIFIER CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    .sidebar-container {
+        @include transition(transform 0.5s ease);
+        position: relative;
+        z-index: zindex(lv2);
+        width: 100%;
+        max-width: 730px;
+        background-color: $color-white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .35);
+    }
 
-  // STYLES OF STATE WITH MODIFIER CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-active {
+        visibility: visible;
+        opacity: 1;
 
-  // MEDIA QUERY
-  // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-right {
+            .sidebar-container {
+                @include translate(0, 0);
+            }
+        }
+    }
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-right {
+        justify-content: flex-end;
+
+        .sidebar-container {
+            @include translate(100%, 0);
+        }
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+.cart {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .cart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+
+        .icon-cart {
+            margin-right: 20px;
+        }
+    }
+
+    .cart-header-inner {
+        display: flex;
+        align-items: center;
+
+        &.is-left {
+
+        }
+
+        &.is-right {
+
+        }
+    }
+
+    .cart-notice {
+        padding: 10px;
+        background-color: $color-green-5;
+        text-align: center;
+    }
+
+    .cart-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .cart-result {
+        position: absolute;
+        z-index: zindex(lv1);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px 40px;
+        background-color: $color-white;
+        border-top: 1px solid $color-gray-5;
+    }
+
+    .cart-promocode {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 35px;
+    }
+
+    .cart-promocode-inner {
+        &.is-field {
+            flex-grow: 1;
+            padding-right: 30px;
+        }
+    }
+
+    .cart-result-detail {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        &.is-result-last {
+            margin-bottom: 30px;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+.product {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .product-image-link {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .product-image {
+        border: 1px solid $color-gray-4;
+
+        &:hover {
+            border-color: $color-gray-4;
+        }
+    }
+
+    .product-name {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .product-counter {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .product-counter-number {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-left {
+        width: 21%;
+    }
+
+    &.is-right {
+        width: 79%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations

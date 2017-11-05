@@ -204,6 +204,9 @@
         &:last-child {
             margin: 0;
         }
+
+        &.is-cart {
+        }
     }
 
     // STYLES OF STATE
@@ -217,6 +220,13 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        &.is-cart {
+            @media screen and (max-width: screen(tablet-md-max)) {
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 // Browser variations
@@ -261,6 +271,230 @@
     @media screen and (max-width: screen(phablet-lg-max)) {
         margin-bottom: 30px;
     }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Navigation
+// ------------------------------------------------
+.list-navigation {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    $navigation-width-lv1: 380px;
+    $navigation-width-lv2: 350px;
+    $navigation-width-lv3: 490px;
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include list-variant(
+        $list-display: inline-block,
+        $list-padding: 30px,
+
+        // List item
+        $list-item-display: block,
+        $list-item-padding: 0 0 0 0,
+        $list-item-margin: 0 0 30px 0
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    width: $navigation-width-lv1;
+    min-height: 730px;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+
+            .text-link {
+                color: $color-gray-8;
+            }
+        }
+
+        .text-link {
+            max-width: 90%;
+        }
+
+        &.is-items-top {
+            align-items: flex-start;
+        }
+
+        &.is-menu-icon {
+            position: relative;
+            padding-left: 70px;
+        }
+    }
+
+    .list-icon {
+        font-size: $font-size-3;
+        color: $color-gray-1;
+    }
+
+    .list-icon-image {
+        @include translate(0, -50%);
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 50%;
+        left: 0;
+        width: 48px;
+        height: 48px;
+    }
+
+    .list-icon-text {
+        @include translate(0, -50%);
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 50%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        text-align: center;
+
+        &.is-green {
+            background-color: $color-green-5;
+        }
+
+        [class*="text-"] {
+            margin-top: 5px;
+        }
+    }
+
+    .list-container-collapse {
+
+    }
+
+    .list-button-collapse {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-navigation-lv2,
+    &.is-navigation-lv3 {
+        @include transition(all .5s ease);
+        @include translate(0, 15px);
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        z-index: zindex(1);
+        top: 0;
+        bottom: 0;
+        min-height: initial;
+        border-left: 1px solid $color-gray-5;
+
+        &.is-active {
+            @include translate(0, 0);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &.is-navigation-lv2 {
+        left: $navigation-width-lv1;
+        width: $navigation-width-lv2;
+    }
+
+    &.is-navigation-lv3 {
+        overflow: auto;
+        left: $navigation-width-lv2;
+        width: $navigation-width-lv3;
+    }
+
+    &.is-navigation-collapse {
+        overflow: auto;
+        vertical-align: top;
+        max-height: 730px;
+        border-left: 1px solid $color-gray-5;
+
+        &.is-column-left {
+            border-left: 0;
+        }
+
+        &.is-column-center {
+            width: $navigation-width-lv2;
+        }
+
+        &.is-column-right {
+            width: $navigation-width-lv3;
+        }
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Cart
+// ------------------------------------------------
+.list-cart {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include list-variant(
+        $list-display: block,
+        $list-padding: 0,
+        $list-margin: 0,
+
+        // List item
+        $list-item-display: block,
+        $list-item-padding: 40px 35px,
+        $list-item-margin: 0
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    overflow: auto;
+    max-height: calc(100vh - 549px);
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        border-bottom: 1px solid $color-gray-5;
+
+        &:last-child {
+            border-bottom-width: 0;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations

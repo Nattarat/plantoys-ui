@@ -107,6 +107,10 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(phablet-lg-max)) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
 
 // Browser variations

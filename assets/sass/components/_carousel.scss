@@ -17,6 +17,7 @@
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
     $pagination-size: 0.9vw; // 17px
+    $pagination-size-fix: 17px;
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -280,6 +281,40 @@
         }
     }
 
+    &.is-control-fix-size {
+        .slick-arrow {
+            width: 32px;
+            height: 55px;
+
+            &.slick-prev {
+                left: 25px;
+            }
+
+            &.slick-next {
+                right: 25px;
+            }
+        }
+
+        .slick-dots {
+            padding: 15px 0;
+
+            li {
+                width: $pagination-size-fix;
+                height: $pagination-size-fix;
+            }
+
+            button {
+                width: $pagination-size-fix;
+                height: $pagination-size-fix;
+
+                &:before {
+                    width: $pagination-size-fix;
+                    height: $pagination-size-fix;
+                }
+            }
+        }
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -299,6 +334,34 @@
         &.is-link {
             @media screen and (max-width: screen(tablet-lg-max)) {
                 justify-content: center;
+            }
+        }
+    }
+
+    &.is-control-fix-size {
+        @media screen and (max-width: screen(tablet-lg-max)) {
+            .slick-arrow {
+                width: 16px;
+                height: 28px;
+            }
+
+            .slick-dots {
+                padding: 15px 0;
+
+                li {
+                    width: $pagination-size-fix/1.5;
+                    height: $pagination-size-fix;
+                }
+
+                button {
+                    width: $pagination-size-fix/1.5;
+                    height: $pagination-size-fix/1.5;
+
+                    &:before {
+                        width: $pagination-size-fix/1.5;
+                        height: $pagination-size-fix/1.5;
+                    }
+                }
             }
         }
     }

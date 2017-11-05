@@ -15,7 +15,7 @@
 <button class="button-XXXXX" type="button">
     <span class="button-body">
         <span class="button-icon">...</span>
-        <img src="..." alt="Icon">
+        <img class="button-icon" src="..." alt="Icon">
         <span class="button-text">...</span>
     </span>
 </button>
@@ -23,7 +23,7 @@
 <a class="button-XXXXX" href="#">
     <span class="button-body">
         <span class="button-icon">...</span>
-        <img src="..." alt="Icon">
+        <img class="button-icon" src="..." alt="Icon">
         <span class="button-text">...</span>
     </span>
 </a>
@@ -57,7 +57,8 @@
     $button-text-color-hover: $color-white,
 
     // Button icon
-    $button-icon-spacing-right: 15px
+    $button-icon-spacing-right: 15px,
+    $button-icon-spacing-left: 15px
 ) {
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -96,6 +97,11 @@
 
         &.is-text-blank {
             margin-right: 0;
+        }
+
+        &.is-text-left {
+            margin-right: 0;
+            margin-left: $button-icon-spacing-left;
         }
     }
 
@@ -332,6 +338,10 @@
         background-image: url('#{path-file(backgrounds)}/button/button-wood-green.jpg');
     }
 
+    &.is-wood-green-light {
+        background-image: url('#{path-file(backgrounds)}/button/button-wood-green-light.jpg');
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -379,7 +389,8 @@
         $button-text-color-hover: $color-gray-1,
 
         // Button icon
-        $button-icon-spacing-right: 10px
+        $button-icon-spacing-right: 10px,
+        $button-icon-spacing-left: 10px
     );
 
     // STYLES OF COMPONENT ITSELF
@@ -388,11 +399,78 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .button-icon {
+        &.is-text-left-large {
+            margin-left: 20px;
+        }
+
         &.is-language {
             width: 27px;
             height: 27px;
         }
+
+        &.is-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
     }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Circle
+// ------------------------------------------------
+.button-circle {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include button-variant(
+        // Body
+        $button-width: 40px,
+        $button-height: 40px,
+        $button-padding: 0,
+        $button-background-color: $color-gray-9,
+        $button-border-width: 0,
+        $button-border-color: transparent,
+        $button-border-radius: 50%,
+        $button-box-shadow: 0 0 0 rgba(0, 0, 0, 0),
+
+        // Body hover
+        $button-background-color-hover: $color-gray-9,
+        $button-border-width-hover: 0,
+        $button-border-color-hover: transparent,
+
+        // Text
+        $button-text-font-family: font-family(primary),
+        $button-text-font-size: font-primary-size(size-4),
+        $button-text-line-height: 1,
+        $button-text-color: $color-white,
+
+        // Text hover
+        $button-text-color-hover: $color-white,
+
+        // Button icon
+        $button-icon-spacing-right: 0,
+        $button-icon-spacing-left: 0
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>

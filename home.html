@@ -97,38 +97,40 @@
             <div class="topbar">
                 <div class="topbar-inner">
                     <div class="topbar-segment is-left">
-                        <a class="icon-hamburger" href="#">
+                        <a id="button-menu-main" class="icon-hamburger" href="#">
                             <span></span>
                         </a>
-                        <a class="text-link is-bold is-small is-gray is-uppercase" href="#">Shop</a>
+                        <a id="button-menu-shop" class="text-link is-bold is-small is-gray is-uppercase hidden-xs" href="#">Shop</a>
                     </div>
-                    <!-- <div class="topbar-segment is-center"></div> -->
                     <div class="topbar-segment is-right">
                         <div class="list-activity">
-                            <div class="list-item">
+                            <div class="list-item hidden-xs">
                                 <a class="button-typography" href="#">
                                     <span class="button-body">
+                                        <!-- Before login -->
                                         <img class="button-icon" src="../assets/images/icon/icon-user-login.png" alt="Icon">
                                         <span class="button-text is-uppercase">Login</span>
+                                        <!-- After login -->
+                                        <!-- <img class="button-icon is-avatar" src="../assets/images/content/avatar-sample.jpg" alt="Icon"> -->
                                     </span>
                                 </a>
                             </div>
-                            <div class="list-item">
-                                <a class="button-typography" href="#">
+                            <div class="list-item is-cart">
+                                <a id="button-sidebar-cart" class="button-typography" href="#">
                                     <span class="button-body">
                                         <img class="button-icon" src="../assets/images/icon/icon-cart-wheel.png" alt="Icon">
                                         <span class="button-text is-uppercase">(99)</span>
                                     </span>
                                 </a>
                             </div>
-                            <div class="list-item">
+                            <div id="button-language" class="list-item hidden-xs hidden-sm">
                                 <a class="button-typography" href="#">
                                     <span class="button-body">
                                         <img class="button-icon is-language" src="../assets/images/icon/icon-flag-usa.png" alt="Icon">
                                     </span>
                                 </a>
                             </div>
-                            <div class="list-item">
+                            <div id="button-search" class="list-item hidden-xs hidden-sm">
                                 <a class="button-typography" href="#">
                                     <span class="button-body">
                                         <img class="button-icon is-text-blank" src="../assets/images/icon/icon-search.png" alt="Icon">
@@ -142,11 +144,569 @@
                     <img class="logo-brand-blackwhite" src="../assets/images/logo/logo.jpg" alt="Logo">
                     <img class="logo-brand-color" src="../assets/images/logo/logo-color.jpg" alt="Logo">
                 </a>
-                <!-- <div class="navigation-main">dasda</div> -->
+
+                <!-- Menu main -->
+                <div id="menu-main" class="navigation-main is-menu-main">
+                    <ul class="list-navigation">
+                        <!-- Single menu -->
+                        <li class="list-item is-menu-single">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-medium is-bold is-gray">
+                                    Home
+                                </span>
+                            </a>
+                        </li>
+                        <!-- Collpase menu lv1 -->
+                        <li id="menu-our-brand" class="list-item">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-medium is-bold is-gray">
+                                    Our Brand
+                                </span>
+                                <i class="list-icon fa fa-angle-right"></i>
+                            </a>
+                            <ul class="list-navigation is-navigation-lv2">
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            Who we are
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            How we work
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            What awards we got
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Collpase menu lv1 -->
+                        <li id="menu-our-products" class="list-item">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-medium is-bold is-gray">
+                                    Our Products
+                                </span>
+                                <i class="list-icon fa fa-angle-right"></i>
+                            </a>
+                            <ul class="list-navigation is-navigation-lv2">
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            View All
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            New Products
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            Best Selling
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            Award Winning
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            Age
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            Child Development
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Collpase menu lv2 -->
+                                <li id="menu-category" class="list-item">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            Category
+                                        </span>
+                                        <i class="list-icon fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="list-navigation is-navigation-lv3">
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-planhome.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    PlanHome
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-planmini.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    PlanMini
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-waterplay.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    Water Play
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-babies.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    Babies
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-pushpull.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    Push & Pull
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-activeplay.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    Active Play
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-learningeducation.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    Learning & Education
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-gamespuzzles.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    Games & Puzzles
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-music.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    Music
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-blocksconstruction.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    Blocks & Construction
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-pretendplay.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    Pretend Play
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-newproducts.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    New Products
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-bestseller.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    Best Seller
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link is-menu-icon" href="#">
+                                                <img class="list-icon-image" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="Icon">
+                                                <span class="text-link is-medium is-bold is-gray">
+                                                    Award Winning
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Collpase menu lv1 -->
+                        <li id="menu-our-child-development-milestone" class="list-item">
+                            <a class="list-link is-items-top" href="#">
+                                <span class="text-link is-medium is-bold is-gray">
+                                    Child Development Milestone
+                                </span>
+                                <i class="list-icon fa fa-angle-right"></i>
+                            </a>
+                            <ul class="list-navigation is-navigation-lv2">
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            Milestone 1
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            Milestone 2
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-medium is-bold is-gray">
+                                            Milestone 3
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Single menu -->
+                        <li class="list-item is-menu-single">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-medium is-bold is-gray">
+                                    Tips for parent
+                                </span>
+                            </a>
+                        </li>
+                        <!-- Single menu -->
+                        <li class="list-item is-menu-single">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-medium is-bold is-gray">
+                                    News
+                                </span>
+                            </a>
+                        </li>
+                        <!-- Single menu -->
+                        <li class="list-item is-menu-single">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-medium is-bold is-gray">
+                                    Contact Us
+                                </span>
+                            </a>
+                        </li>
+                        <!-- Single menu -->
+                        <li class="list-item is-menu-single">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-medium is-bold is-gray">
+                                    Store Locator
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Menu shop -->
+                <div id="menu-shop" class="navigation-main is-menu-shop">
+                    <!-- Lists -->
+                    <div class="list-navigation is-navigation-collapse is-column-left">
+                        <a class="list-button-collapse" href="#">
+                            <span class="text-tertiary is-uppercase">Shop</span>
+                        </a>
+                        <div class="list-container-collapse">
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-newproducts.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        New Products
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-bestseller.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Best Seller
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Award Winning
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lists -->
+                    <div class="list-navigation is-navigation-collapse is-column-center">
+                        <a class="list-button-collapse" href="#">
+                            <span class="text-tertiary is-uppercase">Age group</span>
+                        </a>
+                        <div class="list-container-collapse">
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <div class="list-icon-text is-green">
+                                        <span class="text-default is-white is-bold is-extra-small is-lineheight-self">0-6<br>m</span>
+                                    </div>
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        0-6 months
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <div class="list-icon-text is-green">
+                                        <span class="text-default is-white is-bold is-extra-small is-lineheight-self">7-12<br>m</span>
+                                    </div>
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        7-12 months
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <div class="list-icon-text is-green">
+                                        <span class="text-default is-white is-bold is-extra-small is-lineheight-self">13-18<br>m</span>
+                                    </div>
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        13-18 months
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <div class="list-icon-text is-green">
+                                        <span class="text-default is-white is-bold is-extra-small is-lineheight-self">18-24<br>m</span>
+                                    </div>
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        18-24 months
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <div class="list-icon-text is-green">
+                                        <span class="text-default is-white is-bold is-extra-small is-lineheight-self">2-3y</span>
+                                    </div>
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        2-3 years
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <div class="list-icon-text is-green">
+                                        <span class="text-default is-white is-bold is-extra-small is-lineheight-self">3y+</span>
+                                    </div>
+                                    <span class="text-link is-medium is-bold is-gray">
+                                            3 years+
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lists -->
+                    <div class="list-navigation is-navigation-collapse is-column-right">
+                        <a class="list-button-collapse" href="#">
+                            <span class="text-tertiary is-uppercase">Category</span>
+                        </a>
+                        <div class="list-container-collapse">
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-planhome.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        PlanHome
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-planmini.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        PlanMini
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-waterplay.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Water Play
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-babies.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Babies
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-pushpull.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Push & Pull
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-activeplay.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Active Play
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-learningeducation.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Learning & Education
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-gamespuzzles.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Games & Puzzles
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-music.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Music
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-blocksconstruction.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Blocks & Construction
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-pretendplay.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Pretend Play
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-newproducts.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        New Products
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-bestseller.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Best Seller
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link is-menu-icon" href="#">
+                                    <img class="list-icon-image" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="Icon">
+                                    <span class="text-link is-medium is-bold is-gray">
+                                        Award Winning
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Carousel hero -->
-            <div class="carousel-hero is-arrow-inner is-pagination-over-carousel for-hero-banner">
+            <div class="carousel-hero is-arrow-inner is-control-fix-size is-pagination-over-carousel for-hero-banner">
                 <div class="carousel-item is-viewport-full">
                     <div class="carousel-image is-border-none is-cover" style="background-image: url('../assets/images/content/home/home-hero-banner-1.jpg');"></div>
                     <a class="carousel-description is-link" href="#">
@@ -171,7 +731,7 @@
                     <div class="home-title">
                         <h2 class="text-title is-uppercase">Category</h2>
                     </div>
-                    <div class="carousel-category is-theme-gray is-arrow-inner for-category">
+                    <div class="carousel-category is-theme-gray is-arrow-inner is-control-fix-size for-category">
                         <div class="carousel-item is-item-horizontal">
                             <a class="carousel-link" href="#">
                                 <div class="carousel-image is-border-none">
@@ -392,7 +952,10 @@
                             <a href="#developments-2" class="pagination-bullet scroll-to"></a>
                         </div>
                         <div class="pagination-list-item">
-                            <a href="#developments-3" class="pagination-bullet is-square scroll-to"></a>
+                            <a href="#developments-3" class="pagination-bullet scroll-to"></a>
+                        </div>
+                        <div class="pagination-list-item">
+                            <a href="#news" class="pagination-bullet is-square scroll-to"></a>
                         </div>
                     </div>
                 </div>
@@ -483,7 +1046,7 @@
             </div>
 
             <!-- News -->
-            <div class="news" data-aos="animation">
+            <div id="news" class="news" data-aos="animation">
                 <div class="block-viewport for-news-home is-row-center-right">
                     <div class="news-segment">
                         <div class="news-segment-inner">
@@ -676,6 +1239,301 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Sidebar -->
+            <div id="sidebar-cart" class="sidebar is-right">
+                <div class="sidebar-container">
+                    <form class="cart">
+                        <div class="cart-header">
+                            <div class="cart-header-inner is-left">
+                                <img class="icon-cart" src="../assets/images/icon/icon-cart-wheel-md.png" alt="Icon">
+                                <span class="text-default is-bold is-large">Cart (99)</span>
+                            </div>
+                            <div class="cart-header-inner is-right">
+                                <a id="button-sidebar-cart-close" class="button-typography" href="#">
+                                    <span class="button-body">
+                                        <span class="button-text is-uppercase">Close</span>
+                                        <img class="button-icon is-text-left-large" src="../assets/images/icon/icon-close.png" alt="Icon">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="cart-notice">
+                            <span class="text-default is-white is-bold">
+                                free shipping for orders over $200
+                            </span>
+                        </div>
+                        <ul class="list-cart">
+                            <li class="list-item">
+                                <div class="cart-item">
+                                    <div class="product is-left">
+                                        <a class="product-image-link" href="#">
+                                            <img class="product-image" src="../assets/images/content/product/product-thumbnail-1.jpg" alt="Product">
+                                        </a>
+                                    </div>
+                                    <div class="product is-right">
+                                        <a class="product-name" href="#">
+                                            <span class="text-default is-bold is-large is-black">Melody Xylophone</span>
+                                        </a>
+                                        <div class="product-counter">
+                                            <div class="product-counter-inner">
+                                                <a class="button-circle" href="#">
+                                                    <span class="button-body">
+                                                        <img class="button-icon" src="../assets/images/icon/icon-minus.png" alt="Icon">
+                                                    </span>
+                                                </a>
+                                                <span class="product-counter-number text-default is-large is-bold">99</span>
+                                                <a class="button-circle" href="#">
+                                                    <span class="button-body">
+                                                        <img class="button-icon" src="../assets/images/icon/icon-plus.png" alt="Icon">
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="product-counter-inner">
+                                                <span class="text-default is-medium">$ 150.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="cart-item">
+                                    <div class="product is-left">
+                                        <a class="product-image-link" href="#">
+                                            <img class="product-image" src="../assets/images/content/product/product-thumbnail-2.jpg" alt="Product">
+                                        </a>
+                                    </div>
+                                    <div class="product is-right">
+                                        <a class="product-name" href="#">
+                                            <span class="text-default is-bold is-large is-black">Balancing Cactus Mini</span>
+                                        </a>
+                                        <div class="product-counter">
+                                            <div class="product-counter-inner">
+                                                <a class="button-circle" href="#">
+                                                    <span class="button-body">
+                                                        <img class="button-icon" src="../assets/images/icon/icon-minus.png" alt="Icon">
+                                                    </span>
+                                                </a>
+                                                <span class="product-counter-number text-default is-large is-bold">99</span>
+                                                <a class="button-circle" href="#">
+                                                    <span class="button-body">
+                                                        <img class="button-icon" src="../assets/images/icon/icon-plus.png" alt="Icon">
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="product-counter-inner">
+                                                <span class="text-default is-medium">$ 150.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="cart-item">
+                                    <div class="product is-left">
+                                        <a class="product-image-link" href="#">
+                                            <img class="product-image" src="../assets/images/content/product/product-thumbnail-2.jpg" alt="Product">
+                                        </a>
+                                    </div>
+                                    <div class="product is-right">
+                                        <a class="product-name" href="#">
+                                            <span class="text-default is-bold is-large is-black">Balancing Cactus Mini</span>
+                                        </a>
+                                        <div class="product-counter">
+                                            <div class="product-counter-inner">
+                                                <a class="button-circle" href="#">
+                                                    <span class="button-body">
+                                                        <img class="button-icon" src="../assets/images/icon/icon-minus.png" alt="Icon">
+                                                    </span>
+                                                </a>
+                                                <span class="product-counter-number text-default is-large is-bold">99</span>
+                                                <a class="button-circle" href="#">
+                                                    <span class="button-body">
+                                                        <img class="button-icon" src="../assets/images/icon/icon-plus.png" alt="Icon">
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="product-counter-inner">
+                                                <span class="text-default is-medium">$ 150.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="cart-item">
+                                    <div class="product is-left">
+                                        <a class="product-image-link" href="#">
+                                            <img class="product-image" src="../assets/images/content/product/product-thumbnail-2.jpg" alt="Product">
+                                        </a>
+                                    </div>
+                                    <div class="product is-right">
+                                        <a class="product-name" href="#">
+                                            <span class="text-default is-bold is-large is-black">Balancing Cactus Mini</span>
+                                        </a>
+                                        <div class="product-counter">
+                                            <div class="product-counter-inner">
+                                                <a class="button-circle" href="#">
+                                                    <span class="button-body">
+                                                        <img class="button-icon" src="../assets/images/icon/icon-minus.png" alt="Icon">
+                                                    </span>
+                                                </a>
+                                                <span class="product-counter-number text-default is-large is-bold">99</span>
+                                                <a class="button-circle" href="#">
+                                                    <span class="button-body">
+                                                        <img class="button-icon" src="../assets/images/icon/icon-plus.png" alt="Icon">
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="product-counter-inner">
+                                                <span class="text-default is-medium">$ 150.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="cart-item">
+                                    <div class="product is-left">
+                                        <a class="product-image-link" href="#">
+                                            <img class="product-image" src="../assets/images/content/product/product-thumbnail-2.jpg" alt="Product">
+                                        </a>
+                                    </div>
+                                    <div class="product is-right">
+                                        <a class="product-name" href="#">
+                                            <span class="text-default is-bold is-large is-black">Balancing Cactus Mini</span>
+                                        </a>
+                                        <div class="product-counter">
+                                            <div class="product-counter-inner">
+                                                <a class="button-circle" href="#">
+                                                    <span class="button-body">
+                                                        <img class="button-icon" src="../assets/images/icon/icon-minus.png" alt="Icon">
+                                                    </span>
+                                                </a>
+                                                <span class="product-counter-number text-default is-large is-bold">99</span>
+                                                <a class="button-circle" href="#">
+                                                    <span class="button-body">
+                                                        <img class="button-icon" src="../assets/images/icon/icon-plus.png" alt="Icon">
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="product-counter-inner">
+                                                <span class="text-default is-medium">$ 150.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="cart-result">
+                            <div class="cart-promocode">
+                                <div class="cart-promocode-inner is-field">
+                                    <!-- Add class "is-error" for show error field -->
+                                    <input class="field-line-bottom is-fluid is-placeholder-color-default" placeholder="Promo Code" type="email" />
+                                    <!-- Add class "is-active" for show validation message -->
+                                    <div class="field-validation">
+                                        <span class="text-default is-extra-small is-error">error_meesage</span>
+                                    </div>
+                                </div>
+                                <div class="cart-promocode-inner">
+                                    <button class="button-background-image is-wood-green is-small is-fluid is-padding-blank" type="button">
+                                        <span class="button-body">
+                                            <span class="button-text is-small">Apply</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="cart-result-detail">
+                                <span class="text-default is-bold is-medium">Subtotal</span>
+                                <span class="text-default is-bold is-medium">$ 300.00</span>
+                            </div>
+                            <div class="cart-result-detail">
+                                <span class="text-default is-bold is-medium">Shipping</span>
+                                <span class="text-default is-bold is-medium is-green-light">Free</span>
+                            </div>
+                            <div class="cart-result-detail is-result-last">
+                                <span class="text-default is-bold is-large is-black">Total</span>
+                                <span class="text-default is-bold is-large is-black">$ 300.00</span>
+                            </div>
+                            <button class="button-background-image is-wood-green-light is-fluid" type="button">
+                                <span class="button-body">
+                                    <span class="button-text">Checkout</span>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-overlay"></div>
+            </div>
+
+            <!-- Modal Language -->
+            <div class="modal-dialog modal-language">
+                <div class="modal-dialog-container is-large">
+                    <div class="modal-dialog-body">
+                        <div class="modal-dialog-title">
+                            <span class="text-tertiary is-extra-large is-gray">
+                                Please Choose Your Country
+                            </span>
+                        </div>
+                        <div class="modal-dialog-content">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <a class="language-item" href="#">
+                                        <img class="language-flag" src="../assets/images/icon/icon-flag-thai.png" alt="Flag">
+                                        <span class="text-default is-large is-bold">Thailand</span>
+                                    </a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <a class="language-item" href="#">
+                                        <img class="language-flag" src="../assets/images/icon/icon-flag-usa.png" alt="Flag">
+                                        <span class="text-default is-large is-bold">United States</span>
+                                    </a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <a class="language-item" href="#">
+                                        <img class="language-flag" src="../assets/images/icon/icon-flag-japan.png" alt="Flag">
+                                        <span class="text-default is-large is-bold">Japan</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-dialog-overlay"></div>
+            </div>
+
+            <!-- Modal Search -->
+            <div class="modal-dialog modal-search">
+                <div class="modal-dialog-container">
+                    <div class="modal-dialog-body">
+                        <div class="modal-dialog-content">
+                            <div class="form-search">
+                                <div class="form-search-inner is-field">
+                                    <!-- Add class "is-error" for show error field -->
+                                    <input class="field-line-bottom is-fluid is-placeholder-color-default" placeholder="Start typing here" type="email" />
+                                    <!-- Add class "is-active" for show validation message -->
+                                    <div class="field-validation">
+                                        <span class="text-default is-extra-small is-error">error_meesage</span>
+                                    </div>
+                                </div>
+                                <div class="form-search-inner">
+                                    <button class="button-background-image is-wood-green is-small is-fluid is-padding-blank" type="button">
+                                        <span class="button-body">
+                                            <span class="button-text is-small">Search</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="button-typography button-close-modal-dialog" type="submit">
+                                <span class="button-body">
+                                    <img class="button-icon is-text-blank" src="../assets/images/icon/icon-close.png" alt="Icon">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-dialog-overlay"></div>
+            </div>
             <!-- HTML end ============================================================================ -->
         </div>
     </div>
@@ -692,7 +1550,18 @@
         $j(function() {
             // Headroom
             // =====================================================
-            $j('.topbar').headroom();
+            $j('.topbar').headroom({
+                onPin : function() {
+                    $j('.navigation-main').removeClass('is-active');
+                    $j('.modal-dialog').removeClass('is-active');
+                    $j('.sidebar').removeClass('is-active');
+                },
+                onUnpin : function() {
+                    $j('.navigation-main').removeClass('is-active');
+                    $j('.modal-dialog').removeClass('is-active');
+                    $j('.sidebar').removeClass('is-active');
+                },
+            });
 
             // Carousel
             // =====================================================
@@ -778,6 +1647,101 @@
                     className: 'is-active',
                     callback: function () {
 				}
+            });
+
+            // Navigation
+            // =====================================================
+            $j('#button-menu-main').click(function() {
+                $j('#menu-main').toggleClass('is-active');
+                $j('#menu-shop').removeClass('is-active');
+            });
+
+            $j('#button-menu-shop').click(function() {
+                $j('#menu-shop').toggleClass('is-active');
+                $j('#menu-main').removeClass('is-active');
+            });
+
+            // Menu lv2
+            $j('#menu-our-brand').mouseover(function() {
+                // Add
+                $j('#menu-our-brand .is-navigation-lv2').addClass('is-active');
+                // Remove
+                $j('#menu-our-products .is-navigation-lv2').removeClass('is-active');
+                $j('#menu-our-products .is-navigation-lv3').removeClass('is-active');
+                $j('#menu-our-child-development-milestone .is-navigation-lv2').removeClass('is-active');
+            });
+
+            $j('#menu-our-products').mouseover(function() {
+                // Add
+                $j('#menu-our-products .is-navigation-lv2').addClass('is-active');
+                // Remove
+                $j('#menu-our-brand .is-navigation-lv2').removeClass('is-active');
+                $j('#menu-our-child-development-milestone .is-navigation-lv2').removeClass('is-active');
+            });
+
+            $j('#menu-our-child-development-milestone').mouseover(function() {
+                // Add
+                $j('#menu-our-child-development-milestone .is-navigation-lv2').addClass('is-active');
+                // Remove
+                $j('#menu-our-products .is-navigation-lv2').removeClass('is-active');
+                $j('#menu-our-products .is-navigation-lv3').removeClass('is-active');
+                $j('#menu-our-brand .is-navigation-lv2').removeClass('is-active');
+            });
+
+            // Menu lv3
+            $j('#menu-category').mouseover(function() {
+                $j('#menu-our-products .is-navigation-lv3').addClass('is-active');
+            });
+
+            $j('.is-menu-single').mouseover(function() {
+                $j('#menu-our-products .is-navigation-lv2').removeClass('is-active');
+                $j('#menu-our-products .is-navigation-lv3').removeClass('is-active');
+                $j('#menu-our-brand .is-navigation-lv2').removeClass('is-active');
+                $j('#menu-our-child-development-milestone .is-navigation-lv2').removeClass('is-active');
+            });
+            $j('.is-menu-single-lv2').mouseover(function() {
+                $j('#menu-our-products .is-navigation-lv3').removeClass('is-active');
+                $j('#menu-our-brand .is-navigation-lv2').removeClass('is-active');
+                $j('#menu-our-child-development-milestone .is-navigation-lv2').removeClass('is-active');
+            });
+
+            // Sidebar
+            // =====================================================
+            // Open
+            $j('#button-sidebar-cart').click(function() {
+                $j('#sidebar-cart').addClass('is-active');
+                $j('body').addClass('is-sidebar-lock');
+                $j('#menu-shop').removeClass('is-active');
+                $j('#menu-main').removeClass('is-active');
+            });
+
+            // Close
+            $j('#button-sidebar-cart-close, .sidebar-overlay').click(function() {
+                $j('#sidebar-cart').removeClass('is-active');
+                $j('body').removeClass('is-sidebar-lock');
+            });
+
+            // Modal
+            // =====================================================
+            // Modal language
+            // Open
+            $j('#button-language').click(function() {
+                $j('.modal-language').addClass('is-active');
+                $j('body').addClass('is-sidebar-lock');
+            });
+
+            // Modal search
+            // Open
+            $j('#button-search').click(function() {
+                $j('.modal-search').addClass('is-active');
+                $j('body').addClass('is-sidebar-lock');
+            });
+
+            // Modal
+            // Close
+            $j('.button-close-modal-dialog, .modal-dialog-overlay').click(function() {
+                $j('.modal-dialog').removeClass('is-active');
+                $j('body').removeClass('is-sidebar-lock');
             });
         });
     </script>

@@ -1,0 +1,271 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Modals
+// * Mixins
+// * Contextual variations
+//   - Primary
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Mixins
+// ==================================================================================================
+@mixin modal-variant(
+    $modal-dialog-margin: 0,
+    $modal-dialog-align-items: center,
+
+    // Container
+    $modal-dialog-container-max-width: 50%,
+    $modal-dialog-container-min-height: initial,
+    $modal-dialog-container-max-height: initial,
+    $modal-dialog-container-padding: 30px,
+    $modal-dialog-container-margin: 15px,
+    $modal-dialog-container-background-color: $color-white,
+    $modal-dialog-container-box-shadow: 0 3px 5px rgba(0, 0, 0, .5),
+
+    // Overlay
+    $modal-dialog-overlay-background-color: rgba(0, 0, 0, .5),
+
+    // Body
+    $modal-dialog-body-min-height: initial,
+    $modal-dialog-body-max-height: initial,
+
+    // Title
+    $modal-dialog-title-padding: 0,
+    $modal-dialog-title-margin: 0,
+    $modal-dialog-title-text-align: left
+) {
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include transition(all 0.5s ease);
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: zindex(lv5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: $modal-dialog-margin;
+    justify-content: center;
+    align-items: $modal-dialog-align-items;
+    align-content: $modal-dialog-align-items;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .modal-dialog-container {
+        @include transition(transform 0.5s ease);
+        @include translate(0, 30px);
+        position: relative;
+        z-index: zindex(lv2);
+        width: 100%;
+        max-width: $modal-dialog-container-max-width;
+        min-height: $modal-dialog-container-min-height;
+        max-height: $modal-dialog-container-max-height;
+        padding: $modal-dialog-container-padding;
+        margin: $modal-dialog-container-margin;
+        background-color: $modal-dialog-container-background-color;
+        box-shadow: $modal-dialog-container-box-shadow;
+
+        &.is-small {
+            width: 25%;
+        }
+
+        &.is-medium {
+            width: 50%;
+        }
+
+        &.is-large {
+            width: 75%;
+        }
+    }
+
+    .modal-dialog-overlay {
+        position: fixed;
+        z-index: zindex(lv1);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $modal-dialog-overlay-background-color;
+    }
+
+    .modal-dialog-body {
+        // overflow: auto;
+        min-height: $modal-dialog-body-min-height;
+        max-height: $modal-dialog-body-max-height;
+    }
+
+    .modal-dialog-title {
+        padding: $modal-dialog-title-padding;
+        margin: $modal-dialog-title-margin;
+        text-align: $modal-dialog-title-text-align;
+    }
+
+    .modal-dialog-content {
+
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-active {
+        visibility: visible;
+        opacity: 1;
+
+        .modal-dialog-container {
+            @include translate(0, 0);
+        }
+    }
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Contextual variations
+// ==================================================================================================
+
+// Language
+// ------------------------------------------------
+.modal-language {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include modal-variant(
+        $modal-dialog-container-max-width: 1250px,
+        $modal-dialog-container-padding: 100px,
+
+        // Title
+        $modal-dialog-title-margin: 0 0 90px 0,
+        $modal-dialog-title-text-align: center
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .language-item {
+        display: block;
+        text-align: center;
+    }
+
+    .language-flag {
+        margin: auto auto 40px auto;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Search
+// ------------------------------------------------
+.modal-search {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include modal-variant(
+        $modal-dialog-align-items: flex-start,
+
+        // Container
+        $modal-dialog-container-max-width: 100%,
+        $modal-dialog-container-min-height: 125px,
+        $modal-dialog-container-padding: 0 50px,
+        $modal-dialog-container-margin: 0,
+        $modal-dialog-container-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .modal-dialog-container {
+        @include translate(0, -100%);
+        display: flex;
+        align-items: center;
+    }
+
+    .modal-dialog-body {
+        width: 100%;
+    }
+
+    .modal-dialog-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-search {
+        display: flex;
+        align-items: flex-end;
+        width: 50%;
+    }
+
+    .form-search-inner {
+        &.is-field {
+            flex-grow: 1;
+            padding-right: 15px;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-active {
+
+        .modal-dialog-container {
+            @include translate(0, 0);
+        }
+    }
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

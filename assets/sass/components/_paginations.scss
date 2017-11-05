@@ -113,8 +113,8 @@
     .pagination-bullet {
         @include transition(all 0.5s ease);
         display: block;
-        width: 0.9vw; // 17px
-        height: 0.9vw; // 17px
+        width: 17px; // 0.9vw
+        height: 17px; // 0.9vw
         border: 3px solid $color-white;
         border-radius: 50%;
 
@@ -157,6 +157,13 @@
     .pagination-bullet {
         @media screen and (max-width: screen(tablet-lg-max)) {
             border-width: 1px;
+        }
+    }
+
+    .pagination-bullet {
+        @media screen and (max-width: screen(tablet-lg-max)) {
+            width: calc(17px/1.5);
+            height: calc(17px/1.5);
         }
     }
 }
