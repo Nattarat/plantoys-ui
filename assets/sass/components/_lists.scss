@@ -307,6 +307,16 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        &.is-social-link {
+            position: absolute;
+            z-index: zindex(lv1);
+            bottom: 30px;
+            left: 30px;
+            width: calc(#{$navigation-width-lv1} - 60px);
+        }
+    }
+
     .list-link {
         display: flex;
         justify-content: space-between;
@@ -332,6 +342,18 @@
         &.is-menu-icon {
             position: relative;
             padding-left: 70px;
+        }
+
+        &.is-icon-font {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: $font-size-2;
+            color: $color-gray-1;
+            vertical-align: middle;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 
