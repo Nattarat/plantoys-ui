@@ -17,15 +17,15 @@
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include container-header($container-background:url('#{path-file(images)}/background/news/news_kid.jpg'));
-
+    
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-
+ 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .news-header{
         @include text-header($text-header-margin-top:30px);
-    }
+    }    
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -73,7 +73,7 @@
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-
+    
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media (max-width: screen(tablet-sm)){
@@ -95,7 +95,7 @@
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
-    // MIXINS
+// MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF COMPONENT ITSELF
@@ -120,9 +120,6 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    &.is-wood-green {
-        background-image: url('#{path-file(images)}/content/tipsforparents/tipsforparents-rubber-wood.jpg');
-    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
