@@ -120,6 +120,10 @@
         &.is-small {
             font-size: font-primary-size(size-5);
         }
+
+        &.is-language-active {
+            color: color-text(blue-primary);
+        }
     }
 
     // STYLES OF STATE
@@ -404,7 +408,7 @@
         }
 
         &.is-language {
-            width: 27px;
+            width: auto;
             height: 27px;
         }
 
