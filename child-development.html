@@ -37,6 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/reset.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" media="all" />
 
+    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick-theme.css" media="all" />
+
     <script type="text/javascript" src="http://ptoys.maywz.info/js/prototype/prototype.js"></script>
     <script type="text/javascript" src="http://ptoys.maywz.info/js/lib/jquery/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="http://ptoys.maywz.info/js/lib/jquery/noconflict.js"></script>
@@ -125,7 +128,7 @@
                     </p>
                 </div>
                 <div class="container-fluid child-action">
-                    <div class="action1 hidden">
+                    <div class="action1">
                         <div class="row row-month">
                             <div class="font-rotate">
                                 <p>
@@ -133,7 +136,7 @@
                                 </p> 
                             </div>
                             <div class="col-md-3 child-container">
-                                <div class="thumbnail">
+                                <div class="thumbnail child-thumbnail">
                                     <img src="assets/images/icon/child_development/child-state1.png" class="img-responsive">
                                     <div class="caption">
                                         <h3>Physical</h3>
@@ -141,7 +144,7 @@
                                 </div>                                         
                             </div>
                             <div class="col-md-3 child-container">
-                                <div class="thumbnail">
+                                <div class="thumbnail child-thumbnail">
                                     <img src="assets/images/icon/child_development/child-state2.png" class="img-responsive">
                                     <div class="caption">
                                         <h3>Social & Emotional</h3>
@@ -149,7 +152,7 @@
                                 </div>                                         
                             </div>
                             <div class="col-md-3 child-container">
-                                <div class="thumbnail">
+                                <div class="thumbnail child-thumbnail">
                                     <img src="assets/images/icon/child_development/child-state3.png" class="img-responsive">
                                     <div class="caption">
                                         <h3>Intellectual</h3>
@@ -157,7 +160,7 @@
                                 </div>                                         
                             </div>
                            <div class="col-md-3 child-container">
-                                <div class="thumbnail">
+                                <div class="thumbnail child-thumbnail">
                                     <img src="assets/images/icon/child_development/child-state4.png" class="img-responsive">
                                     <div class="caption">
                                         <h3>Language</h3>
@@ -259,13 +262,53 @@
                             </div>    
                         </div>
                     </div>
-                    <div class="action2 ">
+                    <div class="action2 hidden">
                         <div class="container">
                             <!-- <div class="is-text-align-center">
                                 <p>New Born</p>
                                 
                             </div> -->
-                            
+                            <div data-accordion-group>
+                                <div class="accordion" data-accordion>
+                                    <div data-control>New Born</div>
+                                    <div data-content>
+                                         <!-- Carousel hero -->
+                                        <div class="your-class">
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state1.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3>Physical</h3>
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <p>• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-xs-6">                                                                                                                       
+                                                            <p>• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div>your content</div>
+                                            <div>your content</div>
+                                            <div>your content</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                 <div class="accordion" data-accordion>
+                                    <div data-control>Control2</div>
+                                    <div data-content>
+                                         <!-- Carousel hero -->
+                                        <div class="your-class">
+                                            <div>your content</div>
+                                            <div>your content</div>
+                                            <div>your content</div>
+                                            <div>your content</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -311,7 +354,203 @@
                     </div>
                 </div>
                 <div class="container-fluid">
-                    collape
+                    
+                    <div class="carousel-category is-theme-gray is-arrow-inner is-control-fix-size for-category">
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid1.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        PlanHome<span class="text-default is-trademark is-bold is-super">TM</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid2.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        PlanMini<span class="text-default is-trademark is-bold is-super">TM</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid3.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        Water Play
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid4.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Active Play
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid5.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        Push & Pull
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-learningeducation.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        Learning & Education
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-gamespuzzles.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        Games & Puzzles
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-music.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        Music
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-blocksconstruction.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        Blocks & Construction
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-pretendplay.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        Pretend Play
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-newproducts.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        New Products
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-bestseller.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        Best Seller
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        Award Winning
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-myorder.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        My Order
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-accountinfo.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        Account Info
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-address-book.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="text-carousel is-title-icon">
+                                        Address Book
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            
                 </div>
             <!-- HTML end ============================================================================ -->
         </div>
@@ -324,6 +563,50 @@
             // Script...
         });
     </script> -->
+    <script src="../assets/js/jquery_accordion/jquery-accordion.js"></script>
+    <script>
+        $j('.accordion').accordion({
+            "transitionSpeed": 400
+        });
+    </script>
+    <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
+    <script>
+     $j(document).ready(function(){
+        $j('.your-class').slick({
+          dots:true
+        });
+      });
+    </script>
+    <script>
+        $j('.carousel-category').slick({
+                dots: false,
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+    </script>
 </body>
 
 </html>

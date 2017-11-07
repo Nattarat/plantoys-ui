@@ -120,14 +120,8 @@
  
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .thumbnail{
-        text-align: center;
-        img{
-            margin: auto;
-        }
-        .caption{
-
-        }
+    .child-thumbnail{
+        @include thumb-nail;
     }
     .text-detail{
         list-style-type: disc;
@@ -191,6 +185,11 @@
                     width: 100vw;
                 }
             }
+    }
+    .action2{
+        .child-thumbnai{
+            @include thumb-nail;
+        }
     }
 
     // STYLES OF STATE
