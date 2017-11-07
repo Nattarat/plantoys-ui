@@ -99,3 +99,116 @@
         }
     }
 }
+
+// child row
+// ------------------------------------------------
+@mixin child-content {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+   
+    
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // background: green;
+    padding: 30px;
+    border-left-style: dotted;
+    border-width: 5px;
+    border-color: $color-dot-blue;
+ 
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .thumbnail{
+        text-align: center;
+        img{
+            margin: auto;
+        }
+        .caption{
+
+        }
+    }
+    .text-detail{
+        list-style-type: disc;
+    }
+ 
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// child action
+// ------------------------------------------------
+.child-action {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+   
+    
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    
+ 
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .action1{
+            .row-month{
+                display: flex;
+                .child-container{
+                    @include child-content(); 
+                }   
+                &:not(:first-child){
+                    padding: 20px 0px;
+                }
+                &:nth-child(odd){
+                    background: $color-blue-light;
+                }
+            }
+            .font-rotate{    
+                width: 64px;
+                display: flex;
+                align-items: center;          
+                p{
+                    transform: rotate(-90deg);
+                    width: 100vw;
+                }
+            }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
