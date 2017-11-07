@@ -548,12 +548,18 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     justify-content: space-between;
     align-items: flex-end;
+    flex-wrap: wrap;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        width: 14.2%;
+    }
+
     .list-link {
         position: relative;
         display: block;
+        cursor: default;
     }
 
     .list-link {
@@ -599,6 +605,16 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            width: 33.33%;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 30px;
+            }
+        }
+    }
 }
 
 // Browser variations
