@@ -25,7 +25,7 @@
     z-index: 999;
     top: 125px;
     left: 30px;
-    width: 1230px;
+    width: 1150px;
     background-color: $color-white;
     border-radius: 5px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); // Border triangle with shadow
@@ -63,6 +63,17 @@
     &.is-menu-shop {
         &:before {
             left: 115px;
+        }
+    }
+
+    &.is-menu-cart {
+        left: initial;
+        right: 30px;
+        max-width: 730px;
+
+        &:before {
+            left: initial;
+            right: 215px;
         }
     }
 
