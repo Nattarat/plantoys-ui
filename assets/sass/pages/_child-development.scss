@@ -1,0 +1,101 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// News
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// child delvelopment
+// ------------------------------------------------
+.child-home {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include container-header($container-background:url('#{path-file(images)}/background/child_development/child_development.jpg'));
+    
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+ 
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .child-header{
+        @include text-header($text-header-margin-top:30px);
+    }    
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// sort-by
+// ------------------------------------------------
+.container-agerang {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    height: 100px;
+    padding: 0px 50px;
+    background-image:  url('#{path-file(images)}/content/child_development/child-blue-wood.jpg') ;
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .child-age{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .news-select {
+        @include select-form-group($form-group-align:flex-end);
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // @media (max-width: screen(phablet-md)) {
+    //     padding: 0px 15px;
+    // }
+    @media (max-width: screen(phablet-sm)) {
+        padding: 0px 15px;
+    }
+    @media (max-width: screen(phablet-xs)) {
+        .news-select {
+            @include select-form-group($label-font-size: 25px,$select-font-size: 18px);
+        }
+    }
+}
