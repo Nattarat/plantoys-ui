@@ -1,6 +1,8 @@
 // thumb nail
 // ------------------------------------------------
-@mixin thumb-nail {
+@mixin thumb-nail(
+    $thumb-padding: 0px
+) {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -10,15 +12,26 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     text-align: center;
+    padding: $thumb-padding;
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     img{
         margin: auto;
     }
     .caption{
-
+        .text-style{
+            color: $color-blue-head-thumb;
+            font-family: font-family(primary);
+            font-size: 33px;
+            text-transform: none;
+        }
     }
-    
+    .thumb-text-detail{
+        font-family: font-family(secondary);
+        font-size: 22px;
+        color: $color-dark-slate-gray;
+    }
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 

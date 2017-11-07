@@ -93,33 +93,625 @@
     <div class="wrapper">
         <div class="page">
             <!-- HTML start ========================================================================== -->
-                <nav class="container-fluid">
-                    navbar
-                </nav>
-                <div class="container-fluid child-home">
-                    <div class="child-header">
-                        <h1 class="head-title">Child Delvelopment</h1>
-                        <h2 class="sub-title">Better Kids, Better World</h2>
+            <div class="topbar">
+                <div class="topbar-inner">
+                    <div class="topbar-segment is-left">
+                        <a id="button-menu-main" class="icon-hamburger" href="#">
+                            <span></span>
+                        </a>
+                        <a id="button-menu-shop" class="text-link is-bold is-small is-gray is-uppercase hidden-xs" href="#">Shop</a>
+                    </div>
+                    <div class="topbar-segment is-right">
+                        <div class="list-activity">
+                            <div class="list-item hidden-xs">
+                                <a class="button-typography" href="#">
+                                    <span class="button-body">
+                                        <!-- Before login -->
+                                        <img class="button-icon" src="../assets/images/icon/icon-user-login.png" alt="Icon">
+                                        <span class="button-text is-uppercase">Login</span>
+                                        <!-- After login -->
+                                        <!-- <img class="button-icon is-avatar" src="../assets/images/content/avatar-sample.jpg" alt="Icon"> -->
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="list-item is-cart">
+                                <a id="button-sidebar-cart" class="button-typography" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon" src="../assets/images/icon/icon-cart-wheel.png" alt="Icon">
+                                        <span class="button-text is-uppercase">(99)</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div id="button-language" class="list-item hidden-xs hidden-sm">
+                                <a class="button-typography" href="#">
+                                    <span class="button-body">
+                                        <!-- <img class="button-icon is-language" src="../assets/images/icon/icon-flag-thai.png" alt="Icon"> -->
+                                        <span class="button-text is-uppercase">TH</span>
+                                    </span>
+                                </a>
+                                <span class="text-default">/</span>
+                                <a class="button-typography" href="#">
+                                    <span class="button-body">
+                                        <!-- <img class="button-icon is-language" src="../assets/images/icon/icon-flag-usa.png" alt="Icon"> -->
+                                        <span class="button-text is-uppercase is-language-active">EN</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div id="button-search" class="list-item hidden-xs hidden-sm">
+                                <a class="button-typography" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon is-text-blank" src="../assets/images/icon/icon-search.png" alt="Icon">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-               <div class="container-fluid container-agerang">
-                    <ul class="child-age">
-                        <li>0-6 Months</li>
-                        <li>6-12 Months</li>
-                        <li>12-18 Months</li>
-                        <li>18-24 Months</li>
-                        <li>2-3 Years</li>
-                        <li>3 Years+</li>
+                <a href="#" class="logo-brand">
+                    <img class="logo-brand-blackwhite" src="../assets/images/logo/logo.jpg" alt="Logo">
+                    <img class="logo-brand-color" src="../assets/images/logo/logo-color.jpg" alt="Logo">
+                </a>
+    
+                <!-- Menu main -->
+                <div id="menu-main" class="navigation-main is-menu-main">
+                    <ul class="list-navigation">
+                        <!-- Single menu -->
+                        <li class="list-item is-menu-single">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-bold is-gray">
+                                    Home
+                                </span>
+                            </a>
+                        </li>
+                        <!-- Collpase menu lv1 -->
+                        <li id="menu-our-brand" class="list-item">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-bold is-gray">
+                                    Our Brand
+                                </span>
+                                <i class="list-icon fa fa-angle-right"></i>
+                            </a>
+                            <ul class="list-navigation is-navigation-lv2">
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            Who we are
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            How we work
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            What awards we got
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Collpase menu lv1 -->
+                        <li id="menu-our-products" class="list-item">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-bold is-gray">
+                                    Our Products
+                                </span>
+                                <i class="list-icon fa fa-angle-right"></i>
+                            </a>
+                            <ul class="list-navigation is-navigation-lv2">
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            View All
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            New Products
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            Best Selling
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            Award Winning
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            Age
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            Child Development
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Collpase menu lv2 -->
+                                <li id="menu-category" class="list-item">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            Category
+                                        </span>
+                                        <i class="list-icon fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="list-navigation is-navigation-lv3">
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    PlanHome
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    PlanMini
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    Water Play
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    Babies
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    Push & Pull
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    Active Play
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    Learning & Education
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    Games & Puzzles
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    Music
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    Blocks & Construction
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    Pretend Play
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    New Products
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    Best Seller
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Single menu -->
+                                        <li class="list-item">
+                                            <a class="list-link" href="#">
+                                                <span class="text-link is-small is-bold is-gray">
+                                                    Award Winning
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Collpase menu lv1 -->
+                        <li id="menu-our-child-development-milestone" class="list-item">
+                            <a class="list-link is-items-top" href="#">
+                                <span class="text-link is-small is-bold is-gray">
+                                    Child Development Milestone
+                                </span>
+                                <i class="list-icon fa fa-angle-right"></i>
+                            </a>
+                            <ul class="list-navigation is-navigation-lv2">
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            Milestone 1
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            Milestone 2
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Single menu -->
+                                <li class="list-item is-menu-single-lv2">
+                                    <a class="list-link" href="#">
+                                        <span class="text-link is-small is-bold is-gray">
+                                            Milestone 3
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Single menu -->
+                        <li class="list-item is-menu-single">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-bold is-gray">
+                                    Tips for parent
+                                </span>
+                            </a>
+                        </li>
+                        <!-- Single menu -->
+                        <li class="list-item is-menu-single">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-bold is-gray">
+                                    News
+                                </span>
+                            </a>
+                        </li>
+                        <!-- Single menu -->
+                        <li class="list-item is-menu-single">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-bold is-gray">
+                                    Contact Us
+                                </span>
+                            </a>
+                        </li>
+                        <!-- Single menu -->
+                        <li class="list-item is-menu-single">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-bold is-gray">
+                                    Store Locator
+                                </span>
+                            </a>
+                        </li>
+                        <!-- Single menu -->
+                        <li class="list-item is-social-link is-menu-single">
+                            <a class="list-link is-icon-font" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="list-link is-icon-font" href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="list-link is-icon-font" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="list-link is-icon-font" href="#">
+                                <img src="../assets/images/icon/social/social-line.png" alt="Icon">
+                            </a>
+                            <a class="list-link is-icon-font" href="#">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                        </li>
                     </ul>
-                    <div class="hidden">
-                        mobile
+                </div>
+
+                <!-- Menu shop -->
+                <div id="menu-shop" class="navigation-main is-menu-shop">
+                    <!-- Lists -->
+                    <div class="list-navigation is-navigation-collapse is-column-left">
+                        <a class="list-button-collapse" href="#">
+                            <span class="text-tertiary is-uppercase">Shop</span>
+                        </a>
+                        <div class="list-container-collapse">
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        New Products
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Best Seller
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Award Winning
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Lists -->
+                    <div class="list-navigation is-navigation-collapse is-column-center">
+                        <a class="list-button-collapse" href="#">
+                            <span class="text-tertiary is-uppercase">Age group</span>
+                        </a>
+                        <div class="list-container-collapse">
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        0-6 months
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        7-12 months
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        13-18 months
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        18-24 months
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        2-3 years
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                            3 years+
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lists -->
+                    <div class="list-navigation is-navigation-collapse is-column-right">
+                        <a class="list-button-collapse" href="#">
+                            <span class="text-tertiary is-uppercase">Category</span>
+                        </a>
+                        <div class="list-container-collapse">
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        PlanHome
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        PlanMini
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Water Play
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Babies
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Push & Pull
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Active Play
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Learning & Education
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Games & Puzzles
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Music
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Blocks & Construction
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Pretend Play
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        New Products
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Best Seller
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- Single menu -->
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <span class="text-link is-small is-bold is-gray">
+                                        Award Winning
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content -->
+            <div class="container-fluid child-home">
+                <div class="child-header">
+                    <h1 class="head-title">Child Delvelopment</h1>
+                    <h2 class="sub-title">Better Kids, Better World</h2>
+                </div>
+            </div>
+               <div class="container-fluid container-agerang">
+                    <ul class="child-age hidden-xs hidden-sm hidden-md ">
+                        <li class="select-title">0-6 Months</li>
+                        <li class="select-title">6-12 Months</li>
+                        <li class="select-title">12-18 Months</li>
+                        <li class="select-title">18-24 Months</li>
+                        <li class="select-title">2-3 Years</li>
+                        <li class="select-title">3 Years+</li>
+                    </ul>
+                    
+                    <div class="child-age-mobile  hidden-lg ">
+                        <span class="select-title">Ages</span>
+                        <div class="select-input">
+                            <select>
+                                <option value="">0-6 Months</option>
+                            </select>
+                        </div>
+                    </div>
+                    
                </div> 
-                <div class="container">
-                    <figure>
+                <div class="container child-detail">
+                    <figure class="img-child">
                         <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
                     </figure>
-                    <p>
+                    <p class="month-detail">
                         During the first six months, your babies grow up and develop their skills very quickly. 
                         Parents can obviously observe from when babies develop their physical development, 
                         especially their fine motor skills. This happens when they try to grab or hold objects. 
@@ -128,10 +720,10 @@
                     </p>
                 </div>
                 <div class="container-fluid child-action">
-                    <div class="action1">
+                    <div class="action1 hidden-sm hidden-xs">
                         <div class="row row-month">
                             <div class="font-rotate">
-                                <p>
+                                <p class="font-style">
                                     New Born                                
                                 </p> 
                             </div>
@@ -139,7 +731,7 @@
                                 <div class="thumbnail child-thumbnail">
                                     <img src="assets/images/icon/child_development/child-state1.png" class="img-responsive">
                                     <div class="caption">
-                                        <h3>Physical</h3>
+                                        <h3 class="text-style">Physical</h3>
                                     </div>
                                 </div>                                         
                             </div>
@@ -147,7 +739,7 @@
                                 <div class="thumbnail child-thumbnail">
                                     <img src="assets/images/icon/child_development/child-state2.png" class="img-responsive">
                                     <div class="caption">
-                                        <h3>Social & Emotional</h3>
+                                        <h3 class="text-style">Social & Emotional</h3>
                                     </div>
                                 </div>                                         
                             </div>
@@ -155,7 +747,7 @@
                                 <div class="thumbnail child-thumbnail">
                                     <img src="assets/images/icon/child_development/child-state3.png" class="img-responsive">
                                     <div class="caption">
-                                        <h3>Intellectual</h3>
+                                        <h3 class="text-style">Intellectual</h3>
                                     </div>
                                 </div>                                         
                             </div>
@@ -163,14 +755,14 @@
                                 <div class="thumbnail child-thumbnail">
                                     <img src="assets/images/icon/child_development/child-state4.png" class="img-responsive">
                                     <div class="caption">
-                                        <h3>Language</h3>
+                                        <h3 class="text-style">Language</h3>
                                     </div>
                                 </div>                                         
                             </div>    
                         </div>
                         <div class="row row-month">
                             <div class="font-rotate">
-                                <p>
+                                <p class="font-style">
                                     1 months                              
                                 </p> 
                             </div>
@@ -201,7 +793,7 @@
                         </div>
                         <div class="row row-month">
                             <div class="font-rotate">
-                                <p>
+                                <p class="font-style">
                                     2 months                              
                                 </p> 
                             </div>
@@ -232,7 +824,7 @@
                         </div>  
                         <div class="row row-month">
                             <div class="font-rotate">
-                                <p>
+                                <p class="font-style">
                                     3 months                              
                                 </p> 
                             </div>
@@ -257,101 +849,267 @@
                              <div class="col-md-3 child-container">
                                 <ul class="text-detail">
                                     <li>Move to take the form of general reflexes which involve the whole body</li>
-                                    <li>Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</li>
+                                    <li >Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</li>
                                 </ul>
                             </div>    
                         </div>
                     </div>
-                    <div class="action2 hidden">
+                    <div class="action2 hidden-lg hidden-md">
                         <div class="container">
                             <!-- <div class="is-text-align-center">
                                 <p>New Born</p>
                                 
                             </div> -->
                             <div data-accordion-group>
+                                <!-- new born -->
                                 <div class="accordion" data-accordion>
-                                    <div data-control>New Born</div>
+                                    <div data-control class="accordion-container">
+                                       <p class="font-style is-text-align-center">New Born</p> 
+                                    </div>
                                     <div data-content>
                                          <!-- Carousel hero -->
                                         <div class="your-class">
                                             <div class="thumbnail child-thumbnai">
                                                 <img src="assets/images/icon/child_development/child-state1.png" class="img-responsive">
                                                 <div class="caption">
-                                                    <h3>Physical</h3>
+                                                    <h3 class="text-style">Physical</h3>
                                                     <div class="row">
-                                                        <div class="col-xs-6">
-                                                            <p>• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
                                                         </div>
-                                                        <div class="col-xs-6">                                                                                                                       
-                                                            <p>• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div> 
-                                            <div>your content</div>
-                                            <div>your content</div>
-                                            <div>your content</div>
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state2.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3 class="text-style">Social & Emotional</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state3.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3 class="text-style">Intellectual</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state4.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3 class="text-style">Language</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
                                         </div>
                                     </div>
                                 </div>
-
-                                 <div class="accordion" data-accordion>
-                                    <div data-control>Control2</div>
+                                <!-- 1 month -->
+                                <div class="accordion" data-accordion>
+                                    <div data-control class="accordion-container">
+                                       <p class="font-style is-text-align-center">1 month</p> 
+                                    </div>
                                     <div data-content>
                                          <!-- Carousel hero -->
                                         <div class="your-class">
-                                            <div>your content</div>
-                                            <div>your content</div>
-                                            <div>your content</div>
-                                            <div>your content</div>
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state1.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3 class="text-style">Physical</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state2.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3 class="text-style">Social & Emotional</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state3.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3 class="text-style">Intellectual</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state4.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3 class="text-style">Language</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
                                         </div>
                                     </div>
                                 </div>
-
+                                <!-- 3 month-->
+                                <div class="accordion" data-accordion>
+                                    <div data-control class="accordion-container">
+                                       <p class="font-style is-text-align-center">3 month</p> 
+                                    </div>
+                                    <div data-content>
+                                         <!-- Carousel hero -->
+                                        <div class="your-class">
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state1.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3 class="text-style">Physical</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state2.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3 class="text-style">Social & Emotional</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state3.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3 class="text-style">Intellectual</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="thumbnail child-thumbnai">
+                                                <img src="assets/images/icon/child_development/child-state4.png" class="img-responsive">
+                                                <div class="caption">
+                                                    <h3 class="text-style">Language</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <p class="thumb-text-detail is-text-align-left">• Move to take the form of general reflexes which involve the whole body</p>                               
+                                                        </div>
+                                                        <div class="col-md-6">                                                                                                                       
+                                                            <p class="thumb-text-detail is-text-align-left">• Can't use their eyes in tandem, so they may have wandered randomly or even crossed now and then.</p>                                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>                              
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div>
-                        <h1>Toys for new born to 6 months</h1>
-                        <figure>
-                            <img src="" alt="">
-                        </figure>
-                        <div class="row" style="display:flex;flex-wrap:wrap">
-                            <div class="col-md-6 col-xs-12">
-                                <p>Visual Stimulation: </p>
-                                <p>
-                                    • Encourage your babies to focus on objects and stimulate 
-                                    their vision development like mobiles and baby gym 
-                                </p>
-                            </div>
-                            <div class="col-md-6 col-xs-12">
-                                <p>Motor Stimulation:</p>
-                                <p>
-                                    • Help your babies use for batting, grasping and kicking 
-                                    such as mobiles and baby gyms
-                                </p>
-                            </div>
-                            <div class="col-md-6 col-xs-12">
-                                <p>Auditory Stimulation:</p>
-                                <p>
-                                    • Soothe your babies with gentle sounds using music 
-                                    boxes or rattles irrors
-                                </p>
-                            </div>
-                            <div class="col-md-6 col-xs-12">
-                                <p>Intellectual Stimulation:</p>
-                                <p>
-                                    • Grab your babies’ attention in looking at pictures and 
-                                    listening to other people tell story through using floating 
-                                    baby book or photos book with vivid colors
-                                    • Encourage you babies to learn about themselves and 
-                                    surroundings such as unbreakable safety mirrors
-                                </p>
-                            </div>
+                <div class="container segment-toy">
+                    <div class="header-component is-text-align-center">
+                        <h1 class="text-header">Toys for new born to 6 months</h1>
+                    </div>
+                    <figure class="img-newborn">
+                        <img src="assets/images/icon/child_development/action-newborn.png">
+                    </figure>
+                    <div class="row toy-detail">
+                        <div class="col-md-6 col-xs-12">
+                            <p class="text-header">Visual Stimulation: </p>
+                            <p class="text-detail">
+                                • Encourage your babies to focus on objects and stimulate 
+                                their vision development like mobiles and baby gym 
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <p class="text-header">Motor Stimulation:</p>
+                            <p class="text-detail">
+                                • Help your babies use for batting, grasping and kicking 
+                                such as mobiles and baby gyms
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <p class="text-header">Auditory Stimulation:</p>
+                            <p class="text-detail">
+                                • Soothe your babies with gentle sounds using music 
+                                boxes or rattles irrors
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <p class="text-header">Intellectual Stimulation:</p>
+                            <p class="text-detail">
+                                • Grab your babies’ attention in looking at pictures and 
+                                listening to other people tell story through using floating 
+                                baby book or photos book with vivid colors
+                             
+                            </p>
+                            <p class="text-detail">
+                                • Encourage you babies to learn about themselves and 
+                                surroundings such as unbreakable safety mirrors
+                            </p>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="container-fluid">
                     
@@ -608,5 +1366,4 @@
             });
     </script>
 </body>
-
 </html>

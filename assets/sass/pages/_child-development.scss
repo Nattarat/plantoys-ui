@@ -20,11 +20,12 @@
     
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
- 
+    margin-top: 125px;
+
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-header{
-        @include text-header($text-header-margin-top:30px);
+        @include text-header($text-header-margin-top:30px,$text-header-color:$color-brown-dark,$text-sub-color:$color-brown-dark);
     }    
 
     // STYLES OF STATE
@@ -63,18 +64,18 @@
     background-image:  url('#{path-file(images)}/content/child_development/child-blue-wood.jpg') ;
     background-size: cover;
     background-repeat: repeat-x;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .child-age{
-        display: flex;
-        height: 100%;
-        align-items: center;
-        justify-content: space-between;
+    .child-age{     
+        @include select-form-group($form-group-align:space-between,$label-color:$color-white);
     }
-    .news-select {
-        @include select-form-group($form-group-align:flex-end);
-    }
+   .child-age-mobile{
+        @include select-form-group($form-group-align:center,$label-color:$color-white);
+   }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -125,6 +126,57 @@
     }
     .text-detail{
         list-style-type: disc;
+        li{
+            font-family: font-family(secondary);
+            font-size: 22px;
+            color: $color-dark-slate-gray;
+        }
+    }
+ 
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+
+// month detail
+// ------------------------------------------------
+.child-detail {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    padding: 30px;
+ 
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .img-child{
+        max-width: 670px;
+        margin: auto;
+    }
+    .month-detail{
+        font-family: font-family(primary);
+        font-size: 33px;
+        color: $color-grey-light;
     }
  
     // STYLES OF STATE
@@ -180,17 +232,140 @@
                 width: 64px;
                 display: flex;
                 align-items: center;          
-                p{
+                .font-style{
                     transform: rotate(-90deg);
                     width: 100vw;
+                    font-family: font-family(tertiary);
+                    font-size: 22px;
                 }
             }
     }
     .action2{
+        .accordion{
+            &:not(:first-child){
+                margin-top: 5px;
+            }
+        }
+        .accordion-container{
+            background: $color-blue-light-20;
+            .font-style{                    
+                font-family: font-family(tertiary);
+                font-size: 33px;
+            }
+        }
         .child-thumbnai{
-            @include thumb-nail;
+            @include thumb-nail($thumb-padding:30px);
+        }
+       
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+
+// segment-toy
+// ------------------------------------------------
+.segment-toy {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+   
+    
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    padding: 30px;
+ 
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .header-component{
+        background: $color-blue-light-20;
+        border-radius: 7px;
+        max-width: 1050px;
+        padding: 10px 0px;
+        .text-header{
+            font-family: font-family(primary);
+            font-size: 33px;
         }
     }
+    .img-newborn{
+        margin: auto;
+        max-width: 585px;
+        padding: 30px;
+    }
+    .toy-detail{
+        border-top-style: dotted;
+        border-width: 5px;
+        border-color: $color-dot-blue;
+        display:flex;
+        flex-wrap:wrap;
+        padding: 30px;
+        .text-header{
+            font-family: font-family(primary);
+            font-size: 25px;
+            color: $color-dot-blue;
+        }
+        .text-detail{
+            font-family: font-family(secondary);
+            font-size: 25px;
+            color: $color-grey-menu;
+        }
+    }
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// segment-toy
+// ------------------------------------------------
+.toy-detailsd {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+   
+    
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    
+ 
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
