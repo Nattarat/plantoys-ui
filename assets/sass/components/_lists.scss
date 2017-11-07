@@ -524,3 +524,101 @@
 // IE
 // Safari
 // Firefox
+
+// About icon
+// ------------------------------------------------
+.list-whoweare {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include list-variant(
+        $list-display: flex,
+        $list-padding: 0,
+        $list-margin: 0,
+
+        // List item
+        $list-item-display: inline-block,
+        $list-item-padding: 0 20px,
+        $list-item-margin: 0
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        width: 14.2%;
+    }
+
+    .list-link {
+        position: relative;
+        display: block;
+        cursor: default;
+    }
+
+    .list-link {
+        &:hover {
+            .list-icon {
+                &.is-inactive {
+                    opacity: 0.5;
+                }
+
+                &.is-active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .list-icon {
+        @include transition(opacity .5s ease);
+
+        &.is-inactive {
+            opacity: 1;
+        }
+
+        &.is-active {
+            opacity: 0;
+            position: absolute;
+            z-index: zindex(lv1);
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            width: 33.33%;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

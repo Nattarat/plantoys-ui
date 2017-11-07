@@ -161,11 +161,57 @@
         padding-top: 45px;
     }
 
+    &.is-description {
+        @include transition(height .5s ease);
+        min-height: 180px;
+
+        .description {
+            display: none;
+        }
+    }
+
+    &.is-icon,
+    &.is-description {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-introduction,
+    &.is-icon,
+    &.is-description {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-lg)) {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+
+    &.is-description {
+        @media (min-width: 1024px) {
+            min-height: 300px;
+        }
+
+        @media (min-width: 1280px) {
+            min-height: 270px;
+        }
+
+        @media (min-width: 1600px) {
+            min-height: 240px;
+        }
+
+        @media (min-width: 1800px) {
+            min-height: 210px;
+        }
+    }
 }
 
 // Browser variations
@@ -203,17 +249,119 @@
         &:before {
             background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material.jpg');
         }
+
+        &[data-cover=cover-1] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-2] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-3] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-4] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-5] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-6] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-7] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
     }
 
     &.is-manufacturing {
         &:before {
             background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing.jpg');
         }
+
+        &[data-cover=cover-1] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-2] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-3] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-4] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-5] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
     }
 
     &.is-mind {
         &:before {
             background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind.jpg');
+        }
+
+        &[data-cover=cover-1] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-2] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-3] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-4] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-5] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
         }
     }
 
