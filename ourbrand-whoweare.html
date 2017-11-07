@@ -35,7 +35,8 @@
 
     <!-- Plantoys style -->
     <link rel="stylesheet" type="text/css" href="../assets/css/reset.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="../assets/js/tabs/tabs.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick-theme.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" media="all" />
 
     <script type="text/javascript" src="http://ptoys.maywz.info/js/prototype/prototype.js"></script>
@@ -139,6 +140,25 @@
             </div>
 
             <!-- Sustainable Material -->
+            <div id="carousel-sustainable-material-image" class="carousel-sustainable is-arrow-inner is-control-fix-size is-pagination-over-carousel for-hero-banner">
+                <div class="carousel-item">
+                    <div class="carousel-image is-border-none">
+                        <img class="carousel-image-item" src="../assets/images/background/about/about-sustainable-material.jpg" alt="Sustainable Material">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image is-border-none">
+                        <img class="carousel-image-item" src="../assets/images/background/about/about-sustainable-material_20171024.jpg" alt="Sustainable Material">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!--
             <div class="container-content is-fluid">
                 <div class="about-segment">
                     <div class="about-cover is-material">
@@ -151,6 +171,10 @@
             <p class="text-title is-tabs-mobile is-green-light is-text-align-center">
                 “We always make sure to use the best of the natural resources and create only minimum to zero waste.”
             </p>
+            -->
+
+
+            <!--
             <div class="tabs-icon is-material">
                 <div class="tabs">
                     <div class="tab">
@@ -253,6 +277,7 @@
                     </div>
                 </div>
             </div>
+            -->
 
             <!-- Sustainable Manufacturing -->
             <div class="container-content is-fluid">
@@ -441,10 +466,56 @@
     </div>
 
     <!-- Plantoys javascript -->
-    <script type="text/javascript" src="../assets/js/tabs/tabs.js"></script>
+    <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
     <script type="text/javascript">
         $j(function() {
-            // Script...
+            // Category
+            $j('#carousel-sustainable-material-image').slick({
+                dots: false,
+                arrows: false
+            });
+            $j('#carousel-sustainable-material-icon').slick({
+                dots: false,
+                slidesToShow: 7,
+                slidesToScroll: 7
+            });
+            $j('#carousel-sustainable-material-description').slick({
+                dots: false
+            });
+
+
+
+
+
+            // Category
+            // $j('.carousel-category').slick({
+            //     dots: false,
+            //     slidesToShow: 6,
+            //     slidesToScroll: 6,
+            //     responsive: [
+            //         {
+            //             breakpoint: 1025,
+            //             settings: {
+            //                 slidesToShow: 4,
+            //                 slidesToScroll: 4
+            //             }
+            //         },
+            //         {
+            //             breakpoint: 768,
+            //             settings: {
+            //                 slidesToShow: 3,
+            //                 slidesToScroll: 3
+            //             }
+            //         },
+            //         {
+            //             breakpoint: 480,
+            //             settings: {
+            //                 slidesToShow: 1,
+            //                 slidesToScroll: 1
+            //             }
+            //         }
+            //     ]
+            // });
         });
     </script>
 </body>
