@@ -447,7 +447,7 @@
         top: 100px;
         bottom: 100px;
         left: 50%;
-        display: block;
+        display: none;
         width: 4px;
         margin-left: -2px;
         background: url('#{path-file(images)}/content/about/road-line.png') repeat-y;
@@ -609,6 +609,7 @@
     @media screen and (max-width: screen(phablet-lg-max)) {
         text-align: center;
 
+        &:before,
         &:after {
             display: block;
         }

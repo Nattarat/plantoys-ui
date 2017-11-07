@@ -101,6 +101,11 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.page-header {
+        padding-bottom: 0;
+        margin: 0;
+        border-bottom: 0;
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

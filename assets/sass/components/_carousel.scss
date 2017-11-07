@@ -54,6 +54,7 @@
 
         &.is-border-none {
             border-width: 0;
+            border-radius: 0;
         }
 
         &.is-cover {
@@ -366,6 +367,11 @@
             }
         }
     }
+}
+
+// Fix layout after integrate with Magento
+.carousel-hero {
+    margin-top: -125px;
 }
 
 // Browser variations
