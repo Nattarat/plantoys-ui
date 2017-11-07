@@ -161,6 +161,20 @@
         padding-top: 45px;
     }
 
+    &.is-description {
+        @include transition(height .5s ease);
+
+        .description {
+            display: none;
+        }
+    }
+
+    &.is-icon,
+    &.is-description {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -203,17 +217,119 @@
         &:before {
             background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material.jpg');
         }
+
+        &[data-cover=cover-1] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-2] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-3] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-4] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-5] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-6] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-7] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
     }
 
     &.is-manufacturing {
         &:before {
             background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing.jpg');
         }
+
+        &[data-cover=cover-1] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-2] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-3] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-4] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-5] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
     }
 
     &.is-mind {
         &:before {
             background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind.jpg');
+        }
+
+        &[data-cover=cover-1] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-2] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-3] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-4] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+            }
+        }
+
+        &[data-cover=cover-5] {
+            &:before {
+                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+            }
         }
     }
 
