@@ -32,7 +32,8 @@
 // Layouts
 // ==================================================================================================
 @import 'layouts/footer';
-// @import 'layouts/sidebar';
+@import 'layouts/navigation';
+@import 'layouts/sidebar';
 @import 'layouts/topbar';
 
 // Components
@@ -52,6 +53,7 @@
 @import 'components/tabs';
 @import 'components/carousel';
 @import 'components/lightgallery';
+@import 'components/modals';
 
 // Pages
 // ==================================================================================================

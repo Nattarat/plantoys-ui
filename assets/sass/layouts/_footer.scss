@@ -84,6 +84,60 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .footer-subscribe {
+        @media screen and (max-width: screen(phablet-sm-max)) {
+            padding-right: 0;
+        }
+
+        .footer-subscribe-toy {
+            @media screen and (max-width: screen(phablet-sm-max)) {
+                position: static;
+                margin: auto auto 30px auto;
+            }
+        }
+
+        .footer-subscribe-title {
+            @media screen and (max-width: screen(phablet-sm-max)) {
+                padding-right: 0;
+            }
+        }
+
+        .footer-subscribe-description {
+            @media screen and (max-width: screen(phablet-sm-max)) {
+                padding-right: 0;
+            }
+
+            @media screen and (max-width: screen(tablet-sm-max)) {
+                margin-bottom: 60px;
+            }
+        }
+
+        .footer-subscribe-form {
+            @media screen and (max-width: screen(mobile-md-max)) {
+                padding-right: 0;
+                margin-right: 0;
+            }
+
+            @media (min-width: screen(mobile-lg)) and (max-width: screen(phablet-sm-max)) {
+                margin-right: 0;
+            }
+
+            @media screen and (max-width: screen(tablet-sm-max)) {
+                margin-bottom: 60px;
+            }
+
+            @media (min-width: screen(tablet-md)) and (max-width: screen(labtop-md-max)) {
+                margin-right: 0;
+            }
+        }
+
+        .footer-subscribe-button {
+            @media screen and (max-width: screen(mobile-md-max)) {
+                position: static;
+                margin-top: 15px;
+            }
+        }
+    }
 }
 
 // Browser variations
