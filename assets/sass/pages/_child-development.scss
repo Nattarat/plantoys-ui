@@ -227,12 +227,16 @@
                 &:nth-child(odd){
                     background: $color-blue-light;
                 }
-            }
+            }   
             .font-rotate{    
                 width: 64px;
                 display: flex;
                 align-items: center;    
-                position: relative;      
+                position: relative; 
+                &.is-dot{
+                    background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
+                    background-repeat: repeat-x;
+                }
                 .font-style{               
                     // width: 100vw;
                     font-family: font-family(tertiary);
@@ -242,6 +246,14 @@
                     // height: 100%;
                     transform: rotate(-180deg);
                     writing-mode: vertical-rl;
+                }
+                .dot{
+                    background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
+                    background-size: cover;
+                    background-repeat: repeat-x;
+                    // width: 20px;
+                    height: 100%;
+                   
                 }
             }
     }
