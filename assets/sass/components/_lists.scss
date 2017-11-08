@@ -422,6 +422,22 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-footer {
+        width: auto;
+        min-height: initial;
+        padding: 0;
+
+        .list-item {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
     &.is-navigation-lv2,
     &.is-navigation-lv3 {
         @include transition(all .5s ease);
@@ -477,6 +493,24 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-footer {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .list-item {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                display: block;
+                margin-right: 0;
+                text-align: center;
+
+                &:first-child {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
 }
 
 // Browser variations

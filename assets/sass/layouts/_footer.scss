@@ -18,7 +18,6 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     padding-top: 70px;
-    padding-bottom: 45px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -71,6 +70,18 @@
             top: -35px;
             right: 25px;
         }
+    }
+
+    .footer-copyright {
+        padding: 20px 0;
+        margin-top: 45px;
+        background-color: $color-gray-10;
+    }
+
+    .footer-copyright-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     // STYLES OF STATE
@@ -133,6 +144,12 @@
                 position: static;
                 margin-top: 15px;
             }
+        }
+    }
+
+    .footer-copyright-inner {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            flex-direction: column;
         }
     }
 }
