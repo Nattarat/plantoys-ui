@@ -353,3 +353,59 @@
 // IE
 // Safari
 // Firefox
+
+// segment-toy
+// ------------------------------------------------
+.child-carousel {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+   
+    
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+   
+ 
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .carousel-item{
+        padding: 30px 0px;
+        &:nth-child(odd){
+            border: 1px solid $color-slate-gray-light-10;
+        }
+    }
+    .carousel-link{
+        text-decoration: none;
+    }
+    .child-text-carousel{
+        font-family: font-family(primary);
+        font-size: 1.67vw;
+        line-height: 1.5;
+        color: $color-black;
+   
+    }
+   .child-text-price{
+        color: $color-grey;
+   }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
