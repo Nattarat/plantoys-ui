@@ -371,10 +371,8 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .carousel-item{
-        padding: 30px 0px;
-        &:nth-child(odd){
-            border: 1px solid $color-slate-gray-light-10;
-        }
+        padding: 30px 0px; 
+        border: 1px solid $color-slate-gray-light-10;
     }
     .carousel-link{
         text-decoration: none;

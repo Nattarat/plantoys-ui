@@ -1258,21 +1258,20 @@
         });
     </script> -->
     <script src="../assets/js/jquery_accordion/jquery-accordion.js"></script>
-    <script>
-        $j('.accordion').accordion({
-            "transitionSpeed": 400
-        });
-    </script>
     <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
     <script>
-     $j(document).ready(function(){
-        $j('.your-class').slick({
-          dots:true
-        });
-      });
-    </script>
-    <script>
-        $j('.carousel-category').slick({
+        $j(function() {
+            // Accordion
+            $j('.accordion').accordion({
+                "transitionSpeed": 400
+            });
+            $j(document).ready(function(){
+                $j('.your-class').slick({
+                dots:true
+                });
+            });
+            // Carousel
+            $j('.carousel-category').slick({
                 dots: false,
                 slidesToShow: 5,
                 slidesToScroll: 5,
@@ -1300,6 +1299,8 @@
                     }
                 ]
             });
+        })
+        
     </script>
 </body>
 </html>
