@@ -506,8 +506,8 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    overflow: auto;
-    max-height: calc(100vh - 549px);
+    // overflow: auto;
+    // max-height: calc(100vh - 549px);
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -525,7 +525,8 @@
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.in-balloon {
-        max-height: calc(100vh - 700px);
+        // max-height: calc(100vh - 700px);
+        max-height: initial;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

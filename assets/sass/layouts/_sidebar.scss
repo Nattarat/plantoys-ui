@@ -129,6 +129,12 @@ body {
         }
     }
 
+    .cart-container-scroll {
+        overflow: auto;
+        max-height: calc(100vh - 350px);
+        padding-bottom: 134px;
+    }
+
     .cart-notice {
         padding: 10px;
         background-color: $color-green-5;
@@ -149,10 +155,11 @@ body {
         padding: 30px 40px;
         background-color: $color-white;
         border-top: 1px solid $color-gray-5;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
 
         &.in-balloon {
             position: static;
-            background-color: transparent;
         }
     }
 
@@ -175,7 +182,7 @@ body {
         margin-bottom: 15px;
 
         &.is-result-last {
-            margin-bottom: 30px;
+            margin-bottom: 0;
         }
     }
 
