@@ -16,7 +16,7 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @include container-header($container-background:url('#{path-file(images)}/background/child_development/child_development.jpg'));
+    @include container-header($container-padding: 0px 40px,$container-background:url('#{path-file(images)}/background/child_development/child_development.jpg'));
     
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -25,7 +25,7 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-header{
-        @include text-header($text-header-margin-top:30px,$text-header-color:$color-brown-dark,$text-sub-color:$color-brown-dark);
+        @include text-header($text-header-margin-top:-90px,$text-header-color:$color-brown-dark,$text-sub-color:$color-brown-dark);
     }    
 
     // STYLES OF STATE
@@ -60,7 +60,7 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     height: 100px;
-    padding: 0px 50px;
+    padding: 0px 150px;
     background-image:  url('#{path-file(images)}/content/child_development/child-blue-wood.jpg') ;
     background-size: cover;
     background-repeat: repeat-x;
@@ -101,36 +101,31 @@
     }
 }
 
-// child row
+// month detail
 // ------------------------------------------------
-@mixin child-content {
+.child-detail {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-   
     
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    // background: green;
-    padding: 30px;
-    border-left-style: dotted;
-    border-width: 5px;
-    border-color: $color-dot-blue;
+    max-width: 1477px;
+    margin: auto;
+    padding: 22px 30px 52px 30px;
  
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .child-thumbnail{
-        @include thumb-nail;
+    .img-child{
+        max-width: 670px;
+        margin: auto;
     }
-    .text-detail{
-        list-style-type: disc;
-        li{
-            font-family: font-family(secondary);
-            font-size: 22px;
-            color: $color-dark-slate-gray;
-        }
+    .month-detail{
+        font-family: font-family(primary);
+        font-size: 33px;
+        color: $color-grey-light;
     }
  
     // STYLES OF STATE
@@ -152,31 +147,49 @@
 // IE
 // Safari
 // Firefox
-
-
-// month detail
+// child row
 // ------------------------------------------------
-.child-detail {
+@mixin child-content(
+    $child-padding: 30px
+) {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
+   
     
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    padding: 30px;
- 
+    padding: $child-padding;
+    // border-left-style: dotted;
+    // border-width: 5px;
+    // border-color: $color-dot-blue;
+    border-left: 10px solid transparent;
+    border-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
+    border-image-slice: 20 22;
+    border-image-repeat: round;
+    &.not-border{
+        border: none;
+    }
+
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .img-child{
-        max-width: 670px;
-        margin: auto;
+    .child-thumbnail{
+        @include thumb-nail;
     }
-    .month-detail{
-        font-family: font-family(primary);
-        font-size: 33px;
-        color: $color-grey-light;
+    .text-detail{
+        list-style-type: disc;
+        li{
+            font-family: font-family(secondary);
+            font-size: 25px;
+            color: $color-dark-slate-gray;
+            &.is-space-li{
+                &:not(:first-child){
+                    margin-top: 27px;
+                }
+            }
+        }
     }
  
     // STYLES OF STATE
@@ -218,42 +231,47 @@
     .action1{
             .row-month{
                 display: flex;
-                .child-container{
-                    @include child-content(); 
-                }   
-                &:not(:first-child){
-                    padding: 20px 0px;
+                padding: 36px 0px;
+                &.not-padding{
+                    padding: 0px 0px;
                 }
                 &:nth-child(odd){
                     background: $color-blue-light;
+                    .font-rotate{     
+                        background: $color-blue-light-10;     
+                        &.is-dot{
+                            background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
+                            background-repeat: repeat-x;
+                        }
+                    }
                 }
+                &:nth-child(even){
+                    .font-rotate{
+                        background: $color-dark-blue;
+                    }
+                }
+                .child-container{
+                    &.is-head{
+                        @include child-content($child-padding: 22px); 
+                    }
+                    &.is-detail{
+                        @include child-content($child-padding: 36px 62px); 
+                    }
+                }   
             }   
             .font-rotate{    
                 width: 64px;
                 display: flex;
                 align-items: center;    
-                position: relative; 
-                &.is-dot{
-                    background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
-                    background-repeat: repeat-x;
+                position: relative;
+                &.not-padding{
+                    margin: -36px 0px;
                 }
                 .font-style{               
-                    // width: 100vw;
                     font-family: font-family(tertiary);
-                    font-size: 33px;
-                    // position: absolute;
-                    // width: 100%;
-                    // height: 100%;
+                    font-size: 44px;
                     transform: rotate(-180deg);
                     writing-mode: vertical-rl;
-                }
-                .dot{
-                    background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
-                    background-size: cover;
-                    background-repeat: repeat-x;
-                    // width: 20px;
-                    height: 100%;
-                   
                 }
             }
     }
@@ -267,7 +285,7 @@
             background: $color-blue-light-20;
             .font-style{                    
                 font-family: font-family(tertiary);
-                font-size: 33px;
+                font-size: 44px;
             }
         }
         .child-thumbnai{
@@ -309,24 +327,27 @@
     
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    padding: 30px;
+    padding: 84px;
  
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .header-component{
-        background: $color-blue-light-20;
-        border-radius: 7px;
-        max-width: 1050px;
-        padding: 10px 0px;
         .text-header{
-            font-family: font-family(primary);
-            font-size: 33px;
+            margin: auto;
+            background: $color-blue-light-20;
+            border-radius: 7px;
+            width: fit-content;
+            padding: 0px 27px;
+            color: $color-dark-slate-gray;
+            text-transform: none;
+            font-family: font-family(tertiary);
+            font-size: 53px;   
         }
     }
     .img-newborn{
         margin: auto;
         max-width: 585px;
-        padding: 30px;
+        padding: 37px;
     }
     .toy-detail{
         border-top-style: dotted;
@@ -334,7 +355,7 @@
         border-color: $color-dot-blue;
         display:flex;
         flex-wrap:wrap;
-        padding: 30px;
+        padding: 22px 0px 0px 0px;
         .text-header{
             font-family: font-family(primary);
             font-size: 25px;
@@ -344,6 +365,9 @@
             font-family: font-family(secondary);
             font-size: 25px;
             color: $color-grey-menu;
+        }
+        .is-space-toy-detail{
+            margin-bottom: 22px;
         }
     }
     // STYLES OF STATE
@@ -379,7 +403,6 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
    
- 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .carousel-item{
@@ -391,7 +414,7 @@
     }
     .child-text-carousel{
         font-family: font-family(primary);
-        font-size: 22px;
+        font-size: 25px;
         line-height: 1.5;
         color: $color-black;
    
