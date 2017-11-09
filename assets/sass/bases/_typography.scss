@@ -193,6 +193,45 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(labtop-lg)) {
+        font-size: $text-font-size * 0.7;
+    }
+
+    &.is-extra-small {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-secondary-size(size-8) * 0.7; // 12px
+        }
+    }
+
+    &.is-middle-small {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-secondary-size(size-11) * 0.7; // 18px
+        }
+    }
+
+    &.is-small {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-secondary-size(size-4) * 0.7; // 20px
+        }
+    }
+
+    &.is-medium {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-secondary-size(size-2) * 0.7; // 24px
+        }
+    }
+
+    &.is-large {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-secondary-size(size-9) * 0.7; // 32px
+        }
+    }
+
+    &.is-extra-large {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-secondary-size(size-6) * 0.7; // 48px
+        }
+    }
 }
 
 // Browser variations
@@ -227,6 +266,9 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-trademark {
         font-size: 0.625vw; // 12px
+        position: absolute;
+        top: 0;
+        left: 100%;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -292,6 +334,14 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-introduction,
+    &.is-tabs,
+    &.is-tabs-mobile {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-primary-size(size-9) * 0.7;
+        }
+    }
+
     &.is-tabs {
         @media screen and (max-width: screen(phablet-lg-max)) {
             display: none;
@@ -301,6 +351,12 @@
     &.is-tabs-mobile {
         @media screen and (max-width: screen(phablet-lg-max)) {
             display: block;
+        }
+    }
+
+    &.is-cover {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-primary-size(size-1) * 0.7;
         }
     }
 }
@@ -352,6 +408,7 @@
     }
 
     &.is-title-icon {
+        position: relative;
         font-family: font-family(primary);
         font-size: 1.67vw; // font-primary-size(size-9) = 32px
         line-height: 1.5;
@@ -533,6 +590,16 @@
     @media screen and (max-width: screen(phablet-lg-max)) {
         padding-top: 15px;
         padding-bottom: 15px;
+    }
+
+    @media screen and (max-width: screen(labtop-lg)) {
+        font-size: font-secondary-size(size-3) * 0.7;
+    }
+
+    &.is-active {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-secondary-size(size-9) * 0.7;
+        }
     }
 }
 

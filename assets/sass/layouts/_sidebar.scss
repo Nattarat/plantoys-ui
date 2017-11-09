@@ -131,8 +131,8 @@ body {
 
     .cart-container-scroll {
         overflow: auto;
-        max-height: calc(100vh - 350px);
-        padding-bottom: 134px;
+        max-height: calc(100vh - 484px);
+        margin-bottom: 134px;
     }
 
     .cart-notice {
@@ -197,6 +197,12 @@ body {
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .cart-container-scroll {
+        @media screen and (max-width: screen(labtop-lg)) {
+            max-height: calc(100vh - 425px);
+            margin-bottom: 112px;
+        }
+    }
 }
 
 // Browser variations

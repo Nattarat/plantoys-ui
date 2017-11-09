@@ -29,8 +29,21 @@
 </a>
 */
 
+// Global button variables
+// ==================================================================================================
+$button-height-deault: 73px;
+$button-padding-side-deault: 45px;
+
 // Mixins
 // ==================================================================================================
+@mixin button-size-scale-down() {
+    @media screen and (max-width: screen(labtop-lg)) {
+        height: $button-height-deault * 0.7;
+        padding-left: $button-padding-side-deault * 0.7;
+        padding-right: $button-padding-side-deault * 0.7;
+    }
+}
+
 @mixin button-variant(
     // Body
     $button-width: 150px,
@@ -167,6 +180,21 @@
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .button-text {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: $button-text-font-size * 0.7;
+        }
+
+
+        &.is-small {
+            @media screen and (max-width: screen(labtop-lg)) {
+                font-size: font-primary-size(size-5) * 0.7;
+            }
+        }
+    }
 }
 
 // Browser variations
@@ -186,7 +214,10 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @include button-variant;
+    @include button-variant(
+        $button-height: $button-height-deault
+    );
+    @include button-size-scale-down;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -230,6 +261,7 @@
         $button-background-color-hover: color-button(primary-light-hover),
         $button-border-color-hover: color-button(primary-light-hover)
     );
+    @include button-size-scale-down;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -273,6 +305,7 @@
         $button-background-color-hover: color-button(secondary-hover),
         $button-border-color-hover: color-button(secondary-hover)
     );
+    @include button-size-scale-down;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -317,6 +350,7 @@
         $button-border-width-hover: 0,
         $button-border-color-hover: transparent
     );
+    @include button-size-scale-down;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -419,6 +453,12 @@
         }
     }
 
+    .button-text {
+        &.is-normal {
+            font-family: font-family(secondary);
+        }
+    }
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -430,6 +470,11 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .button-text {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-primary-size(size-4) * 0.7;
+        }
+    }
 }
 
 // Circle

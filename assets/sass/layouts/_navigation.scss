@@ -73,7 +73,7 @@
 
         &:before {
             left: initial;
-            right: 215px;
+            right: 207px;
         }
     }
 
@@ -82,6 +82,11 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-menu-cart {
+        @media screen and (max-width: screen(labtop-lg)) {
+            max-width: 550px;
+        }
+    }
 }
 
 // Browser variations

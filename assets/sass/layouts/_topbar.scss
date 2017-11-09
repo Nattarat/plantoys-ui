@@ -116,6 +116,24 @@
         padding-left: 25px;
         padding-right: 25px;
     }
+
+    .icon-hamburger {
+        span,
+        &:before,
+        &:after {
+            @media screen and (max-width: screen(labtop-lg)) {
+                height: 2px;
+                border-radius: 1px;
+            }
+        }
+
+        span,
+        &:before {
+            @media screen and (max-width: screen(labtop-lg)) {
+                margin-bottom: 5px;
+            }
+        }
+    }
 }
 
 // Browser variations

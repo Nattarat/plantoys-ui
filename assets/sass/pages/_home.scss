@@ -318,9 +318,8 @@
     }
 
     .aligator {
-        @include transition(transform 1s animation-timing(smooth), opacity 0.7s animation-timing(smooth) .3s);
+        @include transition(transform 1s animation-timing(smooth));
         @include translate(-100%, 0);
-        opacity: 0;
         position: absolute;
         z-index: zindex(lv1);
         bottom: 0;
@@ -334,7 +333,6 @@
     &.aos-animate {
         .aligator {
             @include translate(-29%, 0);
-            opacity: 1;
         }
     }
 

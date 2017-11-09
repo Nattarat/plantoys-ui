@@ -11,6 +11,10 @@
 
 @charset 'utf-8';
 
+.main-container {
+    margin-bottom: 0;
+}
+
 // Mixins
 // ==================================================================================================
 @mixin container-variant(

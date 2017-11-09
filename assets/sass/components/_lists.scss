@@ -316,7 +316,8 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     width: $navigation-width-lv1;
-    min-height: 730px;
+    min-height: calc(100vh - 155px); // 730px
+    max-height: 730px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -414,7 +415,7 @@
 
     .list-button-collapse {
         display: block;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     // STYLES OF STATE
@@ -493,6 +494,27 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-link {
+        &.is-icon-font {
+            @media screen and (max-width: screen(labtop-lg)) {
+                font-size: $font-size-2 * 0.7;
+            }
+
+            > img {
+                @media screen and (max-width: screen(labtop-lg)) {
+                    width: 70%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .list-icon {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: $font-size-3 * 0.7;
+        }
+    }
+
     &.is-footer {
         @media screen and (max-width: screen(phablet-lg-max)) {
             padding-top: 10px;
