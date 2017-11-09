@@ -126,7 +126,8 @@
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include container-variant(
-        $block-max-width: 1650px
+        $block-max-width: 1650px,
+        $block-padding: 0 50px
     );
 
     // STYLES OF COMPONENT ITSELF
@@ -146,6 +147,10 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(phablet-lg-max)) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
 
 // Browser variations
