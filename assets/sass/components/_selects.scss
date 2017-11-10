@@ -149,7 +149,7 @@
 .select-arrow {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
-    $select-padding-left: 15px;
+    $select-padding-left: 45px;
     $select-padding-right: 35px;
 
     // MIXINS
@@ -183,7 +183,11 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-country {
         width: auto;
-        min-width: 215px;
+        min-width: 260px;
+
+        select {
+            background: url('#{path-file(images)}/icon/icon-arrow-down-gray.png') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
+        }
     }
 
     &.is-transparent-background {
