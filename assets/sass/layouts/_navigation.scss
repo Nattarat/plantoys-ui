@@ -25,7 +25,7 @@
     z-index: 999;
     top: 125px;
     left: 30px;
-    width: 1150px;
+    width: 380px;
     background-color: $color-white;
     border-radius: 5px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); // Border triangle with shadow
@@ -55,12 +55,22 @@
         opacity: 1;
     }
 
+    &.is-expand-primary {
+        width: 760px;
+    }
+
+    &.is-expand-secondary {
+        width: 1150px;
+    }
+
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-menu-main {
     }
 
     &.is-menu-shop {
+        width: 1150px;
+
         &:before {
             left: 115px;
         }
@@ -69,6 +79,7 @@
     &.is-menu-cart {
         left: initial;
         right: 30px;
+        width: auto;
         max-width: 730px;
 
         &:before {
@@ -82,6 +93,24 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-expand-primary {
+        @media screen and (max-width: screen(labtop-lg)) {
+            width: 560px;
+        }
+    }
+
+    &.is-expand-secondary {
+        @media screen and (max-width: screen(labtop-lg)) {
+            width: 850px;
+        }
+    }
+
+    &.is-menu-shop {
+        @media screen and (max-width: screen(labtop-lg)) {
+            width: 850px;
+        }
+    }
+
     &.is-menu-cart {
         @media screen and (max-width: screen(labtop-lg)) {
             max-width: 550px;

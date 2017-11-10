@@ -300,6 +300,9 @@
     $navigation-width-lv1: 380px;
     $navigation-width-lv2: 380px; // 350px
     $navigation-width-lv3: 380px; // 490px
+    $navigation-width-small-lv1: 280px;
+    $navigation-width-small-lv2: 280px;
+    $navigation-width-small-lv3: 280px;
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -316,8 +319,9 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     width: $navigation-width-lv1;
-    min-height: calc(100vh - 155px); // 730px
-    max-height: 730px;
+    //min-height: calc(100vh - 155px); // 730px
+    // max-height: 730px;
+    min-height: 645px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -494,6 +498,47 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(labtop-lg)) {
+        width: $navigation-width-small-lv1;
+        min-height: 510px;
+    }
+
+    .list-item {
+        &.is-social-link {
+            @media screen and (max-width: screen(labtop-lg)) {
+                width: calc(#{$navigation-width-small-lv1} - 60px);
+            }
+        }
+    }
+
+    &.is-navigation-lv2 {
+        @media screen and (max-width: screen(labtop-lg)) {
+            left: $navigation-width-small-lv1;
+            width: $navigation-width-small-lv2;
+        }
+    }
+
+    &.is-navigation-lv3 {
+        @media screen and (max-width: screen(labtop-lg)) {
+            left: $navigation-width-small-lv2;
+            width: $navigation-width-small-lv3;
+        }
+    }
+
+    &.is-navigation-collapse {
+        &.is-column-center {
+            @media screen and (max-width: screen(labtop-lg)) {
+                width: $navigation-width-small-lv2;
+            }
+        }
+
+        &.is-column-right {
+            @media screen and (max-width: screen(labtop-lg)) {
+                width: $navigation-width-small-lv3;
+            }
+        }
+    }
+
     .list-link {
         &.is-icon-font {
             @media screen and (max-width: screen(labtop-lg)) {

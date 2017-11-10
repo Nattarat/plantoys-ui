@@ -1919,6 +1919,7 @@
             // Menu lv2
             $j('#menu-our-brand').mouseover(function() {
                 // Add
+                $j('#menu-main').addClass('is-expand-primary');
                 $j('#menu-our-brand .is-navigation-lv2').addClass('is-active');
                 // Remove
                 $j('#menu-our-products .is-navigation-lv2').removeClass('is-active');
@@ -1928,6 +1929,7 @@
 
             $j('#menu-our-products').mouseover(function() {
                 // Add
+                $j('#menu-main').addClass('is-expand-primary');
                 $j('#menu-our-products .is-navigation-lv2').addClass('is-active');
                 // Remove
                 $j('#menu-our-brand .is-navigation-lv2').removeClass('is-active');
@@ -1936,6 +1938,7 @@
 
             $j('#menu-our-child-development-milestone').mouseover(function() {
                 // Add
+                $j('#menu-main').addClass('is-expand-primary');
                 $j('#menu-our-child-development-milestone .is-navigation-lv2').addClass('is-active');
                 // Remove
                 $j('#menu-our-products .is-navigation-lv2').removeClass('is-active');
@@ -1945,16 +1948,21 @@
 
             // Menu lv3
             $j('#menu-category').mouseover(function() {
+                $j('#menu-main').addClass('is-expand-secondary');
                 $j('#menu-our-products .is-navigation-lv3').addClass('is-active');
             });
 
             $j('.is-menu-single').mouseover(function() {
+                $j('#menu-main').removeClass('is-expand-primary');
+                $j('#menu-main').removeClass('is-expand-secondary');
                 $j('#menu-our-products .is-navigation-lv2').removeClass('is-active');
                 $j('#menu-our-products .is-navigation-lv3').removeClass('is-active');
                 $j('#menu-our-brand .is-navigation-lv2').removeClass('is-active');
                 $j('#menu-our-child-development-milestone .is-navigation-lv2').removeClass('is-active');
             });
+
             $j('.is-menu-single-lv2').mouseover(function() {
+                $j('#menu-main').removeClass('is-expand-secondary');
                 $j('#menu-our-products .is-navigation-lv3').removeClass('is-active');
                 $j('#menu-our-brand .is-navigation-lv2').removeClass('is-active');
                 $j('#menu-our-child-development-milestone .is-navigation-lv2').removeClass('is-active');
