@@ -283,6 +283,7 @@
         }
         .accordion-container{
             background: $color-blue-light-20;
+            cursor: pointer;
             .font-style{                    
                 font-family: font-family(tertiary);
                 font-size: 44px;
@@ -381,7 +382,9 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-
+    @media (max-width: screen(tablet-sm)){
+        padding: 84px 30px;
+    }
 }
 
 // Browser variations
