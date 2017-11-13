@@ -1,7 +1,9 @@
 // thumb nail
 // ------------------------------------------------
 @mixin thumb-nail(
-    $thumb-padding: 0px
+    $thumb-padding: 0px,
+    $thumb-head-font-size: 33px,
+    $thumb-detail-font-size: 22px
 ) {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -22,13 +24,13 @@
         .text-style{
             color: $color-blue-head-thumb;
             font-family: font-family(primary);
-            font-size: 33px;
+            font-size: $thumb-head-font-size;
             text-transform: none;
         }
     }
     .thumb-text-detail{
         font-family: font-family(secondary);
-        font-size: 22px;
+        font-size: $thumb-detail-font-size;
         color: $color-dark-slate-gray;
     }
 
