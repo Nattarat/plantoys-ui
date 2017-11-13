@@ -688,24 +688,29 @@
                 </div>
             </div>
                <div class="container-fluid container-agerang">
-                    <ul class="child-age hidden-xs hidden-sm hidden-md ">
-                        <li><a href="" class="select-title">0-6 Months</a></li>
-                        <li><a href="" class="select-title">6-12 Months</a></li>
-                        <li><a href="" class="select-title">12-18 Months</a></li>
-                        <li><a href="" class="select-title">18-24 Months</a></li>
-                        <li><a href="" class="select-title">2-3 Years</a></li>
-                        <li><a href="" class="select-title">3 Years+</a></li>
+                    <ul class="child-age hidden-xs hidden-sm hidden-md" role="tablist">
+                        <li class="select-title tablinks active" onclick="tabrange(event, 'range1')" id="defaultOpen">0-6 Months</a></li>
+                        <li class="select-title tablinks" onclick="tabrange(event, 'range2')">6-12 Months</li>
+                        <li class="select-title tablinks" onclick="tabrange(event, 'range3')">12-18 Months</li>
+                        <li class="select-title tablinks" onclick="tabrange(event, 'range4')">18-24 Months</li>
+                        <li class="select-title tablinks" onclick="tabrange(event, 'range5')">2-3 Years</li>
+                        <li class="select-title tablinks" onclick="tabrange(event, 'range6')">3 Years+</li>
                     </ul>
                     <div class="child-age-mobile  hidden-lg ">
                         <span class="select-title">Ages</span>
                         <div class="select-input">
-                            <select>
-                                <option value="">0-6 Months</option>
+                            <select onchange="tabrange(event,this.value)">
+                                <option value="range1">0-6 Months</option>
+                                <option value="range2">6-12 Months</option>
+                                <option value="range3">12-18 Months</option>
+                                <option value="range4">18-24 Months</option>
+                                <option value="range5" >2-3 Years</option>
+                                <option value="range6">3 Years</option>
                             </select>
                         </div>
                     </div>              
                </div> 
-                <div class="child-detail">
+                <div class="container child-detail tabcontent" id="range1">
                     <figure class="img-child">
                         <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
                     </figure>
@@ -717,10 +722,50 @@
                         their needs both physical and emotional to parents. 
                     </p>
                 </div>
+                <div class="container child-detail tabcontent" id="range2">
+                    <figure class="img-child">
+                        <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
+                    </figure>
+                    <p class="month-detail">
+                        test2
+                    </p>
+                </div>
+                <div class="container child-detail tabcontent" id="range3">
+                    <figure class="img-child">
+                        <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
+                    </figure>
+                    <p class="month-detail">
+                        test3
+                    </p>
+                </div>
+                <div class="container child-detail tabcontent" id="range4">
+                    <figure class="img-child">
+                        <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
+                    </figure>
+                    <p class="month-detail">
+                        test4
+                    </p>
+                </div>
+                <div class="container child-detail tabcontent" id="range5">
+                    <figure class="img-child">
+                        <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
+                    </figure>
+                    <p class="month-detail">
+                        test5
+                    </p>
+                </div>
+                <div class="container child-detail tabcontent" id="range6">
+                    <figure class="img-child">
+                        <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
+                    </figure>
+                    <p class="month-detail">
+                        test6
+                    </p>
+                </div>
                 <div class="container-fluid child-action">
-                    <div class="action1 hidden-sm hidden-xs">
+                    <div class="action1 hidden-sm hidden-xs hidden-md">
                         <div class="row row-month not-padding">
-                            <div class="font-rotate is-dot"></div>
+                            <div class="font-rotate is-dot not-background"></div>
                             <div class="col-md-3 child-container is-head not-border">
                                 <div class="thumbnail child-thumbnail">
                                     <img src="assets/images/icon/child_development/child-state1.png" class="img-responsive">
@@ -879,7 +924,7 @@
                             </div>    
                         </div>
                     </div>
-                    <div class="action2 hidden-lg hidden-md">
+                    <div class="action2 hidden-lg">
                         <div class="container">
                             <!-- <div class="is-text-align-center">
                                 <p>New Born</p>
@@ -1159,7 +1204,7 @@
                     </div>
                 </div>
                 <div class="container segment-toy">
-                    <div class="header-component">
+                    <div class="header-component is-text-align-center">
                         <h1 class="text-header">Toys for new born to 6 months</h1>
                     </div>
                     <figure class="img-newborn">
@@ -1366,6 +1411,8 @@
                     // $j('.sidebar').removeClass('is-active');
                 },
             });
+            // tab
+
              // Navigation
             // =====================================================
             $j('#button-menu-main').click(function() {
@@ -1480,7 +1527,24 @@
                 ]
             });
         })
+    </script>
+    <script>
+        function tabrange(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
         
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
     </script>
 </body>
 </html>

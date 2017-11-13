@@ -16,11 +16,11 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @include container-header($container-padding: 0px 40px,$container-background:url('#{path-file(images)}/background/child_development/child_development.jpg'));
+    @include container-header($container-background:url('#{path-file(images)}/background/child_development/child_development.jpg'));
     
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    margin-top: 125px;
+    // margin-top: 125px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -71,10 +71,11 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-age{     
-        @include select-form-group($form-group-align:space-between,$label-color:$color-white);
+        @include select-form-group($label-font-size: 21px,$form-group-align:space-between,$label-opacity:0.7,$label-title-font-family: font-family(secondary),$label-color:$color-white);
+        cursor: pointer;
     }
    .child-age-mobile{
-        @include select-form-group($form-group-align:center,$label-color:$color-white);
+        @include select-form-group($label-font-size: 21px,$select-font-size:17,$form-group-align:center,$label-color:$color-white);
    }
 
     // STYLES OF STATE
@@ -88,17 +89,17 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    // @media (max-width: screen(phablet-md)) {
-    //     padding: 0px 15px;
+    // @media (max-width: screen(labtop-lg)) {
+    //     .child-age{
+    //         .select-title{     
+    //             font-size: 25px;
+    //          }  
+    //     }     
     // }
-    @media (max-width: screen(phablet-sm)) {
+    @media (max-width: screen(phablet-md)) {
         padding: 0px 15px;
     }
-    @media (max-width: screen(phablet-xs)) {
-        .news-select {
-            @include select-form-group($label-font-size: 25px,$select-font-size: 18px);
-        }
-    }
+
 }
 
 // month detail
@@ -112,7 +113,7 @@
     
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    max-width: 1477px;
+    // max-width: 1477px;
     margin: auto;
     padding: 22px 30px 52px 30px;
  
@@ -124,7 +125,7 @@
     }
     .month-detail{
         font-family: font-family(primary);
-        font-size: 33px;
+        font-size: 23px;
         color: $color-grey-light;
     }
  
@@ -139,7 +140,11 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-
+    @media (max-width: screen(mobile-lg)){
+        .month-detail{
+            font-size: 23px;
+        }
+    }
 }
 
 // Browser variations
@@ -182,7 +187,7 @@
         list-style-type: disc;
         li{
             font-family: font-family(secondary);
-            font-size: 25px;
+            font-size: 17px;
             color: $color-dark-slate-gray;
             &.is-space-li{
                 &:not(:first-child){
@@ -238,10 +243,14 @@
                 &:nth-child(odd){
                     background: $color-blue-light;
                     .font-rotate{     
-                        background: $color-blue-light-10;     
+                        background: $color-blue-light-10;
+                        &.not-background{
+                            background: unset;
+                        }     
                         &.is-dot{
                             background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
                             background-repeat: repeat-x;
+                            background-position-x: 100vw;
                         }
                     }
                 }
@@ -262,14 +271,15 @@
             .font-rotate{    
                 width: 64px;
                 display: flex;
-                align-items: center;    
+                align-items: center; 
+                justify-content: center;   
                 position: relative;
                 &.not-padding{
                     margin: -36px 0px;
                 }
                 .font-style{               
                     font-family: font-family(tertiary);
-                    font-size: 44px;
+                    font-size: 21px;
                     transform: rotate(-180deg);
                     writing-mode: vertical-rl;
                 }
@@ -283,13 +293,14 @@
         }
         .accordion-container{
             background: $color-blue-light-20;
+            cursor: pointer;
             .font-style{                    
                 font-family: font-family(tertiary);
-                font-size: 44px;
+                font-size: 30px;
             }
         }
         .child-thumbnai{
-            @include thumb-nail($thumb-padding:30px);
+            @include thumb-nail($thumb-head-font-size:23px,$thumb-detail-font-size:17px,$thumb-padding:30px);
         }
        
     }
@@ -305,7 +316,15 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-
+    // @media (max-width: screen(mobile-lg)){
+    //     .action2{
+    //         .accordion-container{
+    //             .font-style{                    
+    //                 font-size: px;
+    //             }
+    //         }          
+    //     }
+    // }
 }
 
 // Browser variations
@@ -341,13 +360,13 @@
             color: $color-dark-slate-gray;
             text-transform: none;
             font-family: font-family(tertiary);
-            font-size: 53px;   
+            font-size: 37px;   
         }
     }
     .img-newborn{
         margin: auto;
         max-width: 585px;
-        padding: 37px;
+        padding: 37px 0px;
     }
     .toy-detail{
         border-top-style: dotted;
@@ -358,12 +377,12 @@
         padding: 22px 0px 0px 0px;
         .text-header{
             font-family: font-family(primary);
-            font-size: 25px;
+            font-size: 17px;
             color: $color-dot-blue;
         }
         .text-detail{
             font-family: font-family(secondary);
-            font-size: 25px;
+            font-size: 17px;
             color: $color-grey-menu;
         }
         .is-space-toy-detail{
@@ -381,7 +400,21 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-
+    @media (max-width: screen(tablet-sm)){
+        padding: 84px 30px;
+    }
+    // @media (max-width: screen(mobile-lg)){
+    //     .header-component{
+    //         .text-header{
+    //             font-size: 43px;   
+    //         }
+    //     }
+    //     .toy-detail{
+    //         .text-header , .text-detail{
+    //             font-size: 20px;
+    //         }
+    //     }
+    // }
 }
 
 // Browser variations
@@ -414,7 +447,7 @@
     }
     .child-text-carousel{
         font-family: font-family(primary);
-        font-size: 25px;
+        font-size: 17px;
         line-height: 1.5;
         color: $color-black;
    
