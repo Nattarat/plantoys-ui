@@ -17,7 +17,7 @@
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include container-header($container-background:url('#{path-file(images)}/background/child_development/child_development.jpg'));
-    
+
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     // margin-top: 125px;
@@ -26,7 +26,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-header{
         @include text-header($text-header-margin-top:-90px,$text-header-color:$color-brown-dark,$text-sub-color:$color-brown-dark);
-    }    
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -70,7 +70,7 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .child-age{     
+    .child-age{
         @include select-form-group($label-font-size: 21px,$form-group-align:space-between,$label-opacity:0.7,$label-title-font-family: font-family(secondary),$label-color:$color-white);
         cursor: pointer;
     }
@@ -91,10 +91,10 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     // @media (max-width: screen(labtop-lg)) {
     //     .child-age{
-    //         .select-title{     
+    //         .select-title{
     //             font-size: 25px;
-    //          }  
-    //     }     
+    //          }
+    //     }
     // }
     @media (max-width: screen(phablet-md)) {
         padding: 0px 15px;
@@ -110,13 +110,13 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    
+
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     // max-width: 1477px;
     margin: auto;
     padding: 22px 30px 52px 30px;
- 
+
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .img-child{
@@ -128,7 +128,7 @@
         font-size: 23px;
         color: $color-grey-light;
     }
- 
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -162,8 +162,8 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-   
-    
+
+
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     padding: $child-padding;
@@ -196,7 +196,7 @@
             }
         }
     }
- 
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -225,12 +225,12 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-   
-    
+
+
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    
- 
+
+
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .action1{
@@ -242,11 +242,11 @@
                 }
                 &:nth-child(odd){
                     background: $color-blue-light;
-                    .font-rotate{     
+                    .font-rotate{
                         background: $color-blue-light-10;
                         &.not-background{
                             background: unset;
-                        }     
+                        }
                         &.is-dot{
                             background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
                             background-repeat: repeat-x;
@@ -261,23 +261,23 @@
                 }
                 .child-container{
                     &.is-head{
-                        @include child-content($child-padding: 22px); 
+                        @include child-content($child-padding: 22px);
                     }
                     &.is-detail{
-                        @include child-content($child-padding: 36px 62px); 
+                        @include child-content($child-padding: 36px 62px);
                     }
-                }   
-            }   
-            .font-rotate{    
+                }
+            }
+            .font-rotate{
                 width: 64px;
                 display: flex;
-                align-items: center; 
-                justify-content: center;   
+                align-items: center;
+                justify-content: center;
                 position: relative;
                 &.not-padding{
                     margin: -36px 0px;
                 }
-                .font-style{               
+                .font-style{
                     font-family: font-family(tertiary);
                     font-size: 21px;
                     transform: rotate(-180deg);
@@ -294,7 +294,7 @@
         .accordion-container{
             background: $color-blue-light-20;
             cursor: pointer;
-            .font-style{                    
+            .font-style{
                 font-family: font-family(tertiary);
                 font-size: 30px;
             }
@@ -302,7 +302,7 @@
         .child-thumbnai{
             @include thumb-nail($thumb-head-font-size:23px,$thumb-detail-font-size:17px,$thumb-padding:30px);
         }
-       
+
     }
 
     // STYLES OF STATE
@@ -319,10 +319,10 @@
     // @media (max-width: screen(mobile-lg)){
     //     .action2{
     //         .accordion-container{
-    //             .font-style{                    
+    //             .font-style{
     //                 font-size: px;
     //             }
-    //         }          
+    //         }
     //     }
     // }
 }
@@ -342,12 +342,12 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-   
-    
+
+
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     padding: 84px;
- 
+
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .header-component{
@@ -360,7 +360,7 @@
             color: $color-dark-slate-gray;
             text-transform: none;
             font-family: font-family(tertiary);
-            font-size: 37px;   
+            font-size: 37px;
         }
     }
     .img-newborn{
@@ -406,7 +406,7 @@
     // @media (max-width: screen(mobile-lg)){
     //     .header-component{
     //         .text-header{
-    //             font-size: 43px;   
+    //             font-size: 43px;
     //         }
     //     }
     //     .toy-detail{
@@ -431,28 +431,28 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-   
-    
+
+
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-   
+
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .carousel-item{
-        padding: 30px 0px; 
+    .carousel-item {
+        padding: 30px 0px;
         border: 1px solid $color-slate-gray-light-10;
     }
-    .carousel-link{
+    .carousel-link {
         text-decoration: none;
     }
-    .child-text-carousel{
+    .child-text-carousel {
         font-family: font-family(primary);
         font-size: 17px;
         line-height: 1.5;
         color: $color-black;
-   
+
     }
-   .child-text-price{
+   .child-text-price {
         color: $color-grey;
    }
 
@@ -461,6 +461,24 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-column-fifth {
+        .carousel-category {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -1px;
+        }
+
+        .carousel-item {
+            width: 20%;
+            background-color: $color-white;
+            border-left-width: 0;
+            margin-top: -1px;
+
+            &:nth-child(5n + 5) {
+                border-right: 0;
+            }
+        }
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
