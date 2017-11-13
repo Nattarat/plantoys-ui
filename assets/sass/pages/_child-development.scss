@@ -16,7 +16,7 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @include container-header($container-padding: 0px 40px,$container-background:url('#{path-file(images)}/background/child_development/child_development.jpg'));
+    @include container-header($container-background:url('#{path-file(images)}/background/child_development/child_development.jpg'));
     
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
