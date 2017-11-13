@@ -271,7 +271,8 @@
             .font-rotate{    
                 width: 64px;
                 display: flex;
-                align-items: center;    
+                align-items: center; 
+                justify-content: center;   
                 position: relative;
                 &.not-padding{
                     margin: -36px 0px;
