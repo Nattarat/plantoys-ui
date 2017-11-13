@@ -55,6 +55,11 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media (max-width: screen(phablet-xs)){
+        select{
+            font-size: 20px;
+        }
+    }
 }
 
 // Browser variations

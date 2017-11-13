@@ -20,7 +20,7 @@
     
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    margin-top: 125px;
+    // margin-top: 125px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -91,14 +91,17 @@
     // @media (max-width: screen(phablet-md)) {
     //     padding: 0px 15px;
     // }
+    @media (max-width: screen(labtop-lg)) {
+        .child-age{
+            .select-title{     
+                font-size: 25px;
+             }  
+        }     
+    }
     @media (max-width: screen(phablet-sm)) {
         padding: 0px 15px;
     }
-    @media (max-width: screen(phablet-xs)) {
-        .news-select {
-            @include select-form-group($label-font-size: 25px,$select-font-size: 18px);
-        }
-    }
+
 }
 
 // month detail
@@ -139,7 +142,11 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-
+    @media (max-width: screen(mobile-lg)){
+        .month-detail{
+            font-size: 23px;
+        }
+    }
 }
 
 // Browser variations
@@ -306,7 +313,15 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-
+    @media (max-width: screen(mobile-lg)){
+        .action2{
+            .accordion-container{
+                .font-style{                    
+                    font-size: 34px;
+                }
+            }          
+        }
+    }
 }
 
 // Browser variations
@@ -384,6 +399,18 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media (max-width: screen(tablet-sm)){
         padding: 84px 30px;
+    }
+    @media (max-width: screen(mobile-lg)){
+        .header-component{
+            .text-header{
+                font-size: 43px;   
+            }
+        }
+        .toy-detail{
+            .text-header , .text-detail{
+                font-size: 20px;
+            }
+        }
     }
 }
 
