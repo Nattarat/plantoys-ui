@@ -88,9 +88,6 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    // @media (max-width: screen(phablet-md)) {
-    //     padding: 0px 15px;
-    // }
     @media (max-width: screen(labtop-lg)) {
         .child-age{
             .select-title{     
@@ -98,7 +95,7 @@
              }  
         }     
     }
-    @media (max-width: screen(phablet-sm)) {
+    @media (max-width: screen(phablet-md)) {
         padding: 0px 15px;
     }
 
