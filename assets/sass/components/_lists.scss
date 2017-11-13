@@ -61,6 +61,12 @@
         }
     }
 
+    &.is-horizontal-spacebetween {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -97,12 +103,34 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        &.is-button {
+            padding-top: 30px;
+        }
+    }
+
+    .list-form-inner {
+        display: flex;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .list-form-inner-item {
+        flex-grow: 1;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-spacing-item-small {
+        .list-item {
+            margin-bottom: 10px;
+        }
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -542,7 +570,7 @@
     .list-link {
         &.is-icon-font {
             @media screen and (max-width: screen(labtop-lg)) {
-                font-size: $font-size-2 * 0.7;
+                font-size: $font-size-2 * $font-size-reduce-primary;
             }
 
             > img {
@@ -556,7 +584,7 @@
 
     .list-icon {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: $font-size-3 * 0.7;
+            font-size: $font-size-3 * $font-size-reduce-primary;
         }
     }
 
@@ -732,6 +760,87 @@
                 margin-bottom: 30px;
             }
         }
+    }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Tabs
+// ------------------------------------------------
+.list-tabs {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include list-variant(
+        $list-display: flex,
+        $list-padding: 40px 0 35px,
+        $list-margin: 0 auto,
+
+        // List item
+        $list-item-display: inline-block,
+        $list-item-padding: 0,
+        $list-item-margin: 0
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    justify-content: space-between;
+    align-items: center;
+
+    &:before,
+    &:after {
+        content: ' ';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // Reset responsive tabs plugin style
+    .list-item {
+        &.r-tabs-state-active {
+            .text-submenu {
+                color: color-text(default);
+            }
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // Reset responsive tabs plugin style
+    &.r-tabs-nav {
+        padding: 40px 0 35px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1170px;
     }
 }
 

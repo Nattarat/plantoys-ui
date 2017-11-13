@@ -26,10 +26,10 @@ $field-padding-side-deault: 20px;
     &[type=tel],
     &[type=text] {
         @media screen and (max-width: screen(labtop-lg)) {
-            // height: $field-height-deault * 0.7;
-            height: $button-height-deault * 0.7;
-            padding-left: $field-padding-side-deault * 0.7;
-            padding-right: $field-padding-side-deault * 0.7;
+            // height: $field-height-deault * $font-size-reduce-primary;
+            height: $button-height-deault * $font-size-reduce-primary;
+            padding-left: $field-padding-side-deault * $font-size-reduce-primary;
+            padding-right: $field-padding-side-deault * $font-size-reduce-primary;
         }
     }
 }
@@ -111,6 +111,17 @@ $field-padding-side-deault: 20px;
         width: 100%;
     }
 
+    &.is-bold {
+        &[type=email],
+        &[type=search],
+        &[type=number],
+        &[type=password],
+        &[type=tel],
+        &[type=text] {
+            font-family: font-family(primary);
+        }
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -123,7 +134,7 @@ $field-padding-side-deault: 20px;
     &[type=tel],
     &[type=text] {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: $field-text-font-size * 0.7;
+            font-size: $field-text-font-size * $font-size-reduce-primary;
         }
     }
 }
@@ -364,6 +375,9 @@ $field-padding-side-deault: 20px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    form {
+        height: 100%;
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>

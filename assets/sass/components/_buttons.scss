@@ -38,9 +38,9 @@ $button-padding-side-deault: 45px;
 // ==================================================================================================
 @mixin button-size-scale-down() {
     @media screen and (max-width: screen(labtop-lg)) {
-        height: $button-height-deault * 0.7;
-        padding-left: $button-padding-side-deault * 0.7;
-        padding-right: $button-padding-side-deault * 0.7;
+        height: $button-height-deault * $font-size-reduce-primary;
+        padding-left: $button-padding-side-deault * $font-size-reduce-primary;
+        padding-right: $button-padding-side-deault * $font-size-reduce-primary;
     }
 }
 
@@ -185,13 +185,13 @@ $button-padding-side-deault: 45px;
     // >>>>>>>>>>>>>>>>>>>>>>>
     .button-text {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: $button-text-font-size * 0.7;
+            font-size: $button-text-font-size * $font-size-reduce-primary;
         }
 
 
         &.is-small {
             @media screen and (max-width: screen(labtop-lg)) {
-                font-size: font-primary-size(size-5) * 0.7;
+                font-size: font-primary-size(size-5) * $font-size-reduce-primary;
             }
         }
     }
@@ -472,7 +472,7 @@ $button-padding-side-deault: 45px;
     // >>>>>>>>>>>>>>>>>>>>>>>
     .button-text {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-primary-size(size-4) * 0.7;
+            font-size: font-primary-size(size-4) * $font-size-reduce-primary;
         }
     }
 }

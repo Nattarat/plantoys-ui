@@ -129,6 +129,10 @@
         color: color-text(default);
     }
 
+    &.is-gray-light {
+        color: color-text(gray-light);
+    }
+
     &.is-red {
         color: color-text(red-primary);
     }
@@ -150,6 +154,10 @@
         font-size: font-secondary-size(size-8); // 12px
     }
 
+    &.is-extra-middle-small {
+        font-size: font-secondary-size(size-12); // 16px
+    }
+
     &.is-middle-small {
         font-size: font-secondary-size(size-11); // 18px
     }
@@ -164,6 +172,10 @@
 
     &.is-large {
         font-size: font-secondary-size(size-9); // 32px
+    }
+
+    &.is-middle-large {
+        font-size: font-secondary-size(size-1); // 40px
     }
 
     &.is-extra-large {
@@ -194,42 +206,54 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media screen and (max-width: screen(labtop-lg)) {
-        font-size: $text-font-size * 0.7;
+        font-size: $text-font-size * $font-size-reduce-primary;
     }
 
     &.is-extra-small {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-8) * 0.7; // 12px
+            font-size: font-secondary-size(size-8) * $font-size-reduce-primary; // 12px
+        }
+    }
+
+    &.is-extra-middle-small {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-secondary-size(size-12) * $font-size-reduce-primary; // 16px
         }
     }
 
     &.is-middle-small {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-11) * 0.7; // 18px
+            font-size: font-secondary-size(size-11) * $font-size-reduce-primary; // 18px
         }
     }
 
     &.is-small {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-4) * 0.7; // 20px
+            font-size: font-secondary-size(size-4) * $font-size-reduce-primary; // 20px
         }
     }
 
     &.is-medium {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-2) * 0.7; // 24px
+            font-size: font-secondary-size(size-2) * $font-size-reduce-primary; // 24px
         }
     }
 
     &.is-large {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-9) * 0.7; // 32px
+            font-size: font-secondary-size(size-9) * $font-size-reduce-primary; // 32px
+        }
+    }
+
+    &.is-middle-large {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-secondary-size(size-1) * $font-size-reduce-primary; // 40px
         }
     }
 
     &.is-extra-large {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-6) * 0.7; // 48px
+            font-size: font-secondary-size(size-6) * $font-size-reduce-primary; // 48px
         }
     }
 }
@@ -269,6 +293,10 @@
         position: absolute;
         top: 0;
         left: 100%;
+    }
+
+    &.is-field-notice {
+        padding-top: 10px;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -338,7 +366,7 @@
     &.is-tabs,
     &.is-tabs-mobile {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-primary-size(size-9) * 0.7;
+            font-size: font-primary-size(size-9) * $font-size-reduce-primary;
         }
     }
 
@@ -356,7 +384,7 @@
 
     &.is-cover {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-primary-size(size-1) * 0.7;
+            font-size: font-primary-size(size-1) * $font-size-reduce-primary;
         }
     }
 }
@@ -574,16 +602,34 @@
         color: $color-white;
     }
 
-    // STYLES OF MODIFIER CLASS
-    // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-active {
         font-family: font-family(primary);
         font-size: font-secondary-size(size-9);
         color: $color-white;
     }
 
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-page {
+        @include transition(color .3s ease);
+        font-family: font-family(primary);
+        font-size: font-secondary-size(size-2); // 24px
+        line-height: font-secondary-size(size-2);
+        color: $color-gray-4;
+
+        &:hover,
+        &:focus {
+            color: color-text(default);
+        }
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-page {
+        &.is-active {
+            color: color-text(default);
+        }
+    }
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -593,12 +639,13 @@
     }
 
     @media screen and (max-width: screen(labtop-lg)) {
-        font-size: font-secondary-size(size-3) * 0.7;
+        font-size: font-secondary-size(size-3) * $font-size-reduce-primary;
+        line-height: font-secondary-size(size-3) * $font-size-reduce-primary;
     }
 
     &.is-active {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-9) * 0.7;
+            font-size: font-secondary-size(size-9) * $font-size-reduce-primary;
         }
     }
 }
