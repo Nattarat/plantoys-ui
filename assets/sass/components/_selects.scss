@@ -55,11 +55,7 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @media (max-width: screen(phablet-xs)){
-        select{
-            font-size: 20px;
-        }
-    }
+
 }
 
 // Browser variations
@@ -121,7 +117,7 @@
         );
     }
     .select-title {
-        font-family:  $label-title-font-family;
+        font-family: $label-title-font-family;
         font-size: $label-font-size;
         color:  $label-color;
         min-width: $label-min-height;
