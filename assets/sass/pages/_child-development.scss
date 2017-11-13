@@ -72,6 +72,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-age{     
         @include select-form-group($label-font-size: 21px,$form-group-align:space-between,$label-color:$color-white);
+        cursor: pointer;
     }
    .child-age-mobile{
         @include select-form-group($label-font-size: 21px,$select-font-size:17,$form-group-align:center,$label-color:$color-white);

@@ -688,13 +688,13 @@
                 </div>
             </div>
                <div class="container-fluid container-agerang">
-                    <ul class="child-age hidden-xs hidden-sm hidden-md nav nav-tabs" role="tablist">
-                        <li class="select-title">0-6 Months</a></li>
-                        <li class="select-title">6-12 Months</li>
-                        <li class="select-title">12-18 Months</li>
-                        <li class="select-title">18-24 Months</li>
-                        <li class="select-title">2-3 Years</li>
-                        <li class="select-title">3 Years+</li>
+                    <ul class="child-age hidden-xs hidden-sm hidden-md tab" role="tablist">
+                        <li class="select-title tablinks" onclick="tabrange(event, 'range1')" id="defaultOpen">0-6 Months</a></li>
+                        <li class="select-title tablinks" onclick="tabrange(event, 'range2')">6-12 Months</li>
+                        <li class="select-title" onclick="tabrange(event, 'range3')">12-18 Months</li>
+                        <li class="select-title" onclick="tabrange(event, 'range4')">18-24 Months</li>
+                        <li class="select-title" onclick="tabrange(event, 'range5')">2-3 Years</li>
+                        <li class="select-title" onclick="tabrange(event, 'range6')">3 Years+</li>
                     </ul>
                     <div class="child-age-mobile  hidden-lg ">
                         <span class="select-title">Ages</span>
@@ -705,7 +705,7 @@
                         </div>
                     </div>              
                </div> 
-                <div class="child-detail">
+                <div class="child-detail tabcontent" id="range1">
                     <figure class="img-child">
                         <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
                     </figure>
@@ -715,6 +715,46 @@
                         especially their fine motor skills. This happens when they try to grab or hold objects. 
                         They learn how to control muscles. Moreover, they understand sensory stimulation and express 
                         their needs both physical and emotional to parents. 
+                    </p>
+                </div>
+                <div class="child-detail tabcontent" id="range2">
+                    <figure class="img-child">
+                        <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
+                    </figure>
+                    <p class="month-detail">
+                        test2
+                    </p>
+                </div>
+                <div class="child-detail tabcontent" id="range3">
+                    <figure class="img-child">
+                        <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
+                    </figure>
+                    <p class="month-detail">
+                        test3
+                    </p>
+                </div>
+                <div class="child-detail tabcontent" id="range4">
+                    <figure class="img-child">
+                        <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
+                    </figure>
+                    <p class="month-detail">
+                        test4
+                    </p>
+                </div>
+                <div class="child-detail tabcontent" id="range5">
+                    <figure class="img-child">
+                        <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
+                    </figure>
+                    <p class="month-detail">
+                        test5
+                    </p>
+                </div>
+                <div class="child-detail tabcontent" id="range6">
+                    <figure class="img-child">
+                        <img src="assets/images/icon/child_development/rang-month.png" class="img-responsive">
+                    </figure>
+                    <p class="month-detail">
+                        test6
                     </p>
                 </div>
                 <div class="container-fluid child-action">
@@ -1336,7 +1376,6 @@
                                 </a>
                             </div>
                     </div>   
-                
                 </div>
             <!-- HTML end ============================================================================ -->
         </div>
@@ -1483,7 +1522,24 @@
                 ]
             });
         })
-        
     </script>
+    <script>
+        function tabrange(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
 </body>
 </html>
