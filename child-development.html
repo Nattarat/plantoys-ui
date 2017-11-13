@@ -688,19 +688,24 @@
                 </div>
             </div>
                <div class="container-fluid container-agerang">
-                    <ul class="child-age hidden-xs hidden-sm hidden-md tab" role="tablist">
+                    <ul class="child-age hidden-xs hidden-sm hidden-md" role="tablist">
                         <li class="select-title tablinks" onclick="tabrange(event, 'range1')" id="defaultOpen">0-6 Months</a></li>
                         <li class="select-title tablinks" onclick="tabrange(event, 'range2')">6-12 Months</li>
-                        <li class="select-title" onclick="tabrange(event, 'range3')">12-18 Months</li>
-                        <li class="select-title" onclick="tabrange(event, 'range4')">18-24 Months</li>
-                        <li class="select-title" onclick="tabrange(event, 'range5')">2-3 Years</li>
-                        <li class="select-title" onclick="tabrange(event, 'range6')">3 Years+</li>
+                        <li class="select-title tablinks" onclick="tabrange(event, 'range3')">12-18 Months</li>
+                        <li class="select-title tablinks" onclick="tabrange(event, 'range4')">18-24 Months</li>
+                        <li class="select-title tablinks" onclick="tabrange(event, 'range5')">2-3 Years</li>
+                        <li class="select-title tablinks" onclick="tabrange(event, 'range6')">3 Years+</li>
                     </ul>
                     <div class="child-age-mobile  hidden-lg ">
                         <span class="select-title">Ages</span>
                         <div class="select-input">
-                            <select>
-                                <option value="">0-6 Months</option>
+                            <select onchange="tabrange(event,this.value)">
+                                <option value="range1">0-6 Months</option>
+                                <option value="range2">6-12 Months</option>
+                                <option value="range3">12-18 Months</option>
+                                <option value="range4">18-24 Months</option>
+                                <option value="range5" >2-3 Years</option>
+                                <option value="range6">3 Years</option>
                             </select>
                         </div>
                     </div>              
