@@ -187,6 +187,7 @@
 
         select {
             background: url('#{path-file(images)}/icon/icon-arrow-down-gray.png') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
+
         }
     }
 
@@ -222,6 +223,14 @@
 
             select {
                 margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: screen(labtop-lg)) {
+            min-width: 200px;
+
+            select {
+                background-size: 12px, 14px; // arrow, world
             }
         }
     }
