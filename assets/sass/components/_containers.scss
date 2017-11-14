@@ -162,3 +162,116 @@
 // IE
 // Safari
 // Firefox
+
+// Page
+// ------------------------------------------------
+.container-page {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include container-variant(
+        $block-display: block,
+        $block-width: 100%,
+        $block-min-width: initial,
+        $block-max-width: initial,
+        $block-height: auto,
+        $block-min-height: 100vh,
+        $block-max-height: initial,
+        $block-padding: 0 0 35px,
+        $block-margin: 0,
+        $block-background-color: $color-gray-10
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Panel
+// ------------------------------------------------
+.container-panel {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include container-variant(
+        $block-display: block,
+        $block-width: 100%,
+        $block-min-width: initial,
+        $block-max-width: initial,
+        $block-height: auto,
+        $block-min-height: initial,
+        $block-max-height: initial,
+        $block-padding: 0,
+        $block-margin: auto,
+        $block-background-color: $color-white
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    border: 1px solid $color-gray-5;
+    border-radius: 5px;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .container-panel-segment {
+        padding: 35px;
+
+        &.is-myaccount-info {
+            padding-left: 135px;
+            padding-right: 135px;
+        }
+
+        &.is-partition {
+            border-top: 1px solid $color-gray-5;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-myaccount-info {
+        max-width: 735px;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(phablet-lg-max)) {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

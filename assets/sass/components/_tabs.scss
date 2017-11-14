@@ -516,3 +516,55 @@
 // IE
 // Safari
 // Firefox
+
+// Responsive
+// ------------------------------------------------
+.tabs-responsive {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include container-variant(
+        $block-display: block,
+        $block-width: 100%,
+        $block-min-width: initial,
+        $block-max-width: initial,
+        $block-height: auto,
+        $block-min-height: initial,
+        $block-max-height: initial,
+        $block-padding: 0,
+        $block-margin: 0,
+        $block-background-color: transparent
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .tab-content {
+        // Reset responsive tabs plugin style
+        &.r-tabs-panel {
+            padding: 0;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

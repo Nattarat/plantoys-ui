@@ -72,3 +72,64 @@
 // Safari
 // Firefox
 
+// My account
+// ------------------------------------------------
+.myaccount {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .myaccount-header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .myaccount-header-icon {
+        display: inline-block;
+        width: 110px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .myaccount-segment-title {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .my-account-avatar {
+        width: 110px;
+        height: 110px;
+        margin: auto auto 25px;
+        border-radius: 50%;
+    }
+
+    .myaccount-segment-spacing {
+        padding-bottom: 45px;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+

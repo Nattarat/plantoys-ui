@@ -493,6 +493,21 @@
             margin: auto;
         }
 
+        &.is-lightbox {
+            &:before {
+                content: ' ';
+                position: absolute;
+                z-index: zindex(lv1);
+                top: 50%;
+                left: 50%;
+                width: 48px;
+                height: 48px;
+                margin-left: -24px;
+                background: url('#{path-file(icons)}/icon-play-green.png') no-repeat;
+                background-size: cover;
+            }
+        }
+
         &.infographic-1 {
             top: 0.3%;
             left: 12.5%;
@@ -630,11 +645,16 @@
 
     .roadmap-infographic {
         @media screen and (max-width: screen(phablet-lg-max)) {
-            position: static;
+            // position: static;
+            position: relative;
         }
+
+
 
         &[class*="infographic-"] {
             @media screen and (max-width: screen(phablet-lg-max)) {
+                top: 0;
+                left: 0;
                 width: 90%;
                 padding: 30px 0;
                 margin: auto;

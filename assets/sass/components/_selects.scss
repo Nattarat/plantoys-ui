@@ -166,7 +166,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include select-icon(
         $select-width: 290px,
-        $select-height: 50px ,
+        $select-height: 57px ,
         $select-font-size: font-primary-size(size-11),
         $select-padding: 0 $select-padding-right 0 $select-padding-left,
         $select-border-radius: 5px,
@@ -181,6 +181,7 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     select {
+        margin-left: 0;
         font-family: font-family(primary);
         border: 1px solid $color-gray-3;
         background-size: 16px;
@@ -194,10 +195,19 @@
     &.is-country {
         width: auto;
         min-width: 260px;
+        margin-left: 30px;
 
         select {
             background: url('#{path-file(images)}/icon/icon-arrow-down-gray.png') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
+        }
+    }
 
+    &.is-gender {
+        width: auto;
+        min-width: 80px;
+
+        select {
+            padding-left: 20px;
         }
     }
 
@@ -215,14 +225,14 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media screen and (max-width: screen(labtop-lg))  {
-        height: 50px * 0.7;
+        height: 50px * $font-size-reduce-primary;
     }
 
     select {
         @media screen and (max-width: screen(labtop-lg))  {
-            padding-left: $select-padding-left * 0.7;
-            padding-right: $select-padding-right * 0.7;
-            font-size: font-primary-size(size-11) * 0.7;
+            padding-left: $select-padding-left * $font-size-reduce-primary;
+            padding-right: $select-padding-right * $font-size-reduce-primary;
+            font-size: font-primary-size(size-11) * $font-size-reduce-primary;
             background-size: 5%;
         }
     }
