@@ -115,7 +115,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     // max-width: 1477px;
     margin: auto;
-    padding: 22px 30px 52px 30px;
+    padding: 22px 60px 52px 60px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -140,12 +140,13 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @media (max-width: screen(labtop-md)){
+    @media (max-width: screen(labtop-sm)){
         padding: 22px 15px 52px 15px;
     }
-    @media (max-width: screen(tablet-md)){
+    @media (max-width: screen(tablet-sm)){
         padding: 22px 30px 52px 30px;
     }
+    
 }
 
 // Browser variations
