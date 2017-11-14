@@ -166,7 +166,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include select-icon(
         $select-width: 290px,
-        $select-height: 57px ,
+        $select-height: 57px,
         $select-font-size: font-primary-size(size-11),
         $select-padding: 0 $select-padding-right 0 $select-padding-left,
         $select-border-radius: 5px,
@@ -233,7 +233,7 @@
             padding-left: $select-padding-left * $font-size-reduce-primary;
             padding-right: $select-padding-right * $font-size-reduce-primary;
             font-size: font-primary-size(size-11) * $font-size-reduce-primary;
-            background-size: 5%;
+            background-size: 10%;
         }
     }
 
@@ -251,6 +251,21 @@
 
             select {
                 background-size: 12px, 14px; // arrow, world
+            }
+        }
+    }
+
+    &.is-gender {
+        @media screen and (max-width: screen(labtop-lg)) {
+            height: $button-height-deault * $font-size-reduce-primary;
+        }
+
+        select {
+            @media screen and (max-width: screen(labtop-lg)) {
+                padding-left: $field-padding-side-deault * $font-size-reduce-primary;
+                padding-right: $field-padding-side-deault * $font-size-reduce-primary;
+                font-size: font-primary-size(size-11) * $font-size-reduce-primary;
+                background-size: 10%;
             }
         }
     }

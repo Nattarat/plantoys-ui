@@ -1,0 +1,204 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Tables
+// * Mixins
+// * Contextual variations
+//   - Primary
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Mixins
+// ==================================================================================================
+@mixin table-variant(
+    // Body, Header
+    $table-container-padding: 10px,
+
+    // Row
+    $table-row-margin: -$table-container-padding,
+
+    // Column
+    $table-column-padding: 25px 10px,
+    $table-column-header-padding: 25px 10px 0 10px
+) {
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    display: flex;
+    flex-direction: column;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .table-header,
+    .table-body {
+        padding-left: $table-container-padding;
+        padding-right: $table-container-padding;
+    }
+
+    .table-header {
+
+    }
+
+    .table-body {
+
+    }
+
+    .table-row {
+        display: flex;
+        align-items: stretch;
+        align-content: center;
+        margin-left: $table-row-margin;
+        margin-right: $table-row-margin;
+    }
+
+    .table-column {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        padding: $table-column-padding;
+        border-bottom: 1px solid $color-gray-5;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        &.is-header {
+            padding: $table-column-header-padding;
+            border-bottom: 0;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Contextual variations
+// ==================================================================================================
+
+// Table block
+// ------------------------------------------------
+.table-block {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include table-variant;
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-myorder {
+        .table-column {
+            &:nth-child(1) {
+                flex: none;
+                width: 150px;
+            }
+
+            &:nth-child(2) {
+                width: 30%;
+                min-width: 180px;
+            }
+
+            &:nth-child(3) {
+                width: 10%;
+                min-width: 100px;
+            }
+
+            &:nth-child(4) {
+                flex: none;
+                justify-content: center;
+                width: 150px;
+            }
+
+            &:nth-child(5) {
+                flex: none;
+                justify-content: center;
+                width: 115px;
+            }
+        }
+    }
+
+    &.is-myreturn {
+        .table-column {
+            &:nth-child(1) {
+                flex: none;
+                width: 150px;
+            }
+
+            &:nth-child(2) {
+                width: 30%;
+                min-width: 180px;
+            }
+
+            &:nth-child(3) {
+                width: 10%;
+                min-width: 100px;
+            }
+
+            &:nth-child(4) {
+                flex: none;
+                width: 150px;
+            }
+
+            &:nth-child(5) {
+                flex: none;
+                justify-content: center;
+                width: 115px;
+            }
+        }
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-myorder,
+    &.is-myreturn {
+        .table-column {
+            @media screen and (max-width: screen(labtop-lg)) {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

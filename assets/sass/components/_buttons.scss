@@ -461,6 +461,8 @@ $button-padding-side-deault: 45px;
             height: 40px;
             border-radius: 50%;
         }
+
+        &.is-table {}
     }
 
     .button-text {
@@ -489,14 +491,51 @@ $button-padding-side-deault: 45px;
         }
     }
 
+    &.is-wishlist {
+        position: absolute;
+        z-index: zindex(lv1);
+        bottom: 15px;
+        right: 15px;
+
+        .button-icon {
+            width: 51px * 0.9;
+            height: auto;
+
+            &.is-blank {}
+
+            &.is-selected {
+                display: none;
+            }
+        }
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-active {
+        .button-icon {
+            &.is-blank {
+                display: none;
+            }
+
+            &.is-selected {
+                display: block;
+            }
+        }
+    }
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     .button-text {
         @media screen and (max-width: screen(labtop-lg)) {
             font-size: font-primary-size(size-4) * $font-size-reduce-primary;
+        }
+    }
+
+    .button-icon {
+        &.is-table {
+            @media screen and (max-width: screen(labtop-lg)) {
+                width: 50%;
+            }
         }
     }
 }

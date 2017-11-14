@@ -227,7 +227,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include container-variant(
         $block-display: block,
-        $block-width: 100%,
+        $block-width: auto,
         $block-min-width: initial,
         $block-max-width: initial,
         $block-height: auto,
@@ -278,8 +278,13 @@
         max-width: 735px;
     }
 
-    &.is-myaddress {
+    &.is-myaddress,
+    &.is-table {
         max-width: 1050px;
+    }
+
+    &.is-table {
+        min-height: 610px;
     }
 
     &.is-background-wood {
