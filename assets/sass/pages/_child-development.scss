@@ -179,7 +179,7 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-thumbnail{
-        @include thumb-nail;
+        @include thumb-nail($thumb-head-font-size:23px);
     }
     .text-detail{
         list-style-type: disc;
