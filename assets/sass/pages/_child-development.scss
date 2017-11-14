@@ -140,9 +140,12 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    // @media (max-width: screen(tablet-sm)){
-    //     padding: 84px 0px;
-    // }
+    @media (max-width: screen(labtop-md)){
+        padding: 22px 15px 52px 15px;
+    }
+    @media (max-width: screen(tablet-md)){
+        padding: 22px 30px 52px 30px;
+    }
 }
 
 // Browser variations
