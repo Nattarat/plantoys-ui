@@ -126,6 +126,11 @@ $button-padding-side-deault: 45px;
             margin-right: 0;
             margin-left: $button-icon-spacing-left;
         }
+
+        &.is-size-topbar {
+            width: 24px;
+            height: auto;
+        }
     }
 
     .button-text {
@@ -453,7 +458,7 @@ $button-padding-side-deault: 45px;
 
         &.is-language {
             width: auto;
-            height: 27px;
+            height: 24px;
         }
 
         &.is-avatar {

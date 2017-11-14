@@ -51,8 +51,13 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .is-fluid {
+    &.is-fluid {
         width: 100%;
+    }
+
+    &.is-flexible-height {
+        height: auto;
+        min-height: initial;
     }
 
     &.is-vertical {
@@ -404,6 +409,10 @@
             align-items: flex-start;
         }
 
+        &.is-items-center {
+            justify-content: center;
+        }
+
         &.is-menu-icon {
             position: relative;
             padding-left: 70px;
@@ -538,6 +547,10 @@
         &.is-column-right {
             width: $navigation-width-lv3;
         }
+    }
+
+    &.is-partition {
+        border-top: 1px solid $color-gray-5;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

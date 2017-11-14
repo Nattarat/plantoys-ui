@@ -23,7 +23,7 @@
     opacity: 0;
     position: absolute;
     z-index: 999;
-    top: 125px;
+    top: 80px;
     left: 30px;
     width: 380px;
     background-color: $color-white;
@@ -69,10 +69,23 @@
     }
 
     &.is-menu-shop {
-        width: 1150px;
+        display: flex;
+        width: 1140px;
 
         &:before {
             left: 115px;
+        }
+    }
+
+    &.is-menu-account {
+        left: initial;
+        right: 115px;
+        width: 280px;
+        max-width: initial;
+
+        &:before {
+            left: initial;
+            right: 165px;
         }
     }
 
@@ -84,7 +97,7 @@
 
         &:before {
             left: initial;
-            right: 207px;
+            right: 165px;
         }
     }
 
@@ -93,6 +106,10 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(labtop-lg)) {
+        width: 280px;
+    }
+
     &.is-expand-primary {
         @media screen and (max-width: screen(labtop-lg)) {
             width: 560px;
@@ -101,13 +118,26 @@
 
     &.is-expand-secondary {
         @media screen and (max-width: screen(labtop-lg)) {
-            width: 850px;
+            width: 840px;
         }
     }
 
     &.is-menu-shop {
         @media screen and (max-width: screen(labtop-lg)) {
-            width: 850px;
+            width: 840px;
+        }
+    }
+
+    &.is-menu-account {
+        @media screen and (max-width: screen(labtop-lg)) {
+            right: 180px;
+            width: 180px;
+        }
+
+        &:before {
+            @media screen and (max-width: screen(labtop-lg)) {
+                right: 100px;
+            }
         }
     }
 
