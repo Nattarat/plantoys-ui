@@ -160,6 +160,11 @@ $field-padding-side-deault: 20px;
         max-width: 100%;
     }
 
+    &.is-datepicker {
+        padding-right: 50px;
+        background: url('#{path-file(icons)}/icon-calendar.png') no-repeat calc(100% - 20px) center;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -173,6 +178,13 @@ $field-padding-side-deault: 20px;
     &[type=text] {
         @media screen and (max-width: screen(labtop-lg)) {
             font-size: $field-text-font-size * $font-size-reduce-primary;
+        }
+    }
+
+    &.is-datepicker {
+        @media screen and (max-width: screen(labtop-lg)) {
+            background-position: calc(100% - 10px) center;
+            background-size: 16px;
         }
     }
 }
