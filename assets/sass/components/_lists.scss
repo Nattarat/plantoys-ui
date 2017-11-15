@@ -51,8 +51,13 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .is-fluid {
+    &.is-fluid {
         width: 100%;
+    }
+
+    &.is-flexible-height {
+        height: auto;
+        min-height: initial;
     }
 
     &.is-vertical {
@@ -129,6 +134,25 @@
     &.is-spacing-item-small {
         .list-item {
             margin-bottom: 10px;
+        }
+    }
+
+    &.is-myaddress {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -20px;
+        margin-right: -20px;
+
+        .list-item {
+            flex-grow: 1;
+            width: 50%;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 40px;
+
+            &:last-child {
+                margin-bottom: 40px;
+            }
         }
     }
 
@@ -385,6 +409,10 @@
             align-items: flex-start;
         }
 
+        &.is-items-center {
+            justify-content: center;
+        }
+
         &.is-menu-icon {
             position: relative;
             padding-left: 70px;
@@ -519,6 +547,10 @@
         &.is-column-right {
             width: $navigation-width-lv3;
         }
+    }
+
+    &.is-partition {
+        border-top: 1px solid $color-gray-5;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -807,6 +839,9 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     // Reset responsive tabs plugin style
     .list-item {
+        flex-grow: 1;
+        text-align: center;
+
         &.r-tabs-state-active {
             .text-submenu {
                 color: color-text(default);

@@ -56,6 +56,11 @@ $field-padding-side-deault: 20px;
     $field-text-line-height: 1,
     $field-text-color: color-text(default),
 
+    //Textarea
+    $textarea-padding-top: 20px,
+    $textarea-padding-bottom: 20px,
+    $textarea-min-height: 120px,
+
     // Validation
     $field-border-error: 1px solid color-validation(error)
 ) {
@@ -65,6 +70,32 @@ $field-padding-side-deault: 20px;
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include placeholder($field-placeholder-color);
+
+    display: $field-display;
+    width: $field-width;
+    min-width: $field-min-width;
+    max-width: $field-max-width;
+    height: $field-height;
+    min-height: $field-min-height;
+    max-height: $field-max-height;
+    padding: $field-padding;
+    margin: $field-margin;
+    background-color: $field-background-color;
+    border: $field-border;
+    border-radius: $field-border-radius;
+    box-shadow: $field-box-shadow;
+
+    // Typography
+    font-family: $field-text-font-family;
+    font-size: $field-text-font-size;
+    line-height: $field-text-line-height;
+    color: $field-text-color;
+
+    &:focus {
+        outline: 0;
+    }
+
+    // Overwrite style
     &[type=email],
     &[type=search],
     &[type=number],
@@ -122,6 +153,18 @@ $field-padding-side-deault: 20px;
         }
     }
 
+    &.is-textarea {
+        padding-top: $textarea-padding-top;
+        padding-bottom: $textarea-padding-bottom;
+        min-height: $textarea-min-height;
+        max-width: 100%;
+    }
+
+    &.is-datepicker {
+        padding-right: 50px;
+        background: url('#{path-file(icons)}/icon-calendar.png') no-repeat calc(100% - 20px) center;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -135,6 +178,13 @@ $field-padding-side-deault: 20px;
     &[type=text] {
         @media screen and (max-width: screen(labtop-lg)) {
             font-size: $field-text-font-size * $font-size-reduce-primary;
+        }
+    }
+
+    &.is-datepicker {
+        @media screen and (max-width: screen(labtop-lg)) {
+            background-position: calc(100% - 10px) center;
+            background-size: 16px;
         }
     }
 }

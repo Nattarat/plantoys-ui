@@ -648,6 +648,12 @@
             font-size: font-secondary-size(size-9) * $font-size-reduce-primary;
         }
     }
+
+    &.is-page {
+        @media screen and (max-width: screen(labtop-lg)) {
+            font-size: font-secondary-size(size-9) * $font-size-reduce-primary;
+        }
+    }
 }
 
 // Browser variations
@@ -669,6 +675,42 @@
         $text-font-size: font-tertiary-size(size-3),
         $text-line-height: font-tertiary-size(size-3),
         $text-color: color-text(green-secondary)
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Table
+// ------------------------------------------------
+.text-table {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include text-variant(
     );
 
     // STYLES OF COMPONENT ITSELF

@@ -105,10 +105,10 @@
                     <div class="topbar-segment is-right">
                         <div class="list-activity">
                             <div class="list-item is-login">
-                                <a class="button-typography" href="#">
+                                <a id="button-menu-account" class="button-typography" href="#">
                                     <span class="button-body">
                                         <!-- Before login -->
-                                        <img class="button-icon" src="../assets/images/icon/icon-user-login.png" alt="Icon">
+                                        <img class="button-icon is-size-topbar" src="../assets/images/icon/icon-user-login-circle.png" alt="Icon">
                                         <span class="button-text is-normal is-uppercase">Login</span>
                                         <!-- After login -->
                                         <!-- <img class="button-icon is-avatar" src="../assets/images/content/avatar-sample.jpg" alt="Icon"> -->
@@ -118,7 +118,7 @@
                             <div class="list-item is-cart">
                                 <a id="button-menu-cart" class="button-typography" href="#">
                                     <span class="button-body">
-                                        <img class="button-icon" src="../assets/images/icon/icon-cart-wheel.png" alt="Icon">
+                                        <img class="button-icon is-size-topbar" src="../assets/images/icon/icon-cart-circle.png" alt="Icon">
                                         <span class="button-text is-normal is-uppercase">(99)</span>
                                     </span>
                                 </a>
@@ -906,6 +906,61 @@
                             </button>
                         </div>
                     </form>
+                </div>
+
+                <!-- Menu account -->
+                <div id="menu-account" class="navigation-main is-menu-account is-active">
+                    <ul class="list-navigation is-fluid is-flexible-height">
+                        <li class="list-item">
+                            <span class="text-link is-bold is-gray is-uppercase">
+                                My Account
+                            </span>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-gray">
+                                    My Wishlist
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-gray">
+                                    My Account info
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-gray">
+                                    My Address
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-gray">
+                                    My Order
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-gray">
+                                    My Return
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-navigation is-fluid is-flexible-height is-partition">
+                        <li class="list-item">
+                            <a class="list-link" href="#">
+                                <span class="text-link is-small is-gray">
+                                    Log out
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -1910,10 +1965,19 @@
                 $j('#menu-main').toggleClass('is-active');
                 $j('#menu-shop').removeClass('is-active');
                 $j('#menu-cart').removeClass('is-active');
+                $j('#menu-account').removeClass('is-active');
             });
 
             $j('#button-menu-shop').click(function() {
                 $j('#menu-shop').toggleClass('is-active');
+                $j('#menu-main').removeClass('is-active');
+                $j('#menu-cart').removeClass('is-active');
+                $j('#menu-account').removeClass('is-active');
+            });
+
+            $j('#button-menu-account').click(function() {
+                $j('#menu-account').toggleClass('is-active');
+                $j('#menu-shop').removeClass('is-active');
                 $j('#menu-main').removeClass('is-active');
                 $j('#menu-cart').removeClass('is-active');
             });
@@ -1922,11 +1986,13 @@
                 $j('#menu-cart').toggleClass('is-active');
                 $j('#menu-main').removeClass('is-active');
                 $j('#menu-shop').removeClass('is-active');
+                $j('#menu-account').removeClass('is-active');
             });
             $j('#button-menu-cart-close').click(function() {
                 $j('#menu-cart').removeClass('is-active');
                 $j('#menu-main').removeClass('is-active');
                 $j('#menu-shop').removeClass('is-active');
+                $j('#menu-account').removeClass('is-active');
             });
 
             // Menu lv2

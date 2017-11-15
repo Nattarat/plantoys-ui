@@ -103,7 +103,7 @@
         text-align: center;
     }
 
-    .my-account-avatar {
+    .myaccount-avatar {
         width: 110px;
         height: 110px;
         margin: auto auto 25px;
@@ -112,6 +112,34 @@
 
     .myaccount-segment-spacing {
         padding-bottom: 45px;
+
+        &.is-large {
+            padding-bottom: 65px;
+        }
+    }
+
+    .myaccount-address-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .myaccount-address-inner {
+        flex: none;
+
+        &.is-form {
+            flex-grow: 1;
+            max-width: calc(100% - 27px);
+            padding-right: 30px;
+        }
+
+        &.is-button {
+            width: 27px;
+            text-align: right;
+
+            &.is-align-top {
+                align-self: flex-start;
+            }
+        }
     }
 
     // STYLES OF STATE
