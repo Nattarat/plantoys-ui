@@ -78,6 +78,7 @@
     vertical-align: middle;
     color: $text-color;
     text-transform: none;
+    letter-spacing: 1px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -159,11 +160,11 @@
     }
 
     &.is-middle-small {
-        font-size: font-secondary-size(size-11); // 18px
+        font-size: font-secondary-size(size-11); // 14px
     }
 
     &.is-small {
-        font-size: font-secondary-size(size-4); // 20px
+        font-size: font-secondary-size(size-4); // 16px
     }
 
     &.is-medium {
@@ -206,7 +207,7 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media screen and (max-width: screen(labtop-lg)) {
-        font-size: $text-font-size * $font-size-reduce-primary;
+        // font-size: $text-font-size * $font-size-reduce-primary;
     }
 
     &.is-extra-small {
@@ -223,13 +224,13 @@
 
     &.is-middle-small {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-11) * $font-size-reduce-primary; // 18px
+            // font-size: font-secondary-size(size-11) * $font-size-reduce-primary; // 18px
         }
     }
 
     &.is-small {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-4) * $font-size-reduce-primary; // 20px
+            // font-size: font-secondary-size(size-4) * $font-size-reduce-primary; // 20px
         }
     }
 

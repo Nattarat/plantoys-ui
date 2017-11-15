@@ -128,8 +128,8 @@ $button-padding-side-deault: 45px;
         }
 
         &.is-size-topbar {
-            width: 24px;
-            height: auto;
+            width: auto;
+            height: 24px;
         }
     }
 
@@ -140,6 +140,7 @@ $button-padding-side-deault: 45px;
         line-height: $button-text-line-height;
         color: $button-text-color;
         vertical-align: middle;
+        letter-spacing: 1px;
 
         &.is-uppercase {
             text-transform: uppercase;
@@ -200,13 +201,21 @@ $button-padding-side-deault: 45px;
     // >>>>>>>>>>>>>>>>>>>>>>>
     .button-text {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: $button-text-font-size * $font-size-reduce-primary;
+            // font-size: $button-text-font-size * $font-size-reduce-primary;
         }
 
 
         &.is-small {
             @media screen and (max-width: screen(labtop-lg)) {
-                font-size: font-primary-size(size-5) * $font-size-reduce-primary;
+                // font-size: font-primary-size(size-5) * $font-size-reduce-primary;
+            }
+        }
+    }
+
+    .button-icon {
+        &.is-size-topbar {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                height: 18px;
             }
         }
     }
@@ -232,7 +241,7 @@ $button-padding-side-deault: 45px;
     @include button-variant(
         $button-height: $button-height-deault
     );
-    @include button-size-scale-down;
+    // @include button-size-scale-down;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -276,7 +285,7 @@ $button-padding-side-deault: 45px;
         $button-background-color-hover: color-button(primary-light-hover),
         $button-border-color-hover: color-button(primary-light-hover)
     );
-    @include button-size-scale-down;
+    // @include button-size-scale-down;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -320,7 +329,7 @@ $button-padding-side-deault: 45px;
         $button-background-color-hover: color-button(secondary-hover),
         $button-border-color-hover: color-button(secondary-hover)
     );
-    @include button-size-scale-down;
+    // @include button-size-scale-down;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -365,7 +374,7 @@ $button-padding-side-deault: 45px;
         $button-border-width-hover: 0,
         $button-border-color-hover: transparent
     );
-    @include button-size-scale-down;
+    // @include button-size-scale-down;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -532,7 +541,7 @@ $button-padding-side-deault: 45px;
     // >>>>>>>>>>>>>>>>>>>>>>>
     .button-text {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-primary-size(size-4) * $font-size-reduce-primary;
+            // font-size: font-primary-size(size-4) * $font-size-reduce-primary;
         }
     }
 
@@ -540,6 +549,12 @@ $button-padding-side-deault: 45px;
         &.is-table {
             @media screen and (max-width: screen(labtop-lg)) {
                 width: 50%;
+            }
+        }
+
+        &.is-language {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                height: 18px;
             }
         }
     }

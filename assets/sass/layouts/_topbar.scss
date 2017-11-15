@@ -38,6 +38,12 @@
         height: 100%;
     }
 
+    .topbar-segment {
+        &.is-left {}
+
+        &.is-right {}
+    }
+
     .logo-brand {
         @include translate(-50%, -50%);
         position: absolute;
@@ -118,7 +124,20 @@
         padding-right: 25px;
     }
 
+    .topbar-segment {
+        &.is-right {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                width: 60px;
+            }
+        }
+    }
+
     .icon-hamburger {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            width: 18px;
+            margin-right: 10px;
+        }
+
         span,
         &:before,
         &:after {
@@ -130,8 +149,12 @@
 
         span,
         &:before {
-            @media screen and (max-width: screen(labtop-lg)) {
-                margin-bottom: 5px;
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                margin-bottom: 6px;
+            }
+
+            @media (min-width: screen(tablet-sm)) and (max-width: screen(labtop-lg)) {
+                margin-bottom: 9px;
             }
         }
     }

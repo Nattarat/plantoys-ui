@@ -90,6 +90,7 @@ $field-padding-side-deault: 20px;
     font-size: $field-text-font-size;
     line-height: $field-text-line-height;
     color: $field-text-color;
+    letter-spacing: 1px;
 
     &:focus {
         outline: 0;
@@ -177,7 +178,7 @@ $field-padding-side-deault: 20px;
     &[type=tel],
     &[type=text] {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: $field-text-font-size * $font-size-reduce-primary;
+            // font-size: $field-text-font-size * $font-size-reduce-primary;
         }
     }
 
@@ -219,7 +220,7 @@ $field-padding-side-deault: 20px;
   // MIXINS
   // >>>>>>>>>>>>>>>>>>>>>>>
   @include field-variant;
-  @include field-size-scale-down;
+  // @include field-size-scale-down;
 
   // STYLES OF COMPONENT ITSELF
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -258,7 +259,7 @@ $field-padding-side-deault: 20px;
         $field-border: 1px solid $color-gray-3,
         $field-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
     );
-    @include field-size-scale-down;
+    // @include field-size-scale-down;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>

@@ -51,6 +51,10 @@
 
     .account-footer-segment {
         margin-top: 35px;
+
+        &.is-notice {
+            margin-top: 30px;
+        }
     }
 
     // STYLES OF STATE
