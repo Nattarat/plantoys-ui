@@ -12,6 +12,8 @@
 @charset 'utf-8';
 
 .main-container {
+    padding-top: 0;
+    padding-bottom: 0;
     margin-bottom: 0;
 }
 
@@ -190,7 +192,7 @@
         $block-min-width: initial,
         $block-max-width: initial,
         $block-height: auto,
-        $block-min-height: 100vh,
+        $block-min-height: calc(100vh - 80px - 354px),
         $block-max-height: initial,
         $block-padding: 0 0 35px,
         $block-margin: 0,
