@@ -349,7 +349,7 @@ $field-padding-side-deault: 20px;
     $form-icon-height: 58px,
     $form-icon-border: none,
     $form-icon-border-radius: 5px,
-    $form-icon-font-size: 24px,
+    $form-icon-font-size: font-secondary-size(size-4),
     $place-holder-padding: 0px 23px,
     $icon-code: "\f002",
     $icon-size: 22px,
@@ -423,11 +423,24 @@ $field-padding-side-deault: 20px;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    position: relative;
+
+    &:before {
+        display: none;
+    }
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     form {
         height: 100%;
+    }
+
+    .button-search {
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 50%;
+        right: 15px;
+        margin-top: -12px;
     }
 
     // STYLES OF STATE
