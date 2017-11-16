@@ -252,6 +252,15 @@ $color-gray-7: #aeafb3;
 $color-gray-8: #959595;
 $color-gray-9: #cacaca;
 $color-gray-10: #f4f4f4;
+$color-gray-11: #848484;
+$color-gray-12: #68737a;
+$color-gray-13: #636363;
+$color-gray-14: #68686a;
+$color-gray-15: #474747;
+$color-gray-16: #6d6e71;
+$color-gray-17: #5a6872;
+$color-gray-18: #68737a;
+$color-gray-19: #dfe3e6;
 // Blue
 $color-blue-1: #0e66a3;
 $color-blue-2: #0294c7;
@@ -259,6 +268,16 @@ $color-blue-3: #3b99fc;
 $color-blue-4: #1a88fc;
 $color-blue-5: #0070cd;
 $color-blue-6: #079fde;
+$color-blue-7: #36579c;
+$color-blue-8: #00abf7;
+$color-blue-9: #00b3c2;
+$color-blue-10: #0aaccc;
+$color-blue-11: #f1fdfe;
+$color-blue-12:#b3eff6;
+$color-blue-13:#bcf1f7;
+$color-blue-14:#91e7f1;
+$color-blue-15:#85eff6;
+$color-blue-16:#19afe1;
 // Yellow
 $color-yellow-1: #fff799;
 // Orange
@@ -272,85 +291,87 @@ $color-green-2: #bfd8af;
 $color-green-3: #57970b;
 $color-green-4: #78bd3a;
 $color-green-5: #77be44;
+// Pink
+$color-pink-1: #e998b8;
 
 // Primary
 // ------------------------------------------------
-$color-steel-blue: #3d70b2;
-$color-corn-flower-blue: #5596e6;
-$color-medium-aqua-marine: #41d6c3;
-$color-white: #ffffff;
-$color-slate-gray: #8c9ba5;
-$color-slate-gray-light-10: #dfe3e6;
-$color-slate-gray-light-20: #f0f3f6;
-$color-slate-gray-light-30: #f5f7fa;
-$color-dark-slate-gray: #5a6872;
-$color-dark-slate-gray-dark-90: #152934;
-$color-dark-slate-gray-dark-100: #0f212e;
-$color-light-cyan: #ecf1f7;
+// $color-steel-blue: #3d70b2;
+// $color-corn-flower-blue: #5596e6;
+// $color-medium-aqua-marine: #41d6c3;
+// $color-white: #ffffff;
+// $color-slate-gray: #8c9ba5;
+// $color-slate-gray-light-10: #dfe3e6;
+// $color-slate-gray-light-20: #f0f3f6;
+// $color-slate-gray-light-30: #f5f7fa;
+// $color-dark-slate-gray: #5a6872;
+// $color-dark-slate-gray-dark-90: #152934;
+// $color-dark-slate-gray-dark-100: #0f212e;
+// $color-light-cyan: #ecf1f7;
 
-$color-pink-flower: #e998b8;
-$color-grey-head:#68686a;
-$color-blue-flower:#00b3c2;
-$color-grey:#68737a;
-$color-blue-flower:#0aaccc;
-$color-facebook:#36579c;
-$color-twitter:#00abf7;
-$color-mail:#848484;
-$color-blue-light: #f1fdfe;
-$color-blue-light-20:#bcf1f7;
-$color-dot-blue:#85eff6;
-$color-brown-dark:#474747;
-$color-grey-menu:#636363;
-$color-grey-light:#6d6e71;
-$color-blue-head-thumb: #19afe1;
-$color-blue-light-10:#b3eff6;
-$color-dark-blue: #91e7f1;
+// $color-pink-flower: #e998b8;
+// $color-grey-head:#68686a;
+// $color-blue-flower:#00b3c2;
+// $color-grey:#68737a;
+// $color-blue-flower:#0aaccc;
+// $color-facebook:#36579c;
+// $color-twitter:#00abf7;
+// $color-mail:#848484;
+// $color-blue-light: #f1fdfe;
+// $color-blue-light-20:#bcf1f7;
+// $color-dot-blue:#85eff6;
+// $color-brown-dark:#474747;
+// $color-grey-menu:#636363;
+// $color-grey-light:#6d6e71;
+// $color-blue-head-thumb: #19afe1;
+// $color-blue-light-10:#b3eff6;
+// $color-dark-blue: #91e7f1;
 
 // Primary maps
-$color-primary-maps: (
-    'steel-blue': $color-steel-blue,
-    'corn-flower-blue': $color-corn-flower-blue,
-    'medium-aqua-marine': $color-medium-aqua-marine,
-    'white': $color-white,
-    'slate-gray': $color-slate-gray,
-    'slate-gray-light-10': $color-slate-gray-light-10,
-    'slate-gray-light-20': $color-slate-gray-light-20,
-    'slate-gray-light-30': $color-slate-gray-light-30,
-    'dark-slate-gray': $color-dark-slate-gray,
-    'dark-slate-gray-dark-90': $color-dark-slate-gray-dark-90,
-    'dark-slate-gray-dark-100': $color-dark-slate-gray-dark-100,
-    'light-cyan': $color-light-cyan
-);
+// $color-primary-maps: (
+//     'steel-blue': $color-steel-blue,
+//     'corn-flower-blue': $color-corn-flower-blue,
+//     'medium-aqua-marine': $color-medium-aqua-marine,
+//     'white': $color-white,
+//     'slate-gray': $color-slate-gray,
+//     'slate-gray-light-10': $color-slate-gray-light-10,
+//     'slate-gray-light-20': $color-slate-gray-light-20,
+//     'slate-gray-light-30': $color-slate-gray-light-30,
+//     'dark-slate-gray': $color-dark-slate-gray,
+//     'dark-slate-gray-dark-90': $color-dark-slate-gray-dark-90,
+//     'dark-slate-gray-dark-100': $color-dark-slate-gray-dark-100,
+//     'light-cyan': $color-light-cyan
+// );
 
 // Secondary
 // ------------------------------------------------
-$color-crimson: #e71d32;
-$color-lime-green : #5aa700;
-$color-gold: #efc100;
-$color-dodger-blue: #5aaafa;
-$color-black: #0f212e;
-$color-black-light-10: #152935;
-$color-medium-purple: #ba8ff7;
-$color-rebecca-purple: #734098;
-$color-light-sea-green: #00b4a0;
-$color-teal: #008571;
-$color-steel-blue: #3d70b2;
+// $color-crimson: #e71d32;
+// $color-lime-green : #5aa700;
+// $color-gold: #efc100;
+// $color-dodger-blue: #5aaafa;
+// $color-black: #0f212e;
+// $color-black-light-10: #152935;
+// $color-medium-purple: #ba8ff7;
+// $color-rebecca-purple: #734098;
+// $color-light-sea-green: #00b4a0;
+// $color-teal: #008571;
+// $color-steel-blue: #3d70b2;
 
 
 // Secondary maps
-$color-secondary-maps: (
-    'crimson': $color-crimson,
-    'lime-green': $color-lime-green,
-    'gold': $color-gold,
-    'dodger-blue': $color-dodger-blue,
-    'black': $color-black,
-    'black-light-10': $color-black-light-10,
-    'medium-purple': $color-medium-purple,
-    'rebecca-purple': $color-rebecca-purple,
-    'light-sea-green': $color-light-sea-green,
-    'teal': $color-teal,
-    'steel-blue': $color-steel-blue
-);
+// $color-secondary-maps: (
+//     'crimson': $color-crimson,
+//     'lime-green': $color-lime-green,
+//     'gold': $color-gold,
+//     'dodger-blue': $color-dodger-blue,
+//     'black': $color-black,
+//     'black-light-10': $color-black-light-10,
+//     'medium-purple': $color-medium-purple,
+//     'rebecca-purple': $color-rebecca-purple,
+//     'light-sea-green': $color-light-sea-green,
+//     'teal': $color-teal,
+//     'steel-blue': $color-steel-blue
+// );
 
 // Validation map
 // ------------------------------------------------
@@ -416,7 +437,7 @@ $font-size-8: 12px;
 $font-size-9: 32px;
 $font-size-10: 72px;
 $font-size-11: 14px; // 18
-$font-size-12: 16px;
+$font-size-12: 18px;
 
 // Sizes reduce
 $font-size-reduce-primary: 0.6; // 100% > 60%

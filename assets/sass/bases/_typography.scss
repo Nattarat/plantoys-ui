@@ -155,16 +155,20 @@
         font-size: font-secondary-size(size-8); // 12px
     }
 
-    &.is-extra-middle-small {
-        font-size: font-secondary-size(size-12); // 16px
-    }
-
     &.is-middle-small {
         font-size: font-secondary-size(size-11); // 14px
     }
 
     &.is-small {
         font-size: font-secondary-size(size-4); // 16px
+    }
+
+    &.is-middle-medium {
+        font-size: font-secondary-size(size-12); // 18px
+    }
+
+    &.is-middlemore-medium {
+        font-size: font-secondary-size(size-3); // 22px
     }
 
     &.is-medium {
@@ -217,9 +221,7 @@
     }
 
     &.is-extra-middle-small {
-        @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-12) * $font-size-reduce-primary; // 16px
-        }
+        @media screen and (max-width: screen(labtop-lg)) {}
     }
 
     &.is-middle-small {
@@ -614,8 +616,8 @@
     &.is-page {
         @include transition(color .3s ease);
         font-family: font-family(primary);
-        font-size: font-secondary-size(size-2); // 24px
-        line-height: font-secondary-size(size-2);
+        font-size: font-secondary-size(size-5); // 20px
+        line-height: font-secondary-size(size-5);
         color: $color-gray-4;
 
         &:hover,

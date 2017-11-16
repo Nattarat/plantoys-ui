@@ -53,15 +53,15 @@
 // ==================================================================================================
 // Primary
 // ------------------------------------------------
-@function color-primary($layer) {
-    @return map-get($color-primary-maps, $layer);
-}
+// @function color-primary($layer) {
+//     @return map-get($color-primary-maps, $layer);
+// }
 
 // Secondary
 // ------------------------------------------------
-@function color-secondary($layer) {
-    @return map-get($color-secondary-maps, $layer);
-}
+// @function color-secondary($layer) {
+//     @return map-get($color-secondary-maps, $layer);
+// }
 
 // Button
 // ------------------------------------------------

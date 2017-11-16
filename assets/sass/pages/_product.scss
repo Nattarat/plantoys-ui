@@ -1,10 +1,16 @@
-// thumb nail
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Product
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Product
 // ------------------------------------------------
-@mixin thumb-nail(
-    $thumb-padding: 0px,
-    $thumb-head-font-size: 33px,
-    $thumb-detail-font-size: 22px
-) {
+.product {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -13,26 +19,9 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    text-align: center;
-    padding: $thumb-padding;
+
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    img{
-        margin: auto;
-    }
-    .caption{
-        .text-style{
-            color: $color-blue-16;
-            font-family: font-family(primary);
-            font-size: $thumb-head-font-size;
-            text-transform: none;
-        }
-    }
-    .thumb-text-detail{
-        font-family: font-family(secondary);
-        font-size: $thumb-detail-font-size;
-        color: $color-gray-17;
-    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>

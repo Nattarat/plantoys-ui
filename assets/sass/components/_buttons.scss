@@ -147,7 +147,11 @@ $button-padding-side-deault: 45px;
         }
 
         &.is-small {
-            font-size: font-primary-size(size-5);
+            font-size: font-primary-size(size-12); // 18px
+        }
+
+        &.is-medium {
+            font-size: font-primary-size(size-5); // 20px
         }
 
         &.is-language-active {
@@ -609,6 +613,16 @@ $button-padding-side-deault: 45px;
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-counternumber {
+        min-width: 20px;
+        height: 20px;
+
+        .button-icon {
+            width: 8px;
+            height: auto;
+        }
+    }
+
     &.is-gototop {
         @include transition(all .5s ease);
         @include translate(0, 15px);

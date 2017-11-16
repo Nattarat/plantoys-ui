@@ -28,7 +28,7 @@
     .card-sub-detail{
         font-family: font-family(seccondary);
         font-size: font-secondary-size(size-4); // 20px
-        color: $color-grey;
+        color: $color-gray-12;
     }
     .caption{
         width: 100%;
@@ -41,10 +41,10 @@
     &.is-hover:hover{
         cursor: pointer;
         &.is-blue{
-            background: $color-blue-flower;
+            background: $color-blue-9;
         }
         &.is-pink{
-            background: $color-pink-flower;
+            background: $color-pink-1;
         }
     }
 

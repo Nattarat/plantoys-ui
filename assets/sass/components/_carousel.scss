@@ -14,7 +14,8 @@
 .carousel-awards,
 .carousel-hero,
 .carousel-category,
-.carousel-sustainable {
+.carousel-sustainable,
+.carousel-product {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
     $pagination-size: 0.9vw; // 17px
@@ -204,6 +205,11 @@
         &.for-category {
             padding-left: 7vw;
             padding-right: 7vw;
+        }
+
+        &.for-full-viewport {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 

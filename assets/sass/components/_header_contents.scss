@@ -3,7 +3,7 @@
 @mixin container-header(
     $container-background: none,
     $container-height: 540px,
-    $container-padding: 0px 124px 
+    $container-padding: 0px 124px
 ) {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -105,7 +105,7 @@
         .head-title {
             font-size: 55px;
         }
-        .sub-title {  
+        .sub-title {
             display: inline;
             font-size: 25px;
         }
@@ -145,7 +145,7 @@
         font-family: font-family(primary);
         text-transform: unset;
         font-size: 48px;
-        color: $color-grey-head;
+        color: $color-gray-14;
     }
     .text-credit{
         font-family: font-family(secondary);
@@ -153,14 +153,14 @@
         color: $color-gray-1;
         .text-sub-credit{
             font-family: font-family(secondary);
-            color: $color-blue-flower;
+            color: $color-blue-10;
         }
     }
     .text-detail{
         font-family: font-family(secondary);
         font-size: 24px;
         color: $color-gray-1;
-        line-height:44px; 
+        line-height:44px;
         .text-mark{
             font-family: font-family(primary);
         }
@@ -175,7 +175,7 @@
         max-width: 597px;
         max-height: 380px;
     }
- 
+
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
