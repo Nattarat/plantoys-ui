@@ -110,6 +110,11 @@
         max-width: 1050px;
     }
 
+    &.is-blank {
+        min-height: calc(100vh - 434px);
+        padding-top: 180px;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
