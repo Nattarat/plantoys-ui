@@ -172,6 +172,10 @@
         font-size: font-secondary-size(size-12); // 18px
     }
 
+    &.is-littlemore-medium {
+        font-size: font-secondary-size(size-5); // 20px
+    }
+
     &.is-middlemore-medium {
         font-size: font-secondary-size(size-3); // 22px
     }
