@@ -942,18 +942,20 @@
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include list-variant(
-        $list-display: inline-block,
-        $list-padding: 0,
+        $list-display: block,
+        $list-padding: 21px 42px,
         $list-margin: 0,
 
         // List item
-        $list-item-display: inline-block,
+        $list-item-display: block,
         $list-item-padding: 0,
-        $list-item-margin: 0
+        $list-item-margin: 0 0 12px 0
     );
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    background-color: $color-gray-10;
+    border-radius: 8px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -963,7 +965,143 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    // Reset responsive tabs plugin style
+    &.is-accordion {
+        padding-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Product
+// ------------------------------------------------
+.list-product {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include list-variant(
+        $list-display: flex,
+        $list-padding: 0,
+        $list-margin: 0,
+
+        // List item
+        $list-item-display: block,
+        $list-item-padding: 0,
+        $list-item-margin: -1px 0 0 -1px
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    flex-wrap: wrap;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        position: relative;
+    }
+
+    .list-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        border: 1px solid $color-gray-10;
+
+        &:hover {
+            background-color: $color-gray-10;
+
+            .list-link-overlay {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .list-detail {
+                bottom: -1px;
+                margin: 0 -1px;
+                background-color: $color-blue-17;
+            }
+
+            .text-product {
+                color: $color-white;
+
+                &.is-red {
+                    color: color-text(red-secondary);
+                }
+            }
+        }
+    }
+
+    .list-link-overlay {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $color-black;
+    }
+
+    .list-thumbnail {
+        width: 100%;
+        height: 385px;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .list-detail {
+        position: relative;
+        z-index: zindex(lv2);
+        padding: 30px 70px;
+        min-height: 125px;
+        text-align: center;
+    }
+
+    .list-detail-name {
+        margin-bottom: 10px;
+    }
+
+    .list-detail-price {
+    }
+
+    .list-detail-price-inner {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+        vertical-align: middle;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-column-3 {
+        .list-item {
+            width: calc(100% / 3);
+        }
+    }
+
+    &.is-column-5 {
+        .list-item {
+            width: calc(100% / 5);
+        }
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

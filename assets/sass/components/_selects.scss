@@ -177,6 +177,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    display: inline-block;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -196,6 +197,15 @@
         select {
             padding-left: 20px;
             font-size: font-secondary-size(size-4);
+        }
+    }
+
+    &.is-size-itself {
+        width: auto;
+        max-width: initial;
+
+        select {
+            padding-right: 50px;
         }
     }
 

@@ -613,6 +613,11 @@
     // Responsive tabs plugin > Accordion button
     .r-tabs-accordion-title {
         .r-tabs-anchor {
+            position: relative;
+            display: block;
+            padding: 21px 42px;
+            background-color: $color-gray-10;
+            border-radius: 8px;
             font-family: font-family(primary);
             font-size: font-primary-size(size-2);
             line-height: font-primary-size(size-2);
@@ -621,11 +626,32 @@
             &:hover {
                 text-decoration: none;
             }
+
+            // Arrow
+            &:after {
+                content: ' ';
+                position: absolute;
+                z-index: zindex(lv1);
+                top: 50%;
+                right: 31px;
+                display: block;
+                width: 17px;
+                height: 11px;
+                margin-top: -5px;
+                background-image: url('#{path-file(icons)}/icon-arrow-down.png');
+                background-size: cover;
+            }
         }
 
         &.r-tabs-state-active {
             .r-tabs-anchor {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
 
+                // Arrow
+                &:after {
+                    @include rotate(180deg);
+                }
             }
         }
     }

@@ -119,37 +119,496 @@
             </div>
 
             <div class="product">
-                <!-- <div class="product-segment is-filter">
-
-                </div> -->
-                <div class="product-segment is-label">
-                    fsdfsd
-                </div>
-                <div class="product-segment is-sort">
-                    fsdfsd
-                </div>
-                <div class="product-segment is-filter-option">
-                    <!-- Filter -->
-                    <div class="tabs-filter">
-                        <!-- Tabs control -->
-                        <ul class="list-tabs">
-                            <li class="list-item">
-                                <a href="#age">Age</a>
-                            </li>
-                        </ul>
-                        <!-- Tabs content -->
-                        <div id="age">
-                            <ul class="list-filter">
-                                <li class="list-item">
-                                    sdadasd
-                                </li>
-                            </ul>
+                <!-- Filter control -->
+                <div class="product-segment">
+                    <div class="product-segment-inner is-label">
+                        <div class="product-segment-item is-label">
+                            <span class="text-default is-bold is-medium">
+                                Filter by :
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product-segment-inner is-sort">
+                        <div class="product-segment-item is-sort">
+                            <div class="product-segment-item-inner">
+                                <label class="text-default is-label is-small is-bold is-uppercase">Show</label>
+                                <!-- Add class "is-error" for show error field -->
+                                <div class="select-arrow is-default is-size-itself is-transparent-background">
+                                    <select>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <!-- Add class "is-active" for show validation message -->
+                                <div class="field-validation">
+                                    <span class="text-default is-extra-small is-error">error_meesage</span>
+                                </div>
+                            </div>
+                            <div class="product-segment-item-inner">
+                                <label class="text-default is-label is-small is-bold is-uppercase">Sort by</label>
+                                <!-- Add class "is-error" for show error field -->
+                                <div class="select-arrow is-default is-size-itself is-transparent-background">
+                                    <select>
+                                        <option value="1">Price : Low to High</option>
+                                        <option value="2">Price : High to Low</option>
+                                        <option value="3">Alphabet (A-Z)</option>
+                                    </select>
+                                </div>
+                                <!-- Add class "is-active" for show validation message -->
+                                <div class="field-validation">
+                                    <span class="text-default is-extra-small is-error">error_meesage</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="product-segment is-list">
-                    asdsada
+
+                <div class="product-segment">
+                    <!-- Filter column -->
+                    <div class="product-segment-inner is-filter-option">
+                        <!-- Type filter -->
+                        <div class="product-segment-item">
+                            <ul class="list-filter">
+                                <li class="list-item">
+                                    <div class="checkbox-filter">
+                                        <!-- id and for value are mockup > please change its when integrate in magento -->
+                                        <input id="checkbox-a1" type="checkbox" />
+                                        <label class="checkbox-label" for="checkbox-a1">New Products</label>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <div class="checkbox-filter">
+                                        <!-- id and for value are mockup > please change its when integrate in magento -->
+                                        <input id="checkbox-a2" type="checkbox" />
+                                        <label class="checkbox-label" for="checkbox-a2">Best Selling</label>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <div class="checkbox-filter">
+                                        <!-- id and for value are mockup > please change its when integrate in magento -->
+                                        <input id="checkbox-a3" type="checkbox" />
+                                        <label class="checkbox-label" for="checkbox-a3">Award Winning</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Age filter -->
+                        <div class="product-segment-item">
+                            <div class="tabs-filter">
+                                <!-- Tabs control -->
+                                <ul class="list-tabs">
+                                    <li class="list-item">
+                                        <a href="#age">Age</a>
+                                    </li>
+                                </ul>
+                                <!-- Tabs content -->
+                                <div id="age">
+                                    <ul class="list-filter is-accordion">
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-b1" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-b1">0-6 months</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-b2" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-b2">7-12 months</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-b3" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-b3">13-18 months</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-b4" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-b4">18-24 months</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-b5" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-b5">2-3 years</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-b6" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-b6">3 years+</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category filter -->
+                        <div class="product-segment-item">
+                            <div class="tabs-filter">
+                                <!-- Tabs control -->
+                                <ul class="list-tabs">
+                                    <li class="list-item">
+                                        <a href="#category">Category</a>
+                                    </li>
+                                </ul>
+                                <!-- Tabs content -->
+                                <div id="category">
+                                    <ul class="list-filter is-accordion">
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c1" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c1">All Categories</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c2" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c2">Plan Home</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c3" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c3">Plan Mini</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c4" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c4">Water Play</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c5" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c5">Babies</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c6" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c6">Push & Pull</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c7" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c7">Active Play</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c8" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c8">Learning & Education</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c9" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c9">Games & Puzzle</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c10" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c10">Music</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c11" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c11">Construction & Creativity</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-c12" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-c12">Pretend Play</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Child development filter -->
+                        <div class="product-segment-item">
+                            <div class="tabs-filter">
+                                <!-- Tabs control -->
+                                <ul class="list-tabs">
+                                    <li class="list-item">
+                                        <a href="#childdevelopment">Child Development</a>
+                                    </li>
+                                </ul>
+                                <!-- Tabs content -->
+                                <div id="childdevelopment">
+                                    <ul class="list-filter is-accordion">
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-d1" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-d1">Physical</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-d2" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-d2">Emotion & Social</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-d3" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-d3">Intellectual & Language</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="checkbox-filter">
+                                                <!-- id and for value are mockup > please change its when integrate in magento -->
+                                                <input id="checkbox-d4" type="checkbox" />
+                                                <label class="checkbox-label" for="checkbox-d4">Adaptive Toys</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product list column -->
+                    <div class="product-segment-inner is-list">
+                        <div class="list-product is-column-3">
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <div class="list-thumbnail" style="background-image: url('../assets/images/content/product/product-thumbnail-3.png')"></div>
+                                    <div class="list-detail">
+                                        <div class="list-detail-name">
+                                            <span class="text-default text-product is-medium is-bold is-black">Bell Rattle BellRattleBell Rattle Bell Rattle</span>
+                                        </div>
+                                        <div class="list-detail-price">
+                                            <div class="list-detail-price-inner">
+                                                <span class="text-default text-product is-lineheight-self is-small is-black is-linethrough">$ 150.00</span>
+                                            </div>
+                                            <div class="list-detail-price-inner">
+                                                <span class="text-default text-product is-lineheight-self is-middlemore-medium is-black is-red">$ 139.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="button-typography is-addcart" href="#">
+                                            <span class="button-body">
+                                                <img class="button-icon is-text-blank" src="../assets/images/icon/icon-add-circle-plus.png" alt="Icon">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="list-link-overlay" href="#"></div>
+                                </a>
+                                <a class="button-typography is-category" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon is-text-blank" src="../assets/images/icon/category/icon-category-newproducts.png" alt="Icon">
+                                    </span>
+                                </a>
+                                <a class="button-typography is-wishlist" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon is-text-blank is-blank" src="../assets/images/icon/icon-wishlist-blank.png" alt="Icon">
+                                        <img class="button-icon is-text-blank is-selected" src="../assets/images/icon/icon-wishlist-selected.png" alt="Icon">
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <div class="list-thumbnail" style="background-image: url('../assets/images/content/product/product-thumbnail-4.png')"></div>
+                                    <div class="list-detail">
+                                        <div class="list-detail-name">
+                                            <span class="text-default text-product is-medium is-bold is-black">Bell Rattle</span>
+                                        </div>
+                                        <div class="list-detail-price">
+                                            <div class="list-detail-price-inner">
+                                                <span class="text-default text-product is-lineheight-self is-small is-black">$ 150.00</span>
+                                            </div>
+                                            <!-- <div class="list-detail-price-inner">
+                                                <span class="text-default text-product is-lineheight-self is-middlemore-medium is-black is-red">$ 139.00</span>
+                                            </div> -->
+                                        </div>
+                                        <div class="button-typography is-addcart" href="#">
+                                            <span class="button-body">
+                                                <img class="button-icon is-text-blank" src="../assets/images/icon/icon-add-circle-plus.png" alt="Icon">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="list-link-overlay" href="#"></div>
+                                </a>
+                                <a class="button-typography is-category" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon is-text-blank" src="../assets/images/icon/category/icon-category-bestseller.png" alt="Icon">
+                                    </span>
+                                </a>
+                                <a class="button-typography is-wishlist is-active" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon is-text-blank is-blank" src="../assets/images/icon/icon-wishlist-blank.png" alt="Icon">
+                                        <img class="button-icon is-text-blank is-selected" src="../assets/images/icon/icon-wishlist-selected.png" alt="Icon">
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <div class="list-thumbnail" style="background-image: url('../assets/images/content/product/product-thumbnail-5.png')"></div>
+                                    <div class="list-detail">
+                                        <div class="list-detail-name">
+                                            <span class="text-default text-product is-medium is-bold is-black">Bell Rattle</span>
+                                        </div>
+                                        <div class="list-detail-price">
+                                            <div class="list-detail-price-inner">
+                                                <span class="text-default text-product is-lineheight-self is-small is-black">$ 150.00</span>
+                                            </div>
+                                            <!-- <div class="list-detail-price-inner">
+                                                <span class="text-default text-product is-lineheight-self is-middlemore-medium is-black is-red">$ 139.00</span>
+                                            </div> -->
+                                        </div>
+                                        <div class="button-typography is-addcart" href="#">
+                                            <span class="button-body">
+                                                <img class="button-icon is-text-blank" src="../assets/images/icon/icon-add-circle-plus.png" alt="Icon">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="list-link-overlay" href="#"></div>
+                                </a>
+                                <a class="button-typography is-category" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon is-text-blank" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="Icon">
+                                    </span>
+                                </a>
+                                <a class="button-typography is-wishlist" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon is-text-blank is-blank" src="../assets/images/icon/icon-wishlist-blank.png" alt="Icon">
+                                        <img class="button-icon is-text-blank is-selected" src="../assets/images/icon/icon-wishlist-selected.png" alt="Icon">
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <div class="list-thumbnail" style="background-image: url('../assets/images/content/product/product-thumbnail-6.png')"></div>
+                                    <div class="list-detail">
+                                        <div class="list-detail-name">
+                                            <span class="text-default text-product is-medium is-bold is-black">Bell Rattle</span>
+                                        </div>
+                                        <div class="list-detail-price">
+                                            <div class="list-detail-price-inner">
+                                                <span class="text-default text-product is-lineheight-self is-small is-black">$ 150.00</span>
+                                            </div>
+                                            <!-- <div class="list-detail-price-inner">
+                                                <span class="text-default text-product is-lineheight-self is-middlemore-medium is-black is-red">$ 139.00</span>
+                                            </div> -->
+                                        </div>
+                                        <div class="button-typography is-addcart" href="#">
+                                            <span class="button-body">
+                                                <img class="button-icon is-text-blank" src="../assets/images/icon/icon-add-circle-plus.png" alt="Icon">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="list-link-overlay" href="#"></div>
+                                </a>
+                                <!-- <a class="button-typography is-category" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon is-text-blank" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="Icon">
+                                    </span>
+                                </a> -->
+                                <a class="button-typography is-wishlist" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon is-text-blank is-blank" src="../assets/images/icon/icon-wishlist-blank.png" alt="Icon">
+                                        <img class="button-icon is-text-blank is-selected" src="../assets/images/icon/icon-wishlist-selected.png" alt="Icon">
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="list-item">
+                                <a class="list-link" href="#">
+                                    <div class="list-thumbnail" style="background-image: url('../assets/images/content/product/product-thumbnail-7.png')"></div>
+                                    <div class="list-detail">
+                                        <div class="list-detail-name">
+                                            <span class="text-default text-product is-medium is-bold is-black">Bell Rattle</span>
+                                        </div>
+                                        <div class="list-detail-price">
+                                            <div class="list-detail-price-inner">
+                                                <span class="text-default text-product is-lineheight-self is-small is-black">$ 150.00</span>
+                                            </div>
+                                            <!-- <div class="list-detail-price-inner">
+                                                <span class="text-default text-product is-lineheight-self is-middlemore-medium is-black is-red">$ 139.00</span>
+                                            </div> -->
+                                        </div>
+                                        <div class="button-typography is-addcart" href="#">
+                                            <span class="button-body">
+                                                <img class="button-icon is-text-blank" src="../assets/images/icon/icon-add-circle-plus.png" alt="Icon">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="list-link-overlay" href="#"></div>
+                                </a>
+                                <!-- <a class="button-typography is-category" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon is-text-blank" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="Icon">
+                                    </span>
+                                </a> -->
+                                <a class="button-typography is-wishlist" href="#">
+                                    <span class="button-body">
+                                        <img class="button-icon is-text-blank is-blank" src="../assets/images/icon/icon-wishlist-blank.png" alt="Icon">
+                                        <img class="button-icon is-text-blank is-selected" src="../assets/images/icon/icon-wishlist-selected.png" alt="Icon">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-footer">
+                            <div class="product-footer-segment">
+                                <span class="text-default is-bold">Showing 1-10 of 44 results</span>
+                            </div>
+                            <div class="product-footer-segment">
+                                <div class="pagination-page">
+                                    <div class="pagination-list">
+                                        <div class="pagination-list-item">
+                                            <span class="text-default text-pagination is-lineheight-self is-bold">Page</span>
+                                        </div>
+                                        <a class="pagination-list-item is-active" href="#">
+                                            <span class="text-default text-pagination is-lineheight-self is-bold" href="">1</span>
+                                        </a>
+                                        <a class="pagination-list-item" href="#">
+                                            <span class="text-default text-pagination is-lineheight-self is-bold" href="">2</span>
+                                        </a>
+                                        <a class="pagination-list-item" href="#">
+                                            <span class="text-default text-pagination is-lineheight-self is-bold is-large" href=""><i class="fa fa-angle-right"></i></span>
+                                        </a>
+                                        <a class="pagination-list-item" href="#">
+                                            <span class="text-default text-pagination is-lineheight-self is-bold" href="">Last</span>
+                                            <span class="text-default text-pagination text-pagination-icon-right is-lineheight-self is-bold is-large" href=""><i class="fa fa-angle-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
+
             </div>
 
 
@@ -169,7 +628,7 @@
 
             // Responsive tabs
             $j('.tabs-filter').responsiveTabs({
-                startCollapsed: 'accordion'
+                startCollapsed: false
             });
         });
     </script>

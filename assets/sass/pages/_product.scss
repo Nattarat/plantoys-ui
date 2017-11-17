@@ -19,34 +19,52 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    display: flex;
     padding: 25px 60px;
-    margin-left: -20px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .product-segment {
-        padding-left: 20px;
-
-        &.is-filter-option {
-            flex: 0;
-        }
-
-        &.is-list {
-            flex: 1;
-        }
+        display: flex;
+        margin-left: -20px;
     }
 
     .product-segment-inner {
         padding-left: 20px;
 
+        &.is-label,
         &.is-filter-option {
             flex: 0;
         }
 
+        &.is-sort,
         &.is-list {
             flex: 1;
         }
+    }
+
+    .product-segment-item {
+        margin-bottom: 20px;
+
+        &.is-label {
+            display: flex;
+            align-items: center;
+            width: 400px;
+            min-height: 57px;
+        }
+
+        &.is-sort {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .product-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     // STYLES OF STATE

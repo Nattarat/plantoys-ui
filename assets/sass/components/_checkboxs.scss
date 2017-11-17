@@ -28,6 +28,10 @@
     $checkbox-box-border: 0,
     $checkbox-box-border-radius: 4px,
 
+    // Box active
+    $checkbox-box-color-active: $color-blue-3,
+    $checkbox-box-border-active: 0,
+
     // icon
     $checkbox-icon-width: 16px,
     $checkbox-icon-height: 16px,
@@ -44,6 +48,13 @@
 
         &:checked {
             + .checkbox-label {
+                // Box
+                &:before {
+                    background-color: $checkbox-box-color-active;
+                    border: $checkbox-box-border-active;
+                }
+
+                // Check icon
                 &:after {
                     @include opacity(1);
                     visibility: visible;
@@ -62,6 +73,7 @@
         font-family: $checkbox-label-font-family;
         font-size: $checkbox-label-font-size;
         line-height: 1.5;
+        letter-spacing: 1px;
         color: $checkbox-label-font-color;
         vertical-align: middle;
         cursor: pointer;
@@ -122,30 +134,74 @@
 // Primary
 // ------------------------------------------------
 .checkbox-primary {
-  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // MIXINS
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  @include checkbox-variant;
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include checkbox-variant;
 
-  // STYLES OF COMPONENT ITSELF
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF CHILD CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF STATE
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF MODIFIER CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // STYLES OF STATE WITH MODIFIER CLASS
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
-  // MEDIA QUERY
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Filter
+// ------------------------------------------------
+.checkbox-filter {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include checkbox-variant(
+        // Label text
+        $checkbox-label-padding: 0 0 0 30px,
+        $checkbox-label-font-family: font-family(primary),
+        $checkbox-label-font-size: font-primary-size(size-4),
+
+        // Box
+        $checkbox-box-color: $color-white,
+        $checkbox-box-border: 1px solid $color-gray-9
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations

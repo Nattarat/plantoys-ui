@@ -278,6 +278,7 @@ $color-blue-13:#bcf1f7;
 $color-blue-14:#91e7f1;
 $color-blue-15:#85eff6;
 $color-blue-16:#19afe1;
+$color-blue-17:#b0bdc0;
 // Yellow
 $color-yellow-1: #fff799;
 // Orange
@@ -285,6 +286,7 @@ $color-orange-1: #ed9a2d;
 // Red
 $color-red-1: #ff0000;
 $color-red-2: #d51f2d;
+$color-red-3: #cf0a2c;
 // Green
 $color-green-1: #c6d675;
 $color-green-2: #bfd8af;
@@ -406,6 +408,7 @@ $color-text-maps: (
     'green-primary': $color-green-3,
     'green-secondary': $color-green-5,
     'red-primary': $color-red-1,
+    'red-secondary': $color-red-3,
     'blue-primary': $color-blue-6,
     'title-page': $color-gray-6,
     'gray-light': $color-gray-4

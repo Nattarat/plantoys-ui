@@ -514,7 +514,7 @@ $button-padding-side-deault: 45px;
 
     &.is-wishlist {
         position: absolute;
-        z-index: zindex(lv1);
+        z-index: zindex(lv3);
         bottom: 15px;
         right: 15px;
 
@@ -528,6 +528,26 @@ $button-padding-side-deault: 45px;
                 display: none;
             }
         }
+    }
+
+    &.is-category {
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 15px;
+        left: 15px;
+
+        .button-icon {
+            width: 80px;
+            height: auto;
+        }
+    }
+
+    &.is-addcart {
+        @include translate(-50%, -50%);
+        position: absolute;
+        z-index: zindex(lv1);
+        top: -4px;
+        left: 50%;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
