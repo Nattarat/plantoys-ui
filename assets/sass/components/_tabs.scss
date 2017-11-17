@@ -579,7 +579,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include container-variant(
         $block-display: block,
-        $block-width: 100%,
+        $block-width: 400px,
         $block-min-width: initial,
         $block-max-width: initial,
         $block-height: auto,
@@ -595,10 +595,45 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .tab-content {
-        // Reset responsive tabs plugin style
-        &.r-tabs-panel {
+    // Responsive tabs plugin style > Reset
+    &.r-tabs {
+        .r-tabs-nav {
+            display: none;
+        }
+
+        .r-tabs-accordion-title {
+            display: block;
+        }
+
+        .r-tabs-panel {
             padding: 0;
+        }
+    }
+
+    // Responsive tabs plugin > Accordion button
+    .r-tabs-accordion-title {
+        .r-tabs-anchor {
+            font-family: font-family(primary);
+            font-size: font-primary-size(size-2);
+            line-height: font-primary-size(size-2);
+            color: color-text(default);
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &.r-tabs-state-active {
+            .r-tabs-anchor {
+
+            }
+        }
+    }
+
+    // Responsive tabs plugin > container content
+    .r-tabs-panel {
+        &.r-tabs-state-active {
+
         }
     }
 

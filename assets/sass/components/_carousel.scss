@@ -34,6 +34,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .carousel-item {
         position: relative;
+        display: block !important; // fix line height spacing from pludin inline style
 
         &.is-viewport-full {
             height: 100vh;
@@ -183,6 +184,8 @@
         padding-right: 4.5vw; // 85px
 
         .slick-arrow {
+            top: 50%;
+
             &.slick-prev {
                 left: 1.25vw;
             }

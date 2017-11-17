@@ -255,7 +255,8 @@
     .container-panel-segment {
         padding: 35px;
 
-        &.is-myaccount-info {
+        &.is-myaccount-info,
+        &.is-form-vertical {
             padding-left: 135px;
             padding-right: 135px;
         }
@@ -281,7 +282,8 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    &.is-myaccount-info {
+    &.is-myaccount-info,
+    &.is-form-vertical {
         max-width: 735px;
     }
 

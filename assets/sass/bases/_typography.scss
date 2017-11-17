@@ -216,7 +216,7 @@
 
     &.is-extra-small {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-8) * $font-size-reduce-primary; // 12px
+            // font-size: font-secondary-size(size-8) * $font-size-reduce-primary; // 12px
         }
     }
 
@@ -238,25 +238,25 @@
 
     &.is-medium {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-2) * $font-size-reduce-primary; // 24px
+            // font-size: font-secondary-size(size-2) * $font-size-reduce-primary; // 24px
         }
     }
 
     &.is-large {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-9) * $font-size-reduce-primary; // 32px
+            // font-size: font-secondary-size(size-9) * $font-size-reduce-primary; // 32px
         }
     }
 
     &.is-middle-large {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-1) * $font-size-reduce-primary; // 40px
+            // font-size: font-secondary-size(size-1) * $font-size-reduce-primary; // 40px
         }
     }
 
     &.is-extra-large {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-6) * $font-size-reduce-primary; // 48px
+            // font-size: font-secondary-size(size-6) * $font-size-reduce-primary; // 48px
         }
     }
 }
@@ -714,6 +714,7 @@
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include text-variant(
+        $text-font-size: font-secondary-size(size-4)
     );
 
     // STYLES OF COMPONENT ITSELF

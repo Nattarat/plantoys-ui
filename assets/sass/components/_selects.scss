@@ -192,6 +192,13 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-default {
+        select {
+            padding-left: 20px;
+            font-size: font-secondary-size(size-4);
+        }
+    }
+
     &.is-country {
         width: auto;
         min-width: 260px;

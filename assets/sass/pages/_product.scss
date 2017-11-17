@@ -19,9 +19,35 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    display: flex;
+    padding: 25px 60px;
+    margin-left: -20px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .product-segment {
+        padding-left: 20px;
+
+        &.is-filter-option {
+            flex: 0;
+        }
+
+        &.is-list {
+            flex: 1;
+        }
+    }
+
+    .product-segment-inner {
+        padding-left: 20px;
+
+        &.is-filter-option {
+            flex: 0;
+        }
+
+        &.is-list {
+            flex: 1;
+        }
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
