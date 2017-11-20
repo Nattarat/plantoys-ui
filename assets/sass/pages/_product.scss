@@ -10,7 +10,55 @@
 
 // Product
 // ------------------------------------------------
-.product {
+
+// Magento product layout structure
+.col2-left-layout {
+    display: flex;
+    margin-left: -20px;
+
+    .col-left,
+    .col-main {
+        padding-left: 20px;
+    }
+
+    .col-left {
+        flex: 0;
+        padding-right: 0;
+    }
+
+    .col-main {
+        flex: 1;
+
+        .product-segment-inner {
+            padding-left: 0;
+        }
+
+        .pager {
+            float: none;
+            overflow: visible;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .sorter {
+            float: none;
+            margin-bottom: 0;
+
+            > .sort-by {
+                float: none;
+                height: auto;
+                margin-right: 0;
+            }
+
+            label {
+                float: none;
+            }
+        }
+    }
+}
+
+.product,
+.col2-left-layout {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -65,6 +113,327 @@
         align-items: center;
         padding-top: 30px;
         padding-bottom: 30px;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Filter magento structure
+// ------------------------------------------------
+.product-filter-content {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    margin-top: 0;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .currently {
+        padding-bottom: 15px;
+
+        .block-subtitle {
+            span {
+                display: inline-block;
+                font-family: font-family(secondary);
+                font-size: font-secondary-size(size-11);
+                font-weight: normal;
+                line-height: 1.3;
+                vertical-align: middle;
+                color: $color-gray-1;
+                text-transform: none;
+                letter-spacing: 1px;
+            }
+        }
+
+        ol {
+            li {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                border: 1px solid $color-gray-4;
+                border-radius: 4px;
+                padding: 4px 30px 3px 10px;
+                margin: 0 5px 5px 0;
+                font-family: font-family(secondary);
+                font-size: font-secondary-size(size-8);
+                font-weight: normal;
+                line-height: 1.3;
+                vertical-align: middle;
+                color: $color-gray-1;
+                text-transform: none;
+                letter-spacing: 1px;
+            }
+
+            .label {
+                display: inline-block;
+                padding: 0;
+                margin-right: 5px;
+                font-family: font-family(secondary);
+                font-size: font-secondary-size(size-8);
+                font-weight: normal;
+                line-height: 1.3;
+                vertical-align: middle;
+                color: $color-gray-1;
+                text-transform: none;
+                letter-spacing: 1px;
+            }
+
+            .btn-remove {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                height: 100%;
+                border: 0;
+                border-left: 1px solid $color-gray-4;
+
+                &:hover {
+                    background-color: transparent;
+                }
+
+                &:after {
+                    content: '×';
+                    position: absolute;
+                    z-index: 1;
+                    top: 4px;
+                    left: 0;
+                    height: auto;
+                    line-height: 1;
+                    font-size: $font-size-4;
+                    color: $color-gray-1;
+                }
+            }
+        }
+    }
+
+    // Button filter clear tags
+    .actions {
+        margin-bottom: 20px;
+
+        a {
+            display: inline-block;
+            min-width: 150px;
+            height: 48px;
+            padding: 0 45px;
+            background-image: url('#{path-file(backgrounds)}/button/button-wood-red.jpg');
+            background-color: transparent;
+            background-size: 100% 100%;
+            border-style: solid;
+            border-width: 0;
+            border-color: transparent;
+            border-radius: 8px;
+            vertical-align: middle;
+            box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35);
+            cursor: pointer;
+            text-align: center;
+
+            // Typography
+            display: inline-block;
+            font-family: font-family(primary);
+            font-size: font-primary-size(size-12);
+            line-height: 48px;
+            color: $color-white;
+            vertical-align: middle;
+            letter-spacing: 1px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+#narrow-by-list {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // Button accordion
+    dt {
+        position: relative;
+        display: block;
+        padding: 21px 42px;
+        margin: 0 0 20px 0;
+        background-color: $color-gray-10;
+        border-radius: 8px;
+        font-family: font-family(primary);
+        font-size: font-primary-size(size-2);
+        font-weight: normal;
+        line-height: font-primary-size(size-2);
+        color: color-text(default);
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        // Arrow
+        &:after {
+            content: ' ';
+            position: absolute;
+            z-index: zindex(lv1);
+            top: 50%;
+            right: 31px;
+            display: block;
+            width: 17px;
+            height: 11px;
+            margin-top: -5px;
+            background-image: url('#{path-file(icons)}/icon-arrow-down.png');
+            background-size: cover;
+        }
+
+        &.current {
+            margin: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            // Arrow
+            &:after {
+                @include rotate(180deg);
+            }
+
+            // List filter options
+            + dd {
+                &.current {
+                    display: block;
+                    padding-top: 0;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
+            }
+        }
+    }
+
+    // Container list filter option
+    dd {
+        display: none;
+        padding: 21px 42px;
+        margin: 0 0 20px 0;
+        background-color: $color-gray-10;
+        border-radius: 8px;
+    }
+
+    .m-filter-item-list  {
+        li {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            padding: 0 0 0 30px;
+            margin: 0 0 12px 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            //Checkbox
+            &:before,
+            &:after {
+                @include translate(0, -50%);
+                content: ' ';
+                display: block;
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 0;
+            }
+
+            &:before {
+                width: 16px;
+                height: 16px;
+                background-color: $color-white;
+                border: 1px solid $color-gray-9;
+                border-radius: 4px;
+            }
+
+            &:after {
+                @include transition(all 0.3s ease);
+                @include opacity(0);
+                visibility: hidden;
+                width: 16px;
+                height: 16px;
+                background-image: url('#{path-file(icons)}/icon-check-white.png');
+            }
+
+            // Selected filter
+            &.m-selected-ln-item {
+                &:before {
+                    background-color: $color-blue-3;
+                    border: 0;
+                }
+
+                &:after {
+                    @include opacity(1);
+                    visibility: visible;
+                }
+            }
+
+            // Label
+            a,
+            span {
+                display: inline-block;
+                font-family: font-family(primary);
+                font-size: font-primary-size(size-4);
+                font-weight: 600;
+                line-height: 1;
+                letter-spacing: 1px;
+                color: $color-gray-1;
+            }
+
+            a {
+
+            }
+
+            // Label selected
+            span {
+
+            }
+        }
     }
 
     // STYLES OF STATE

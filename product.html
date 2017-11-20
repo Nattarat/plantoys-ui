@@ -118,6 +118,55 @@
                 <span class="text-default is-small is-bold is-green-light">Physical or Emotion & Social</span>
             </div>
 
+            <div class="main-container col2-left-layout">
+                <div class="col-left">
+                    <div style="width: 400px; height: 100px; background-color: #ccc;"></div>
+                </div>
+                <div class="col-main">
+                    <div class="product-segment-inner is-sort">
+                        <div class="product-segment-item is-sort">
+                            <!-- Pager -->
+                            <div class="product-segment-item-inner pager">
+                                <div class="count-container">
+                                    <label class="text-default is-label is-small is-bold is-uppercase">Show</label>
+                                    <div class="select-arrow is-default is-size-itself is-transparent-background">
+                                        <select onchange="setLocation(this.value)" title="Results per page">
+                                            <option value="http://ptoys.maywz.info/category/music.html?limit=4&amp;price=2%2C1000" selected="selected">
+                                                4 </option>
+                                            <option value="http://ptoys.maywz.info/category/music.html?limit=12&amp;price=2%2C1000">
+                                                12 </option>
+                                            <option value="http://ptoys.maywz.info/category/music.html?limit=24&amp;price=2%2C1000">
+                                                24 </option>
+                                            <option value="http://ptoys.maywz.info/category/music.html?limit=36&amp;price=2%2C1000">
+                                                36 </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Sort by -->
+                            <div class="product-segment-item-inner sorter">
+                                <p class="view-mode"></p>
+                                <div class="sort-by">
+                                    <label class="text-default is-label is-small is-bold is-uppercase">Sort By</label>
+                                    <div class="select-arrow is-default is-size-itself is-transparent-background">
+                                        <select onchange="setLocation(this.value)" title="Sort By">
+                                            <option value="http://ptoys.maywz.info/category/music.html?dir=asc&amp;order=position&amp;price=2%2C1000" selected="selected">
+                                                Position </option>
+                                            <option value="http://ptoys.maywz.info/category/music.html?dir=asc&amp;order=name&amp;price=2%2C1000">
+                                                Name </option>
+                                            <option value="http://ptoys.maywz.info/category/music.html?dir=asc&amp;order=price&amp;price=2%2C1000">
+                                                Price </option>
+                                        </select>
+                                    </div>
+                                    <!-- <a href="http://ptoys.maywz.info/category/music.html?dir=desc&amp;order=position&amp;price=2%2C1000" class="sort-by-switcher sort-by-switcher--asc" title="Set Descending Direction">Set Descending Direction</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="product">
                 <!-- Filter control -->
                 <div class="product-segment">
@@ -165,6 +214,95 @@
                 <div class="product-segment">
                     <!-- Filter column -->
                     <div class="product-segment-inner is-filter-option">
+                        <!-- Magento filter layout structure -->
+                        <div class="block-content toggle-content product-filter-content">
+                            <div class="currently">
+                                <div class="block-subtitle ">
+                                    <div class="m-subtitle-actions">
+                                        <div class="m-expand-collapse">
+                                            <div class="btn-expand-collapse"></div>
+                                        </div>
+                                    </div>
+                                    <span>Currently Shopping by:</span>
+                                </div>
+                                <ol>
+                                    <li>
+                                        <a href="http://ptoys.maywz.info/category/music.html" title="Remove This Item" class="btn-remove">Remove This Item</a>
+                                        <span class="label">Age:</span> 12m+
+                                    </li>
+                                    <li>
+                                        <a href="http://ptoys.maywz.info/category/music.html" title="Remove This Item" class="btn-remove">Remove This Item</a>
+                                        <span class="label">Age:</span> 12m+
+                                    </li>
+                                    <li>
+                                        <a href="http://ptoys.maywz.info/category/music.html" title="Remove This Item" class="btn-remove">Remove This Item</a>
+                                        <span class="label">Age:</span> 12m+
+                                    </li>
+                                    <li>
+                                        <a href="http://ptoys.maywz.info/category/music.html" title="Remove This Item" class="btn-remove">Remove This Item</a>
+                                        <span class="label">Age:</span> 12m+
+                                    </li>
+                                    <li>
+                                        <a href="http://ptoys.maywz.info/category/music.html" title="Remove This Item" class="btn-remove">Remove This Item</a>
+                                        <span class="label">Age:</span> 12m+
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="actions">
+                                <a href="http://ptoys.maywz.info/category/music.html">Clear All</a>
+                            </div>
+                            <p class="block-subtitle block-subtitle--filter hidden">Filter</p>
+                            <dl id="narrow-by-list">
+                                <dt class="odd current">Price</dt>
+                                <dd class="odd current">
+                                    <ol class="m-filter-item-list ">
+                                        <li>
+                                            <a href="http://ptoys.maywz.info/category/music.html?age=12&amp;price=7%2C100" title="฿600.00 - ฿700.00">฿600.00 - ฿700.00</a>
+                                            <span>(1)</span>
+                                        </li>
+                                    </ol>
+                                </dd>
+                                <dt class="even">Child development</dt>
+                                <dd class="even">
+                                    <ol class="m-filter-item-list ">
+                                        <li>
+                                            <a href="http://ptoys.maywz.info/category/music.html?age=12&amp;child_development=91" title=" Auditory"> Auditory</a>
+                                            <span>(1)</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://ptoys.maywz.info/category/music.html?age=12&amp;child_development=43" title=" Coordination"> Coordination</a>
+                                            <span>(1)</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://ptoys.maywz.info/category/music.html?age=12&amp;child_development=48" title=" Fine Motor"> Fine Motor</a>
+                                            <span>(1)</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://ptoys.maywz.info/category/music.html?age=12&amp;child_development=21" title="Musical">Musical</a>
+                                            <span>(1)</span>
+                                        </li>
+                                    </ol>
+                                </dd>
+                                <dt class="last odd">Age</dt>
+                                <dd class="last odd">
+                                    <ol class="m-filter-item-list ">
+                                        <li class="m-selected-ln-item">
+                                            <span class="m-selected-filter-item">12m+</span>
+                                            <span>(1)</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://ptoys.maywz.info/category/music.html?age=12_5" title="18m+">18m+</a>
+                                            <span>(1)</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://ptoys.maywz.info/category/music.html?age=12_3" title="3y+">3y+</a>
+                                            <span>(1)</span>
+                                        </li>
+                                    </ol>
+                                </dd>
+                            </dl>
+                        </div>
+
                         <!-- Type filter -->
                         <div class="product-segment-item">
                             <ul class="list-filter">
@@ -423,11 +561,29 @@
                                     </div>
                                     <div class="list-link-overlay" href="#"></div>
                                 </a>
-                                <a class="button-typography is-category" href="#">
-                                    <span class="button-body">
-                                        <img class="button-icon is-text-blank" src="../assets/images/icon/category/icon-category-newproducts.png" alt="Icon">
-                                    </span>
-                                </a>
+                                <ul class="list-product-label">
+                                    <li class="list-item">
+                                        <a class="button-typography" href="#">
+                                            <span class="button-body">
+                                                <img class="button-icon is-product-label is-text-blank" src="../assets/images/icon/category/icon-category-newproducts.png" alt="Icon">
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-item">
+                                        <a class="button-typography" href="#">
+                                            <span class="button-body">
+                                                <img class="button-icon is-product-label is-text-blank" src="../assets/images/icon/category/icon-category-bestseller.png" alt="Icon">
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="list-item">
+                                        <a class="button-typography" href="#">
+                                            <span class="button-body">
+                                                <img class="button-icon is-product-label is-text-blank" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="Icon">
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
                                 <a class="button-typography is-wishlist" href="#">
                                     <span class="button-body">
                                         <img class="button-icon is-text-blank is-blank" src="../assets/images/icon/icon-wishlist-blank.png" alt="Icon">
@@ -458,11 +614,15 @@
                                     </div>
                                     <div class="list-link-overlay" href="#"></div>
                                 </a>
-                                <a class="button-typography is-category" href="#">
-                                    <span class="button-body">
-                                        <img class="button-icon is-text-blank" src="../assets/images/icon/category/icon-category-bestseller.png" alt="Icon">
-                                    </span>
-                                </a>
+                                <ul class="list-product-label">
+                                    <li class="list-item">
+                                        <a class="button-typography" href="#">
+                                            <span class="button-body">
+                                                <img class="button-icon is-product-label is-text-blank" src="../assets/images/icon/category/icon-category-bestseller.png" alt="Icon">
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
                                 <a class="button-typography is-wishlist is-active" href="#">
                                     <span class="button-body">
                                         <img class="button-icon is-text-blank is-blank" src="../assets/images/icon/icon-wishlist-blank.png" alt="Icon">
@@ -493,11 +653,15 @@
                                     </div>
                                     <div class="list-link-overlay" href="#"></div>
                                 </a>
-                                <a class="button-typography is-category" href="#">
-                                    <span class="button-body">
-                                        <img class="button-icon is-text-blank" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="Icon">
-                                    </span>
-                                </a>
+                                <ul class="list-product-label">
+                                    <li class="list-item">
+                                        <a class="button-typography" href="#">
+                                            <span class="button-body">
+                                                <img class="button-icon is-product-label is-text-blank" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="Icon">
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
                                 <a class="button-typography is-wishlist" href="#">
                                     <span class="button-body">
                                         <img class="button-icon is-text-blank is-blank" src="../assets/images/icon/icon-wishlist-blank.png" alt="Icon">

@@ -131,6 +131,12 @@ $button-padding-side-deault: 45px;
             width: auto;
             height: 24px;
         }
+
+        &.is-product-label {
+            width: 48px;
+            height: 48px;
+            max-width: initial;
+        }
     }
 
     .button-text {

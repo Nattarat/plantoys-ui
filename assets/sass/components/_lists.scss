@@ -1092,13 +1092,13 @@
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-column-3 {
-        .list-item {
+        > .list-item {
             width: calc(100% / 3);
         }
     }
 
     &.is-column-5 {
-        .list-item {
+        > .list-item {
             width: calc(100% / 5);
         }
     }
@@ -1116,3 +1116,50 @@
 // Safari
 // Firefox
 
+// Product label
+// ------------------------------------------------
+.list-product-label {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include list-variant(
+        $list-display: block,
+        $list-padding: 0,
+        $list-margin: 0,
+
+        // List item
+        $list-item-display: block,
+        $list-item-padding: 0,
+        $list-item-margin: 0 0 10px
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    position: absolute;
+    z-index: zindex(lv1);
+    top: 15px;
+    left: 15px;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
