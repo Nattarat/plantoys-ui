@@ -372,6 +372,7 @@
         padding: 21px 42px;
         margin: 0 0 20px 0;
         background-color: $color-gray-10;
+        border: 0;
         border-radius: 8px;
     }
 
@@ -441,7 +442,9 @@
             }
 
             a {
-
+                &:hover {
+                    text-decoration: none;
+                }
             }
 
             // Label selected
