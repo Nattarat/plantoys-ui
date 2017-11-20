@@ -8,6 +8,8 @@
 
 @charset 'utf-8';
 
+// Normal structure
+// ------------------------------------------------
 .breadcrumb {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -22,6 +24,96 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Magento structure
+// ------------------------------------------------
+.breadcrumbs {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    position: relative;
+    z-index: zindex(lv2);
+    padding: 10px 0;
+    margin: 0 -60px 30px;
+    background-color: $color-gray-10;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    ul {
+        display: flex;
+        align-items: center;
+        padding: 0 60px;
+
+        li,
+        a,
+        strong,
+        span {
+            float: none;
+        }
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        a,
+        strong,
+        span {
+            display: inline-block;
+            font-weight: normal;
+            line-height: 1;
+            vertical-align: middle;
+            color: $color-gray-1;
+            text-transform: none;
+            letter-spacing: 1px;
+        }
+
+        a,
+        span {
+            font-family: font-family(primary);
+            font-size: font-primary-size(size-4);
+
+            &:hover {
+                color: $color-gray-1;
+                text-decoration: none;
+            }
+        }
+
+        strong {
+            font-family: font-family(secondary);
+            font-size: font-secondary-size(size-4);
+        }
+
+        i {
+            vertical-align: middle;
+            font-size: $font-size-2;
+            margin: 0 10px;
+        }
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
