@@ -13,8 +13,10 @@
 
 // Product list layout (magento structure)
 .col2-left-layout {
-    display: flex;
-    margin-left: -20px;
+    .main {
+        display: flex;
+        margin-left: -20px;
+    }
 
     .col-left,
     .col-main {
