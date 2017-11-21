@@ -56,9 +56,10 @@
     }
     .head-title{
         font-family: font-family(primary);
-        font-size: 32px;
+        font-size: font-primary-size(size-5);
         margin-bottom: 30px;
         padding-left: 33px;
+        letter-spacing: 1px;
     }
     .new-card{
         @include card();

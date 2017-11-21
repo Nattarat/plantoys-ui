@@ -20,12 +20,12 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-   
+
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .tipsforparent-header{
-        @include text-header($text-header-margin-top:-43px);
+        @include text-header($text-header-margin-top: 0);
         .form-email {
             @include form-icon;
             margin-top: 24px;
@@ -62,6 +62,8 @@
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -75,7 +77,7 @@
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    
+
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media (max-width: screen(tablet-sm)){
@@ -101,7 +103,7 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    
+
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -113,7 +115,7 @@
     background-image:  url('#{path-file(images)}/content/tipsforparents/tipsforparents-rubber-wood.jpg') ;
     background-size: cover;
     background-repeat: repeat-x;
-    
+
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .tips-select-category {

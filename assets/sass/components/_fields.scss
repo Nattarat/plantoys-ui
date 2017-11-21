@@ -389,6 +389,7 @@ $field-padding-side-deault: 20px;
         border: $form-icon-border;
         border-radius: $form-icon-border-radius;
         padding: $place-holder-padding;
+        font-family: font-family(secondary);
         font-size: $form-icon-font-size;
     }
 

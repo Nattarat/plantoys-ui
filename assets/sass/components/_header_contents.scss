@@ -60,7 +60,7 @@
     $text-header-margin-top: 0px,
     $text-header-margin-bottom: 12px,
     $text-sub-font: font-family(secondary),
-    $text-sub-size: 30px,
+    $text-sub-size: font-secondary-size(size-2),
     $text-sub-color: $color-white
 ) {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
@@ -81,12 +81,14 @@
         color: $text-header-color;
         margin-top: $text-header-margin-top;
         margin-bottom: $text-header-margin-bottom;
+        letter-spacing: 1px;
     }
     .sub-title {
         text-transform: unset;
         font-family: $text-sub-font;
         font-size: $text-sub-size;
         color: $text-sub-color;
+        letter-spacing: 1px;
     }
 
     // STYLES OF STATE
@@ -144,23 +146,29 @@
     .head-title{
         font-family: font-family(primary);
         text-transform: unset;
-        font-size: 48px;
+        font-size: font-primary-size(size-13);
         color: $color-gray-14;
+        letter-spacing: 1px;
     }
     .text-credit{
         font-family: font-family(secondary);
-        font-size: 24px;
+        font-size: font-secondary-size(size-11);
         color: $color-gray-1;
+        letter-spacing: 1px;
+
         .text-sub-credit{
             font-family: font-family(secondary);
             color: $color-blue-10;
+            letter-spacing: 1px;
         }
     }
     .text-detail{
         font-family: font-family(secondary);
-        font-size: 24px;
+        font-size: font-secondary-size(size-4);
         color: $color-gray-1;
-        line-height:44px;
+        line-height: 35px;
+        letter-spacing: 1px;
+
         .text-mark{
             font-family: font-family(primary);
         }
@@ -195,7 +203,7 @@
         &.except{
             margin-top: 28px;
         }
-        margin-top: 73px;
+        margin-top: 30px; // 73
     }
     .img-sub-container{
         margin-top: 47px;
