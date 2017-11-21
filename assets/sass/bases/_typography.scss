@@ -393,7 +393,7 @@
     &.is-tabs,
     &.is-tabs-mobile {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-primary-size(size-9) * $font-size-reduce-primary;
+            // font-size: font-primary-size(size-9) * $font-size-reduce-primary;
         }
     }
 
@@ -411,7 +411,7 @@
 
     &.is-cover {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-primary-size(size-1) * $font-size-reduce-primary;
+            // font-size: font-primary-size(size-1) * $font-size-reduce-primary;
         }
     }
 }
@@ -668,19 +668,19 @@
     }
 
     @media screen and (max-width: screen(labtop-lg)) {
-        font-size: font-secondary-size(size-3) * $font-size-reduce-primary;
-        line-height: font-secondary-size(size-3) * $font-size-reduce-primary;
+        // font-size: font-secondary-size(size-3) * $font-size-reduce-primary;
+        // line-height: font-secondary-size(size-3) * $font-size-reduce-primary;
     }
 
     &.is-active {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-9) * $font-size-reduce-primary;
+            // font-size: font-secondary-size(size-9) * $font-size-reduce-primary;
         }
     }
 
     &.is-page {
         @media screen and (max-width: screen(labtop-lg)) {
-            font-size: font-secondary-size(size-9) * $font-size-reduce-primary;
+            // font-size: font-secondary-size(size-9) * $font-size-reduce-primary;
         }
     }
 }
