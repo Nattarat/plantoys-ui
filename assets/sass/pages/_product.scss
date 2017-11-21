@@ -10,9 +10,10 @@
 
 // Product
 // ------------------------------------------------
+$product-container-padding: 0 60px 25px 60px;
 
 // Product list layout (magento structure)
-.col2-left-layout {
+.main-container.col2-left-layout {
     .main {
         display: flex;
         margin-left: -20px;
@@ -61,8 +62,8 @@
     }
 }
 
-.product-container,
-.col2-left-layout {
+.product-index,
+.main-container.col2-left-layout {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -71,7 +72,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    padding: 25px 60px;
+    padding: $product-container-padding;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -475,8 +476,8 @@
 
 // Product detail
 // ------------------------------------------------
-
-.product-detail {
+.product-detail,
+.main-container.col1-layout {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -485,9 +486,47 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    padding: $product-container-padding;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .product-view {
+        max-width: 1565px;
+        margin: auto;
+    }
+
+    .product-essential {
+        display: flex;
+    }
+
+    .product-collateral {
+
+    }
+
+    .product-detail-segment {
+        &.is-preview,
+        &.is-detail {
+            width: 50%;
+        }
+
+        &.is-preview {
+            width: 50%;
+            padding-right: 80px;
+        }
+
+        &.is-detail {
+
+        }
+    }
+
+    .product-detail-segment-item {
+        margin-bottom: 20px;
+
+        &.is-rating {
+            display: flex;
+            align-items: center;
+        }
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>

@@ -155,6 +155,10 @@
         color: color-text(blue-primary);
     }
 
+    &.is-blue-light {
+        color: color-text(blue-secondary);
+    }
+
     // Sizes
     &.is-extra-small {
         font-size: font-secondary-size(size-8); // 12px
@@ -213,9 +217,17 @@
         text-decoration: line-through;
     }
 
+    &.is-underline {
+        border-bottom: 2px solid color-text(link);
+    }
+
     // Line height
     &.is-lineheight-self {
         line-height: 1;
+    }
+
+    &.is-nowrap {
+        white-space: nowrap;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -338,7 +350,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include text-variant(
         $text-font-family: font-family(primary),
-        $text-font-size: font-primary-size(size-1),
+        $text-font-size: font-primary-size(size-13),
         $text-line-height: 1.2
     );
 
@@ -356,7 +368,7 @@
     &.is-introduction,
     &.is-tabs,
     &.is-tabs-mobile {
-        font-size: font-primary-size(size-9);
+        font-size: font-primary-size(size-3);
     }
 
     &.is-tabs,
@@ -370,7 +382,6 @@
 
     &.is-cover {
         font-family: font-family(tertiary);
-        font-size: font-tertiary-size(size-1);
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -454,14 +465,16 @@
     &.is-title-icon {
         position: relative;
         font-family: font-family(primary);
-        font-size: 1.67vw; // font-primary-size(size-9) = 32px
+        // font-size: 1.67vw; // font-primary-size(size-9) = 32px
+        font-size: font-primary-size(size-5); // 20px
         line-height: 1.5;
         color: color-text(default);
     }
 
     &.is-paragraph {
         font-family: font-family(secondary);
-        font-size: 1.15vw; // font-secondary-size(size-5) = 22px
+        // font-size: 1.15vw; // font-secondary-size(size-5) = 22px
+        font-size: font-secondary-size(size-4); // 16px
         line-height: 1.5;
     }
 
@@ -481,11 +494,11 @@
         }
     }
 
-    &.is-title-icon {
-        @media screen and (max-width: screen(tablet-lg-max)) {
-            font-size: font-primary-size(size-4); // 20px
-        }
-    }
+    // &.is-title-icon {
+    //     @media screen and (max-width: screen(tablet-lg-max)) {
+    //         font-size: font-primary-size(size-4); // 20px
+    //     }
+    // }
 }
 
 // Browser variations
@@ -600,8 +613,8 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include text-variant(
         $text-font-family: font-family(secondary),
-        $text-font-size: font-secondary-size(size-3),
-        $text-line-height: font-secondary-size(size-3),
+        $text-font-size: font-secondary-size(size-5),
+        $text-line-height: font-secondary-size(size-5),
         $text-color: color-text(submenu)
     );
 
@@ -620,7 +633,7 @@
 
     &.is-active {
         font-family: font-family(primary);
-        font-size: font-secondary-size(size-9);
+        // font-size: font-secondary-size(size-9);
         color: $color-white;
     }
 

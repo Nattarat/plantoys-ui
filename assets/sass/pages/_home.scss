@@ -479,15 +479,15 @@
         }
     }
 
-    .developments-paragraph {
-        &.text-carousel {
-            &.is-paragraph {
-                @media screen and (max-width: screen(tablet-sm)) {
-                    font-size: font-primary-size(size-8); // 12px
-                }
-            }
-        }
-    }
+    // .developments-paragraph {
+    //     &.text-carousel {
+    //         &.is-paragraph {
+    //             @media screen and (max-width: screen(tablet-sm)) {
+    //                 font-size: font-primary-size(size-8); // 12px
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 // Browser variations

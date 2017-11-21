@@ -20,6 +20,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     $pagination-size: 0.9vw; // 17px
     $pagination-size-fix: 17px;
+    $pagination-size-fix-small: 11px;
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -64,6 +65,13 @@
             background-size: cover;
             background-position: center;
         }
+    }
+
+    .carousel-image-award {
+        position: absolute;
+        z-index: zindex(lv2);
+        top: 15px;
+        right: 15px;
     }
 
     .carousel-image-item {
@@ -276,7 +284,7 @@
                 &.slick-active {
                     button {
                         &:before {
-                            background-color: $color-black;
+                            background-color: $color-gray-4; // black
                             opacity: 1;
                         }
                     }
@@ -286,7 +294,7 @@
             button {
                 &:before {
                     background-color: $color-white;
-                    border-color: $color-black;
+                    border-color: $color-gray-4; // black
                 }
             }
         }
@@ -360,17 +368,17 @@
                 padding: 15px 0;
 
                 li {
-                    width: $pagination-size-fix/1.5;
-                    height: $pagination-size-fix;
+                    width: $pagination-size-fix-small;
+                    height: $pagination-size-fix-small;
                 }
 
                 button {
-                    width: $pagination-size-fix/1.5;
-                    height: $pagination-size-fix/1.5;
+                    width: $pagination-size-fix-small;
+                    height: $pagination-size-fix-small;
 
                     &:before {
-                        width: $pagination-size-fix/1.5;
-                        height: $pagination-size-fix/1.5;
+                        width: $pagination-size-fix-small;
+                        height: $pagination-size-fix-small;
                     }
                 }
             }
@@ -380,7 +388,7 @@
 
 // Fix layout after integrate with Magento
 .carousel-hero {
-    margin-top: -110px;
+    margin-top: -80px;
 }
 
 // Browser variations
