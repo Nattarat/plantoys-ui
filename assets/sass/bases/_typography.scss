@@ -416,6 +416,22 @@
     }
 }
 
+// Overwrite magento style
+.page-title {
+    h1 {
+        display: inline-block;
+        padding-bottom: 0;
+        font-family: font-family(primary);
+        font-size: font-primary-size(size-2);
+        font-weight: normal;
+        line-height: 1.3;
+        vertical-align: middle;
+        color: $color-gray-1;
+        text-transform: none;
+        letter-spacing: 1px;
+    }
+}
+
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
