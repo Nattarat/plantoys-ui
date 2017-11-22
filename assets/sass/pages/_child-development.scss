@@ -71,11 +71,11 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-age{
-        @include select-form-group($label-font-size: 21px,$form-group-align:space-between,$label-opacity:0.7,$label-title-font-family: font-family(secondary),$label-color:$color-white);
+        @include select-form-group($label-font-size: $font-size-5,$form-group-align:space-between,$label-opacity:0.7,$label-title-font-family: font-family(secondary),$label-color:$color-white);
         cursor: pointer;
     }
    .child-age-mobile{
-        @include select-form-group($label-font-size: 21px,$select-font-size:17,$form-group-align:center,$label-color:$color-white);
+        @include select-form-group($label-font-size: $font-size-5,$select-font-size:17,$form-group-align:center,$label-color:$color-white);
    }
 
     // STYLES OF STATE
@@ -115,7 +115,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     // max-width: 1477px;
     margin: auto;
-    padding: 22px 60px 52px 60px;
+    padding: 24px 60px 53px 60px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -125,8 +125,9 @@
     }
     .month-detail{
         font-family: font-family(primary);
-        font-size: 23px;
+        font-size: $font-size-5;
         color: $color-gray-16;
+        letter-spacing: 1px;
     }
 
     // STYLES OF STATE
@@ -141,10 +142,10 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media (max-width: 1200px){
-        padding: 22px 15px 52px 15px;
+        padding: 24px 15px 53px 15px;
     }
     @media (max-width: screen(tablet-sm)){
-        padding: 22px 30px 52px 30px;
+        padding: 24px 30px 53px 30px;
     }
 
 }
@@ -170,12 +171,11 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     padding: $child-padding;
     // border-left-style: dotted;
-    // border-width: 5px;
+    // border-width: 4.5px;
     // border-color: $color-blue-15;
+
     border-left: 10px solid transparent;
-    border-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
-    border-image-slice: 20 22;
-    border-image-repeat: round;
+    border-image: url('#{path-file(images)}/icon/child_development/child-dot.png') 25 30 10 20 repeat;
     &.not-border{
         border: none;
     }
@@ -183,13 +183,13 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-thumbnail{
-        @include thumb-nail($thumb-head-font-size:23px);
+        @include thumb-nail($thumb-head-font-size: $font-size-5);
     }
     .text-detail{
         list-style-type: disc;
         li{
             font-family: font-family(secondary);
-            font-size: 17px;
+            font-size: $font-size-12;
             color: $color-gray-17;
             &.is-space-li{
                 &:not(:first-child){
@@ -252,7 +252,8 @@
                         &.is-dot{
                             background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
                             background-repeat: repeat-x;
-                            background-position-x: 100vw;
+                            background-position-x: 1.5px;
+                            background-position-y: 4px;
                         }
                     }
                 }
@@ -281,7 +282,7 @@
                 }
                 .font-style{
                     font-family: font-family(tertiary);
-                    font-size: 21px;
+                    font-size: $font-size-2;
                     transform: rotate(-180deg);
                     writing-mode: vertical-rl;
                 }
@@ -362,7 +363,7 @@
             color: $color-gray-17;
             text-transform: none;
             font-family: font-family(tertiary);
-            font-size: 37px;
+            font-size: 36px;
         }
     }
     .img-newborn{
@@ -379,12 +380,12 @@
         padding: 22px 0px 0px 0px;
         .text-header{
             font-family: font-family(primary);
-            font-size: 17px;
+            font-size: $font-size-12;
             color: $color-blue-15;
         }
         .text-detail{
             font-family: font-family(secondary);
-            font-size: 17px;
+            font-size: $font-size-12;
             color: $color-gray-13;
         }
         .is-space-toy-detail{

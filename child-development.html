@@ -689,7 +689,7 @@
             </div>
             <div class="container-fluid container-agerang">
                 <ul class="child-age hidden-xs hidden-sm hidden-md" role="tablist">
-                    <li class="select-title tablinks active" onclick="tabrange(event, 'range1')">0-6 Months</li>
+                    <li class="select-title tablinks active" onclick="tabrange(event, 'range1')" id="defaultOpen">0-6 Months</li>
                     <li class="select-title tablinks" onclick="tabrange(event, 'range2')">6-12 Months</li>
                     <li class="select-title tablinks" onclick="tabrange(event, 'range3')">12-18 Months</li>
                     <li class="select-title tablinks" onclick="tabrange(event, 'range4')">18-24 Months</li>
@@ -3390,7 +3390,7 @@
         }
         
         // Get the element with id="defaultOpen" and click on it
-        // document.getElementById("rang2").click();
+        document.getElementById("defaultOpen").click();
     </script>
 </body>
 </html>
