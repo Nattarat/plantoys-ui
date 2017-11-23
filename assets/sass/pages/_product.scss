@@ -511,7 +511,9 @@ $product-container-padding: 0 60px 25px 60px;
     }
 
     .product-essential {
-        display: flex;
+        form {
+            display: flex;
+        }
     }
 
     .product-collateral {
