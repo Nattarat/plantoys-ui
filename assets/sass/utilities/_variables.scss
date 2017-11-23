@@ -296,6 +296,8 @@ $color-green-4: #78bd3a;
 $color-green-5: #77be44;
 // Pink
 $color-pink-1: #e998b8;
+// Brown
+$color-brown-1: #863103;
 
 // Primary
 // ------------------------------------------------
@@ -394,7 +396,9 @@ $color-button-maps: (
     'primary-light': $color-blue-2,
     'primary-light-hover': $color-blue-2,
     'secondary': $color-orange-1,
-    'secondary-hover': $color-orange-1
+    'secondary-hover': $color-orange-1,
+    'tertiary': $color-green-5,
+    'tertiary-hover': $color-green-5
 );
 
 // Text maps
@@ -413,7 +417,8 @@ $color-text-maps: (
     'blue-primary': $color-blue-6,
     'blue-secondary': $color-blue-18,
     'title-page': $color-gray-6,
-    'gray-light': $color-gray-4
+    'gray-light': $color-gray-4,
+    'gray-lighter': $color-gray-16
 );
 
 // Typography (size & line-height)

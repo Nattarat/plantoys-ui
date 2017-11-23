@@ -128,6 +128,11 @@ $button-padding-side-deault: 45px;
             margin-left: $button-icon-spacing-left;
         }
 
+        &.is-small {
+            width: 24px;
+            height: auto;
+        }
+
         &.is-size-topbar {
             width: auto;
             height: 24px;
@@ -413,6 +418,50 @@ $button-padding-side-deault: 45px;
 // Safari
 // Firefox
 
+// Tertiary
+// ------------------------------------------------
+.button-tertiary {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include button-variant(
+        // Body
+        $button-background-color: color-button(tertiary),
+        $button-border-color: color-button(tertiary),
+
+        // Body hover
+        $button-background-color-hover: color-button(tertiary-hover),
+        $button-border-color-hover: color-button(tertiary-hover)
+    );
+    // @include button-size-scale-down;
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
 // Background image
 // ------------------------------------------------
 .button-background-image {
@@ -571,6 +620,12 @@ $button-padding-side-deault: 45px;
         bottom: 15px;
         right: 15px;
 
+        &.is-wishlist-inline {
+            position: static;
+            bottom: initial;
+            right: initial;
+        }
+
         .button-icon {
             width: 51px * 0.9;
             height: auto;
@@ -596,11 +651,12 @@ $button-padding-side-deault: 45px;
     }
 
     &.is-addcart {
-        @include translate(-50%, -50%);
-        position: absolute;
-        z-index: zindex(lv1);
-        top: -4px;
-        left: 50%;
+        .button-body {
+            width: 50px;
+            height: 50px;
+            background-color: $color-blue-17;
+            border-radius: 50%;
+        }
     }
 
     &.is-rating {

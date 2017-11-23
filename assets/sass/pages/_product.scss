@@ -134,6 +134,11 @@ $product-container-padding: 0 60px 25px 60px;
         padding-bottom: 30px;
     }
 
+    .category-banner {
+        margin-left: -60px;
+        margin-right: -60px;
+    }
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -527,6 +532,17 @@ $product-container-padding: 0 60px 25px 60px;
         &.is-detail {
 
         }
+
+        &.is-specification {
+            max-width: 1565px;
+            padding-top: 60px;
+            margin: auto;
+        }
+    }
+
+    .product-detail-segment-inner {
+        display: flex;
+        justify-content: space-between;
     }
 
     .product-detail-segment-item {
@@ -536,6 +552,42 @@ $product-container-padding: 0 60px 25px 60px;
             display: flex;
             align-items: center;
         }
+
+        &.is-quantity {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-top: 1px solid $color-gray-5;
+            border-bottom: 1px solid $color-gray-5;
+        }
+
+        &.is-specification {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .product-detail-segment-item-inner {
+        &.is-column-half {
+            width: 50%;
+        }
+
+        &.is-specification-description {
+            padding-right: 30px;
+        }
+
+        &.is-review-name {
+            width: 25%;
+            min-width: 155px;
+        }
+
+        &.is-review-comment {
+            width: 75%;
+        }
+    }
+
+    .product-detail-video {
+        width: 100%;
+        height: 23.5vw; // 450px
     }
 
     // STYLES OF STATE

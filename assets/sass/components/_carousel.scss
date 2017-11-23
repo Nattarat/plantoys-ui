@@ -27,8 +27,10 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    &.slick-slider {
-        margin-bottom: 0;
+    &.slick-dotted {
+        &.slick-slider {
+            margin-bottom: 0;
+        }
     }
 
     // STYLES OF CHILD CLASS
@@ -384,6 +386,12 @@
             }
         }
     }
+}
+
+.carousel-name {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 30px;
 }
 
 // Fix layout after integrate with Magento

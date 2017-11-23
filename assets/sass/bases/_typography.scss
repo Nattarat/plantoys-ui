@@ -99,7 +99,7 @@
     // Display
     &.is-paragraph {
         display: block;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
     }
 
     &.is-paragraph-nospacing {
@@ -137,6 +137,10 @@
 
     &.is-gray-light {
         color: color-text(gray-light);
+    }
+
+    &.is-gray-lighter {
+        color: color-text(gray-lighter);
     }
 
     &.is-red {
@@ -605,6 +609,15 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-specification {
+        color: $color-brown-1;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+
+        &:hover {
+            color: $color-brown-1;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
