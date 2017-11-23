@@ -520,6 +520,13 @@ $product-container-padding: 0 60px 25px 60px;
 
     }
 
+    .product-detail-award {
+        position: absolute;
+        z-index: zindex(lv2);
+        top: 15px;
+        right: 15px;
+    }
+
     .product-detail-segment {
         &.is-preview,
         &.is-detail {
@@ -527,8 +534,9 @@ $product-container-padding: 0 60px 25px 60px;
         }
 
         &.is-preview {
+            position: relative;
             width: 50%;
-            padding-right: 80px;
+            margin-right: 80px;
         }
 
         &.is-detail {
