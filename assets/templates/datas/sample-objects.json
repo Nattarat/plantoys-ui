@@ -1,0 +1,29 @@
+[
+    {   "firstName": "Christophe",
+        "lastName": "Coenraets",
+        "fullTime": true,
+        "phone": "617-123-4567",
+        "manager" : {
+            "firstName": "John",
+            "lastName": "Smith"
+        }
+    },
+    {   "firstName": "John",
+        "lastName": "Smith",
+        "fullTime": false,
+        "phone": "617-987-6543",
+        "manager" : {
+            "firstName": "Jane",
+            "lastName": "Smith"
+        }
+    },
+    {   "firstName": "Lisa",
+        "lastName": "Jones",
+        "fullTime": true,
+        "phone": "617-111-2323",
+        "manager" : {
+            "firstName": "Joseph",
+            "lastName": "Smith"
+        }
+    }
+]

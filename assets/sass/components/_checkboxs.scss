@@ -72,6 +72,7 @@
         margin: $checkbox-label-margin;
         font-family: $checkbox-label-font-family;
         font-size: $checkbox-label-font-size;
+        font-weight: normal;
         line-height: 1.5;
         letter-spacing: 1px;
         color: $checkbox-label-font-color;
@@ -196,6 +197,58 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Shape
+// ------------------------------------------------
+.checkbox-shape {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include checkbox-variant(
+        // Label text
+        $checkbox-label-padding: 0 0 0 30px,
+        $checkbox-label-font-family: font-family(secondary),
+        $checkbox-label-font-size: font-secondary-size(size-4),
+
+        // Box
+        $checkbox-box-color: $color-white,
+        $checkbox-box-border: 1px solid $color-gray-9
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-circle {
+        .checkbox-label {
+            // Box
+            &:before {
+                border-radius: 50%;
+            }
+        }
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

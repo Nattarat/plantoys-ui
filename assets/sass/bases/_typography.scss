@@ -225,6 +225,10 @@
         border-bottom: 2px solid color-text(link);
     }
 
+    &.is-italic {
+        font-style: italic;
+    }
+
     // Line height
     &.is-lineheight-self {
         line-height: 1;

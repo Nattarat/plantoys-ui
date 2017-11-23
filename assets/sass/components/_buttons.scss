@@ -256,6 +256,10 @@ $button-padding-side-deault: 45px;
         margin-left: 30px;
     }
 
+    &.is-text-right {
+        margin-right: 30px;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -508,6 +512,10 @@ $button-padding-side-deault: 45px;
 
     &.is-wood-green-light {
         background-image: url('#{path-file(backgrounds)}/button/button-wood-green-light.jpg');
+    }
+
+    &.is-wood-brown {
+        background-image: url('#{path-file(backgrounds)}/button/button-wood-brown.jpg');
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

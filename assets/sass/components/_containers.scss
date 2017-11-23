@@ -210,6 +210,10 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-customersupport {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -306,6 +310,10 @@
         &.is-wood-green {
             background-image: url('#{path-file(backgrounds)}/account/account-wood-green.jpg');
         }
+    }
+
+    &.is-contactus {
+        max-width: 1065px;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
