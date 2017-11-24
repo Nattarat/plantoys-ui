@@ -206,6 +206,16 @@ $button-padding-side-deault: 45px;
         }
     }
 
+    input[type=file] {
+        opacity: 0;
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
     &:hover {
