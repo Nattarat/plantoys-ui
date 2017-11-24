@@ -668,6 +668,40 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-faqs {
+        width: auto;
+
+        // Responsive tabs plugin > Accordion button
+        .r-tabs-accordion-title {
+            .r-tabs-anchor {
+                background-color: transparent;
+                border-bottom: 1px solid $color-gray-10;
+                border-radius: 0;
+                color: $color-black;
+
+                // Arrow
+                &:after {
+                    right: 42px;
+                    background-image: url('#{path-file(icons)}/icon-arrow-down-gray.png');
+                }
+            }
+
+            &.r-tabs-state-active {
+                .r-tabs-anchor {
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        // Responsive tabs plugin > container content
+        .r-tabs-panel {
+            &.r-tabs-state-active {
+                .customersupport-answer {
+                    border-bottom: 1px solid $color-gray-10;
+                }
+            }
+        }
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

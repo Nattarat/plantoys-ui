@@ -124,6 +124,11 @@
             //min-height: 200px;
             margin-bottom: 30px;
         }
+
+        &.is-title {
+            padding: 0 60px 40px 60px;
+            text-align: center;
+        }
     }
 
     .customersupport-map {
@@ -141,6 +146,10 @@
         height: 100%;
         padding: 55px 25px;
         background-color: $color-white;
+    }
+
+    .customersupport-answer {
+        padding: 0 42px 21px 42px;
     }
 
     // STYLES OF STATE

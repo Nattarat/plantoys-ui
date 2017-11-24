@@ -1425,7 +1425,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include list-variant(
         $list-display: block,
-        $list-padding: 15px 0 0,
+        $list-padding: 0,
         $list-margin: 0,
 
         // List item
@@ -1461,6 +1461,81 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-fileupload {
+        padding-top: 15px;
+    }
+
+    &.is-paragraph {
+        padding-top: 5px;
+        padding-bottom: 20px;
+    }
+
+    &.is-paragraph-nospacing {
+        padding-top: 5px;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Number
+// ------------------------------------------------
+.list-number {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include list-variant(
+        $list-display: block,
+        $list-padding: 0,
+        $list-margin: 0,
+
+        // List item
+        $list-item-display: block,
+        $list-item-padding: 0 0 0 15px,
+        $list-item-margin: 0 0 5px 0
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        position: relative;
+
+        &:before {
+            counter-increment: order;
+            content: ""counter(order)".";
+            position: absolute;
+            z-index: zindex(lv1);
+            top: 5px;
+            left: 0;
+            font-family: font-family(secondary);
+            font-size: font-secondary-size(size-4);
+            line-height: font-secondary-size(size-4);
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-paragraph {
+        padding-top: 5px;
+        margin-bottom: 20px;
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

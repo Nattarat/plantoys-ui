@@ -35,9 +35,6 @@
 
     <!-- Plantoys style -->
     <link rel="stylesheet" type="text/css" href="../assets/css/reset.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="../assets/js/tabs/tabs.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick-theme.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" media="all" />
 
     <script type="text/javascript" src="http://ptoys.maywz.info/js/prototype/prototype.js"></script>
@@ -337,7 +334,7 @@
                                     </span>
                                 </a>
                                 <span class="text-default">You may upload photos and documents up to 5 files.</span>
-                                <ul class="list-bullet">
+                                <ul class="list-bullet is-fileupload">
                                     <li class="list-item">
                                         <span class="text-default is-small">file_name.file_extension</span>
                                         <span class="text-default is-small">-</span>
@@ -386,32 +383,12 @@
     </div>
 
     <!-- Plantoys javascript -->
-    <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
-    <script type="text/javascript" src="../assets/js/breakpoints/breakpoints.js"></script>
+    <!-- <script type="text/javascript" src="../assets/js/..."></script>
     <script type="text/javascript">
         $j(function() {
-            $j(window).setBreakpoints({
-                // use only largest available vs use all available
-                distinct: false,
-                // array of widths in pixels where breakpoints
-                // should be triggered
-                breakpoints: [
-                    768,
-                ]
-            });
-
-            $j(window).bind('enterBreakpoint768',function() {
-                $j('.carousel-awards').slick({
-                    dots: true,
-                    adaptiveHeight: true
-                });
-            });
-
-            $j(window).bind('exitBreakpoint768',function() {
-                $j('.carousel-awards').slick('unslick');
-            });
+            // script
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
