@@ -115,6 +115,32 @@
             padding-top: 20px;
             padding-bottom: 20px;
         }
+
+        &.is-office {
+            margin-bottom: 20px;
+        }
+
+        &.is-address {
+            //min-height: 200px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .customersupport-map {
+        min-height: 540px;
+        background-color: $color-gray-5;
+    }
+
+    .customersupport-office-image {
+        height: 370px;
+        background-size: cover;
+    }
+
+    .customersupport-office-contact {
+        display: flex;
+        height: 100%;
+        padding: 55px 25px;
+        background-color: $color-white;
     }
 
     // STYLES OF STATE

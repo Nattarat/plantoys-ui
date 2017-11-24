@@ -163,6 +163,10 @@
         color: color-text(blue-secondary);
     }
 
+    &.is-orange {
+        color: color-text(orange-secondary);
+    }
+
     // Sizes
     &.is-extra-small {
         font-size: font-secondary-size(size-8); // 12px
