@@ -90,35 +90,16 @@
     <div class="wrapper">
         <div class="page">
             <!-- HTML start ========================================================================== -->
-            <div class="container-fluid customersupport-cover">
-                <div class="customersupport-header">
-                    <h1 class="head-title">Customer Support</h1>
+            <div class="container-fluid career-cover">
+                <div class="career-header">
+                    <h1 class="head-title">Career</h1>
                     <h2 class="sub-title">Better Kids, Better World</h2>
                 </div>
             </div>
 
-            <div class="customersupport-container-sortby">
-                <div class="container-content is-submenu">
-                    <div class="row">
-                        <div class="col-sm-3 is-text-align-center">
-                            <a href="customersupport-contactus.html" class="text-submenu is-active">Contact Us</a>
-                        </div>
-                        <div class="col-sm-3 is-text-align-center">
-                            <a href="customersupport-worldwideoffice.html" class="text-submenu">Worldwide Offices</a>
-                        </div>
-                        <div class="col-sm-3 is-text-align-center">
-                            <a href="customersupport-storelocator.html" class="text-submenu">Store Locators</a>
-                        </div>
-                        <div class="col-sm-3 is-text-align-center">
-                            <a href="customersupport-faqs.html" class="text-submenu">FAQs</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="customersupport">
-                <div class="container-page is-customersupport">
-                    <div class="container-panel is-contactus">
+            <div class="career">
+                <div class="container-page is-career">
+                    <div class="container-panel is-career">
                         <div class="container-panel-segment">
                             <div class="list-form is-fluid">
                                 <div class="list-item">
@@ -166,42 +147,33 @@
                                     </div>
                                 </div>
                                 <div class="list-item">
-                                    <label class="text-default is-small is-bold is-gray-light is-uppercase">Home address</label>
+                                    <label class="text-default is-small is-bold is-gray-light is-uppercase">Facebook</label>
                                     <!-- Add class "is-error" for show error field -->
-                                    <textarea class="field-secondary is-textarea is-bold is-fluid" name=""></textarea>
+                                    <input class="field-secondary is-bold is-fluid" placeholder="" type="text" value="">
                                     <!-- Add class "is-active" for show validation message -->
                                     <div class="field-validation">
                                         <span class="text-default is-extra-small is-error">error_meesage</span>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="container-panel-segment is-partition">
+                            <div class="list-form is-fluid is-job-detail">
                                 <div class="list-item">
                                     <div class="list-form-inner is-spacing-column-large">
                                         <div class="list-form-inner-item is-spacing-column-large">
-                                            <label class="text-default is-small is-bold is-gray-light is-uppercase">City</label>
+                                            <label class="text-default is-small is-bold is-gray-light is-uppercase">Applying for *</label>
                                             <!-- Add class "is-error" for show error field -->
-                                            <input class="field-secondary is-bold is-fluid" placeholder="" type="text" value="Bangkok">
+                                            <input class="field-secondary is-bold is-fluid" placeholder="Position / Function" type="text" value="">
                                             <!-- Add class "is-active" for show validation message -->
                                             <div class="field-validation">
                                                 <span class="text-default is-extra-small is-error">error_meesage</span>
                                             </div>
                                         </div>
                                         <div class="list-form-inner-item is-spacing-column-large">
-                                            <label class="text-default is-small is-bold is-gray-light is-uppercase">Postal</label>
+                                            <label class="text-default is-small is-bold is-gray-light is-uppercase">How do you know us</label>
                                             <!-- Add class "is-error" for show error field -->
-                                            <input class="field-secondary is-bold is-fluid" placeholder="" type="text" value="0817137035">
-                                            <!-- Add class "is-active" for show validation message -->
-                                            <div class="field-validation">
-                                                <span class="text-default is-extra-small is-error">error_meesage</span>
-                                            </div>
-                                        </div>
-                                        <div class="list-form-inner-item is-spacing-column-large">
-                                            <label class="text-default is-small is-bold is-gray-light is-uppercase">Country</label>
-                                            <!-- Add class "is-error" for show error field -->
-                                            <div class="select-arrow is-default is-transparent-background">
-                                                <select>
-                                                    <option value="th">Thailand</option>
-                                                </select>
-                                            </div>
+                                            <input class="field-secondary is-bold is-fluid" placeholder="(e.g. JobsDB.com)" type="text" value="">
                                             <!-- Add class "is-active" for show validation message -->
                                             <div class="field-validation">
                                                 <span class="text-default is-extra-small is-error">error_meesage</span>
@@ -210,130 +182,45 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="container-panel-segment is-partition">
-                            <span class="text-default is-bold is-uppercase">you are ... *</span>
-                            <p class="text-default is-paragraph is-italic">Please select the one best describes you.</p>
-                            <div class="list-form is-fluid is-spacing-item-small">
+                            <div class="career-segment is-title">
+                                <span class="text-default is-medium is-bold is-uppercase">Job type *</span>
+                            </div>
+                            <div class="list-form is-fluid is-horizontal is-job-type">
                                 <div class="list-item">
                                     <div class="checkbox-shape is-circle">
                                         <input id="checkbox-a1" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-a1">New to PlanToys (pre-purchase researching)</label>
+                                        <label class="checkbox-label" for="checkbox-a1">Full time</label>
                                     </div>
                                 </div>
                                 <div class="list-item">
                                     <div class="checkbox-shape is-circle">
                                         <input id="checkbox-a2" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-a2">PlanToys Customer (who also buys other brands)</label>
+                                        <label class="checkbox-label" for="checkbox-a2">Part time</label>
                                     </div>
                                 </div>
                                 <div class="list-item">
                                     <div class="checkbox-shape is-circle">
                                         <input id="checkbox-a3" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-a3">PlanToys Fan (always buy PlanToys)</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape is-circle">
-                                        <input id="checkbox-a4" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-a4">Retailer / Share Owner</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape is-circle">
-                                        <input id="checkbox-a5" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-a5">Press & Media</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape is-circle">
-                                        <input id="checkbox-a6" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-a6">Others</label>
+                                        <label class="checkbox-label" for="checkbox-a3">Internship</label>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="container-panel-segment is-partition">
-                            <span class="text-default is-bold is-uppercase">how can we help you? *</span>
-                            <p class="text-default is-paragraph is-italic">Please select any support you need.</p>
-                            <div class="list-form is-fluid is-spacing-item-small">
-                                <div class="list-item">
-                                    <div class="checkbox-shape">
-                                        <input id="checkbox-b1" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-b1">Product Information Request - Material Safety and Quality</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape">
-                                        <input id="checkbox-b2" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-b2">Where can I buy PlanToys? (Shops locations / Online stores URLs)</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape">
-                                        <input id="checkbox-b3" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-b3">Request Toys Assembly Instructions (Please mention Item No. / Photo upload suggested)</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape">
-                                        <input id="checkbox-b4" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-b4">How to Play? (You'll later be re-directed to our YouTube Toys Demo Channel)</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape">
-                                        <input id="checkbox-b5" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-b5">Purchase Replacement Parts (Please mention Item No. / Photo upload suggested)</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape">
-                                        <input id="checkbox-b6" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-b6">Report a Defective Toy (Please mention Item No. / Photo upload suggested)</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape">
-                                        <input id="checkbox-b7" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-b7">Suggestion on our Toys Design & Functions / Product Design Idea / Design Collaboration</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape">
-                                        <input id="checkbox-b8" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-b8">Become our Distribution Partner (Profile Upload Suggested)</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape">
-                                        <input id="checkbox-b9" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-b9">Press & Media (Content request for Blogs / Social Media)</label>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="checkbox-shape">
-                                        <input id="checkbox-b10" type="checkbox">
-                                        <label class="checkbox-label" for="checkbox-b10">Others</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="customersupport-segment is-message">
+                            <div class="career-segment is-message">
                                 <!-- Add class "is-error" for show error field -->
-                                <textarea class="field-secondary is-textarea is-bold is-fluid" name=""></textarea>
+                                <textarea class="field-secondary is-textarea is-bold is-fluid" placeholder="Message" name=""></textarea>
                                 <!-- Add class "is-active" for show validation message -->
                                 <div class="field-validation">
                                     <span class="text-default is-extra-small is-error">error_meesage</span>
                                 </div>
                             </div>
-                            <div class="customersupport-segment">
+                            <div class="career-segment">
                                 <a class="button-primary is-small is-text-right" href="#">
                                     <input type="file" multiple name="" id="">
                                     <span class="button-body">
                                         <span class="button-text is-uppercase is-small">File Upload</span>
                                     </span>
                                 </a>
-                                <span class="text-default">You may upload photos and documents up to 5 files.</span>
+                                <span class="text-default">You can upload only one attachment file un Microsoft Word (.doc/.docx).</span>
                                 <ul class="list-bullet is-fileupload">
                                     <li class="list-item">
                                         <span class="text-default is-small">file_name.file_extension</span>
@@ -364,11 +251,11 @@
                             </div>
                         </div>
                         <div class="container-panel-segment is-partition">
-                            <div class="customersupport-segment is-recaptcha">
+                            <div class="career-segment is-recaptcha">
                                 <span class="text-default">ReCaptcha</span>
                             </div>
-                            <div class="customersupport-segment is-text-align-center">
-                                <button class="button-background-image is-wood-brown is-small" type="button">
+                            <div class="career-segment is-text-align-center">
+                                <button class="button-background-image is-wood-blue is-small" type="button">
                                     <span class="button-body">
                                         <span class="button-text is-small">Submit Form</span>
                                     </span>

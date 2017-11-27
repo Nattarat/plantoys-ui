@@ -69,7 +69,7 @@ $field-padding-side-deault: 20px;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @include placeholder($field-placeholder-color);
+    @include placeholder($field-placeholder-color, font-family(secondary));
 
     display: $field-display;
     width: $field-width;
@@ -325,7 +325,7 @@ $field-padding-side-deault: 20px;
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-placeholder-color-default {
-        @include placeholder($color-gray-4);
+        @include placeholder($color-gray-4, font-family(secondary));
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

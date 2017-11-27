@@ -210,7 +210,8 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    &.is-customersupport {
+    &.is-customersupport,
+    &.is-career {
         padding-top: 65px;
         padding-bottom: 65px;
     }
@@ -281,6 +282,12 @@
         }
     }
 
+    .container-panel-segment-inner {
+        &.is-title {
+            margin-bottom: 20px;
+        }
+    }
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -312,7 +319,8 @@
         }
     }
 
-    &.is-contactus {
+    &.is-contactus,
+    &.is-career {
         max-width: 1065px;
     }
 
