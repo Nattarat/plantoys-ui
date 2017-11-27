@@ -3331,10 +3331,16 @@
             $j('.accordion').accordion({
                 "transitionSpeed": 400
             });
-            $j(document).ready(function(){
+            $j("select").ready(function(){
+                console.log("call")
                 $j('.your-class').slick({
-                dots:true
+                    mobileFirst:true,
+                    dots:true
                 });
+            });
+            $j("select").change(function(){
+                console.log("call2")
+                $j('.your-class').slick('refresh');
             });
             // Carousel
             $j('.carousel-category').slick({
