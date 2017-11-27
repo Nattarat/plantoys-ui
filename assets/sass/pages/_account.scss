@@ -77,6 +77,14 @@
 // Firefox
 
 // My account
+// - Wishlist
+// - Info
+// - Address
+// - Order
+// - Return
+// - Shipping
+// - Payment
+// - Confirm
 // ------------------------------------------------
 .myaccount {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
@@ -99,12 +107,7 @@
         display: inline-block;
         width: 90px;
         height: auto;
-        margin-bottom: 10px;
-    }
-
-    .myaccount-segment-title {
-        margin-bottom: 25px;
-        text-align: center;
+        margin-bottom: 20px;
     }
 
     .myaccount-avatar {
@@ -114,12 +117,35 @@
         border-radius: 50%;
     }
 
+    .myaccount-segment-title {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
     .myaccount-segment-spacing {
         padding-bottom: 45px;
 
         &.is-large {
             padding-bottom: 65px;
         }
+    }
+
+    .myaccount-segment-button {
+        padding-top: 30px;
+
+        &.is-half {
+            display: flex;
+            margin-left: -15px;
+
+            .myaccount-segment-button-inner {
+                flex: 1;
+                padding-left: 15px;
+            }
+        }
+    }
+
+    .myaccount-segment-button-inner {
+
     }
 
     .myaccount-address-content {

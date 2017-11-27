@@ -330,6 +330,12 @@
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-blank {
+        &.is-form-vertical {
+            background-color: transparent;
+            border: 0;
+        }
+    }
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>

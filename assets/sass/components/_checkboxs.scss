@@ -262,3 +262,105 @@
 // IE
 // Safari
 // Firefox
+
+// Payment
+// ------------------------------------------------
+.checkbox-panel {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include checkbox-variant(
+        // Label text
+        $checkbox-label-padding: 0,
+        $checkbox-label-margin: 0,
+        $checkbox-label-font-family: font-family(secondary),
+        $checkbox-label-font-size: font-secondary-size(size-5),
+        $checkbox-label-font-color: color-text(default),
+
+        // Box
+        $checkbox-box-width: 16px,
+        $checkbox-box-height: 16px,
+        $checkbox-box-color: $color-blue-3,
+        $checkbox-box-border: 0,
+        $checkbox-box-border-radius: 4px,
+
+        // Box active
+        $checkbox-box-color-active: $color-blue-3,
+        $checkbox-box-border-active: 0,
+
+        // icon
+        $checkbox-icon-width: 16px,
+        $checkbox-icon-height: 16px,
+        $checkbox-icon-image: url('#{path-file(icons)}/icon-check-white.png')
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    width: 100%;
+
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    input[type=checkbox],
+    input[type=radio] {
+        &:checked {
+            + .checkbox-label {
+                background-color: $color-gray-5;
+            }
+        }
+    }
+
+    .checkbox-label {
+        @include transition(all .3s ease);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 120px;
+        padding: 20px 35px;
+        background-color: $color-white;
+
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+
+    .checkbox-label-inner {
+
+    }
+
+    .icon-payment {
+        display: inline-block;
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+
+    .icon-shipping {
+        display: inline-block;
+        width: 115px;
+        height: 115px;
+        margin-right: 20px;
+        border: 1px solid $color-gray-4;
+        vertical-align: middle;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
