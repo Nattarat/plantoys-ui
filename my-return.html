@@ -173,36 +173,7 @@
                                             </span>
                                         </div>
                                         <div class="table-column">
-                                            <a class="button-typography" href="#">
-                                                <span class="button-body">
-                                                    <img class="button-icon is-text-blank is-table" src="../assets/images/icon/icon-list-unorder.png" alt="Icon">
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="table-row">
-                                        <div class="table-column">
-                                            <span class="text-table">
-                                                24-03-2017
-                                            </span>
-                                        </div>
-                                        <div class="table-column">
-                                            <span class="text-table">
-                                                PT000190002922
-                                            </span>
-                                        </div>
-                                        <div class="table-column">
-                                            <span class="text-table">
-                                                $150.00
-                                            </span>
-                                        </div>
-                                        <div class="table-column">
-                                            <span class="text-table is-green-light">
-                                                Delivered
-                                            </span>
-                                        </div>
-                                        <div class="table-column">
-                                            <a class="button-typography" href="#">
+                                            <a id="button-return-detail" class="button-typography" href="#">
                                                 <span class="button-body">
                                                     <img class="button-icon is-text-blank is-table" src="../assets/images/icon/icon-list-unorder.png" alt="Icon">
                                                 </span>
@@ -219,13 +190,74 @@
         </div>
     </div>
 
+    <!-- Modal return detail -->
+    <div class="modal-dialog modal-return-detail">
+        <div class="modal-dialog-container is-large">
+            <div class="modal-dialog-body">
+                <div class="modal-dialog-title">
+                    <div class="modal-dialog-title-segment is-title">
+                        <img class="modal-dialog-title-icon is-return-detail" src="../assets/images/icon/icon-bag.png" alt="Icon">
+                        <span class="text-default is-middlemore-medium is-bold">PT000190002622</span>
+                    </div>
+                    <div class="modal-dialog-title-segment is-button">
+                        <a class="button-close-modal-dialog button-typography" href="#">
+                            <span class="button-body">
+                                <img class="button-icon is-text-blank is-modal-close" src="../assets/images/icon/icon-close.png" alt="Icon">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-dialog-content">
+                    <div class="cart">
+                        <ul class="list-cart">
+                            <li class="list-item">
+                                <div class="cart-item">
+                                    <div class="product is-left">
+                                        <a class="product-image-link" href="#">
+                                            <img class="product-image" src="../assets/images/content/product/product-thumbnail-1.jpg" alt="Product">
+                                        </a>
+                                    </div>
+                                    <div class="product is-right">
+                                        <a class="product-name" href="#">
+                                            <span class="text-default is-bold is-black">Melody Xylophone</span>
+                                        </a>
+                                        <div class="product-counter">
+                                            <span class="text-default is-middlemore-medium is-bold">x 1</span>
+                                            <span class="text-default">$ 150.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal-dialog-overlay"></div>
+    </div>
+
     <!-- Plantoys javascript -->
-    <!-- <script type="text/javascript" src="../assets/js/..."></script>
+    <!-- <script type="text/javascript" src="../assets/js/..."></script> -->
     <script type="text/javascript">
         $j(function() {
-            // script
+            // Modal
+            // =====================================================
+            // Modal return detail
+            // Open
+            $j('#button-return-detail').click(function() {
+                $j('.modal-return-detail').addClass('is-active');
+                $j('body').addClass('is-sidebar-lock');
+            });
+
+            // Modal
+            // Close
+            $j('.button-close-modal-dialog, .modal-dialog-overlay').click(function() {
+                $j('.modal-dialog').removeClass('is-active');
+                $j('body').removeClass('is-sidebar-lock');
+            });
         });
-    </script> -->
+    </script>
 </body>
 
 </html>

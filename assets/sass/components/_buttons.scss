@@ -148,6 +148,11 @@ $button-padding-side-deault: 45px;
             width: 64px;
             height: 64px;
         }
+
+        &.is-modal-close {
+            width: 17px;
+            height: auto;
+        }
     }
 
     .button-text {

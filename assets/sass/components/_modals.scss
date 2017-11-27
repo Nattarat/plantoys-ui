@@ -269,3 +269,90 @@
 // IE
 // Safari
 // Firefox
+
+// Return
+// ------------------------------------------------
+.modal-return-detail {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include modal-variant(
+        $modal-dialog-margin: 0,
+        $modal-dialog-align-items: flex-start,
+
+        // Container
+        $modal-dialog-container-max-width: 625px,
+        $modal-dialog-container-min-height: initial,
+        $modal-dialog-container-max-height: initial,
+        $modal-dialog-container-padding: 0,
+        $modal-dialog-container-margin: 25vh 15px 15px 15px,
+        $modal-dialog-container-background-color: $color-white,
+        $modal-dialog-container-box-shadow: 0 3px 5px rgba(0, 0, 0, .5),
+
+        // Overlay
+        $modal-dialog-overlay-background-color: rgba(0, 0, 0, .5),
+
+        // Body
+        $modal-dialog-body-min-height: initial,
+        $modal-dialog-body-max-height: initial,
+
+        // Title
+        $modal-dialog-title-padding: 25px 35px,
+        $modal-dialog-title-margin: 0,
+        $modal-dialog-title-text-align: left
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .modal-dialog-title {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-gray-5;
+    }
+
+    .modal-dialog-title-segment {
+        &.is-title {
+            display: flex;
+            align-items: center;
+        }
+
+        &.is-button {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .modal-dialog-title-icon {
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: middle;
+
+        &.is-return-detail {
+            position: relative;
+            top: -3px;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
