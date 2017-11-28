@@ -79,6 +79,10 @@ $product-container-padding: 0 60px 25px 60px;
     .product-segment {
         display: flex;
         margin-left: -20px;
+
+        &.is-ordersummary {
+            margin-left: 0;
+        }
     }
 
     .product-segment-inner {

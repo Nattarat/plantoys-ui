@@ -144,6 +144,10 @@ body {
     .cart-item {
         display: flex;
         align-items: center;
+
+        &.is-alignitems-top {
+            align-items: flex-start;
+        }
     }
 
     .cart-result {
@@ -183,6 +187,14 @@ body {
 
         &.is-result-last {
             margin-bottom: 0;
+        }
+
+        &.is-spacing-bottom-small {
+            margin-bottom: 5px;
+        }
+
+        &.is-spacing-bottom-large {
+            margin-bottom: 30px;
         }
     }
 
@@ -234,6 +246,11 @@ body {
         &:hover {
             border-color: $color-gray-4;
         }
+
+        &.is-medium {
+            max-width: 100px;
+            height: auto;
+        }
     }
 
     .product-name {
@@ -253,6 +270,11 @@ body {
         margin-right: 10px;
     }
 
+    .product-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -266,6 +288,19 @@ body {
     &.is-right {
         width: 79%;
         padding-left: 30px;
+    }
+
+    &.is-column-fluid {
+        flex: 1;
+    }
+
+    &.is-column-fix {
+        flex: none;
+    }
+
+    &.is-ordersummary-detail {
+        flex: 1;
+        display: flex;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

@@ -757,6 +757,14 @@
         &:last-child {
             border-bottom-width: 0;
         }
+
+        &.is-padding-blank {
+            padding: 0;
+        }
+
+        &.is-background-gray {
+            background-color: $color-gray-5;
+        }
     }
 
     // STYLES OF STATE

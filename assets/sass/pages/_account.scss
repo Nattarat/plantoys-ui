@@ -125,6 +125,10 @@
     .myaccount-segment-spacing {
         padding-bottom: 45px;
 
+        &.is-small {
+            padding-bottom: 20px;
+        }
+
         &.is-large {
             padding-bottom: 65px;
         }
@@ -148,12 +152,18 @@
 
     }
 
-    .myaccount-address-content {
+    .myaccount-address-content,
+    .myaccount-content {
         display: flex;
         align-items: center;
+
+        &.is-spacing-between {
+            justify-content: space-between;
+        }
     }
 
-    .myaccount-address-inner {
+    .myaccount-address-inner,
+    .myaccount-content-inner {
         flex: none;
 
         &.is-form {
@@ -169,6 +179,10 @@
             &.is-align-top {
                 align-self: flex-start;
             }
+        }
+
+        &.is-fluid {
+            flex: 1;
         }
     }
 

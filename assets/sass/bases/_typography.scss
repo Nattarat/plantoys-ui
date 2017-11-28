@@ -196,6 +196,10 @@
         font-size: font-secondary-size(size-2); // 24px
     }
 
+    &.is-little-large {
+        font-size: font-secondary-size(size-14); // 28px
+    }
+
     &.is-large {
         font-size: font-secondary-size(size-9); // 32px
     }
@@ -572,6 +576,10 @@
     &:focus {
         &.is-gray {
             color: color-text(default-hover);
+        }
+
+        &.is-black {
+            color: $color-black;
         }
     }
 
