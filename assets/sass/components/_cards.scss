@@ -12,9 +12,38 @@
     max-width: 480px;
     margin: auto;
     height: 100%;
-
+    
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.has-border{
+        &.is-first{
+            border: 1px solid $color-gray-10;
+            &.new-row{
+                border-top: 0px solid $color-gray-10;
+                border-bottom: 1px solid $color-gray-10;
+                border-right: 1px solid $color-gray-10;
+                border-left: 1px solid $color-gray-10;
+            }
+        }
+        &.is-then{
+            border-top: 1px solid $color-gray-10;
+            border-bottom: 1px solid $color-gray-10;
+            border-right: 1px solid $color-gray-10;
+            border-left: 0px solid $color-gray-10;
+            &.new-row{
+                border-top: 0px solid $color-gray-10;
+                border-bottom: 1px solid $color-gray-10;
+                border-right: 1px solid $color-gray-10;
+                border-left: 0px solid $color-gray-10;
+            }
+        }
+        &.is-final{
+            border-top: 0px solid $color-gray-10;
+            border-bottom: 1px solid $color-gray-10;
+            border-right: 1px solid $color-gray-10;
+            border-left: 0px solid $color-gray-10;
+        }
+    }
     a {
         text-decoration: none;
     }
@@ -50,6 +79,9 @@
         }
         &.is-pink{
             background: $color-pink-1;
+        }
+        .card-detail , .card-sub-detail{
+            color: $color-white;        
         }
     }
 

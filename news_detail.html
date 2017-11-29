@@ -171,7 +171,7 @@
                     <h2 class="head-title">Recommended for you</h2>
                     <div class="row row-flex">
                         <div class="col-lg-3 col-md-4 col-sm-6 is-padding-left-blank is-padding-right-blank is-text-align-center">
-                            <div class="thumbnail new-card is-hover is-pink">
+                            <div class="thumbnail new-card is-hover is-pink has-border">
                                 <div class="thumbnail-img">
                                     <img src="/assets/images/content/news/news-activities-1.jpg" class="img-responsive">
                                 </div>
@@ -181,7 +181,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 is-padding-left-blank is-padding-right-blank">
-                            <div class="thumbnail new-card is-hover is-pink">
+                            <div class="thumbnail new-card is-hover is-pink has-border">
                                 <div class="thumbnail-img">
                                     <img src="/assets/images/content/news/news-activities-2.jpg" class="img-responsive">
                                 </div>
@@ -191,7 +191,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 is-padding-left-blank is-padding-right-blank">
-                            <div class="thumbnail new-card is-hover is-pink">
+                            <div class="thumbnail new-card is-hover is-pink has-border">
                                 <div class="thumbnail-img">
                                     <img src="/assets/images/content/news/news-activities-3.jpg" class="img-responsive">
                                 </div>
@@ -201,7 +201,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 is-padding-left-blank is-padding-right-blank">
-                            <div class="thumbnail new-card is-hover is-pink">
+                            <div class="thumbnail new-card is-hover is-pink has-border">
                                 <div class="thumbnail-img">
                                     <img src="/assets/images/content/news/news-activities-4.jpg" class="img-responsive">
                                 </div>
@@ -215,6 +215,85 @@
             <!-- HTML end ============================================================================ -->
         </div>
     </div>
+    <script>
+            $j(function() {
+                // border follow width
+                if($j(window).width()>1180){
+                    $j(".col-lg-3:nth-child(-n+4) .new-card").addClass("is-then");
+                    $j(".col-lg-3:first-child .new-card").removeClass("is-then");
+                    $j(".col-lg-3:first-child .new-card").addClass("is-first");
+                    $j(".col-lg-3:nth-child(n+5) .new-card").addClass("is-then new-row");
+                    $j(".col-lg-3:nth-child(5) .new-card").removeClass("is-then");
+                    $j(".col-lg-3:nth-child(5) .new-card").addClass("is-first");
+                }
+                if($j(window).width()>973 & $j(window).width()< 1180 ){
+                    $j(".col-md-4:nth-child(-n+3) .new-card").addClass("is-then");
+                    $j(".col-md-4:first-child .new-card").removeClass("is-then");
+                    $j(".col-md-4:first-child .new-card").addClass("is-first");
+                    $j(".col-md-4:nth-child(n+4) .new-card").addClass("is-then new-row");
+                    $j(".col-md-4:nth-child(4) .new-card").removeClass("is-then");
+                    $j(".col-md-4:nth-child(4) .new-card").addClass("is-first");
+                    $j(".col-md-4:nth-child(7) .new-card").removeClass("is-then");
+                    $j(".col-md-4:nth-child(7) .new-card").addClass("is-first");
+                }
+                if($j(window).width()>750 & $j(window).width()< 973){
+                    $j(".col-sm-6:nth-child(-n+2) .new-card").addClass("is-then");
+                    $j(".col-sm-6:first-child .new-card").removeClass("is-then");
+                    $j(".col-sm-6:first-child .new-card").addClass("is-first");
+                    $j(".col-sm-6:nth-child(n+3) .new-card").addClass("is-then new-row");
+                    $j(".col-sm-6:nth-child(3) .new-card").removeClass("is-then");
+                    $j(".col-sm-6:nth-child(3) .new-card").addClass("is-first");
+                    $j(".col-sm-6:nth-child(5) .new-card").removeClass("is-then");
+                    $j(".col-sm-6:nth-child(5) .new-card").addClass("is-first");
+                    $j(".col-sm-6:nth-child(7) .new-card").removeClass("is-then");
+                    $j(".col-sm-6:nth-child(7) .new-card").addClass("is-first");
+                }
+                if($j(window).width()<750){
+                    $j(".col-sm-6:first-child .new-card").addClass("is-first");
+                    $j(".col-sm-6:nth-child(n+2) .new-card").addClass("is-first new-row");
+                }
+                $j(window).resize(function(){
+                        $j(".new-card").removeClass("is-then");
+                        $j(".new-card").removeClass("is-first");
+                        $j(".new-card").removeClass("new-row");
+                    if($j(window).width()>1180){
+                        $j(".col-lg-3:nth-child(-n+4) .new-card").addClass("is-then");
+                        $j(".col-lg-3:first-child .new-card").removeClass("is-then");
+                        $j(".col-lg-3:first-child .new-card").addClass("is-first");
+                        $j(".col-lg-3:nth-child(n+5) .new-card").addClass("is-then new-row");
+                        $j(".col-lg-3:nth-child(5) .new-card").removeClass("is-then");
+                        $j(".col-lg-3:nth-child(5) .new-card").addClass("is-first");
+                    }
+                    if($j(window).width()>973 & $j(window).width()< 1180 ){
+                        $j(".col-md-4:nth-child(-n+3) .new-card").addClass("is-then");
+                        $j(".col-md-4:first-child .new-card").removeClass("is-then");
+                        $j(".col-md-4:first-child .new-card").addClass("is-first");
+                        $j(".col-md-4:nth-child(n+4) .new-card").addClass("is-then new-row");
+                        $j(".col-md-4:nth-child(4) .new-card").removeClass("is-then");
+                        $j(".col-md-4:nth-child(4) .new-card").addClass("is-first");
+                        $j(".col-md-4:nth-child(7) .new-card").removeClass("is-then");
+                        $j(".col-md-4:nth-child(7) .new-card").addClass("is-first");
+                    }
+                    if($j(window).width()>750 & $j(window).width()< 973){
+                        $j(".col-sm-6:nth-child(-n+2) .new-card").addClass("is-then");
+                        $j(".col-sm-6:first-child .new-card").removeClass("is-then");
+                        $j(".col-sm-6:first-child .new-card").addClass("is-first");
+                        $j(".col-sm-6:nth-child(n+3) .new-card").addClass("is-then new-row");
+                        $j(".col-sm-6:nth-child(3) .new-card").removeClass("is-then");
+                        $j(".col-sm-6:nth-child(3) .new-card").addClass("is-first");
+                        $j(".col-sm-6:nth-child(5) .new-card").removeClass("is-then");
+                        $j(".col-sm-6:nth-child(5) .new-card").addClass("is-first");
+                        $j(".col-sm-6:nth-child(7) .new-card").removeClass("is-then");
+                        $j(".col-sm-6:nth-child(7) .new-card").addClass("is-first");
+                    }
+                    if($j(window).width()<750){
+                        $j(".col-sm-6:first-child .new-card").addClass("is-first");
+                        $j(".col-sm-6:nth-child(n+2) .new-card").addClass("is-first new-row");
+                    }
+                    console.log($j(window).width())
+                })
+            })
+        </script>
 </body>
 
 </html>
