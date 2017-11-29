@@ -1,0 +1,292 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Cart
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+.cart {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .cart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+
+        .icon-cart {
+            margin-right: 20px;
+        }
+    }
+
+    .cart-header-inner {
+        display: flex;
+        align-items: center;
+
+        &.is-left {
+
+        }
+
+        &.is-right {
+
+        }
+    }
+
+    .minicart-wrapper {
+        position: relative;
+
+        &:before {
+            content: ' ';
+            position: absolute;
+            z-index: zindex(lv2);
+            top: 50%;
+            left: 50%;
+            display: none;
+            width: 100px;
+            height: 100px;
+            margin-top: -50px;
+            margin-left: -50px;
+            background-image: url('#{path-file(images)}/loading/loading-three-circle.gif');
+            background-size: 100%;
+        }
+
+        &:after {
+            content: ' ';
+            position: absolute;
+            z-index: zindex(lv1);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: none;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        &.loading {
+            &:before,
+            &:after {
+                display: block;
+            }
+        }
+    }
+
+    .cart-container-scroll {
+        overflow: auto;
+        max-height: calc(100vh - 484px);
+        margin-bottom: 134px;
+    }
+
+    .cart-notice {
+        padding: 10px;
+        background-color: $color-green-5;
+        text-align: center;
+    }
+
+    .cart-item {
+        display: flex;
+        align-items: center;
+
+        &.is-alignitems-top {
+            align-items: flex-start;
+        }
+    }
+
+    .cart-result {
+        position: absolute;
+        z-index: zindex(lv1);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px 40px;
+        background-color: $color-white;
+        border-top: 1px solid $color-gray-5;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        &.in-balloon {
+            position: static;
+        }
+    }
+
+    .cart-promocode {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 35px;
+    }
+
+    .cart-promocode-inner {
+        &.is-field {
+            flex-grow: 1;
+            padding-right: 30px;
+        }
+    }
+
+    .cart-result-detail {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        &.is-result-last {
+            margin-bottom: 0;
+        }
+
+        &.is-spacing-bottom-small {
+            margin-bottom: 5px;
+        }
+
+        &.is-spacing-bottom-large {
+            margin-bottom: 30px;
+        }
+    }
+
+    #minicart-error-message {
+        color: color-text(red-secondary);
+    }
+
+    #minicart-success-message {
+        color: color-text(green-secondary);
+    }
+
+    .minicart-message {
+        display: none;
+        padding: 25px 35px 10px 35px;
+        font-family: font-family(secondary);
+        font-size: font-secondary-size(size-4);
+        font-weight: normal;
+        line-height: 1.3;
+        color: color-text(default);
+        text-transform: none;
+        letter-spacing: 1px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .cart-container-scroll {
+        @media screen and (max-width: screen(labtop-lg)) {
+            max-height: calc(100vh - 425px);
+            margin-bottom: 112px;
+        }
+    }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+.product {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .product-image-link {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .product-image {
+        border: 1px solid $color-gray-4;
+
+        &:hover {
+            border-color: $color-gray-4;
+        }
+
+        &.is-medium {
+            max-width: 100px;
+            height: auto;
+        }
+    }
+
+    .product-name {
+        display: block;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .product-counter {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .product-counter-number {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .product-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-left {
+        width: 21%;
+        padding: 0;
+    }
+
+    &.is-right {
+        width: 79%;
+        padding-left: 30px;
+    }
+
+    &.is-column-fluid {
+        flex: 1;
+    }
+
+    &.is-column-fix {
+        flex: none;
+    }
+
+    &.is-ordersummary-detail {
+        flex: 1;
+        display: flex;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

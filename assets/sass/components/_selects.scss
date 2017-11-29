@@ -183,9 +183,10 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     select {
         margin-left: 0;
-        font-family: font-family(primary);
         border: 1px solid $color-gray-3;
         background-size: 16px;
+        font-family: font-family(primary);
+        letter-spacing: 1px;
     }
 
     // STYLES OF STATE
