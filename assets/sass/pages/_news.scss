@@ -95,15 +95,15 @@
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
-// MIXINS
+    // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    height: 100px;
+    height: auto;
     display: flex;
     align-items: center;
-    padding: 0px 50px;
+    padding: 10px 50px;
     background-image:  url('#{path-file(images)}/content/news/news-rubber-Wood.jpg') ;
     background-size: cover;
     background-repeat: repeat-x;

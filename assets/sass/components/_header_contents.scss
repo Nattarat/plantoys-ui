@@ -2,7 +2,7 @@
 // ------------------------------------------------
 @mixin container-header(
     $container-background: none,
-    $container-height: 540px,
+    $container-height: 50vh, // 540px
     $container-padding: 0 60px // 0 124px
 ) {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
@@ -20,6 +20,7 @@
     align-items: center;
     background-image: $container-background;
     height: $container-height;
+    max-height: 360px;
     padding: $container-padding;
 
     // STYLES OF CHILD CLASS

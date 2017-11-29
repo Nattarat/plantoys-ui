@@ -64,11 +64,11 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    min-height: 100px;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 10px 50px;
     background-image:  url('#{path-file(backgrounds)}/about/about-rubber-wood.jpg');
     background-size: cover;
     background-repeat: repeat-x;
@@ -112,7 +112,8 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     width: 100%;
     height: 41.7vw;
-    margin-bottom: 35px;
+    max-height: 480px;
+    margin-bottom: 20px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -147,7 +148,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    padding-bottom: 45px;
+    padding-bottom: 20px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -158,7 +159,7 @@
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-introduction {
-        padding-top: 45px;
+        padding-top: 20px;
     }
 
     &.is-description {
@@ -235,7 +236,8 @@
     &:before {
         content: ' ';
         display: block;
-        height: 400px;
+        height: 40vh; // 400
+        max-height: 360px;
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -500,8 +502,8 @@
                 z-index: zindex(lv1);
                 top: 50%;
                 left: 50%;
-                width: 48px;
-                height: 48px;
+                width: 2.5vw; // 48px
+                height: 2.5vw; // 48px
                 margin-left: -24px;
                 background: url('#{path-file(icons)}/icon-play-green.png') no-repeat;
                 background-size: cover;
@@ -518,12 +520,22 @@
             top: 13.0%;
             left: 4.3%;
             width: 16%;
+
+            &:before {
+                top: 10%;
+                left: 3%;
+            }
         }
 
         &.infographic-3 {
             top: 13.5%;
             left: 31.4%;
             width: 16%;
+
+            &:before {
+                top: 30%;
+                left: 105%;
+            }
         }
 
         &.infographic-4 {
@@ -536,30 +548,55 @@
             top: 15.25%;
             left: 72.2%;
             width: 21.5%;
+
+            &:before {
+                top: -5%;
+                left: 45%;
+            }
         }
 
         &.infographic-6 {
             top: 29.7%;
             left: 86.9%;
             width: 12.8%;
+
+            &:before {
+                top: -32%;
+                left: 72%;
+            }
         }
 
         &.infographic-7 {
             top: 34.6%;
             left: 60.2%;
             width: 33.2%;
+
+            &:before {
+                top: 15%;
+                left: 65%;
+            }
         }
 
         &.infographic-7-1 {
             top: 49.6%;
             left: 64.7%;
             width: 4.8%;
+
+            &:before {
+                top: 93%;
+                left: 28%;
+            }
         }
 
         &.infographic-7-2 {
             top: 47.8%;
             left: 78.7%;
             width: 5.8%;
+
+            &:before {
+                top: 65%;
+                left: 140%;
+            }
         }
 
         &.infographic-8 {
@@ -572,12 +609,22 @@
             top: 50.2%;
             left: 12.8%;
             width: 26%;
+
+            &:before {
+                top: 68%;
+                left: 3%;
+            }
         }
 
         &.infographic-15 {
             top: 38%;
             left: 0%;
             width: 36.7%;
+
+            &:before {
+                top: 15%;
+                left: 20%;
+            }
         }
 
         &.infographic-10 {
@@ -590,12 +637,22 @@
             top: 69.6%;
             left: 17.3%;
             width: 19.9%;
+
+            &:before {
+                top: 38%;
+                left: 26%;
+            }
         }
 
         &.infographic-12 {
             top: 69%;
             left: 44.1%;
             width: 15.5%;
+
+            &:before {
+                top: 29%;
+                left: 91%;
+            }
         }
 
         &.infographic-13 {
@@ -649,7 +706,13 @@
             position: relative;
         }
 
-
+        &.is-lightbox {
+            &:before {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    display: none;
+                }
+            }
+        }
 
         &[class*="infographic-"] {
             @media screen and (max-width: screen(phablet-lg-max)) {
