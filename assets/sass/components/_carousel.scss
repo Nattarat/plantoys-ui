@@ -329,6 +329,11 @@
         }
     }
 
+    &.is-inner-container {
+        margin-left: -60px;
+        margin-right: -60px;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 

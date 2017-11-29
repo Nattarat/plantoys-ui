@@ -439,6 +439,9 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .slick-slide {
+        margin-left: -1px;
+    }
     .carousel-item {
         padding: 30px 0px;
         border: 1px solid $color-gray-19;
@@ -449,7 +452,7 @@
     .child-text-carousel {
         margin-bottom: 10px;
         font-family: font-family(primary);
-        font-size: 17px;
+        font-size: font-primary-size(size-12);
         line-height: 1.5;
         color: $color-black;
     }

@@ -111,6 +111,7 @@
                         </li>
                     </ul>
                 </div>
+
                 <!-- Product detail column -->
                 <div class="main">
                     <div class="product-view">
@@ -136,51 +137,18 @@
                                         <h2 class="text-default is-large is-bold">Musical Band</h2>
                                     </div>
                                     <div class="product-detail-segment-item">
-                                        <h2 class="text-default is-medium">$ 150.00</h2>
+                                        <div class="price-format is-product-card-detail">
+                                            <span class="price-number">$ 1050.00</span>
+                                            <span class="price-number is-dismiss">$ 1050.00</span>
+                                            <span class="price-number is-discount">$ 750.00</span>
+                                        </div>
                                     </div>
                                     <div class="product-detail-segment-item is-rating">
-                                        <ul class="list-rating">
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <div class="rating" style="width: 50%;"></div>
+                                            </div>
+                                        </div>
                                         <a class="text-link is-medium is-bold is-underline is-lineheight-self" href="#">Write a Review</a>
                                     </div>
                                     <div class="product-detail-segment-item">
@@ -295,91 +263,115 @@
 
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!--Carousel product (layout from child development) -->
-            <div class="carousel-name">
-                <span class="text-default is-bold">You may also like</span>
-            </div>
-            <div class="carousel-category is-theme-gray is-arrow-inner is-control-fix-size for-full-viewport child-carousel">
-                <div class="carousel-item is-item-horizontal">
-                    <a class="carousel-link" href="#">
-                        <div class="carousel-image is-border-none">
-                            <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid1.png" alt="News">
+                    <!--Carousel product (layout from child development) -->
+                    <div class="carousel-name">
+                        <span class="text-default is-bold">You may also like</span>
+                    </div>
+                    <div class="carousel-category is-theme-gray is-arrow-inner is-control-fix-size is-inner-container for-full-viewport child-carousel">
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid1.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="child-text-carousel">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam alias accusamus laudantium, maiores at, doloremque aspernatur, ab similique atque nihil beatae nisi blanditiis ea. Itaque aspernatur quae obcaecati magni dicta.
+                                    </p>
+                                    <div class="price-format is-product-card-carousel">
+                                        <span class="price-number">$ 1050.00</span>
+                                        <span class="price-number is-dismiss">$ 1050.00</span>
+                                        <span class="price-number is-discount">$ 750.00</span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
-                                Bell Rattle
-                            </p>
-                            <p class="child-text-price">$ 150.00</p>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid2.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="child-text-carousel">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, exercitationem harum nam perferendis nulla sint.
+                                    </p>
+                                    <div class="price-format is-product-card-carousel">
+                                        <span class="price-number">$ 1050.00</span>
+                                        <span class="price-number is-dismiss">$ 1050.00</span>
+                                        <span class="price-number is-discount">$ 750.00</span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="carousel-item is-item-horizontal">
-                    <a class="carousel-link" href="#">
-                        <div class="carousel-image is-border-none">
-                            <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid2.png" alt="News">
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid3.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="child-text-carousel">
+                                        Mirror Baby Book
+                                    </p>
+                                    <div class="price-format is-product-card-carousel">
+                                        <span class="price-number">$ 1050.00</span>
+                                        <span class="price-number is-dismiss">$ 1050.00</span>
+                                        <span class="price-number is-discount">$ 750.00</span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
-                                Bunny Rattle
-                            </p>
-                            <p class="child-text-price">$ 150.00</p>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid4.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="child-text-carousel">
+                                        Baby Gym
+                                    </p>
+                                    <div class="price-format is-product-card-carousel">
+                                        <span class="price-number">$ 1050.00</span>
+                                        <span class="price-number is-dismiss">$ 1050.00</span>
+                                        <span class="price-number is-discount">$ 750.00</span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="carousel-item is-item-horizontal">
-                    <a class="carousel-link" href="#">
-                        <div class="carousel-image is-border-none">
-                            <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid3.png" alt="News">
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid5.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="child-text-carousel">
+                                        Baby Car
+                                    </p>
+                                    <div class="price-format is-product-card-carousel">
+                                        <span class="price-number">$ 1050.00</span>
+                                        <span class="price-number is-dismiss">$ 1050.00</span>
+                                        <span class="price-number is-discount">$ 750.00</span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
-                                Mirror Baby Book
-                            </p>
-                            <p class="child-text-price">$ 150.00</p>
+                        <div class="carousel-item is-item-horizontal">
+                            <a class="carousel-link" href="#">
+                                <div class="carousel-image is-border-none">
+                                    <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid5.png" alt="News">
+                                </div>
+                                <div class="carousel-description is-padding-horizontal-blank">
+                                    <p class="child-text-carousel">
+                                        Baby Car
+                                    </p>
+                                    <div class="price-format is-product-card-carousel">
+                                        <span class="price-number">$ 1050.00</span>
+                                        <span class="price-number is-dismiss">$ 1050.00</span>
+                                        <span class="price-number is-discount">$ 750.00</span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="carousel-item is-item-horizontal">
-                    <a class="carousel-link" href="#">
-                        <div class="carousel-image is-border-none">
-                            <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid4.png" alt="News">
-                        </div>
-                        <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
-                                Baby Gym
-                            </p>
-                            <p class="child-text-price">$ 150.00</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="carousel-item is-item-horizontal">
-                    <a class="carousel-link" href="#">
-                        <div class="carousel-image is-border-none">
-                            <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid5.png" alt="News">
-                        </div>
-                        <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
-                                Baby Car
-                            </p>
-                            <p class="child-text-price">$ 150.00</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="carousel-item is-item-horizontal">
-                    <a class="carousel-link" href="#">
-                        <div class="carousel-image is-border-none">
-                            <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid5.png" alt="News">
-                        </div>
-                        <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
-                                Baby Car
-                            </p>
-                            <p class="child-text-price">$ 150.00</p>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
 
@@ -433,49 +425,14 @@
                             <div class="list-review">
                                 <div class="list-item">
                                     <div class="product-detail-segment-item-inner is-review-name">
-                                        <ul class="list-rating is-review">
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <span class="text-default is-small is-bold">Supamas Anuson</span>
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <div class="rating" style="width: 50%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail-username">
+                                            <span class="text-default is-small is-bold">Supamas Anuson</span>
+                                        </div>
                                     </div>
                                     <div class="product-detail-segment-item-inner is-review-comment">
                                         <p class="text-default is-small is-bold is-paragraph">Title</p>
@@ -484,49 +441,14 @@
                                 </div>
                                 <div class="list-item">
                                     <div class="product-detail-segment-item-inner is-review-name">
-                                        <ul class="list-rating is-review">
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating is-rating-selected" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="list-item">
-                                                <a class="button-typography is-rating" href="#">
-                                                    <span class="button-body">
-                                                        <img class="button-icon is-text-blank is-rating-active" src="../assets/images/icon/icon-star-active.png" alt="Icon">
-                                                        <img class="button-icon is-text-blank is-rating-inactive" src="../assets/images/icon/icon-star-inactive.png" alt="Icon">
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <span class="text-default is-small is-bold">Supamas Anuson</span>
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <div class="rating" style="width: 50%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail-username">
+                                            <span class="text-default is-small is-bold">Supamas Anuson</span>
+                                        </div>
                                     </div>
                                     <div class="product-detail-segment-item-inner is-review-comment">
                                         <p class="text-default is-small is-bold is-paragraph">Title</p>
@@ -550,10 +472,14 @@
                             <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid1.png" alt="News">
                         </div>
                         <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
+                            <p class="child-text-carousel">
                                 Bell Rattle
                             </p>
-                            <p class="child-text-price">$ 150.00</p>
+                            <div class="price-format is-product-card-carousel">
+                                <span class="price-number">$ 1050.00</span>
+                                <span class="price-number is-dismiss">$ 1050.00</span>
+                                <span class="price-number is-discount">$ 750.00</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -563,62 +489,14 @@
                             <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid2.png" alt="News">
                         </div>
                         <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
+                            <p class="child-text-carousel">
                                 Bunny Rattle
                             </p>
-                            <p class="child-text-price">$ 150.00</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="carousel-item is-item-horizontal">
-                    <a class="carousel-link" href="#">
-                        <div class="carousel-image is-border-none">
-                            <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid3.png" alt="News">
-                        </div>
-                        <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
-                                Mirror Baby Book
-                            </p>
-                            <p class="child-text-price">$ 150.00</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="carousel-item is-item-horizontal">
-                    <a class="carousel-link" href="#">
-                        <div class="carousel-image is-border-none">
-                            <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid4.png" alt="News">
-                        </div>
-                        <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
-                                Baby Gym
-                            </p>
-                            <p class="child-text-price">$ 150.00</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="carousel-item is-item-horizontal">
-                    <a class="carousel-link" href="#">
-                        <div class="carousel-image is-border-none">
-                            <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid5.png" alt="News">
-                        </div>
-                        <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
-                                Baby Car
-                            </p>
-                            <p class="child-text-price">$ 150.00</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="carousel-item is-item-horizontal">
-                    <a class="carousel-link" href="#">
-                        <div class="carousel-image is-border-none">
-                            <img class="carousel-image-item" src="../assets/images/icon/child_development/child-kid5.png" alt="News">
-                        </div>
-                        <div class="carousel-description is-padding-horizontal-blank">
-                            <p class="child-text-carousel is-title-icon">
-                                Baby Car
-                            </p>
-                            <p class="child-text-price">$ 150.00</p>
+                            <div class="price-format is-product-card-carousel">
+                                <span class="price-number">$ 1050.00</span>
+                                <span class="price-number is-dismiss">$ 1050.00</span>
+                                <span class="price-number is-discount">$ 750.00</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -629,6 +507,7 @@
 
     <!-- Plantoys javascript -->
     <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery-match-height/jquery.matchHeight-min.js"></script>
     <!-- <script type="text/javascript" src="../assets/js/responsive-tabs/js/jquery.responsiveTabs.min.js"></script> -->
     <script type="text/javascript">
         $j(function() {
@@ -674,6 +553,9 @@
                     }
                 ]
             });
+
+            // Match height
+            $j('.carousel-item').matchHeight();
 
             // Responsive tabs
             // $j('.tabs-filter').responsiveTabs({
