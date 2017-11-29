@@ -38,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick-theme.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/js/aos/aos.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/jquery-ui-1.12.1/jquery-ui.min.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" media="all" />
 
     <script type="text/javascript" src="http://ptoys.maywz.info/js/prototype/prototype.js"></script>
@@ -664,7 +665,7 @@
                         <li id="menu-our-child-development-milestone" class="list-item is-menu-multiple">
                             <a class="list-link" href="#">
                                 <span class="text-link is-small is-bold is-gray">
-                                    Child Development Milestone
+                                    Child Development
                                 </span>
                                 <i class="list-icon fa fa-angle-right"></i>
                             </a>
@@ -699,7 +700,7 @@
                         <li class="list-item is-menu-single">
                             <a class="list-link" href="#">
                                 <span class="text-link is-small is-bold is-gray">
-                                    Tips for parent
+                                    Tips for Parent
                                 </span>
                             </a>
                         </li>
@@ -715,15 +716,7 @@
                         <li class="list-item is-menu-single">
                             <a class="list-link" href="#">
                                 <span class="text-link is-small is-bold is-gray">
-                                    Contact Us
-                                </span>
-                            </a>
-                        </li>
-                        <!-- Single menu -->
-                        <li class="list-item is-menu-single">
-                            <a class="list-link" href="#">
-                                <span class="text-link is-small is-bold is-gray">
-                                    Store Locator
+                                    Customer Support
                                 </span>
                             </a>
                         </li>
@@ -1499,9 +1492,14 @@
                         <div class="footer-copyright-inner">
                             <div class="footer-copyright-segment is-left">
                                 <span class="text-default is-bold is-middle-small">©2017 Plantoys Company Limited.</span>
-                                <div class="select-arrow is-country is-transparent-background">
-                                    <select>
-                                        <option value="">ENGLISH</option>
+                                <div class="footer-copyright-segment-inner is-label-location">
+                                    <span class="text-default is-bold is-middle-small">Your location: </span>
+                                </div>
+                                <div id="select-country-anchor" class="select-jqueryui is-flag">
+                                    <select id="select-country" name="">
+                                        <option value="thailand" data-class="thailand">Thailand</option>
+                                        <option value="english" data-class="english">USA</option>
+                                        <option value="japan" data-class="japan">Japan</option>
                                     </select>
                                 </div>
                             </div>
@@ -1847,6 +1845,7 @@
     <script type="text/javascript" src="../assets/js/aos/aos.js"></script>
     <script type="text/javascript" src="../assets/js/headroomjs/headroom.min.js"></script>
     <script type="text/javascript" src="../assets/js/headroomjs/jQuery.headroom.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript">
         $j(function() {
             // Headroom
@@ -2102,6 +2101,42 @@
                 $j('.modal-dialog').removeClass('is-active');
                 $j('body').removeClass('is-sidebar-lock');
             });
+
+            // jQuery UI Selectmenu
+            // =====================================================
+            // Customize html and css
+            $j.widget("custom.iconselectmenu", $j.ui.selectmenu, {
+                _renderItem: function(ul, item) {
+                    var listItem = $j("<li>"),
+                    wrapper = $j("<div>", {text: item.label} );
+
+                    $j("<span>", {
+                        style: item.element.attr("data-style"),
+                        "class": "ui-icon " + item.element.attr("data-class")
+                    })
+                    .appendTo(wrapper);
+
+                    return listItem.append(wrapper).appendTo(ul);
+                },
+                _renderButtonItem: function(item) {
+                    var buttonItem = $j("<span>", {
+                        "class": "ui-selectmenu-text " + item.element.attr("data-class")
+                    });
+
+                    this._setText(buttonItem, item.label);
+
+                    return buttonItem;
+                }
+            });
+
+            $j("#select-country").iconselectmenu({
+                appendTo: "#select-country-anchor",
+                position: {
+                    my: "top+24px",
+                    at: "center",
+                    collision: "flip"
+                }
+            }).iconselectmenu("menuWidget");
         });
     </script>
 </body>

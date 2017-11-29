@@ -92,6 +92,15 @@
         &.is-right {}
     }
 
+    .footer-copyright-segment-inner {
+        &.is-label-location {
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 10px;
+            line-height: 1;
+        }
+    }
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
