@@ -622,6 +622,12 @@ $button-padding-side-deault: 45px;
         &.is-normal {
             font-family: font-family(secondary);
         }
+
+        &.is-language-thai,
+        &.is-language-japan {
+            font-size: $font-size-12;
+            font-weight: bold;
+        }
     }
 
     // STYLES OF STATE
@@ -682,10 +688,10 @@ $button-padding-side-deault: 45px;
 
     &.is-addcart {
         .button-body {
-            width: 50px;
-            height: 50px;
-            background-color: $color-blue-17;
-            border-radius: 50%;
+            // width: 50px;
+            // height: 50px;
+            // background-color: $color-blue-17;
+            // border-radius: 50%;
         }
     }
 
@@ -710,6 +716,12 @@ $button-padding-side-deault: 45px;
             &.is-rating-inactive {
                 display: block;
             }
+        }
+    }
+
+    &.is-language {
+        .button-body {
+            min-height: 24px;
         }
     }
 

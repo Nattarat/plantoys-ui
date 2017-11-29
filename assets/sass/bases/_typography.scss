@@ -813,6 +813,98 @@
 // Safari
 // Firefox
 
+// Product price
+// ------------------------------------------------
+.price-format {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .price-number {
+        @include text-variant(
+            $text-display: inline-block,
+            $text-font-family: font-family(secondary),
+            $text-font-size: font-secondary-size(size-5),
+            $text-line-height: 1.3,
+            $text-color: color-text(default)
+        );
+
+        position: relative;
+        top: 2px;
+
+        &.is-dismiss {
+            margin-right: 10px;
+            text-decoration: line-through;
+        }
+
+        &.is-discount {
+            top: 0;
+            color: color-text(red-secondary);
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-product-card {
+        justify-content: center;
+
+        .price-number {
+            font-size: font-secondary-size(size-4);
+
+            &.is-discount {
+                font-size: font-secondary-size(size-3);
+            }
+        }
+    }
+
+    &.is-product-card-detail {
+        .price-number {
+            font-size: font-secondary-size(size-2);
+
+            &.is-discount {
+                font-size: font-secondary-size(size-9);
+            }
+        }
+    }
+
+    &.is-product-card-carousel {
+        justify-content: center;
+
+        .price-number {
+            font-size: font-secondary-size(size-4);
+
+            &.is-discount {
+                font-size: font-secondary-size(size-3);
+            }
+        }
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
 // Calibration
 // - Base
 // - Window
