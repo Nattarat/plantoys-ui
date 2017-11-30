@@ -191,3 +191,34 @@
         font-size: 14px;
     }
 }
+
+.select-jqueryui {
+    &.is-flag {
+        transform: scale(.75);
+        transform-origin: left;
+    }
+}
+
+.footer-main {
+    .footer-copyright {
+        padding: 0;
+    }
+}
+
+.list-navigation {
+    .list-link.is-icon-font {
+        font-size: 16px;
+
+        &:last-child {
+            img {
+                width: auto;
+                height: 20px;
+            }
+        }
+    }
+}
+
+.footer-copyright {
+    z-index: 9;
+    position: relative;
+}
