@@ -158,3 +158,36 @@
         }
     }
 }
+
+.date {
+    .created-time {
+        padding: 0 38px;
+        position: relative;
+        top: -17px;
+        color: #999;
+        font-size: 12px;
+    }
+}
+
+.new-cards {
+    .new-card.is-hover {
+        &:hover {
+            .created-time {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.news-detail-container,
+.tipsforparents-detail-container {
+    max-width: 1280px;
+
+    .head-title {
+        font-size: 28px;
+    }
+
+    .text-detail {
+        font-size: 14px;
+    }
+}
