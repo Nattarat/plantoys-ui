@@ -166,7 +166,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include select-icon(
         $select-width: 290px,
-        $select-height: 48px,
+        $select-height: 36px, // 48
         $select-font-size: font-primary-size(size-11),
         $select-padding: 0 $select-padding-right 0 $select-padding-left,
         $select-border-radius: 5px,
@@ -184,8 +184,8 @@
     select {
         margin-left: 0;
         border: 1px solid $color-gray-3;
-        background-size: 16px;
-        font-family: font-family(primary);
+        background-size: 12px; // 16
+        font-family: font-family(secondary);
         letter-spacing: 1px;
     }
 
@@ -196,8 +196,8 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-default {
         select {
-            padding-left: 20px;
-            font-size: font-secondary-size(size-4);
+            padding-left: 15px; // 20
+            font-size: font-secondary-size(size-8);
         }
     }
 
@@ -251,7 +251,7 @@
             // padding-left: $select-padding-left * $font-size-reduce-primary;
             // padding-right: $select-padding-right * $font-size-reduce-primary;
             // font-size: font-primary-size(size-11) * $font-size-reduce-primary;
-            background-size: 10%;
+            // background-size: 10%;
         }
     }
 

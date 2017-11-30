@@ -19,7 +19,7 @@
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
     $pagination-size: 0.9vw; // 17px
-    $pagination-size-fix: 17px;
+    $pagination-size-fix: 12px;
     $pagination-size-fix-small: 11px;
 
     // MIXINS
@@ -146,7 +146,7 @@
         li {
             width: $pagination-size;
             height: $pagination-size;
-            margin: 0 8px;
+            margin: 0 5px;
             vertical-align: middle;
 
             &.slick-active {
@@ -297,8 +297,8 @@
 
     &.is-control-fix-size {
         .slick-arrow {
-            width: 32px;
-            height: 55px;
+            width: 15px;
+            height: 25px;
 
             &.slick-prev {
                 left: 25px;
