@@ -60,11 +60,11 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    min-height: 100px;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 10px 50px;
     background-image:  url('#{path-file(backgrounds)}/customersupport/customersupport-rubber-wood.jpg');
     background-size: cover;
     background-repeat: repeat-x;
