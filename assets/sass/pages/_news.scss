@@ -66,6 +66,10 @@
     .row-flex{
         display: flex;
         flex-wrap: wrap;
+        padding: 15px;
+        .is-padding{
+            padding: 15px;
+        }
     }
     .new-card{
         @include card();

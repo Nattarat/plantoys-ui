@@ -4,7 +4,7 @@
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
     $card-border-width: 30px; // 1px
-    $card-border-color: $color-white; // $color-gray-10
+    // $card-border-color: $color-white; // $color-gray-10
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -17,35 +17,6 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    &.has-border{
-        &.is-first{
-            border: $card-border-width solid $card-border-color;
-            &.new-row{
-                border-top: 0px solid $card-border-color;
-                border-bottom: $card-border-width solid $card-border-color;
-                border-right: $card-border-width solid $card-border-color;
-                border-left: $card-border-width solid $card-border-color;
-            }
-        }
-        &.is-then{
-            border-top: $card-border-width solid $card-border-color;
-            border-bottom: $card-border-width solid $card-border-color;
-            border-right: $card-border-width solid $card-border-color;
-            border-left: 0px solid $card-border-color;
-            &.new-row{
-                border-top: 0px solid $card-border-color;
-                border-bottom: $card-border-width solid $card-border-color;
-                border-right: $card-border-width solid $card-border-color;
-                border-left: 0px solid $card-border-color;
-            }
-        }
-        &.is-final{
-            border-top: 0px solid $card-border-color;
-            border-bottom: $card-border-width solid $card-border-color;
-            border-right: $card-border-width solid $card-border-color;
-            border-left: 0px solid $card-border-color;
-        }
-    }
     a {
         text-decoration: none;
     }
