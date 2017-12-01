@@ -140,31 +140,9 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media (max-width: screen(phablet-sm)) {
-        padding: 0px 15px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
-    @media (max-width: screen(phablet-xs)) {
-        .news-select {
-            @include select-form-group($label-font-size: 25px,$select-font-size: 18px);
-        }
-    }
-    // @media (max-width:screen(tablet-lg)){
-    //     flex-direction: column;
-    //     padding: 0px 15px;
-    //     .tips-select-category {
-    //         @include select-form-group($label-font-size: 25px,$select-font-size: 18px,$select-width: 100%,$form-group-padding: 15px 0px 0px 0px);
-    //     }
-    //     .tips-select-sortby {
-    //         @include select-form-group($label-font-size: 25px,$select-font-size: 18px,$select-width: 100%,$form-group-padding: 15px 0px 15px 0px);
-    //     }
-    // }
-    // @media (max-width: screen(phablet-xs)) {
-    //     .tips-select-category {
-    //         @include select-form-group($label-font-size: 25px,$select-font-size: 20px);
-    //     }
-    //     .tips-select-sortby {
-    //         @include select-form-group($label-font-size: 25px,$select-font-size: 20px);
-    //     }
-    // }
 }
 
 // Browser variations
