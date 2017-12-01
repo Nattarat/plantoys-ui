@@ -10,7 +10,7 @@
 
 // Product
 // ------------------------------------------------
-$product-container-padding: 0 60px 25px 60px;
+$product-container-padding: 0 50px 25px 50px;
 
 // Product list layout (magento structure)
 .product-index,
@@ -24,16 +24,17 @@ $product-container-padding: 0 60px 25px 60px;
     .col-main {
         float: none;
         width: auto;
-        padding-left: 20px;
     }
 
     .col-left {
         flex: 0;
+        padding-left: 0;
         padding-right: 0;
     }
 
     .col-main {
         flex: 1;
+        padding-left: 20px;
 
         .product-segment-inner {
             padding-left: 0;
@@ -76,6 +77,12 @@ $product-container-padding: 0 60px 25px 60px;
         }
     }
 
+    .col-main {
+        @media screen and (max-width: screen(tablet-lg)) {
+            padding-left: 0;
+        }
+    }
+
     .pager {
         > .count-container {
             @media screen and (max-width: screen(tablet-sm)) {
@@ -105,8 +112,7 @@ $product-container-padding: 0 60px 25px 60px;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    max-width: 1440px;
-    padding: $product-container-padding;
+    padding: 0 0 25px;
     margin: auto;
 
     // STYLES OF CHILD CLASS
@@ -153,7 +159,7 @@ $product-container-padding: 0 60px 25px 60px;
             display: flex;
             align-items: center;
             width: 300px;
-            min-height: 57px;
+            min-height: 36px;
         }
 
         &.is-sort {
@@ -196,9 +202,14 @@ $product-container-padding: 0 60px 25px 60px;
         }
     }
 
+    .breadcrumbs {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .category-banner {
-        margin-left: -60px;
-        margin-right: -60px;
+        // margin-left: -60px;
+        // margin-right: -60px;
     }
 
     // STYLES OF STATE
@@ -215,6 +226,13 @@ $product-container-padding: 0 60px 25px 60px;
     @media screen and (max-width: screen(mobile-lg-max)) {
         padding-left: 30px;
         padding-right: 30px;
+    }
+
+    .main {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
     }
 
     .product-filter {
@@ -237,7 +255,7 @@ $product-container-padding: 0 60px 25px 60px;
         }
 
         &.is-pagination {
-            @media screen and (max-width: screen(phablet-lg-max)) {
+            @media screen and (max-width: screen(phablet-xs-max)) {
                 display: block;
             }
         }
@@ -249,10 +267,20 @@ $product-container-padding: 0 60px 25px 60px;
                 width: auto;
             }
         }
+
+        &.is-sort {
+            @media screen and (max-width: screen(phablet-xs-max)) {
+                display: block;
+            }
+        }
     }
 
     .product-segment-item-inner {
         &.pager {
+            @media screen and (max-width: screen(phablet-xs-max)) {
+                margin-bottom: 20px;
+            }
+
             @media screen and (max-width: screen(tablet-lg)) {
                 width: auto;
             }
