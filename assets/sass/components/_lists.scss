@@ -1143,9 +1143,9 @@
     .list-thumbnail-hover {
         @include transition(all .3s ease);
         width: 100%;
-        height: 12vw; // 15vw
-        min-height: 180px; // 265px
-        max-height: 230px; // 300 px
+        height: 20vw; // 15vw
+        min-height: 280px; // 265px
+        max-height: 280px; // 300 px
         background-size: 90%;
         background-position: center;
         background-repeat: no-repeat;
@@ -1166,8 +1166,8 @@
         position: relative;
         z-index: zindex(lv2);
         // bottom: -1px;
-        min-height: 125px;
-        padding: 30px;
+        // min-height: 125px;
+        padding: 15px 60px;
         text-align: center;
     }
 
@@ -1234,6 +1234,12 @@
         @media screen and (max-width: screen(phablet-xs-max)) {
             height: auto;
             min-height: 250px;
+            max-height: initial;
+        }
+
+        @media (min-width: screen(phablet-sm)) and (max-width: screen(tablet-md-max)) {
+            height: auto;
+            min-height: 200px;
             max-height: initial;
         }
     }
