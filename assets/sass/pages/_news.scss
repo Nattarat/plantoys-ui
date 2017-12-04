@@ -133,12 +133,8 @@
     //     padding: 0px 15px;
     // }
     @media (max-width: screen(phablet-sm)) {
-        padding: 0px 15px;
-    }
-    @media (max-width: screen(phablet-xs)) {
-        .news-select {
-            @include select-form-group($label-font-size: 25px,$select-font-size: 18px);
-        }
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }
 
