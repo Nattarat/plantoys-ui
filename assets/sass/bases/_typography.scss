@@ -61,7 +61,7 @@
 @mixin text-variant(
     $text-display: inline-block,
     $text-font-family: font-family(secondary),
-    $text-font-size: font-secondary-size(size-5),
+    $text-font-size: font-secondary-size(size-4),
     $text-line-height: 1.3, // 1.5
     $text-color: color-text(default)
 ) {
@@ -438,7 +438,7 @@
         display: inline-block;
         padding-bottom: 0;
         font-family: font-family(primary);
-        font-size: font-primary-size(size-2);
+        font-size: font-primary-size(size-4);
         font-weight: normal;
         line-height: 1.3;
         vertical-align: middle;
@@ -834,15 +834,16 @@
         @include text-variant(
             $text-display: inline-block,
             $text-font-family: font-family(secondary),
-            $text-font-size: font-secondary-size(size-5),
+            $text-font-size: font-secondary-size(size-8),
             $text-line-height: 1.3,
             $text-color: color-text(default)
         );
 
         position: relative;
-        top: 2px;
+        top: 0;
 
         &.is-dismiss {
+            margin-left: 10px;
             margin-right: 10px;
             text-decoration: line-through;
         }
@@ -866,10 +867,8 @@
         justify-content: center;
 
         .price-number {
-            font-size: font-secondary-size(size-4);
-
             &.is-discount {
-                font-size: font-secondary-size(size-5);
+                font-size: font-secondary-size(size-4);
             }
         }
     }
@@ -888,10 +887,8 @@
         justify-content: center;
 
         .price-number {
-            font-size: font-secondary-size(size-4);
-
             &.is-discount {
-                font-size: font-secondary-size(size-3);
+                font-size: font-secondary-size(size-12);
             }
         }
     }

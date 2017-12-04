@@ -166,7 +166,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include select-icon(
         $select-width: 290px,
-        $select-height: 36px, // 48
+        $select-height: 30px, // 48 > 36
         $select-font-size: font-primary-size(size-11),
         $select-padding: 0 $select-padding-right 0 $select-padding-left,
         $select-border-radius: 5px,
@@ -184,7 +184,7 @@
     select {
         margin-left: 0;
         border: 1px solid $color-gray-3;
-        background-size: 12px; // 16
+        background-size: 10px; // 16 > 12
         font-family: font-family(secondary);
         letter-spacing: 1px;
     }
@@ -197,7 +197,7 @@
     &.is-default {
         select {
             padding-left: 15px; // 20
-            font-size: font-secondary-size(size-8);
+            font-size: font-secondary-size(size-15);
         }
     }
 
