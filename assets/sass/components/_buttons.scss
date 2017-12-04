@@ -47,8 +47,8 @@ $button-padding-side-deault: 45px;
 @mixin button-variant(
     // Body
     $button-width: 150px,
-    $button-height: 73px,
-    $button-padding: 0 45px,
+    $button-height: 72px,
+    $button-padding: 0 25px,
     $button-background-color: color-button(primary),
     $button-border-width: 0,
     $button-border-color: color-button(primary),
@@ -129,7 +129,7 @@ $button-padding-side-deault: 45px;
         }
 
         &.is-small {
-            width: 24px;
+            width: 16px;
             height: auto;
         }
 
@@ -145,8 +145,8 @@ $button-padding-side-deault: 45px;
         }
 
         &.is-product-category {
-            width: 64px;
-            height: 64px;
+            width: 32px;
+            height: 32px;
         }
 
         &.is-modal-close {
@@ -176,7 +176,7 @@ $button-padding-side-deault: 45px;
         }
 
         &.is-small {
-            font-size: font-primary-size(size-12); // 18px
+            font-size: font-primary-size(size-11); // 14px
         }
 
         &.is-medium {
@@ -198,7 +198,7 @@ $button-padding-side-deault: 45px;
         bottom: 100%;
         left: 50%;
         display: flex;
-        padding: 5px 20px;
+        padding: 5px 12px;
         background-color: $color-white;
         border-radius: 12px;
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); // Border triangle with shadow
@@ -270,16 +270,16 @@ $button-padding-side-deault: 45px;
     }
 
     &.is-small {
-        height: 48px;
+        height: 36px; // 48px
     }
 
     // Spacing
     &.is-text-left {
-        margin-left: 30px;
+        margin-left: 15px;
     }
 
     &.is-text-right {
-        margin-right: 30px;
+        margin-right: 15px;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -848,11 +848,11 @@ $button-padding-side-deault: 45px;
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-counternumber {
-        min-width: 20px;
-        height: 20px;
+        min-width: 14px;
+        height: 14px;
 
         .button-icon {
-            width: 8px;
+            width: 6px;
             height: auto;
         }
     }

@@ -636,7 +636,7 @@ $product-container-padding: 0 50px 25px 50px;
             span {
                 display: inline-block;
                 font-family: font-family(secondary);
-                font-size: font-secondary-size(size-15);
+                font-size: font-secondary-size(size-8);
                 font-weight: 600;
                 line-height: 1;
                 letter-spacing: 1px;
@@ -696,7 +696,7 @@ $product-container-padding: 0 50px 25px 50px;
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .product-view {
-        max-width: 1565px;
+        max-width: 960px;
         margin: auto;
     }
 
@@ -715,6 +715,8 @@ $product-container-padding: 0 50px 25px 50px;
         z-index: zindex(lv2);
         top: 15px;
         right: 15px;
+        width: 48px;
+        height: auto;
     }
 
     .product-detail-segment {
@@ -734,7 +736,7 @@ $product-container-padding: 0 50px 25px 50px;
         }
 
         &.is-specification {
-            max-width: 1565px;
+            max-width: 1440px;
             padding-top: 60px;
             margin: auto;
         }
@@ -746,16 +748,26 @@ $product-container-padding: 0 50px 25px 50px;
     }
 
     .product-detail-segment-item {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+
+        &.is-price {
+            margin-bottom: 15px;
+        }
 
         &.is-rating {
             display: flex;
             align-items: center;
+            margin-bottom: 20px;
+        }
+
+        &.is-description {
+            margin-bottom: 40px;
         }
 
         &.is-quantity {
-            padding-top: 15px;
-            padding-bottom: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
             border-top: 1px solid $color-gray-5;
             border-bottom: 1px solid $color-gray-5;
         }
@@ -763,6 +775,15 @@ $product-container-padding: 0 50px 25px 50px;
         &.is-specification {
             display: flex;
             align-items: center;
+        }
+
+        &.is-icon-cataegory,
+        &.is-icon-development {
+            padding-top: 5px;
+        }
+
+        &.is-icon-development {
+            margin-bottom: 10px;
         }
     }
 
@@ -783,6 +804,16 @@ $product-container-padding: 0 50px 25px 50px;
         &.is-review-comment {
             width: 75%;
         }
+
+        &.is-align-vertical-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+        }
     }
 
     .product-detail-video {
@@ -791,7 +822,7 @@ $product-container-padding: 0 50px 25px 50px;
     }
 
     .product-detail-username {
-        padding-top: 15px;
+        padding-top: 5px;
     }
 
     // STYLES OF STATE
@@ -799,6 +830,11 @@ $product-container-padding: 0 50px 25px 50px;
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-specification {
+        max-width: 1280px;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -841,19 +877,20 @@ $product-container-padding: 0 50px 25px 50px;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    margin: 0 65px 0 0;
+    margin: 0 15px 0 0;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .rating-box {
         overflow: hidden;
         position: relative;
-        width: 151px;
-        height: 27px;
+        width: 75px;
+        height: 13px;
         margin: 0;
         background-image: url('#{path-file(icons)}/icon-star-percent-inactive.png');
         background-repeat: no-repeat;
         background-position: left center;
+        background-size: 100%;
 
 
         .rating {
@@ -862,10 +899,11 @@ $product-container-padding: 0 50px 25px 50px;
             z-index: zindex(lv1);
             top: 0;
             left: 0;
-            height: 27px;
+            height: 13px;
             background-image: url('#{path-file(icons)}/icon-star-percent-active.png');
             background-repeat: no-repeat;
             background-position: left center;
+            background-size: 75px;
         }
     }
 

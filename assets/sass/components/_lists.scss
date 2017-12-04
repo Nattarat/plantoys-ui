@@ -1167,7 +1167,7 @@
         z-index: zindex(lv2);
         // bottom: -1px;
         // min-height: 125px;
-        padding: 15px 60px;
+        padding: 24px 60px;
         text-align: center;
     }
 
@@ -1369,7 +1369,7 @@
         // List item
         $list-item-display: inline-block,
         $list-item-padding: 0,
-        $list-item-margin: 0 10px 0 0
+        $list-item-margin: 0 5px 0 0
     );
 
     // STYLES OF COMPONENT ITSELF
@@ -1426,12 +1426,12 @@
     @include list-variant(
         $list-display: inline-block,
         $list-padding: 0,
-        $list-margin: 0,
+        $list-margin: 0 0 0 -5px,
 
         // List item
         $list-item-display: inline-block,
         $list-item-padding: 0,
-        $list-item-margin: 0 25px 0 0
+        $list-item-margin: 0
     );
 
     // STYLES OF COMPONENT ITSELF
@@ -1440,6 +1440,9 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .list-item {
+        min-width: 60px;
+        max-width: 60px;
+        vertical-align: top;
         text-align: center;
 
         &:last-child {
@@ -1448,7 +1451,9 @@
     }
 
     .list-icon {
-
+        width: 50px;
+        height: auto;
+        margin: 0 auto 5px auto;
     }
 
     // STYLES OF STATE
