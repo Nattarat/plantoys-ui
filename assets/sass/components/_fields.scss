@@ -300,7 +300,8 @@ $field-padding-side-deault: 20px;
         $field-border: 2px solid $color-gray-1,
         $field-border-radius: 0,
         $field-box-shadow: 0 0 0 rgba(0, 0, 0, 0),
-        $field-placeholder-color: $color-gray-1
+        $field-placeholder-color: $color-gray-1,
+        $field-text-font-size: font-secondary-size(size-8)
     );
 
     // STYLES OF COMPONENT ITSELF

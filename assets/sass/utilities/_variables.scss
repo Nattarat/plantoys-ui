@@ -453,6 +453,7 @@ $font-size-12: 18px;
 $font-size-13: 34px;
 $font-size-14: 28px;
 $font-size-15: 10px;
+$font-size-16: 11px;
 
 // Sizes reduce
 $font-size-reduce-primary: 0.6; // 100% > 60%
@@ -473,7 +474,8 @@ $font-primary-size-maps: (
     'size-12': $font-size-12,
     'size-13': $font-size-13,
     'size-14': $font-size-14,
-    'size-15': $font-size-15
+    'size-15': $font-size-15,
+    'size-16': $font-size-16
 );
 
 // Secondary(VAG-Rounded-Light-Ssi-Light) maps
@@ -492,7 +494,8 @@ $font-secondary-size-maps: (
     'size-12': $font-size-12,
     'size-13': $font-size-13,
     'size-14': $font-size-14,
-    'size-15': $font-size-15
+    'size-15': $font-size-15,
+    'size-16': $font-size-16
 );
 
 // Tertiary(Pen-of-Truth) maps
@@ -511,5 +514,6 @@ $font-tertiary-size-maps: (
     'size-12': $font-size-12,
     'size-13': $font-size-13,
     'size-14': $font-size-14,
-    'size-15': $font-size-15
+    'size-15': $font-size-15,
+    'size-16': $font-size-16
 );

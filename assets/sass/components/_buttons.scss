@@ -46,7 +46,7 @@ $button-padding-side-deault: 45px;
 
 @mixin button-variant(
     // Body
-    $button-width: 150px,
+    $button-width: 130px,
     $button-height: 72px,
     $button-padding: 0 25px,
     $button-background-color: color-button(primary),
@@ -147,6 +147,11 @@ $button-padding-side-deault: 45px;
         &.is-product-category {
             width: 32px;
             height: 32px;
+        }
+
+        &.is-product-development {
+            width: 50px;
+            height: 50px;
         }
 
         &.is-modal-close {

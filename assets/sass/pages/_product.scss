@@ -737,7 +737,7 @@ $product-container-padding: 0 50px 25px 50px;
 
         &.is-specification {
             max-width: 1440px;
-            padding-top: 60px;
+            // padding-top: 25px;
             margin: auto;
         }
     }
@@ -779,7 +779,7 @@ $product-container-padding: 0 50px 25px 50px;
 
         &.is-icon-cataegory,
         &.is-icon-development {
-            padding-top: 5px;
+            // padding-top: 5px;
         }
 
         &.is-icon-development {
@@ -834,6 +834,7 @@ $product-container-padding: 0 50px 25px 50px;
         max-width: 1280px;
         padding-left: 0;
         padding-right: 0;
+        margin-top: 0 !important;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

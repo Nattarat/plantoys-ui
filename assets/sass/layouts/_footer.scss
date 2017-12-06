@@ -17,7 +17,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    padding-top: 70px;
+    padding-top: 15px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -41,25 +41,25 @@
         padding-right: 25px;
 
         .footer-subscribe-title {
-            padding-right: 200px;
-            margin-bottom: 20px;
+            padding-right: 120px;
+            margin-bottom: 10px;
         }
 
         .footer-subscribe-description {
-            padding-right: 200px;
-            margin-bottom: 100px; // 40
+            padding-right: 120px;
+            margin-bottom: 30px;
         }
 
         .footer-subscribe-form {
             position: relative;
-            padding-right: 160px;
+            padding-right: 140px;
             margin-right: 110px; // 185
         }
 
         .footer-subscribe-button {
             position: absolute;
             z-index: zindex(lv1);
-            top: -17px;
+            top: -15px;
             right: 0;
             max-width: 160px;
         }
@@ -67,14 +67,16 @@
         .footer-subscribe-toy {
             position: absolute;
             z-index: zindex(lv2);
-            top: -35px;
+            top: -5px;
             right: 25px;
+            width: 90px;
+            height: auto;
         }
     }
 
     .footer-copyright {
         padding: 8px 0;
-        margin-top: 45px;
+        margin-top: 15px;
         background-color: $color-gray-10;
     }
 

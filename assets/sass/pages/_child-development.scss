@@ -450,7 +450,8 @@
         text-decoration: none;
     }
     .child-text-carousel {
-        margin-bottom: 10px;
+        @include ellipsis;
+        margin-bottom: 0; // 10
         font-family: font-family(primary);
         font-size: font-primary-size(size-4);
         line-height: 1.5;

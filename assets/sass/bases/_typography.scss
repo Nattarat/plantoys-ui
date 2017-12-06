@@ -885,6 +885,7 @@
 
     &.is-product-card-carousel {
         justify-content: center;
+        min-height: 23px;
 
         .price-number {
             &.is-discount {
