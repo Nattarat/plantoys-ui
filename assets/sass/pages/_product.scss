@@ -161,7 +161,7 @@ $product-container-padding: 0 50px 25px 50px;
         }
 
         &.is-pagination {
-            display: flex;
+            display: none;
             justify-content: space-between;
             align-items: center;
         }
@@ -207,7 +207,13 @@ $product-container-padding: 0 50px 25px 50px;
         // justify-content: space-between;
         // align-items: center;
         padding-top: 30px;
-        padding-bottom: 30px;
+        // padding-bottom: 30px;
+
+        .product-segment-inner {
+            &.is-pagination {
+                display: flex;
+            }
+        }
 
         &.is-pagination {
             display: flex;
@@ -312,6 +318,14 @@ $product-container-padding: 0 50px 25px 50px;
     }
 
     .product-footer {
+        .product-segment-inner {
+            &.is-pagination {
+                @media screen and (max-width: screen(phablet-xs-max)) {
+                    display: none;
+                }
+            }
+        }
+
         &.is-pagination {
             @media screen and (max-width: screen(phablet-lg-max)) {
                 justify-content: center;
@@ -773,6 +787,7 @@ $product-container-padding: 0 50px 25px 50px;
 
         &.is-specification {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
         }
 
@@ -796,12 +811,13 @@ $product-container-padding: 0 50px 25px 50px;
         }
 
         &.is-review-name {
-            width: 25%;
+            width: 20%;
             min-width: 155px;
         }
 
         &.is-review-comment {
-            width: 75%;
+            width: 80%;
+            padding-left: 10px;
         }
 
         &.is-align-vertical-center {
@@ -831,8 +847,8 @@ $product-container-padding: 0 50px 25px 50px;
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-specification {
         max-width: 1440px;
-        // padding-left: 0;
-        // padding-right: 0;
+        padding-left: 0;
+        padding-right: 0;
         margin-top: 0 !important;
     }
 
@@ -886,10 +902,29 @@ $product-container-padding: 0 50px 25px 50px;
     }
 
     .product-detail-segment-item-inner {
+        &.is-column-half {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                width: 100%;
+            }
+        }
+
         &.is-review-name {
             @media screen and (max-width: screen(mobile-lg-max)) {
                 margin-bottom: 15px;
             }
+        }
+
+        &.is-review-comment {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                padding-left: 0;
+            }
+        }
+    }
+
+    &.is-specification {
+        @media (min-width: screen(labtop-lg)) {
+            padding-left: 50px;
+            padding-right: 50px;
         }
     }
 }
