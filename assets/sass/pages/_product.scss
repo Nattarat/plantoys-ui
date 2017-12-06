@@ -922,7 +922,7 @@ $product-container-padding: 0 50px 25px 50px;
     }
 
     &.is-specification {
-        @media (min-width: screen(labtop-lg)) {
+        @media (min-width: 1441px) {
             padding-left: 50px;
             padding-right: 50px;
         }
