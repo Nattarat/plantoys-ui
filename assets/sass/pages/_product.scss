@@ -215,6 +215,10 @@ $product-container-padding: 0 50px 25px 50px;
             }
         }
 
+        &.is-sort {
+            display: none;
+        }
+
         &.is-pagination {
             display: flex;
             flex-wrap: wrap;
@@ -741,7 +745,7 @@ $product-container-padding: 0 50px 25px 50px;
 
         &.is-preview {
             position: relative;
-            margin-right: 80px;
+            margin-right: 120px;
         }
 
         &.is-detail {
