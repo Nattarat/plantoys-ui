@@ -727,7 +727,6 @@ $product-container-padding: 0 50px 25px 50px;
 
         &.is-preview {
             position: relative;
-            width: 50%;
             margin-right: 80px;
         }
 
@@ -842,6 +841,57 @@ $product-container-padding: 0 50px 25px 50px;
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(mobile-lg-max)) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .product-essential {
+        form {
+            @media screen and (max-width: screen(tablet-md-max)) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .product-detail-segment {
+        &.is-preview,
+        &.is-detail {
+            @media screen and (max-width: screen(phablet-sm-max)) {
+                width: 100%;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @media (min-width: screen(phablet-md)) and (max-width: screen(tablet-md-max)) {
+                width: 100%;
+                max-width: 55%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &.is-preview {
+            @media screen and (max-width: screen(tablet-md-max)) {
+
+            }
+        }
+
+        &.is-detail {
+            @media screen and (max-width: screen(tablet-md-max)) {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .product-detail-segment-item-inner {
+        &.is-review-name {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                margin-bottom: 15px;
+            }
+        }
+    }
 }
 
 // Browser variations

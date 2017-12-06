@@ -130,8 +130,8 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media screen and (max-width: screen(mobile-lg-max)) {
-        margin-left: -30px;
-        margin-right: -30px;
+        // margin-left: -30px;
+        // margin-right: -30px;
     }
 
     @media screen and (max-width: screen(tablet-sm)) {
@@ -139,9 +139,9 @@
     }
 
     ul {
-        @media screen and (max-width: screen(mobile-lg-max)) {
-            padding-left: 30px;
-            padding-right: 30px;
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-left: 25px;
+            padding-right: 25px;
         }
     }
 }

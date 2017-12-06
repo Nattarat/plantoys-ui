@@ -389,11 +389,16 @@
 .carousel-name {
     // padding-left: 60px;
     // padding-right: 60px;
-    max-width: 1280px;
+    max-width: 1440px;
     padding-top: 10px;
     margin: 0 auto 25px;
 
-    @media screen and (max-width: screen(labtop-md-max)) {
+    @media screen and (max-width: screen(tablet-md-max)) {
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    @media (min-width: screen(tablet-lg)) and (max-width: screen(labtop-md-max)) {
         margin-left: 50px;
         margin-right: 50px;
     }
