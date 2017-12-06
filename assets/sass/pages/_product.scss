@@ -215,8 +215,10 @@ $product-container-padding: 0 50px 25px 50px;
             }
         }
 
-        &.is-sort {
-            display: none;
+        .product-segment-item {
+            &.is-sort {
+                display: none;
+            }
         }
 
         &.is-pagination {
