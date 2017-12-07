@@ -10,7 +10,7 @@
 
 // Product
 // ------------------------------------------------
-$product-container-padding: 0 50px 25px 50px;
+$product-container-padding: 0 50px;
 
 // Product list layout (magento structure)
 .product-index,
@@ -182,6 +182,10 @@ $product-container-padding: 0 50px 25px 50px;
             justify-content: space-between;
             align-items: center;
         }
+
+        &.is-pagination-inner {
+            margin-bottom: 0;
+        }
     }
 
     .product-segment-item-inner {
@@ -206,7 +210,7 @@ $product-container-padding: 0 50px 25px 50px;
         // display: flex;
         // justify-content: space-between;
         // align-items: center;
-        padding-top: 30px;
+        padding-top: 20px;
         // padding-bottom: 30px;
 
         .product-segment-inner {
@@ -284,11 +288,11 @@ $product-container-padding: 0 50px 25px 50px;
             }
         }
 
-        &.is-pagination {
-            @media screen and (max-width: screen(phablet-xs-max)) {
-                display: block;
-            }
-        }
+        // &.is-pagination {
+        //     @media screen and (max-width: screen(phablet-xs-max)) {
+        //         display: block;
+        //     }
+        // }
     }
 
     .product-segment-item {
@@ -325,11 +329,11 @@ $product-container-padding: 0 50px 25px 50px;
 
     .product-footer {
         .product-segment-inner {
-            &.is-pagination {
-                @media screen and (max-width: screen(phablet-xs-max)) {
-                    display: none;
-                }
-            }
+            // &.is-pagination {
+            //     @media screen and (max-width: screen(phablet-xs-max)) {
+            //         display: none;
+            //     }
+            // }
         }
 
         &.is-pagination {

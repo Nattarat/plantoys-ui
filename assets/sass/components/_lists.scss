@@ -275,16 +275,26 @@
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include list-variant(
-        $list-item-margin: 0 25px 0 0
+        $list-display: flex,
+        $list-padding: 0,
+        $list-margin: 0,
+
+        // List item
+        $list-item-display: flex,
+        $list-item-padding: 0,
+        $list-item-margin: 0 15px 0 0
     );
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    align-items: center;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .list-item {
+        z-index: zindex(lv2);
         position: relative;
+        align-items: center;
 
         &:last-child {
             margin: 0;
@@ -294,6 +304,10 @@
         }
 
         &.is-cart {
+        }
+
+        &.is-active {
+            z-index: zindex(lv1);
         }
     }
 
@@ -419,23 +433,23 @@
 .list-navigation {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
-    $navigation-width-lv1: 380px;
-    $navigation-width-lv2: 380px; // 350px
-    $navigation-width-lv3: 380px; // 490px
-    $navigation-width-small-lv1: 280px;
-    $navigation-width-small-lv2: 280px;
-    $navigation-width-small-lv3: 280px;
+    $navigation-width-lv1: 275px;
+    $navigation-width-lv2: 275px; // 350px
+    $navigation-width-lv3: 275px; // 490px
+    $navigation-width-small-lv1: 275px;
+    $navigation-width-small-lv2: 275px;
+    $navigation-width-small-lv3: 275px;
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include list-variant(
         $list-display: inline-block,
-        $list-padding: 30px,
+        $list-padding: 15px 20px,
 
         // List item
         $list-item-display: block,
         $list-item-padding: 0 0 0 0,
-        $list-item-margin: 0 0 15px 0
+        $list-item-margin: 0 0 10px 0
     );
 
     // STYLES OF COMPONENT ITSELF
@@ -443,7 +457,7 @@
     width: $navigation-width-lv1;
     //min-height: calc(100vh - 155px); // 730px
     // max-height: 730px;
-    min-height: 645px;
+    min-height: 460px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -453,8 +467,8 @@
         &.is-social-link {
             position: absolute;
             z-index: zindex(lv1);
-            bottom: 30px;
-            left: 30px;
+            bottom: 15px;
+            left: 15px;
             width: calc(#{$navigation-width-lv1} - 60px);
         }
 
@@ -474,7 +488,7 @@
     .list-link {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start; // center
+        align-items: center; // center
 
         &:hover,
         &:focus {
@@ -521,7 +535,7 @@
     }
 
     .list-icon {
-        font-size: $font-size-3;
+        font-size: $font-size-12;
         color: $color-gray-1;
     }
 
@@ -564,7 +578,7 @@
 
     .list-button-collapse {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     // STYLES OF STATE
@@ -642,6 +656,16 @@
         border-top: 1px solid $color-gray-5;
     }
 
+    &.is-account {
+        .list-item {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -649,7 +673,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media screen and (max-width: screen(labtop-lg)) {
         width: $navigation-width-small-lv1;
-        min-height: 510px;
+        // min-height: 510px;
     }
 
     .list-item {
@@ -750,7 +774,7 @@
 
         // List item
         $list-item-display: block,
-        $list-item-padding: 25px 35px,
+        $list-item-padding: 10px 15px,
         $list-item-margin: 0
     );
 

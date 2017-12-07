@@ -46,7 +46,7 @@ $button-padding-side-deault: 45px;
 
 @mixin button-variant(
     // Body
-    $button-width: 130px,
+    $button-width: 110px,
     $button-height: 72px,
     $button-padding: 0 25px,
     $button-background-color: color-button(primary),
@@ -128,6 +128,11 @@ $button-padding-side-deault: 45px;
             margin-left: $button-icon-spacing-left;
         }
 
+        &.is-super-small {
+            width: auto;
+            height: 10px;
+        }
+
         &.is-small {
             width: 16px;
             height: auto;
@@ -135,7 +140,7 @@ $button-padding-side-deault: 45px;
 
         &.is-size-topbar {
             width: auto;
-            height: 24px;
+            height: 18px;
         }
 
         &.is-product-label {
@@ -178,6 +183,14 @@ $button-padding-side-deault: 45px;
 
         &.is-uppercase {
             text-transform: uppercase;
+        }
+
+        &.is-super-small {
+            font-size: font-primary-size(size-15); // 10px
+        }
+
+        &.is-extra-small {
+            font-size: font-primary-size(size-8); // 12px
         }
 
         &.is-small {
@@ -274,6 +287,15 @@ $button-padding-side-deault: 45px;
         width: 100%;
     }
 
+    &.is-flexible {
+        width: initial;
+        min-width: initial;
+    }
+
+    &.is-extra-small {
+        height: 28px;
+    }
+
     &.is-small {
         height: 36px; // 48px
     }
@@ -308,7 +330,7 @@ $button-padding-side-deault: 45px;
     .button-icon {
         &.is-size-topbar {
             @media screen and (max-width: screen(phablet-lg-max)) {
-                height: 18px;
+                // height: 18px;
             }
         }
     }
@@ -604,6 +626,7 @@ $button-padding-side-deault: 45px;
     .button-icon {
         &.is-text-left-large {
             margin-left: 20px;
+            margin-right: 0;
         }
 
         &.is-language {

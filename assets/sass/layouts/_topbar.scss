@@ -23,7 +23,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 60px; // 80
     padding-left: 50px;
     padding-right: 50px;
     background-color: $color-white;
@@ -39,9 +39,29 @@
     }
 
     .topbar-segment {
-        &.is-left {}
+        &.is-left {
+            display: flex;
+            align-items: center;
+        }
 
         &.is-right {}
+    }
+
+    .topbar-segment-inner {
+        position: relative;
+        z-index: zindex(lv2);
+
+        &.is-main {
+
+        }
+
+        &.is-shop {
+
+        }
+
+        &.is-active {
+            z-index: zindex(lv1);
+        }
     }
 
     .logo-brand {
@@ -51,7 +71,7 @@
         top: 50%;
         left: 50%;
         display: block;
-        margin-top: 3px;
+        margin-top: 1px;
 
         &:hover {
             .logo-brand-color {
@@ -63,7 +83,7 @@
     .logo-brand-blackwhite,
     .logo-brand-color {
         @include transition(opacity 0.5s ease);
-        width: 80px;
+        width: 60px;
     }
 
     .logo-brand-color {
@@ -76,8 +96,8 @@
 
     .icon-hamburger {
         display: inline-block;
-        width: 30px;
-        margin-right: 35px;
+        width: 22px;
+        margin-right: 20px;
         vertical-align: middle;
 
         span,
@@ -85,14 +105,14 @@
         &:after {
             content: ' ';
             display: block;
-            height: 4px;
+            height: 3px;
             background-color: $color-gray-1;
             border-radius: 5px;
         }
 
         span,
         &:before {
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
     }
 
@@ -134,27 +154,27 @@
 
     .icon-hamburger {
         @media screen and (max-width: screen(phablet-lg-max)) {
-            width: 18px;
-            margin-right: 10px;
+            // width: 18px;
+            // margin-right: 10px;
         }
 
         span,
         &:before,
         &:after {
             @media screen and (max-width: screen(labtop-lg)) {
-                height: 2px;
-                border-radius: 1px;
+                // height: 2px;
+                // border-radius: 1px;
             }
         }
 
         span,
         &:before {
             @media screen and (max-width: screen(phablet-lg-max)) {
-                margin-bottom: 6px;
+                // margin-bottom: 6px;
             }
 
             @media (min-width: screen(tablet-sm)) and (max-width: screen(labtop-lg)) {
-                margin-bottom: 9px;
+                // margin-bottom: 9px;
             }
         }
     }

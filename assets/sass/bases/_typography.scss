@@ -168,6 +168,10 @@
     }
 
     // Sizes
+    &.is-super-small {
+        font-size: font-secondary-size(size-15); // 10px
+    }
+
     &.is-extra-small {
         font-size: font-secondary-size(size-8); // 12px
     }
