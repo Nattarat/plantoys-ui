@@ -93,6 +93,8 @@
     .cart-notice {
         padding: 5px 20px;
         background-color: $color-green-5;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
         text-align: center;
     }
 
@@ -148,6 +150,7 @@
     .cart-result-detail {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 7px;
 
         &.is-result-last {
