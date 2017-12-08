@@ -640,7 +640,7 @@
                                     <span class="button-body">
                                         <!-- Before login -->
                                         <img class="button-icon button-icon-topbar is-size-topbar" src="../assets/images/icon/icon-user-login-circle.png" alt="Icon">
-                                        <span class="button-text button-text-topbar is-small is-uppercase">Login</span>
+                                        <!-- <span class="button-text button-text-topbar is-small is-uppercase">Login</span> -->
                                         <!-- After login -->
                                         <!-- <img class="button-icon is-avatar" src="../assets/images/content/avatar-sample.jpg" alt="Icon"> -->
                                     </span>
@@ -739,6 +739,19 @@
                                             <!-- Add class "loading" to class "minicart-wrapper" for show loading -->
                                             <div class="minicart-wrapper">
                                                 <div class="cart-container-scroll">
+                                                    <div class="product">
+                                                        <div class="product-empty empty">
+                                                            <img class="product-empty-icon" src="../assets/images/icon/category/icon-category-cart.png" alt="Icon">
+                                                            <div class="product-empty-description">
+                                                                <span class="text-default is-middle-small is-bold is-gray-light">Your Shopping Cart is Empty</span>
+                                                            </div>
+                                                            <a class="button-background-image is-wood-green-light is-small is-fluid" href="#">
+                                                                <span class="button-body">
+                                                                    <span class="button-text is-small">Start Shopping Now</span>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                     <ul class="list-cart in-balloon">
                                                         <li class="list-item">
                                                             <div class="cart-item is-alignitems-top">
@@ -758,7 +771,10 @@
                                                                                     <img class="button-icon" src="../assets/images/icon/icon-minus.png" alt="Icon">
                                                                                 </span>
                                                                             </a>
-                                                                            <span class="product-counter-number text-default is-middle-small is-bold">99</span>
+                                                                            <!-- <span class="product-counter-number text-default is-middle-small is-bold">99</span> -->
+                                                                            <div class="product-counter-number">
+                                                                                <input class="qty cart-item-quantity input-text" name="" value="999">
+                                                                            </div>
                                                                             <a class="button-circle is-counternumber" href="#">
                                                                                 <span class="button-body">
                                                                                     <img class="button-icon" src="../assets/images/icon/icon-plus.png" alt="Icon">
@@ -768,6 +784,13 @@
                                                                         <div class="product-counter-inner">
                                                                             <span class="text-default is-super-small">$ 150.00</span>
                                                                         </div>
+                                                                    </div>
+                                                                    <div class="product-control">
+                                                                        <a class="button-typography remove" href="#">
+                                                                            <span class="button-body">
+                                                                                <img class="button-icon is-super-small is-text-blank" src="../assets/images/icon/icon-close.png" alt="Icon">
+                                                                            </span>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -871,11 +894,22 @@
                                                 </div>
                                             </div>
                                             <div class="cart-result">
-                                                <button class="button-background-image is-wood-green-light is-small is-fluid" type="button">
-                                                    <span class="button-body">
-                                                        <span class="button-text is-small is-uppercase">Checkout</span>
-                                                    </span>
-                                                </button>
+                                                <div class="cart-result-inner-row">
+                                                    <div class="cart-result-inner">
+                                                        <button class="button-background-image is-wood-green-light is-small is-fluid is-padding-blank" type="button">
+                                                            <span class="button-body">
+                                                                <span class="button-text is-extra-small is-uppercase">View Cart</span>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="cart-result-inner">
+                                                        <button class="button-background-image is-wood-green-light is-small is-fluid is-padding-blank" type="button">
+                                                            <span class="button-body">
+                                                                <span class="button-text is-extra-small is-uppercase">Checkout Now</span>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
@@ -948,215 +982,217 @@
             </div>
 
             <!-- Carousel category -->
-            <div id="category-plantoys" class="home">
-                <div class="home-segment">
-                    <div class="home-title">
-                        <h2 class="text-title is-uppercase">Category</h2>
-                    </div>
-                    <div class="carousel-category is-theme-gray is-arrow-inner is-control-fix-size for-category">
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-planhome.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        PlanHome<span class="text-default is-trademark is-bold is-super">TM</span>
-                                    </p>
-                                </div>
-                            </a>
+            <div class="container-content">
+                <div id="category-plantoys" class="home">
+                    <div class="home-segment">
+                        <div class="home-title">
+                            <h2 class="text-title is-medium is-uppercase">Category</h2>
                         </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-planmini.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        PlanMini<span class="text-default is-trademark is-bold is-super">TM</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-waterplay.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Water Play
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-babies.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Babies
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-pushpull.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Push & Pull
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-activeplay.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Active Play
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-learningeducation.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Learning & Education
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-gamespuzzles.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Games & Puzzles
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-music.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Music
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-blocksconstruction.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Blocks & Construction
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-pretendplay.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Pretend Play
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-newproducts.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        New Products
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-bestseller.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Best Seller
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Award Winning
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-myorder.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        My Order
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-accountinfo.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Account Info
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item is-item-horizontal">
-                            <a class="carousel-link" href="#">
-                                <div class="carousel-image is-border-none">
-                                    <img class="carousel-image-item" src="../assets/images/icon/category/icon-category-address-book.png" alt="News">
-                                </div>
-                                <div class="carousel-description is-padding-horizontal-blank">
-                                    <p class="text-carousel is-title-icon">
-                                        Address Book
-                                    </p>
-                                </div>
-                            </a>
+                        <div class="carousel-category is-theme-gray is-arrow-inner is-control-fix-size for-category">
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-planhome.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            PlanHome<span class="text-default is-trademark is-bold is-super">TM</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-planmini.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            PlanMini<span class="text-default is-trademark is-bold is-super">TM</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-waterplay.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Water Play
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-babies.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Babies
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-pushpull.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Push & Pull
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-activeplay.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Active Play
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-learningeducation.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Learning & Education
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-gamespuzzles.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Games & Puzzles
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-music.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Music
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-blocksconstruction.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Blocks & Construction
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-pretendplay.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Pretend Play
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-newproducts.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            New Products
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-bestseller.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Best Seller
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-awardwinning.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Award Winning
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-myorder.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            My Order
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-accountinfo.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Account Info
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="carousel-link" href="#">
+                                    <div class="carousel-image is-border-none">
+                                        <img class="carousel-image-item is-icon" src="../assets/images/icon/category/icon-category-address-book.png" alt="News">
+                                    </div>
+                                    <div class="carousel-description is-padding-horizontal-blank">
+                                        <p class="text-carousel is-title-icon">
+                                            Address Book
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1731,10 +1767,10 @@
 
             <!-- Modal Language -->
             <div class="modal-dialog modal-language">
-                <div class="modal-dialog-container is-large">
+                <div class="modal-dialog-container is-medium">
                     <div class="modal-dialog-body">
                         <div class="modal-dialog-title">
-                            <span class="text-tertiary is-extra-large is-gray">
+                            <span class="text-tertiary is-little-large is-gray">
                                 Please Choose Your Country
                             </span>
                         </div>
@@ -1743,19 +1779,19 @@
                                 <div class="col-sm-4">
                                     <a class="language-item" href="#">
                                         <img class="language-flag" src="../assets/images/icon/icon-flag-thai.png" alt="Flag">
-                                        <span class="text-default is-large is-bold">Thailand</span>
+                                        <span class="text-default is-middle-medium is-bold">Thailand</span>
                                     </a>
                                 </div>
                                 <div class="col-sm-4">
                                     <a class="language-item" href="#">
                                         <img class="language-flag" src="../assets/images/icon/icon-flag-usa.png" alt="Flag">
-                                        <span class="text-default is-large is-bold">United States</span>
+                                        <span class="text-default is-middle-medium is-bold">United States</span>
                                     </a>
                                 </div>
                                 <div class="col-sm-4">
                                     <a class="language-item" href="#">
                                         <img class="language-flag" src="../assets/images/icon/icon-flag-japan.png" alt="Flag">
-                                        <span class="text-default is-large is-bold">Japan</span>
+                                        <span class="text-default is-middle-medium is-bold">Japan</span>
                                     </a>
                                 </div>
                             </div>
@@ -1807,6 +1843,37 @@
             <!-- HTML end ============================================================================ -->
         </div>
     </div>
+
+
+
+    <!-- <div id="loading-mask" style="display: none;">
+        <div class="background-overlay"></div>
+        <p id="loading_mask_loader" class="loader">
+            <img alt="Loading.." src="http://ptoys.maywz.info/media/ajaxsuite/default/Ellipsis.gif">
+        </p>
+    </div> -->
+
+
+
+    <!-- <div id="after-loading-success-message" style="display: block;">
+        <div class="background-overlay"></div>
+        <p id="success-message-container" class="loader">
+            Product was successfully added to your shopping cart.
+            <button type="button" name="finish_and_checkout" id="finish_and_checkout" class="button btn-cart">
+                <span> <span> Go to cart page </span> </span>
+            </button>
+            <button type="button" name="continue_shopping" id="continue_shopping" class="button btn-cart">
+                <span> <span> Continue shopping </span> </span>
+            </button>
+        </p>
+    </div> -->
+
+
+
+
+
+
+
 
     <!-- Plantoys javascript -->
     <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
@@ -1958,7 +2025,6 @@
                 $j('#menu-main').removeClass('is-active');
                 // console.log('mouseOff');
 
-
                 // Remove
                 $j('#menu-main').removeClass('is-expand-primary');
                 $j('#menu-main').removeClass('is-expand-secondary');
@@ -1976,21 +2042,21 @@
                 // console.log('mouseOff');
             });
 
-            $j('#menu-account').mouseover(function() {
-                // console.log('mouseOn');
-            });
-            $j('#menu-account').mouseOff(function() {
-                $j('#menu-account').removeClass('is-active');
-                // console.log('mouseOff');
-            });
+            // $j('#menu-account').mouseover(function() {
+            //     // console.log('mouseOn');
+            // });
+            // $j('#menu-account').mouseOff(function() {
+            //     $j('#menu-account').removeClass('is-active');
+            //     // console.log('mouseOff');
+            // });
 
-            $j('#menu-cart').mouseover(function() {
-                // console.log('mouseOn');
-            });
-            $j('#menu-cart').mouseOff(function() {
-                $j('#menu-cart').removeClass('is-active');
-                // console.log('mouseOff');
-            });
+            // $j('#menu-cart').mouseover(function() {
+            //     // console.log('mouseOn');
+            // });
+            // $j('#menu-cart').mouseOff(function() {
+            //     $j('#menu-cart').removeClass('is-active');
+            //     // console.log('mouseOff');
+            // });
 
             $j('#menu-language').mouseover(function() {
                 // console.log('mouseOn');

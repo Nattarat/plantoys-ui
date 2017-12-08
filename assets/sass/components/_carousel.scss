@@ -8,7 +8,10 @@
 
 @charset 'utf-8';
 
-// News & Awards
+// Container
+// ------------------------------------------------
+
+// General
 // ------------------------------------------------
 .carousel-news,
 .carousel-awards,
@@ -71,6 +74,10 @@
 
     .carousel-image-item {
         margin: auto;
+
+        &.is-icon {
+            max-width: 120px;
+        }
     }
 
     .carousel-content-image {

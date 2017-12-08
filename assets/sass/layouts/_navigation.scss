@@ -302,6 +302,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    cursor: pointer;
     position: absolute;
     z-index: zindex(lv1);
     top: 0;
@@ -316,44 +317,6 @@
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
-
-    // STYLES OF MODIFIER CLASS
-    // >>>>>>>>>>>>>>>>>>>>>>>
-
-    // STYLES OF STATE WITH MODIFIER CLASS
-    // >>>>>>>>>>>>>>>>>>>>>>>
-
-    // MEDIA QUERY
-    // >>>>>>>>>>>>>>>>>>>>>>>
-}
-
-// Browser variations
-// >>>>>>>>>>>>>>>>>>>>>>>
-// IE
-// Safari
-// Firefox
-
-#button-menu-main,
-#button-menu-shop {
-    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
-    // >>>>>>>>>>>>>>>>>>>>>>>
-
-    // MIXINS
-    // >>>>>>>>>>>>>>>>>>>>>>>
-
-    // STYLES OF COMPONENT ITSELF
-    // >>>>>>>>>>>>>>>>>>>>>>>
-    // position: relative;
-    // z-index: zindex(lv1);
-
-    // STYLES OF CHILD CLASS
-    // >>>>>>>>>>>>>>>>>>>>>>>
-
-    // STYLES OF STATE
-    // >>>>>>>>>>>>>>>>>>>>>>>
-    // &.is-active {
-    //     z-index: zindex(lv2);
-    // }
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

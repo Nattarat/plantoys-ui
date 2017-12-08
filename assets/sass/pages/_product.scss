@@ -751,6 +751,7 @@ $product-container-padding: 0 50px;
 
         &.is-preview {
             position: relative;
+            left: -80px;
             margin-right: 120px;
         }
 
@@ -987,7 +988,6 @@ $product-container-padding: 0 50px;
         background-repeat: no-repeat;
         background-position: left center;
         background-size: 100%;
-
 
         .rating {
             float: none;

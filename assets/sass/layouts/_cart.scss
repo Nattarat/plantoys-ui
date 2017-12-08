@@ -122,6 +122,16 @@
         }
     }
 
+    .cart-result-inner-row {
+        display: flex;
+        margin-left: -15px;
+    }
+
+    .cart-result-inner {
+        width: 50%;
+        padding-left: 15px;
+    }
+
     .cart-promocode {
         display: flex;
         align-items: flex-end;
@@ -243,13 +253,91 @@
     }
 
     .product-counter-number {
+        display: inline-block;
         margin-left: 5px;
         margin-right: 5px;
+        line-height: 1;
+        vertical-align: middle;
+
+        .cart-item-quantity {
+            display: inline-block;
+            max-width: 27px;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+
+            font-family: font-family(primary);
+            font-size: font-primary-size(size-11);
+            font-weight: normal;
+            line-height: 1.3;
+            vertical-align: middle;
+            color: $color-gray-1;
+            text-transform: none;
+            letter-spacing: 1px;
+            text-align: center;
+
+            &:focus {
+                outline: 0;
+            }
+        }
     }
 
     .product-content {
         padding-left: 30px;
         padding-right: 30px;
+    }
+
+    .product-price {
+        .price {
+            display: inline-block;
+            font-family: font-family(secondary);
+            font-size: font-secondary-size(size-15);
+            font-weight: normal;
+            line-height: 1.3;
+            vertical-align: middle;
+            color: $color-gray-1;
+            text-transform: none;
+            letter-spacing: 1px;
+        }
+
+        &.is-result {
+            .price {
+                font-family: font-family(primary);
+                font-size: font-primary-size(size-8);
+            }
+        }
+
+        &.is-total {
+            .price {
+                font-family: font-family(primary);
+                font-size: font-primary-size(size-4);
+                color: $color-black;
+            }
+        }
+    }
+
+    .product-control {
+        opacity: .3;
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 0;
+        right: 0;
+    }
+
+    .product-empty {
+        padding: 15px;
+    }
+
+    .product-empty-icon {
+        width: 48px;
+        height: auto;
+        margin: auto auto 5px auto;
+        opacity: .3;
+    }
+
+    .product-empty-description {
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     // STYLES OF STATE
@@ -263,6 +351,7 @@
     }
 
     &.is-right {
+        position: relative;
         width: 78%;
         padding-left: 15px;
     }
