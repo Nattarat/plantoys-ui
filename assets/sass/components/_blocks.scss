@@ -160,7 +160,9 @@
 
     &.for-subscribe-home {
         height: auto;
-        min-height: 850px;
+        min-height: initial;
+        // min-height: 850px;
+        padding: 100px 0;
     }
 
     &.for-news-home {

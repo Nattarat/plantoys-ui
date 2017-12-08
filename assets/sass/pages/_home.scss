@@ -112,9 +112,12 @@
     // Toy
     &:before {
         top: 45px;
-        right: 2vw;
-        width: 24vw; // 458px
-        height: 21vw; // 406px
+        // right: 2vw;
+        // width: 24vw; // 458px
+        // height: 21vw; // 406px
+        right: 16vw;
+        width: 14vw;
+        height: 12vw;
         background-image: url('#{path-file(backgrounds)}/home/home-subcribe-toy.png');
         background-size: contain;
     }
@@ -122,9 +125,12 @@
     // Tablet
     &:after {
         bottom: 0;
-        left: 8vw;
-        width: 35vw; // 685px
-        height: 22vw; // 425px
+        // left: 8vw;
+        // width: 35vw; // 685px
+        // height: 22vw; // 425px
+        left: 22vw;
+        width: 20vw;
+        height: 13vw;
         background-image: url('#{path-file(backgrounds)}/home/home-subcribe-tablet.png');
         background-size: contain;
     }
@@ -134,21 +140,21 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .subscribe-segment {
         &.is-email {
-            margin-bottom: 7vw;
+            margin-bottom: 60px; // 7vw
         }
 
         &.is-catalogue {
-            margin-left: 35vw;
+            margin-left: 25vw;
         }
     }
 
     .subscribe-title {
-        margin-bottom: 25px;
+        margin-bottom: 15px;
         text-align: center;
     }
 
     .subscribe-description {
-        margin-bottom: 35px;
+        margin-bottom: 20px;
         text-align: center;
 
         .text-default {
@@ -157,10 +163,10 @@
     }
 
     .subscribe-field {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
 
         [class^="field"] {
-            width: 690px;
+            width: 35vw;
         }
     }
 
@@ -169,7 +175,7 @@
 
         a[class^="button"],
         button[class^="button"] {
-            min-width: 300px;
+            min-width: 175px;
 
             &:first-child {
                 margin-right: 20px;

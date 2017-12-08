@@ -39,7 +39,7 @@ $field-padding-side-deault: 20px;
     $field-width: auto,
     $field-min-width: 150px,
     $field-max-width: inherit,
-    $field-height: 48px, // 57
+    $field-height: 36px, // 57 > 48 >
     $field-min-height: inherit,
     $field-max-height: inherit,
     $field-padding: 0 20px,
@@ -52,7 +52,7 @@ $field-padding-side-deault: 20px;
 
     // Typography
     $field-text-font-family: font-family(secondary),
-    $field-text-font-size: font-secondary-size(size-4),
+    $field-text-font-size: font-secondary-size(size-8),
     $field-text-line-height: 1,
     $field-text-color: color-text(default),
 
