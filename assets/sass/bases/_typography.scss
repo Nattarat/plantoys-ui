@@ -468,7 +468,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include text-variant(
         $text-font-family: font-family(tertiary),
-        $text-font-size: 2.5vw, // font-tertiary-size(size-6) = 48px
+        $text-font-size: 2vw, // font-tertiary-size(size-6) = 48px
         $text-line-height: 1,
         $text-color: color-text(yellow-primary)
     );

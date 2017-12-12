@@ -53,7 +53,7 @@
         &:before {
             content: ' ';
             position: absolute;
-            z-index: zindex(lv2);
+            z-index: zindex(lv4);
             top: 50%;
             left: 50%;
             display: none;
@@ -68,7 +68,7 @@
         &:after {
             content: ' ';
             position: absolute;
-            z-index: zindex(lv1);
+            z-index: zindex(lv3);
             top: 0;
             bottom: 0;
             left: 0;
