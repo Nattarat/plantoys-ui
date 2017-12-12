@@ -187,6 +187,13 @@
         }
     }
 
+    &.for-subscribe-home {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-top: 120px;
+            padding-bottom: 160px;
+        }
+    }
+
     &.for-news-home {
         @media screen and (max-width: screen(tablet-sm)) {
             min-height: auto;

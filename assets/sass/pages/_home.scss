@@ -125,12 +125,12 @@
     // Tablet
     &:after {
         bottom: 0;
-        // left: 8vw;
-        // width: 35vw; // 685px
-        // height: 22vw; // 425px
-        left: 22vw;
-        width: 20vw;
-        height: 13vw;
+        // left: 22vw;
+        // width: 20vw;
+        // height: 13vw;
+        left: 14vw;
+        width: 27vw;
+        height: 18vw;
         background-image: url('#{path-file(backgrounds)}/home/home-subcribe-tablet.png');
         background-size: contain;
     }
@@ -166,7 +166,9 @@
         margin-bottom: 20px;
 
         [class^="field"] {
-            width: 35vw;
+            width: 27vw; // 35
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -177,8 +179,8 @@
         button[class^="button"] {
             min-width: 175px;
 
-            &:first-child {
-                margin-right: 20px;
+            &:nth-child(2) {
+                margin-left: 20px;
             }
         }
     }
@@ -195,15 +197,15 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media screen and (max-width: screen(mobile-lg-max)) {
-        padding-top: 50vw;
-        padding-bottom: 50vw;
+        // padding-top: 50vw;
+        // padding-bottom: 50vw;
         padding-left: 30px;
         padding-right: 30px;
     }
 
     @media (min-width: screen(phablet-sm)) and (max-width: screen(phablet-lg-max)) {
-        padding-top: 20vw;
-        padding-bottom: 20vw;
+        // padding-top: 20vw;
+        // padding-bottom: 20vw;
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -213,23 +215,28 @@
     }
 
     @media (min-width: screen(tablet-md)) and (max-width: screen(tablet-lg-max)) {
-        padding-bottom: 16vw;
+        padding-bottom: 10vw;
     }
 
     // Toy
     &:before {
-        @media screen and (max-width: screen(mobile-lg-max)) {
-            top: 30px;
-            width: 50vw;
-            height: 43.75vw;
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            // top: 30px;
+            // width: 50vw;
+            // height: 43.75vw;
+            top: 15px;
+            width: 110px;
+            height: 94px;
         }
     }
 
     // Tablet
     &:after {
-        @media screen and (max-width: screen(mobile-lg-max)) {
-            width: 70vw;
-            height: 43.4vw;
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            // width: 70vw;
+            // height: 43.4vw;
+            width: 210px;
+            height: 140px;
         }
     }
 
@@ -237,6 +244,12 @@
         &.is-catalogue {
             @media screen and (max-width: screen(tablet-lg-max)) {
                 margin-left: 0;
+            }
+        }
+
+        &.is-email {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                margin-bottom: 30px;
             }
         }
     }
@@ -269,8 +282,13 @@
 
             &:first-child {
                 @media screen and (max-width: screen(phablet-lg-max)) {
-                    margin-right: 0;
-                    margin-bottom: 30px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            &:nth-child(2) {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    margin-left: 0;
                 }
             }
         }
@@ -425,8 +443,8 @@
     }
 
     .developments-sub-title {
-        padding-top: 1.8vw; // 35px
-        padding-bottom: 1.8vw; // 35px
+        padding-top: 15px; // 35px > 1.8vw
+        padding-bottom: 15px; // 35px > 1.8vw
     }
 
     .developments-paragraph {

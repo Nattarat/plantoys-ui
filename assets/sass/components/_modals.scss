@@ -264,6 +264,49 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .form-search {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @media (min-width: screen(phablet-sm)) {
+            min-width: 350px;
+        }
+
+        @media (min-width: screen(phablet-lg)) and (max-width: screen(phablet-lg-max)) {
+            width: calc(100% - 150px);
+        }
+    }
+
+    .form-search-inner {
+        &.is-field {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                width: 85%;
+                padding-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .modal-dialog-container {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
+    .modal-dialog-content {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            align-items: flex-start;
+        }
+    }
 }
 
 // Browser variations

@@ -135,7 +135,7 @@
         .footer-subscribe-description {
             @media screen and (max-width: screen(phablet-sm-max)) {
                 padding-right: 0;
-                margin-bottom: 60px;
+                margin-bottom: 30px;
             }
         }
 
@@ -150,7 +150,7 @@
             }
 
             @media screen and (max-width: 991px) {
-                margin-bottom: 60px;
+                margin-bottom: 30px;
             }
 
             @media (min-width: screen(tablet-md)) and (max-width: screen(labtop-md-max)) {
@@ -187,6 +187,14 @@
 
             @media screen and (max-width: screen(tablet-md-max)) {
                 margin-bottom: 10px;
+            }
+        }
+    }
+
+    .footer-copyright-segment-inner {
+        &.is-label-location {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                margin: 20px 0 5px 0;
             }
         }
     }
