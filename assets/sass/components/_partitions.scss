@@ -14,13 +14,13 @@
 // Mixins
 // ==================================================================================================
 @mixin partition-variant(
-    $partition-padding: 35px 0,
+    $partition-padding: 25px 0,
     $partition-height: 1px,
     $partition-color: $color-gray-5,
     $partition-text: ' ',
     $partition-font-background-color: $color-white,
     $partition-font-family: font-family(secondary),
-    $partition-font-size: font-secondary-size(size-5),
+    $partition-font-size: font-secondary-size(size-11),
     $partition-font-color: $color-gray-1
 ) {
     // MIXINS

@@ -28,18 +28,19 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .account-form {
         position: relative;
-        width: 490px;
-        margin: 70px auto 300px auto;
+        width: 320px;
+        margin: 60px auto 150px auto;
 
         &:before {
             content: ' ';
             position: absolute;
             z-index: zindex(lv1);
-            top: 140px;
+            top: 35px;
             right: 100%;
-            width: 248px;
-            height: 200px;
-            margin-right: 120px;
+            display: block;
+            width: 175px;
+            height: 141px;
+            margin-right: 30px;
             background: url('#{path-file(backgrounds)}/account/account-helicopter.png') no-repeat center;
             background-size: 100%;
         }
@@ -50,10 +51,10 @@
     }
 
     .account-footer-segment {
-        margin-top: 35px;
+        margin-top: 15px;
 
         &.is-notice {
-            margin-top: 30px;
+            margin-top: 10px;
         }
     }
 
@@ -68,6 +69,29 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media (max-width: screen(mobile-lg-max)) {
+        background-size: 200%;
+    }
+
+    .account-form {
+        @media (max-width: screen(mobile-xs-max)) {
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        &:before {
+            @media (max-width: screen(tablet-sm)) {
+                position: relative;
+                margin: auto;
+                top: 0px;
+                left: -20px;
+                width: 130px;
+                height: 105px;
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 
 // Browser variations
