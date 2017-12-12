@@ -644,6 +644,11 @@ $button-padding-side-deault: 45px;
             width: auto;
             height: 16px;
         }
+
+        &.is-googlemap {
+            width: 48px;
+            height: auto;
+        }
     }
 
     .button-text {
@@ -821,6 +826,12 @@ $button-padding-side-deault: 45px;
         &.is-language {
             @media screen and (max-width: screen(phablet-lg-max)) {
                 height: 18px;
+            }
+        }
+
+        &.is-googlemap {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                width: 32px;
             }
         }
     }

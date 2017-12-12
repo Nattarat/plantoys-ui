@@ -131,7 +131,7 @@
         }
 
         &.is-storelocator {
-            padding: 0 60px;
+            padding: 0 60px 60px 60px;
             margin: auto;
             max-width: 720px;
             text-align: center;
@@ -170,6 +170,15 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .customersupport-segment {
+        &.is-storelocator {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 30px;
+            }
+        }
+    }
 }
 
 // Browser variations

@@ -113,6 +113,10 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-medium {
+        max-width: 1280px;
+    }
+
     &.is-carousel-with-outer-arrow {
         padding-left: 2.5vw;
         padding-right: 2.5vw;
@@ -234,6 +238,13 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-customersupport,
+    &.is-career {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+    }
 }
 
 // Browser variations
@@ -346,6 +357,14 @@
         max-width: 1440px;
     }
 
+    &.is-storelocator {
+        position: relative;
+        height: 100%;
+        padding-right: 100px;
+        border: 0;
+        border-radius: 0;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-blank {
@@ -364,6 +383,17 @@
     @media screen and (max-width: screen(phablet-lg-max)) {
         margin-left: 15px;
         margin-right: 15px;
+    }
+
+    &.is-storelocator {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            padding-right: 15px;
+        }
+
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 }
 
