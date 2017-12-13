@@ -421,10 +421,6 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .breadcrumbs {
-        margin-left: 0;
-        margin-right: 0;
-    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -432,13 +428,142 @@
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.content-static {
+        padding-bottom: 60px;
+
+        .breadcrumbs {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
         .col-main {
-            max-width: 1440px;
+            max-width: 1024px;
             min-height: calc(100vh - 333px);
             padding-left: 50px;
             padding-right: 50px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .main {
+            // Global
+            p, ol, ul, li, strong, span {
+                line-height: 1.5;
+                vertical-align: middle;
+                color: $color-gray-1;
+                text-transform: none;
+                letter-spacing: 1px;
+            }
+
+            // Family
+            p, ol, ul, li, span {
+                font-family: font-family(secondary);
+                font-size: font-secondary-size(size-11);
+                font-weight: normal;
+            }
+
+            strong,
+            [style*="x-large"] {
+                font-family: font-family(primary);
+                font-weight: bold;
+            }
+
+            // Size
+            strong {
+                font-size: font-primary-size(size-4);
+            }
+
+            [style*="x-large"] {
+                font-size: font-primary-size(size-5) !important;
+            }
+
+            // Spacing
+            p {
+                margin-bottom: 10px;
+
+                strong {
+                    margin-bottom: 0;
+                }
+            }
+
+            strong,
+            [style*="x-large"] {
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+
+            // List
+            ul {
+                margin-bottom: 10px;
+
+                li {
+                    position: relative;
+                    padding-left: 15px;
+
+                    &:before {
+                        content: ' ';
+                        position: absolute;
+                        z-index: zindex(lv1);
+                        top: 8px;
+                        left: 0;
+                        display: block;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: $color-gray-1;
+                    }
+                }
+
+                ul {
+                    padding-left: 17px;
+                    margin-bottom: 0;
+
+                    li {
+                        padding-left: 15px;
+
+                        &:before {
+                            border: 1px solid $color-gray-1;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+
+            ol {
+                counter-reset: order;
+                margin-bottom: 10px;
+
+                li {
+                    position: relative;
+                    padding-left: 15px;
+
+                    &:before {
+                        counter-increment: order;
+                        content: ""counter(order)".";
+                        position: absolute;
+                        z-index: zindex(lv1);
+                        top: 5px;
+                        left: 0;
+                        font-family: font-family(secondary);
+                        font-size: font-secondary-size(size-8);
+                        line-height: font-secondary-size(size-8);
+                    }
+                }
+
+                ol {
+                    counter-reset: suborder;
+                    padding-left: 17px;
+                    margin-bottom: 0;
+
+                    li {
+                        padding-left: 23px;
+
+                        &:before {
+                            counter-increment: suborder;
+                            content: counter(order) "."counter(suborder)"";
+                        }
+                    }
+                }
+            }
         }
     }
 
