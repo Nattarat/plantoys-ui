@@ -134,6 +134,13 @@
         padding-top: 180px;
     }
 
+    &.is-information {
+        max-width: 768px;
+        min-height: calc(100vh - 373px);
+        padding-left: 25px;
+        padding-right: 2px;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -392,6 +399,41 @@
             margin-right: 0;
         }
     }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Static content
+// ------------------------------------------------
+.main-container {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .breadcrumbs {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations
