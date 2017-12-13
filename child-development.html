@@ -391,7 +391,7 @@
                             <ul class="list-navigation is-navigation-lv2">
                                 <!-- Single menu -->
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#" id="barrange" onclick="tabrange('tab1', 'range1')">
+                                    <a class="list-link" href="#"onclick="tabrange('tab1', 'range1')">
                                         <span class="text-link is-small is-bold is-gray">
                                             0-6 Months
                                         </span>
@@ -399,7 +399,7 @@
                                 </li>
                                 <!-- Single menu -->
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#" id="barrange"  onclick="tabrange('tab2', 'range2')">
+                                    <a class="list-link" href="#" onclick="tabrange('tab2', 'range2')">
                                         <span class="text-link is-small is-bold is-gray">
                                             6-12 Months
                                         </span>
@@ -407,28 +407,28 @@
                                 </li>
                                 <!-- Single menu -->
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#" id="barrange"  onclick="tabrange('tab3', 'range3')">
+                                    <a class="list-link" href="#" onclick="tabrange('tab3', 'range3')">
                                         <span class="text-link is-small is-bold is-gray">
                                             12-18 Months
                                         </span>
                                     </a>
                                 </li>
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#" id="barrange" onclick="tabrange('tab4', 'range4')">
+                                    <a class="list-link" href="#"onclick="tabrange('tab4', 'range4')">
                                         <span class="text-link is-small is-bold is-gray">
                                             18-24 Months
                                         </span>
                                     </a>
                                 </li>
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#" id="barrange"  onclick="tabrange('tab5', 'range5')">
+                                    <a class="list-link" href="#" onclick="tabrange('tab5', 'range5')">
                                         <span class="text-link is-small is-bold is-gray">
                                             2-3 Years
                                         </span>
                                     </a>
                                 </li>
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#" id="barrange"  onclick="tabrange('tab6', 'range6')">
+                                    <a class="list-link" href="#" onclick="tabrange('tab6', 'range6')">
                                         <span class="text-link is-small is-bold is-gray">
                                             3 Years+
                                         </span>
@@ -720,13 +720,13 @@
                 <div class="child-age-mobile  hidden-lg ">
                     <span class="select-title">Ages</span>
                     <div class="select-input">
-                        <select onclick="tabrange(id, this.value)" >
-                            <option id="tab1" value="range1" >0-6 Months</option>
-                            <option id="tab2" value="range2" >6-12 Months</option>
-                            <option id="tab3" value="range3">12-18 Months</option>
-                            <option id="tab4" value="range4">18-24 Months</option>
-                            <option id="tab5" value="range5" >2-3 Years</option>
-                            <option id="tab6" value="range6">3 Years</option>
+                        <select onclick="tabrange('select', this.value)" >
+                            <option value="range1" >0-6 Months</option>
+                            <option value="range2" >6-12 Months</option>
+                            <option value="range3">12-18 Months</option>
+                            <option value="range4">18-24 Months</option>
+                            <option value="range5" >2-3 Years</option>
+                            <option value="range6">3 Years</option>
                         </select>
                     </div>
                 </div>
@@ -3403,7 +3403,7 @@
                     }
                 ]
             });
-        })
+           })
     </script>
     <script>
         function tabrange(tab, cityName) {
@@ -3415,13 +3415,27 @@
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
-                $j("select option[value="+cityName+"]").removeAttr("selected");
+                $j('#select option:selected').prop('selected', false);
             }
             document.getElementById(cityName).style.display = "block";
+            if(tab=="select"){
+                // if(cityName == "range1"){
+                //     tab = "tab1"
+                // }
+                tab = (cityName == "range1" ? "tab1" : 
+                        cityName == "range2"? "tab2" :
+                        cityName == "range3"? "tab3" :
+                        cityName == "range4"? "tab4" :
+                        cityName == "range5"? "tab5" :
+                        cityName == "range6"? "tab6" :
+                        null
+                )
+            }
             $j("#"+tab).addClass( " active");
-            $j("#"+tab).attr("selected","selected");
-            $j("select option[value="+cityName+"]").attr("selected","selected");
-            console.log(cityName);
+            // $j("select option[value=range"+i+"]").attr()
+            console.log(tab)
+            $j("select option[value="+cityName+"]").prop("selected","selected");
+            // console.log(cityName);
         }
         // Get the element with id="defaultOpen" and click on it
         // document.getElementById("#tab1").click();
