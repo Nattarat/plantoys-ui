@@ -140,6 +140,11 @@ $button-padding-side-deault: 45px;
 
         &.is-size-topbar {
             width: auto;
+            height: 26px;
+        }
+
+        &.is-search-topbar {
+            width: auto;
             height: 18px;
         }
 
@@ -778,6 +783,14 @@ $button-padding-side-deault: 45px;
         .button-body {
             min-height: 24px;
         }
+    }
+
+    &.is-avatar {
+        overflow: hidden;
+        width: 26px;
+        height: 26px;
+        background-size: cover;
+        border-radius: 50%;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
