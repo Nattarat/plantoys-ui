@@ -135,10 +135,10 @@
     }
 
     &.is-information {
-        max-width: 768px;
         min-height: calc(100vh - 373px);
-        padding-left: 25px;
-        padding-right: 2px;
+        max-width: 1440px;
+        padding: 0 50px;
+        margin: auto;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -421,19 +421,38 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .breadcrumbs {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .breadcrumbs {
-        margin-left: 0;
-        margin-right: 0;
+    &.content-static {
+        .col-main {
+            min-height: calc(100vh - 373px);
+            max-width: 1440px;
+            padding: 0 50px;
+            margin: auto;
+        }
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.content-static {
+        .col-main {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+        }
+    }
 }
 
 // Browser variations
