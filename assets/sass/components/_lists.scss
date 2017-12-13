@@ -1123,6 +1123,15 @@
                 opacity: 1;
             }
 
+            .list-thumbnail-default {
+                @include scale(1.1);
+            }
+
+            .list-thumbnail-default-hover {
+                visibility: visible;
+                opacity: 1;
+            }
+
             .list-detail {
                 margin: 0 -1px;
                 background-color: $color-blue-17;
@@ -1193,6 +1202,28 @@
         top: 0;
         left: 0;
         background-size: cover;
+    }
+
+    .list-thumbnail-wrapper {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .list-thumbnail-default {
+        @include transition(all .3s ease);
+        @include scale(1);
+    }
+
+    .list-thumbnail-default-hover {
+        @include transition(all .3s ease);
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .list-detail {
