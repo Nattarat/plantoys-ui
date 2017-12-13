@@ -1656,6 +1656,15 @@
         padding-top: 5px;
     }
 
+    &.is-sub-bullet {
+        .list-item {
+            &:before {
+                border: 1px solid $color-gray-1;
+                background-color: transparent;
+            }
+        }
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1721,7 +1730,22 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-paragraph {
         padding-top: 5px;
-        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    &.is-sub-number {
+        counter-reset: suborder;
+
+        .list-item {
+            padding-left: 20px;
+
+            &:before {
+                counter-increment: suborder;
+                content: counter(order) "."counter(suborder)"";
+                // counter-increment: subsection;
+                // content: counter(section) "." counter(subsection) " ";
+            }
+        }
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

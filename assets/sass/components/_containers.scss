@@ -433,12 +433,8 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.content-static {
         .col-main {
-            min-height: calc(100vh - 333px);
-        }
-
-        .content-block {
-            display: block;
             max-width: 1440px;
+            min-height: calc(100vh - 333px);
             padding-left: 50px;
             padding-right: 50px;
             margin-left: auto;
@@ -452,11 +448,9 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.content-static {
-        .content-block {
-            @media screen and (max-width: screen(phablet-lg-max)) {
-                padding-left: 25px;
-                padding-right: 25px;
-            }
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-left: 25px;
+            padding-right: 25px;
         }
     }
 }
