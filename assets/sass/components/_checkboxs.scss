@@ -22,19 +22,19 @@
     $checkbox-label-font-color: color-text(default),
 
     // Box
-    $checkbox-box-width: 16px,
-    $checkbox-box-height: 16px,
+    $checkbox-box-width: 14px,
+    $checkbox-box-height: 14px,
     $checkbox-box-color: $color-blue-3,
     $checkbox-box-border: 0,
-    $checkbox-box-border-radius: 4px,
+    $checkbox-box-border-radius: 2px,
 
     // Box active
     $checkbox-box-color-active: $color-blue-3,
     $checkbox-box-border-active: 0,
 
     // icon
-    $checkbox-icon-width: 16px,
-    $checkbox-icon-height: 16px,
+    $checkbox-icon-width: 14px,
+    $checkbox-icon-height: 14px,
     $checkbox-icon-image: url('#{path-file(icons)}/icon-check-white.png')
 ) {
     // MIXINS
@@ -223,7 +223,7 @@
         // Label text
         $checkbox-label-padding: 0 0 0 30px,
         $checkbox-label-font-family: font-family(secondary),
-        $checkbox-label-font-size: font-secondary-size(size-4),
+        $checkbox-label-font-size: font-secondary-size(size-8),
 
         // Box
         $checkbox-box-color: $color-white,

@@ -349,12 +349,9 @@
     }
 
     &.is-contactus,
-    &.is-career {
-        max-width: 1065px;
-    }
-
+    &.is-career,
     &.is-faqs {
-        max-width: 1440px;
+        max-width: 768px;
     }
 
     &.is-storelocator {

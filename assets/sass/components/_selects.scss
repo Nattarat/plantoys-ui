@@ -42,6 +42,10 @@
         margin-left: $space-text-select;
         border-radius: $select-border-radius;
         background: $select-background url('#{path-file(images)}/icon/icon-arrow-down.png') no-repeat $select-position-icon;
+
+        &:focus {
+            outline: 0;
+        }
     }
 
     // STYLES OF STATE
@@ -166,8 +170,8 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include select-icon(
         $select-width: 290px,
-        $select-height: 30px, // 48 > 36
-        $select-font-size: font-primary-size(size-11),
+        $select-height: 40px, // 48 > 36 > 30
+        $select-font-size: font-primary-size(size-8),
         $select-padding: 0 $select-padding-right 0 $select-padding-left,
         $select-border-radius: 5px,
         $select-background: $color-white,
@@ -185,7 +189,7 @@
         margin-left: 0;
         border: 1px solid $color-gray-3;
         background-size: 10px; // 16 > 12
-        font-family: font-family(secondary);
+        font-family: font-family(primary);
         letter-spacing: 1px;
     }
 
