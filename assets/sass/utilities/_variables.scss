@@ -41,6 +41,7 @@ $zindex-lv-2: 9 !default;
 $zindex-lv-3: 99 !default;
 $zindex-lv-4: 999 !default;
 $zindex-lv-5: 9999 !default;
+$zindex-lv-6: 99999 !default;
 
 // Z index maps
 $zindex-maps: (
@@ -48,7 +49,8 @@ $zindex-maps: (
     'lv2': $zindex-lv-2,
     'lv3': $zindex-lv-3,
     'lv4': $zindex-lv-4,
-    'lv5': $zindex-lv-5
+    'lv5': $zindex-lv-5,
+    'lv6': $zindex-lv-6
 );
 
 // Animation timing

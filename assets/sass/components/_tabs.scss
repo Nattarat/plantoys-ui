@@ -615,12 +615,12 @@
         .r-tabs-anchor {
             position: relative;
             display: block;
-            padding: 21px 42px;
+            padding: 15px 100px 15px 30px;
             background-color: $color-gray-10;
             border-radius: 8px;
             font-family: font-family(primary);
-            font-size: font-primary-size(size-2);
-            line-height: font-primary-size(size-2);
+            font-size: font-primary-size(size-4);
+            // line-height: font-primary-size(size-4);
             color: color-text(default);
 
             &:hover {
@@ -677,7 +677,7 @@
                 background-color: transparent;
                 border-bottom: 1px solid $color-gray-10;
                 border-radius: 0;
-                color: $color-black;
+                // color: $color-black;
 
                 // Arrow
                 &:after {

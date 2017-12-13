@@ -414,10 +414,10 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     position: fixed;
-    z-index: zindex(lv5);
+    z-index: zindex(lv6);
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -486,7 +486,7 @@
 #success-message-container {
     position: relative;
     z-index: zindex(lv2);
-    top: 0;
+    top: 40%;
     width: 500px;
     padding: 45px 30px;
     margin: auto;
