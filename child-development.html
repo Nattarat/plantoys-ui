@@ -391,7 +391,7 @@
                             <ul class="list-navigation is-navigation-lv2">
                                 <!-- Single menu -->
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#"onclick="tabrange('tab1', 'range1')">
+                                    <a class="list-link" href="#0-6months">
                                         <span class="text-link is-small is-bold is-gray">
                                             0-6 Months
                                         </span>
@@ -399,7 +399,7 @@
                                 </li>
                                 <!-- Single menu -->
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#" onclick="tabrange('tab2', 'range2')">
+                                    <a class="list-link" href="#6-12months">
                                         <span class="text-link is-small is-bold is-gray">
                                             6-12 Months
                                         </span>
@@ -407,28 +407,28 @@
                                 </li>
                                 <!-- Single menu -->
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#" onclick="tabrange('tab3', 'range3')">
+                                    <a class="list-link" href="#12-18months">
                                         <span class="text-link is-small is-bold is-gray">
                                             12-18 Months
                                         </span>
                                     </a>
                                 </li>
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#"onclick="tabrange('tab4', 'range4')">
+                                    <a class="list-link" href="#18-24months">
                                         <span class="text-link is-small is-bold is-gray">
                                             18-24 Months
                                         </span>
                                     </a>
                                 </li>
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#" onclick="tabrange('tab5', 'range5')">
+                                    <a class="list-link" href="#2-3years" >
                                         <span class="text-link is-small is-bold is-gray">
                                             2-3 Years
                                         </span>
                                     </a>
                                 </li>
                                 <li class="list-item is-menu-single-lv2">
-                                    <a class="list-link" href="#" onclick="tabrange('tab6', 'range6')">
+                                    <a class="list-link" href="#3years">
                                         <span class="text-link is-small is-bold is-gray">
                                             3 Years+
                                         </span>
@@ -3403,6 +3403,21 @@
                     }
                 ]
             });
+            $j(window).bind('hashchange', function () { //detect hash change
+                if(window.location.hash){
+                    var hash = $j(location).attr('hash');
+                    console.log(hash)
+                    var data = (hash == "#0-6months" ?  $j("#tab1").click(): 
+                                hash == "#6-12months"?  $j("#tab2").click():
+                                hash == "#12-18months"? $j("#tab3").click():
+                                hash == "#18-24months"? $j("#tab4").click():
+                                hash == "#2-3years"?    $j("#tab5").click():
+                                hash == "#3years"?      $j("#tab6").click():
+                                null
+                    )
+                }
+            });
+           
            })
     </script>
     <script>
