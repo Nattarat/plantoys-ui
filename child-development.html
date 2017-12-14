@@ -720,7 +720,7 @@
                 <div class="child-age-mobile  hidden-lg ">
                     <span class="select-title">Ages</span>
                     <div class="select-input">
-                        <select onclick="tabrange('select', this.value)" >
+                        <select id="selectid" onclick="tabrange('select', this.value)" >
                             <option value="range1" >0-6 Months</option>
                             <option value="range2" >6-12 Months</option>
                             <option value="range3">12-18 Months</option>
@@ -3430,7 +3430,8 @@
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
-                $j('#select option:selected').prop('selected', false);
+                // $j('#select option:selected').prop('selected', false);
+                document.getElementById("selectid").value = "";
             }
             document.getElementById(cityName).style.display = "block";
             if(tab=="select"){
@@ -3446,15 +3447,21 @@
                         null
                 )
             }
-            $j("#"+tab).addClass( " active");
+            // $j("#"+tab).addClass( " active");
+            var tabactive = document.getElementById(tab);
+            tabactive.className += " active";
             // $j("select option[value=range"+i+"]").attr()
             console.log(tab)
-            $j("select option[value="+cityName+"]").prop("selected","selected");
+            // $j("select option[value="+cityName+"]").prop("selected","selected");
+            document.getElementById("selectid").value = cityName;
+        
+            // document.getElementById(select).selected = "true";
             // console.log(cityName);
         }
         // Get the element with id="defaultOpen" and click on it
         // document.getElementById("#tab1").click();
-        $j("#tab1").click();
+        // $j("#tab1").click();
+        document.getElementById("tab1").click();
     </script>
 </body>
 </html>
