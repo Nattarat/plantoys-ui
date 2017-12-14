@@ -388,7 +388,7 @@
     &.is-introduction,
     &.is-tabs,
     &.is-tabs-mobile {
-        font-size: font-primary-size(size-3);
+        font-size: font-primary-size(size-4);
     }
 
     &.is-tabs,
@@ -662,8 +662,8 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include text-variant(
         $text-font-family: font-family(secondary),
-        $text-font-size: font-secondary-size(size-5),
-        $text-line-height: font-secondary-size(size-5),
+        $text-font-size: font-secondary-size(size-12),
+        $text-line-height: font-secondary-size(size-12),
         $text-color: color-text(submenu)
     );
 

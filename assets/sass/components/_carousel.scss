@@ -416,6 +416,18 @@
     margin-top: -80px;
 }
 
+// Fix size
+.carousel-awards {
+    max-width: 1280px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .carousel-content-image {
+        max-width: 120px;
+    }
+}
+
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE

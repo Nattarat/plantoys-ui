@@ -164,18 +164,35 @@
 
     &.is-description {
         @include transition(height .5s ease);
-        min-height: 180px;
+        min-height: 120px;
 
         .description {
             display: none;
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
     &.is-introduction,
     &.is-icon,
     &.is-description {
-        padding-left: 150px;
-        padding-right: 150px;
+        // padding-left: 150px;
+        // padding-right: 150px;
+
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.is-introduction {
+        max-width: 1440px;
+    }
+
+    &.is-description,
+    &.is-icon {
+        max-width: 1024px;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -186,34 +203,78 @@
     &.is-introduction,
     &.is-icon,
     &.is-description {
-        @media screen and (max-width: screen(phablet-lg-max)) {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
+        // @media screen and (max-width: screen(phablet-lg-max)) {
+        //     padding-left: 15px;
+        //     padding-right: 15px;
+        // }
 
-        @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-lg)) {
-            padding-left: 50px;
-            padding-right: 50px;
+        // @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-lg)) {
+        //     padding-left: 50px;
+        //     padding-right: 50px;
+        // }
+
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-left: 25px;
+            padding-right: 25px;
         }
     }
 
     &.is-description {
-        @media (min-width: 1024px) {
-            min-height: 300px;
-        }
+        // @media (min-width: 1024px) {
+        //     min-height: 300px;
+        // }
 
-        @media (min-width: 1280px) {
-            min-height: 270px;
-        }
+        // @media (min-width: 1280px) {
+        //     min-height: 270px;
+        // }
 
-        @media (min-width: 1600px) {
-            min-height: 240px;
-        }
+        // @media (min-width: 1600px) {
+        //     min-height: 240px;
+        // }
 
-        @media (min-width: 1800px) {
-            min-height: 210px;
-        }
+        // @media (min-width: 1800px) {
+        //     min-height: 210px;
+        // }
     }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Segment inner
+// ------------------------------------------------
+.about-segment-inner {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-content {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations
@@ -236,8 +297,7 @@
     &:before {
         content: ' ';
         display: block;
-        height: 40vh; // 400
-        max-height: 360px;
+        height: 360px;
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -250,120 +310,120 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-material {
         &:before {
-            background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material.jpg');
+            background-image: url('#{path-file(backgrounds)}/about/material-main.jpg');
         }
 
         &[data-cover=cover-1] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/material-1.jpg');
             }
         }
 
         &[data-cover=cover-2] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/material-2.jpg');
             }
         }
 
         &[data-cover=cover-3] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/material-3.jpg');
             }
         }
 
         &[data-cover=cover-4] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/material-4.jpg');
             }
         }
 
         &[data-cover=cover-5] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/material-5.jpg');
             }
         }
 
         &[data-cover=cover-6] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/material-6.jpg');
             }
         }
 
         &[data-cover=cover-7] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/material-7.jpg');
             }
         }
     }
 
     &.is-manufacturing {
         &:before {
-            background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing.jpg');
+            background-image: url('#{path-file(backgrounds)}/about/manufacturing-main.jpg');
         }
 
         &[data-cover=cover-1] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/manufacturing-1.jpg');
             }
         }
 
         &[data-cover=cover-2] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/manufacturing-2.jpg');
             }
         }
 
         &[data-cover=cover-3] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/manufacturing-3.jpg');
             }
         }
 
         &[data-cover=cover-4] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/manufacturing-4.jpg');
             }
         }
 
         &[data-cover=cover-5] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/manufacturing-5.jpg');
             }
         }
     }
 
     &.is-mind {
         &:before {
-            background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind.jpg');
+            background-image: url('#{path-file(backgrounds)}/about/mind-main.jpg');
         }
 
         &[data-cover=cover-1] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/mind-1.jpg');
             }
         }
 
         &[data-cover=cover-2] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/mind-2.jpg');
             }
         }
 
         &[data-cover=cover-3] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-mind_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/mind-3.jpg');
             }
         }
 
         &[data-cover=cover-4] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-material_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/mind-4.jpg');
             }
         }
 
         &[data-cover=cover-5] {
             &:before {
-                background-image: url('#{path-file(backgrounds)}/about/about-sustainable-manufacturing_20171024.jpg');
+                background-image: url('#{path-file(backgrounds)}/about/mind-5.jpg');
             }
         }
     }
@@ -442,6 +502,10 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     position: relative;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 
     &:before {
         content: ' ';
@@ -487,6 +551,7 @@
     .roadmap-infographic {
         position: absolute;
         z-index: zindex(lv1);
+        display: block;
         cursor: pointer;
 
         .infographic-image {

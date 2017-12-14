@@ -227,7 +227,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .list-item {
         width: 20%;
-        min-height: 330px;
+        min-height: 250px;
         padding-left: 15px;
         padding-right: 15px;
         text-align: center;
@@ -845,7 +845,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
 
@@ -865,25 +865,29 @@
         &:hover {
             .list-icon {
                 &.is-inactive {
-                    opacity: 0.5;
+                    // opacity: 0.5;
+                    visibility: hidden;
                 }
 
                 &.is-active {
-                    opacity: 1;
+                    // opacity: 1;
+                    visibility: visible;
                 }
             }
         }
     }
 
     .list-icon {
-        @include transition(opacity .5s ease);
+        // @include transition(opacity .5s ease);
 
         &.is-inactive {
-            opacity: 1;
+            // opacity: 1;
+            visibility: visible;
         }
 
         &.is-active {
-            opacity: 0;
+            // opacity: 0;
+            visibility: hidden;
             position: absolute;
             z-index: zindex(lv1);
             bottom: 0;
