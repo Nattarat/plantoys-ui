@@ -322,6 +322,22 @@
         &.is-title {
             margin-bottom: 20px;
         }
+
+        &.is-promocode {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 20px;
+        }
+    }
+
+    .container-panel-segment-item {
+        &.is-fullview {
+            width: 100%;
+        }
+
+        &.is-spacing-left {
+            padding-left: 20px;
+        }
     }
 
     // STYLES OF STATE

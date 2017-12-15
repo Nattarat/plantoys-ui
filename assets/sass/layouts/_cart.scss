@@ -264,6 +264,27 @@
         }
     }
 
+    .product-counter-inner {
+        &.is-spacing-clear {
+            display: flex;
+        }
+
+        &.is-text-price {
+            .cart-price {
+                .price {
+                    font-family: font-family(secondary);
+                    font-size: font-secondary-size(size-11);
+                    font-weight: normal;
+                    line-height: 1.3;
+                    vertical-align: middle;
+                    color: $color-gray-1;
+                    text-transform: none;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
     .product-counter-number {
         display: inline-block;
         margin-left: 5px;
@@ -299,8 +320,12 @@
         padding-right: 30px;
 
         &.is-checkout {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             width: 100%;
             padding-left: 15px;
+            padding-right: 0;
         }
     }
 

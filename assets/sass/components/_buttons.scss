@@ -685,6 +685,10 @@ $button-padding-side-deault: 45px;
             font-size: $font-size-12;
             font-weight: bold;
         }
+
+        &.is-link {
+            color: color-text(link);
+        }
     }
 
     // STYLES OF STATE
