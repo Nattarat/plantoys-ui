@@ -80,6 +80,15 @@
             padding-right: 25px;
         }
 
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            margin-top: 30px;
+            margin-bottom: 175px;
+        }
+
+        @media (min-width: screen(tablet-sm)) and (max-width: screen(labtop-lg-max)) {
+            margin-bottom: 250px;
+        }
+
         &:before {
             @media (max-width: screen(tablet-sm)) {
                 position: relative;

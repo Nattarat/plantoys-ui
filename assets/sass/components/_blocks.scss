@@ -154,6 +154,10 @@
         align-content: center;
     }
 
+    &.is-form-account {
+        min-height: calc(100vh - 255px);
+    }
+
     &.for-home-developments {
         // style
     }

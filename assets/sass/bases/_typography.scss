@@ -82,6 +82,9 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .price {
+        font-family: font-family(secondary);
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -120,6 +123,10 @@
     // Weight
     &.is-bold {
         font-family: font-family(primary);
+
+        .price {
+            font-family: font-family(primary);
+        }
     }
 
     // Colors
