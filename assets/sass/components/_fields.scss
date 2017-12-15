@@ -143,6 +143,11 @@ $field-padding-side-deault: 20px;
         width: 100%;
     }
 
+    &.is-inlineblock {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
     &.is-bold {
         &[type=email],
         &[type=search],
@@ -164,6 +169,15 @@ $field-padding-side-deault: 20px;
     &.is-datepicker {
         padding-right: 50px;
         background: url('#{path-file(icons)}/icon-calendar.png') no-repeat calc(100% - 20px) center;
+    }
+
+    &.is-number {
+        width: 50px;
+        min-width: 50px;
+        height: 36px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

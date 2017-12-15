@@ -237,6 +237,11 @@
             border-color: $color-gray-4;
         }
 
+        &.is-small {
+            max-width: 75px;
+            height: auto;
+        }
+
         &.is-medium {
             max-width: 100px;
             height: auto;
@@ -253,6 +258,10 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
+        &.is-alignitems-center {
+            align-items: center;
+        }
     }
 
     .product-counter-number {
@@ -288,6 +297,11 @@
     .product-content {
         padding-left: 30px;
         padding-right: 30px;
+
+        &.is-checkout {
+            width: 100%;
+            padding-left: 15px;
+        }
     }
 
     .product-price {

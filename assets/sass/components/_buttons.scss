@@ -175,6 +175,17 @@ $button-padding-side-deault: 45px;
             font-size: $font-size-2;
             color: $color-white;
         }
+
+        &.is-checkout-delete {
+            opacity: 0.5;
+            width: 10px;
+            height: auto;
+        }
+
+        &.is-checkout-control {
+            width: 10px;
+            height: auto;
+        }
     }
 
     .button-text {
@@ -312,6 +323,14 @@ $button-padding-side-deault: 45px;
 
     &.is-text-right {
         margin-right: 15px;
+    }
+
+    &.is-text-left-small {
+        margin-left: 5px;
+    }
+
+    &.is-text-right-small {
+        margin-right: 5px;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

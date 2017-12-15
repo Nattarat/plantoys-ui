@@ -413,7 +413,29 @@
 
 // Fix layout after integrate with Magento
 .carousel-hero {
-    margin-top: -80px;
+    margin-top: -60px;
+
+    &:before {
+        content: 'Scroll Down';
+        position: absolute;
+        z-index: zindex(lv3);
+        bottom: 65px;
+        left: 50%;
+        display: block;
+        width: 100px;
+        height: 44px;
+        margin-left: -50px;
+        background-image: url('#{path-file(icons)}/icon-mousescroll-down.gif');
+        background-size: cover;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.75);
+        white-space: nowrap;
+        text-align: center;
+        line-height: 105px;
+    }
 }
 
 // Fix size
