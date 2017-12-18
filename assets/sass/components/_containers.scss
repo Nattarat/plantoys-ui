@@ -122,7 +122,22 @@
         padding-right: 2.5vw;
     }
 
-    &.is-submenu {}
+    &.is-submenu {
+        .tabs-menu {
+            div {
+                a {
+                    padding: 0;
+                    color: rgba(255, 255, 255, 0.75);
+                    text-transform: capitalize;
+
+                    &:hover,
+                    &.is-active {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
 
     &.is-myaddress,
     &.is-confirm {
@@ -147,9 +162,21 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-submenu {
-        @media screen and (max-width: screen(phablet-lg-max)) {
-            padding-top: 20px;
-            padding-bottom: 20px;
+        // @media screen and (max-width: screen(phablet-lg-max)) {
+        //     padding-top: 20px;
+        //     padding-bottom: 20px;
+        // }
+
+        .tabs-menu {
+            div {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
         }
     }
 }
@@ -236,8 +263,9 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-customersupport,
     &.is-career {
-        padding-top: 65px;
-        padding-bottom: 65px;
+        // padding: 65px 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -315,6 +343,11 @@
             width: 100%;
             height: 100%;
             padding: 0;
+        }
+
+        &.is-fullwidth {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 
@@ -405,6 +438,15 @@
         margin-right: 15px;
     }
 
+    &.is-contactus,
+    &.is-career,
+    &.is-faqs {
+        @media screen and (max-width: screen(tablet-sm)) {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+
     &.is-storelocator {
         @media screen and (max-width: screen(mobile-lg-max)) {
             padding-right: 15px;
@@ -437,6 +479,9 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .tab {
+        margin-bottom: 0;
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>

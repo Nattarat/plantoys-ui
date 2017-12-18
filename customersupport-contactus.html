@@ -84,6 +84,120 @@
         var Translator = new Translate([]);
         //]]>
     </script>
+
+    <!-- Tabs style -->
+    <style>
+        .tabs {
+            /* Clearfix */
+            line-height: 1.5;
+            margin-bottom: 1.5em;
+            padding: 0;
+        }
+        .tabs::before, .tabs::after {
+            display: table;
+            content: '';
+            clear: both;
+        }
+        @media (max-width: 40em) {
+            .tabs {
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+            }
+        }
+        .tabs .tab {
+            list-style: none;
+        }
+        @media (min-width: 40em) {
+            .tabs .tab {
+            display: inline;
+            }
+        }
+        .tabs .tab:first-child .tab-button {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+        @media (max-width: 40em) {
+            .tabs .tab:first-child .tab-button {
+            border-top: 0;
+            }
+        }
+        @media (max-width: 40em) {
+            .tabs .tab:last-child .tab-button {
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            }
+        }
+        .tabs .tab.active .tab-button {
+            background-color: #f7f7f7;
+        }
+        @media (min-width: 40em) {
+            .tabs .tab.active .tab-button {
+            background-color: #f7f7f7;
+            border: 1px solid #dcdcdc;
+            border-bottom-color: #f7f7f7;
+            margin-bottom: -1px;
+            }
+        }
+        .tabs .tab.active .tab-content {
+            display: block;
+        }
+        .tabs .tab-button {
+            background-color: #fff;
+            border-top: 1px solid #dcdcdc;
+            color: #333;
+            display: block;
+            font-weight: bold;
+            padding: 0.75em 5px;
+            text-decoration: none;
+        }
+        @media (min-width: 40em) {
+            .tabs .tab-button {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-top: 0;
+            display: inline-block;
+            }
+        }
+        .tabs .tab-button:hover {
+            color: #477dca;
+        }
+        .tabs .tab-button:focus {
+            outline: none;
+        }
+        .tabs .tab-content {
+            background: #f7f7f7;
+            display: none;
+            padding: 1.5em 10px;
+            width: 100%;
+        }
+        @media (min-width: 40em) {
+            .tabs .tab-content {
+            border: 1px solid #dcdcdc;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-top-right-radius: 3px;
+            float: left;
+            }
+        }
+        .tabs-menu {}
+        .tabs-menu div {}
+        .tabs-menu div.current {}
+
+        .tabs-menu div a {
+            padding: 10px;
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+        }
+        .tab {
+            margin-bottom: 20px;
+            width: auto;
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {}
+    </style>
 </head>
 
 <body>
@@ -97,7 +211,27 @@
                 </div>
             </div>
 
+            <!-- HTML after integrate with tabs -->
             <div class="customersupport-container-sortby">
+                <div class="container-content is-submenu">
+                    <div class="row tabs-menu">
+                        <div class="col-sm-3 is-text-align-center">
+                            <a class="text-submenu is-active" href="#contact-us">Contact Us</a>
+                        </div>
+                        <div class="col-sm-3 is-text-align-center">
+                            <a class="text-submenu" href="#worldwideoffice">Worldwide Offices</a>
+                        </div>
+                        <div class="col-sm-3 is-text-align-center">
+                            <a class="text-submenu" href="#storelocator">Store Locators</a>
+                        </div>
+                        <div class="col-sm-3 is-text-align-center">
+                            <a class="text-submenu" href="#faqs">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="customersupport-container-sortby">
                 <div class="container-content is-submenu">
                     <div class="row">
                         <div class="col-sm-3 is-text-align-center">
@@ -114,7 +248,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="customersupport">
                 <div class="container-page is-customersupport">
@@ -327,13 +461,15 @@
                                 </div>
                             </div>
                             <div class="customersupport-segment">
-                                <a class="button-primary is-small is-text-right" href="#">
-                                    <input type="file" multiple name="" id="">
-                                    <span class="button-body">
-                                        <span class="button-text is-uppercase is-small">File Upload</span>
-                                    </span>
-                                </a>
-                                <span class="text-default is-middle-small">You may upload photos and documents up to 5 files.</span>
+                                <div class="customersupport-segment-inner is-upload-files">
+                                    <a class="button-primary button-upload-files is-small" href="#">
+                                        <input type="file" multiple name="" id="">
+                                        <span class="button-body">
+                                            <span class="button-text is-small">File Upload</span>
+                                        </span>
+                                    </a>
+                                    <span class="text-default is-middle-small">You may upload photos and documents up to 5 files.</span>
+                                </div>
                                 <ul class="list-bullet is-fileupload">
                                     <li class="list-item">
                                         <span class="text-default is-extra-small">file_name.file_extension</span>
@@ -368,7 +504,7 @@
                                 <span class="text-default">ReCaptcha</span>
                             </div>
                             <div class="customersupport-segment is-text-align-center">
-                                <button class="button-background-image is-wood-brown is-small" type="button">
+                                <button class="button-background-image is-recaptcha is-wood-brown is-small" type="button">
                                     <span class="button-body">
                                         <span class="button-text is-small">Submit Form</span>
                                     </span>

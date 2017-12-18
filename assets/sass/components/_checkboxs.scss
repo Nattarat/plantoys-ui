@@ -15,7 +15,7 @@
 // ==================================================================================================
 @mixin checkbox-variant(
     // Label text
-    $checkbox-label-padding: 0 0 0 30px,
+    $checkbox-label-padding: 0 0 0 25px,
     $checkbox-label-margin: 0,
     $checkbox-label-font-family: font-family(secondary),
     $checkbox-label-font-size: font-secondary-size(size-8),
@@ -235,6 +235,16 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .checkbox-label {
+        &:before {
+            top: 9px;
+        }
+
+        &:after {
+            top: 8px;
+            left: -1px;
+        }
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -357,6 +367,44 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Captcha(Google)
+// ------------------------------------------------
+.captcha {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    @media screen and (max-width: screen(mobile-md-max)) {
+        @include scale(.8);
+    }
 }
 
 // Browser variations

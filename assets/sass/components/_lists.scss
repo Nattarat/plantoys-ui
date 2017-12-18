@@ -192,6 +192,21 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-form-inner {
+        @media screen and (max-width: screen(phablet-sm-max)) {
+            display: block;
+        }
+    }
+
+    .list-form-inner-item {
+        @media screen and (max-width: screen(phablet-sm-max)) {
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 // Browser variations
@@ -1807,6 +1822,21 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            width: 100%;
+        }
+    }
+
+    .list-item-inner {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            width: 100%;
+        }
+    }
 }
 
 // Browser variations

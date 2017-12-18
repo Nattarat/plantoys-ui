@@ -591,11 +591,20 @@ $button-padding-side-deault: 45px;
         background-image: url('#{path-file(backgrounds)}/button/button-wood-brown.jpg');
     }
 
+    &.is-recaptcha {
+        width: 304px;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-recaptcha {
+        @media screen and (max-width: screen(mobile-md-max)) {
+            width: 243px;
+        }
+    }
 }
 
 // Browser variations
