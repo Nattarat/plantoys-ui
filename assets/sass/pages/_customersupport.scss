@@ -109,11 +109,11 @@
             padding-bottom: 40px;
         }
 
-        &.is-recaptcha {
-            display: flex;
-            justify-content: center;
-            padding-bottom: 20px;
-        }
+        // &.is-recaptcha {
+        //     display: flex;
+        //     justify-content: center;
+        //     padding-bottom: 20px;
+        // }
 
         &.is-office {
             margin-bottom: 15px;
@@ -124,12 +124,12 @@
         }
 
         &.is-title {
-            padding: 0 60px 40px 60px;
+            padding: 0 60px 25px 60px;
             text-align: center;
         }
 
         &.is-storelocator {
-            padding: 0 60px 60px 60px;
+            padding: 0 60px 25px 60px;
             margin: auto;
             max-width: 720px;
             text-align: center;
@@ -213,3 +213,19 @@
 // IE
 // Safari
 // Firefox
+
+// Customize style after integrate with magento
+.content-worldwideoffice {
+    .container-page {
+        padding-bottom: 0;
+        margin-bottom: -1px;
+    }
+}
+
+.customersupport-segment {
+    &.is-recaptcha {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+}

@@ -28,15 +28,15 @@ $product-container-padding: 0 50px;
 
     .col-left {
         // flex: 0;
-        width: 20%;
+        width: 26%;
         padding-left: 0;
         padding-right: 0;
     }
 
     .col-main {
         // flex: 1;
-        width: 80%;
-        padding-left: 40px;
+        width: 74%;
+        padding-left: 60px;
         padding-right: 0;
 
         .product-segment-inner {
@@ -884,6 +884,10 @@ $product-container-padding: 0 50px;
     .product-detail-segment {
         &.is-preview,
         &.is-detail {
+            @media screen and (max-width: screen(tablet-md-max)) {
+                left: 0;
+            }
+
             @media screen and (max-width: screen(phablet-sm-max)) {
                 width: 100%;
                 max-width: 100%;
@@ -965,6 +969,7 @@ $product-container-padding: 0 50px;
     }
 }
 
+// Rating star
 .ratings {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -974,7 +979,9 @@ $product-container-padding: 0 50px;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    margin: 0 15px 0 0;
+    display: flex;
+    align-items: center;
+    margin: 0;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -983,7 +990,7 @@ $product-container-padding: 0 50px;
         position: relative;
         width: 75px;
         height: 13px;
-        margin: 0;
+        margin: 0 15px 0 0;
         background-image: url('#{path-file(icons)}/icon-star-percent-inactive.png');
         background-repeat: no-repeat;
         background-position: left center;
@@ -1001,6 +1008,10 @@ $product-container-padding: 0 50px;
             background-position: left center;
             background-size: 75px;
         }
+
+        &.is-item-single {
+            margin-right: 0;
+        }
     }
 
     // STYLES OF STATE
@@ -1017,6 +1028,115 @@ $product-container-padding: 0 50px;
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Rating link
+.product-view {
+    .ratings {
+        .rating-links {
+            float: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+
+            // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+            // >>>>>>>>>>>>>>>>>>>>>>>
+
+            // MIXINS
+            // >>>>>>>>>>>>>>>>>>>>>>>
+
+            // STYLES OF COMPONENT ITSELF
+            // >>>>>>>>>>>>>>>>>>>>>>>
+
+            // STYLES OF CHILD CLASS
+            // >>>>>>>>>>>>>>>>>>>>>>>
+            a,
+            span {
+                display: inline-block;
+                font-family: font-family(primary);
+                font-size: font-primary-size(size-8);
+                font-weight: normal;
+                line-height: 1.3;
+                vertical-align: middle;
+                text-transform: none;
+                letter-spacing: 1px;
+            }
+
+            a {
+                color: color-text(link);
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            span {
+                position: relative;
+                top: -1px;
+                color: color-text(default);
+            }
+
+            // STYLES OF STATE
+            // >>>>>>>>>>>>>>>>>>>>>>>
+
+            // STYLES OF MODIFIER CLASS
+            // >>>>>>>>>>>>>>>>>>>>>>>
+
+            // STYLES OF STATE WITH MODIFIER CLASS
+            // >>>>>>>>>>>>>>>>>>>>>>>
+
+            // MEDIA QUERY
+            // >>>>>>>>>>>>>>>>>>>>>>>
+        }
+    }
+}
+
+// Rating form
+.ratings-form {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    max-width: 1024px;
+    margin: auto auto 45px;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .ratings-form-segment {
+        &.is-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        &.is-question {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    .review-summary-table {
+        border-bottom: 0;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+.review-heading {
+    margin-bottom: 20px;
 }
 
 // Browser variations

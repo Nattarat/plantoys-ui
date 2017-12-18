@@ -748,7 +748,16 @@ $button-padding-side-deault: 45px;
             width: auto;
             height: 16px;
 
-            &.is-blank {}
+            &.is-hover {
+                &.is-blank,
+                &.is-selected {
+                    display: none;
+                }
+            }
+
+            &.is-blank {
+                display: block;
+            }
 
             &.is-selected {
                 display: none;
@@ -784,6 +793,10 @@ $button-padding-side-deault: 45px;
         .button-icon {
             width: auto;
             height: 16px;
+
+            &.is-hover {
+                display: none;
+            }
         }
     }
 

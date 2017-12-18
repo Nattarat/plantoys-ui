@@ -3,7 +3,7 @@
 @mixin container-header(
     $container-background: none,
     $container-height: 50vh, // 540px
-    $container-padding: 0 60px // 0 124px
+    $container-padding: 0 30px // 0 124px
 ) {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -56,12 +56,12 @@
 // ------------------------------------------------
 @mixin text-header(
     $text-header-font: font-family(primary),
-    $text-header-size: font-primary-size(size-7),
+    $text-header-size: font-primary-size(size-1),
     $text-header-color: $color-white,
     $text-header-margin-top: 0px,
     $text-header-margin-bottom: 12px,
     $text-sub-font: font-family(secondary),
-    $text-sub-size: font-secondary-size(size-2),
+    $text-sub-size: font-secondary-size(size-3),
     $text-sub-color: $color-white
 ) {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)

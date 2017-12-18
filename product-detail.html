@@ -144,12 +144,23 @@
                                         </div>
                                     </div>
                                     <div class="product-detail-segment-item is-rating">
-                                        <div class="ratings">
+                                        <!-- Old template -->
+                                        <!-- <div class="ratings">
                                             <div class="rating-box">
                                                 <div class="rating" style="width: 50%;"></div>
                                             </div>
                                         </div>
-                                        <a class="text-link is-extra-small is-bold is-underline is-lineheight-self" href="#">Write a Review</a>
+                                        <a class="text-link is-extra-small is-bold is-underline is-lineheight-self" href="#">Write a Review</a> -->
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <div class="rating" style="width:70%"></div>
+                                            </div>
+                                            <p class="rating-links">
+                                                <a href="#review-form">2 Review(s)</a>
+                                                <span class="separator">|</span>
+                                                <a href="#review-form">Add Your Review</a>
+                                            </p>
+                                        </div>
                                     </div>
                                     <div class="product-detail-segment-item is-description">
                                         <p class="text-default is-middle-small is-black">
@@ -445,6 +456,133 @@
                                 <span class="text-bevel is-middle-medium is-uppercase is-specification">Rating & Review</span>
                             </div>
                             <div class="product-detail-segment-item is-review">
+                                <div class="form-add ratings-form">
+                                    <div class="ratings-form-segment is-title">
+                                        <h2 class="text-default is-middle-medium is-bold">Write Your Own Review</h2>
+                                    </div>
+                                    <form action="http://ptoys.maywz.info/review/product/post/id/330/" method="post" id="review-form">
+                                        <input name="form_key" type="hidden" value="YEnc5oX8YeVkXtIQ">
+                                        <div class="ratings-form-segment is-question">
+                                            <h3 class="text-default is-middle-small">
+                                                You're reviewing:
+                                                <span class="text-default is-bold">TAMBOURINE</span>
+                                                , How do you rate this product?*
+                                            </h3>
+                                        </div>
+                                        <div class="fieldset">
+                                            <span id="input-message-box"></span>
+
+
+                                            <div id="product-review-table" class="data-table review-summary-table">
+                                                <div class="list-rating-select">
+                                                    <div class="list-item">
+                                                        <div class="ratings">
+                                                            <div class="rating-box is-item-single">
+                                                                <span class="rating-number">1</span>
+                                                                <span class="rating nobr" style="width: 20%;">1 star</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <div class="ratings">
+                                                            <div class="rating-box is-item-single">
+                                                                <span class="rating-number">2</span>
+                                                                <span class="rating nobr" style="width: 40%;">2 star</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <div class="ratings">
+                                                            <div class="rating-box is-item-single">
+                                                                <span class="rating-number">3</span>
+                                                                <span class="rating nobr" style="width: 60%;">3 star</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <div class="ratings">
+                                                            <div class="rating-box is-item-single">
+                                                                <span class="rating-number">4</span>
+                                                                <span class="rating nobr" style="width: 80%;">4 star</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <div class="ratings">
+                                                            <div class="rating-box is-item-single">
+                                                                <span class="rating-number">5</span>
+                                                                <span class="rating nobr" style="width: 100%;">5 star</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-rating-select">
+                                                    <div class="list-item">
+                                                        <label for="Quality_1"><input type="radio" name="ratings[1]" id="Quality_1" value="1" class="radio"></label>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <label for="Quality_2"><input type="radio" name="ratings[1]" id="Quality_2" value="2" class="radio"></label>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <label for="Quality_3"><input type="radio" name="ratings[1]" id="Quality_3" value="3" class="radio"></label>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <label for="Quality_4"><input type="radio" name="ratings[1]" id="Quality_4" value="4" class="radio"></label>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <label for="Quality_5"><input type="radio" name="ratings[1]" id="Quality_5" value="5" class="radio"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <input type="hidden" name="validate_rating" class="validate-rating" value="">
+                                            <script type="text/javascript">decorateTable('product-review-table')</script>
+
+                                            <ul class="list-form is-rating">
+                                                <li class="list-item">
+                                                    <label for="review_field" class="text-default is-extra-small is-bold is-gray-light is-uppercase">Let us know your thoughts*</label>
+                                                    <!-- Add class "is-error" for show error field -->
+                                                    <textarea name="detail" id="review_field" class="field-secondary is-textarea is-bold is-fluid"></textarea>
+                                                    <!-- Add class "is-active" for show validation message -->
+                                                    <div class="field-validation">
+                                                        <span class="text-default is-extra-small is-error">error_meesage</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <label for="summary_field" class="text-default is-extra-small is-bold is-gray-light is-uppercase">Summary of Your Review*</label>
+                                                    <!-- Add class "is-error" for show error field -->
+                                                    <input name="title" id="summary_field" class="field-secondary is-bold is-fluid" placeholder="" type="text" value="">
+                                                    <!-- Add class "is-active" for show validation message -->
+                                                    <div class="field-validation">
+                                                        <span class="text-default is-extra-small is-error">error_meesage</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <label for="nickname_field" class="text-default is-extra-small is-bold is-gray-light is-uppercase">What's your nickname?*</label>
+                                                    <!-- Add class "is-error" for show error field -->
+                                                    <input name="nickname" id="nickname_field" class="field-secondary is-bold is-fluid" placeholder="" type="text" value="">
+                                                    <!-- Add class "is-active" for show validation message -->
+                                                    <div class="field-validation">
+                                                        <span class="text-default is-extra-small is-error">error_meesage</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item">
+                                                    <button class="button-background-image is-wood-blue is-small is-fluid" type="submit">
+                                                        <span class="button-body">
+                                                            <span class="button-text is-small">Submit Review</span>
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="review-heading">
+                                    <span class="text-default is-middle-medium">Customer Reviews</span>
+                                    <span class="text-default is-middle-medium is-bold">2 item(s)</span>
+                                </div>
+
                                 <div class="list-review">
                                     <div class="list-item">
                                         <div class="product-detail-segment-item-inner is-review-name">

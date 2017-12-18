@@ -53,7 +53,9 @@
         &.is-pink{
             background: $color-pink-1;
         }
-        .card-detail , .card-sub-detail{
+        .card-detail,
+        .card-sub-detail,
+        .created-time {
             color: $color-white;
         }
     }

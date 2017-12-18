@@ -187,6 +187,12 @@
         }
     }
 
+    &.is-rating {
+        display: block;
+        max-width: 480px;
+        margin: auto;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1114,15 +1120,6 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .list-item {
         position: relative;
-    }
-
-    .list-link {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        border: 1px solid $color-gray-10;
 
         &:hover {
             // background-color: $color-gray-10;
@@ -1165,7 +1162,71 @@
                     color: color-text(red-secondary);
                 }
             }
+
+            .button-typography {
+                &.is-wishlist,
+                &.is-addcart {
+                    .button-icon {
+                        display: none;
+
+                        &.is-hover {
+                            display: block;
+                        }
+                    }
+                }
+
+                &.is-wishlist {
+                    .button-icon {
+                        &.is-hover {
+                            &.is-blank {
+                                display: block;
+                            }
+
+                            &.is-selected {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .button-icon {
+                            &.is-hover {
+                                &.is-blank {
+                                    display: none;
+                                }
+
+                                &.is-selected {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    &.is-active {
+                        .button-icon {
+                            &.is-hover {
+                                &.is-blank {
+                                    display: none;
+                                }
+
+                                &.is-selected {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    .list-link {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        border: 1px solid $color-gray-10;
 
         .text-product,
         .price-number {
@@ -1423,6 +1484,62 @@
         display: block;
         margin: 0 0 20px;
     }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Rating select
+// ------------------------------------------------
+.list-rating-select {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include list-variant(
+        $list-display: flex,
+        $list-padding: 0,
+        $list-margin: 0,
+
+        // List item
+        $list-item-display: block,
+        $list-item-padding: 0,
+        $list-item-margin: 0 30px 5px 0
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-item {
+        min-width: 75px;
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 5px;
+            margin-right: 0;
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -1810,6 +1927,11 @@
         width: 50%;
     }
 
+    .list-item {
+        &:last-child {
+            margin-bottom: 2px;
+        }
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>

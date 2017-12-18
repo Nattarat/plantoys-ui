@@ -360,12 +360,12 @@ $field-padding-side-deault: 20px;
 //
 // ------------------------------------------------
 @mixin form-icon(
-    $form-icon-max-width: 650px,
-    $form-icon-height: 48px,
+    $form-icon-max-width: 320px,
+    $form-icon-height: 40px,
     $form-icon-border: none,
     $form-icon-border-radius: 5px,
     $form-icon-font-size: font-secondary-size(size-4),
-    $place-holder-padding: 0px 23px,
+    $place-holder-padding: 0px 20px,
     $icon-code: "\f002",
     $icon-size: 22px,
     $icon-top: 15px,
@@ -406,6 +406,10 @@ $field-padding-side-deault: 20px;
         padding: $place-holder-padding;
         font-family: font-family(secondary);
         font-size: $form-icon-font-size;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     // STYLES OF STATE
@@ -435,7 +439,9 @@ $field-padding-side-deault: 20px;
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @include form-icon();
+    @include form-icon(
+        $form-icon-font-size: font-secondary-size(size-8)
+    );
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>

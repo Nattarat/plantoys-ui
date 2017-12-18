@@ -918,6 +918,32 @@
 // Safari
 // Firefox
 
+// Datetime card
+// ------------------------------------------------
+
+.date {
+    padding-bottom: 15px;
+    padding-left: 38px;
+    padding-right: 38px;
+
+    .created-time {
+        font-family: font-family(secondary);
+        font-size: font-secondary-size(size-8);
+        font-weight: normal;
+        line-height: 1.3;
+        vertical-align: middle;
+        color: $color-gray-1;
+        text-transform: none;
+        letter-spacing: 1px;
+    }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
 // Calibration
 // - Base
 // - Window
