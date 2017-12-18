@@ -82,7 +82,7 @@
     $label-opacity:1,
     // select
     $select-width: 290px,
-    $select-height: 55px ,
+    $select-height: auto ,
     $select-font-size: 24px,
     $select-padding: 2px 2px 2px 18px,
     $select-border-radius: 5px,
@@ -125,7 +125,7 @@
         font-size: $label-font-size;
         color:  $label-color;
         min-width: $label-min-height;
-        padding-top: 6px;
+        padding-top: 0px;
         opacity: $label-opacity;
         &:hover{
             text-decoration: none;
