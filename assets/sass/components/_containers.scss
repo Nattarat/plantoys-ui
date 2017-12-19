@@ -349,6 +349,12 @@
             padding-left: 0;
             padding-right: 0;
         }
+
+        &.is-checkout-account {
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     .container-panel-segment-inner {

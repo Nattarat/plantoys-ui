@@ -83,6 +83,10 @@
                 display: block;
             }
         }
+
+        &.is-emptycart {
+            padding-bottom: 0;
+        }
     }
 
     .cart-container-scroll {
