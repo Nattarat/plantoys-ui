@@ -116,6 +116,14 @@
         &.is-button {
             padding-top: 30px;
         }
+
+        &.is-spacingbottom-small {
+            margin-bottom: 5px;
+        }
+
+        &.is-spacingbottom-blank {
+            margin-bottom: 0;
+        }
     }
 
     .list-form-inner {
@@ -191,6 +199,11 @@
         display: block;
         max-width: 480px;
         margin: auto;
+    }
+
+    &.is-footer-button-wizard {
+        display: flex;
+        justify-content: space-between;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

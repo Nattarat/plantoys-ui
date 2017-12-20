@@ -920,7 +920,6 @@
 
 // Datetime card
 // ------------------------------------------------
-
 .date {
     padding-bottom: 15px;
     padding-left: 38px;
@@ -943,6 +942,18 @@
 // IE
 // Safari
 // Firefox
+
+// Validation message (Magento)
+// ------------------------------------------------
+.validation-advice {
+    font-family: font-family(secondary);
+    font-size: font-secondary-size(size-8);
+    font-weight: normal;
+    line-height: 1.3;
+    vertical-align: middle;
+    text-transform: none;
+    letter-spacing: 1px;
+}
 
 // Calibration
 // - Base
