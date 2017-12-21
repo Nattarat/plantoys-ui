@@ -374,14 +374,14 @@
     .toy-detail{
         border-top-style: dotted;
         border-width: 5px;
-        border-color: $color-blue-15;
+        border-color: $color-blue-20;
         display:flex;
         flex-wrap:wrap;
         padding: 22px 0px 0px 0px;
         .text-header{
             font-family: font-family(primary);
             font-size: 16px;
-            color: $color-blue-15;
+            color: $color-blue-19;
         }
         .text-detail{
             font-family: font-family(secondary);
