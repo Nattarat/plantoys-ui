@@ -955,6 +955,14 @@
     letter-spacing: 1px;
 }
 
+// Loading message
+// ------------------------------------------------
+.please-wait {
+    &.is-left {
+        margin-left: 10px;
+    }
+}
+
 // Calibration
 // - Base
 // - Window

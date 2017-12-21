@@ -143,6 +143,11 @@ $field-padding-side-deault: 20px;
         width: 100%;
     }
 
+    &.is-fluid-small {
+        width: 100%;
+        max-width: 290px;
+    }
+
     &.is-inlineblock {
         display: inline-block;
         vertical-align: middle;
