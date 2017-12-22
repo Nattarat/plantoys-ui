@@ -124,43 +124,45 @@
                     <!-- Select method -->
                     <div class="container-panel is-form-vertical">
                         <div class="container-panel-segment is-form-vertical">
-                            <form id="co-shipping-method-form" action="">
-                                <div id="checkout-shipping-method-load" class="select-method">
-                                    <dl class="sp-methods">
-                                        <dt>Select Shipping Method</dt>
-                                        <dd>
-                                            <ul>
+                            <form action="" id="co-payment-form">
+                                <div class="select-payment">
+                                    <dl class="sp-methods list-checkbox" id="checkout-payment-method-load">
+                                        <dt id="dt_method_cashondelivery">
+                                            <input id="p_method_cashondelivery" value="cashondelivery" type="radio" name="payment[method]" title="Cash On Delivery" onclick="payment.switchMethod('cashondelivery')" checked="checked" class="radio" autocomplete="off">
+                                            <label for="p_method_cashondelivery">Cash On Delivery</label>
+                                        </dt>
+                                        <dd id="dd_method_cashondelivery">
+                                            <ul class="form-list checkout-agreements" id="payment_form_cashondelivery" style="">
                                                 <li>
-                                                    <input name="shipping_method" type="radio" value="matrixrate_matrixrate_1" id="s_method_matrixrate_matrixrate_1" checked="checked"
-                                                        class="radio">
-                                                    <label for="s_method_matrixrate_matrixrate_1">
-                                                        ไปรษณีย์ไทย
-                                                        <span class="price">฿50.00</span>
-                                                    </label>
+                                                    <div class="cashondelivery-instructions-content agreement-content">
+                                                        เก็บเงินปลายทาง
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </dd>
-                                        <dt>Free Shipping</dt>
-                                        <dd>
-                                            <ul>
+                                        <dt id="dt_method_purchaseorder">
+                                            <input id="p_method_purchaseorder" value="purchaseorder" type="radio" name="payment[method]" title="Purchase Order" onclick="payment.switchMethod('purchaseorder')" class="radio" autocomplete="off">
+                                            <label for="p_method_purchaseorder">Purchase Order </label>
+                                        </dt>
+                                        <dd id="dd_method_purchaseorder">
+                                            <ul class="form-list" id="payment_form_purchaseorder">
                                                 <li>
-                                                    <input name="shipping_method" type="radio" value="freeshipping_freeshipping" id="s_method_freeshipping_freeshipping" class="radio">
-                                                    <label for="s_method_freeshipping_freeshipping">
-                                                        Free
-                                                        <span class="price">฿0.00</span>
-                                                    </label>
+                                                    <label for="po_number" class="required"><em>*</em>Purchase Order Number</label>
+                                                    <div class="input-box">
+                                                        <input type="text" id="po_number" name="payment[po_number]" title="Purchase Order Number" class="input-text required-entry" value="" disabled="" autocomplete="off">
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </dd>
-                                        <dt>Flat Rate</dt>
-                                        <dd>
-                                            <ul>
+                                        <dt id="dt_method_checkmo">
+                                            <input id="p_method_checkmo" value="checkmo" type="radio" name="payment[method]" title="Check / Money order" onclick="payment.switchMethod('checkmo')" class="radio" autocomplete="off">
+                                            <label for="p_method_checkmo">Check / Money order </label>
+                                        </dt>
+                                        <dd id="dd_method_checkmo">
+                                            <ul class="form-list checkmo-list" id="payment_form_checkmo">
                                                 <li>
-                                                    <input name="shipping_method" type="radio" value="flatrate_flatrate" id="s_method_flatrate_flatrate" class="radio">
-                                                    <label for="s_method_flatrate_flatrate">
-                                                        Fixed
-                                                        <span class="price">฿5.00</span>
-                                                    </label>
+                                                    <label>Send Check to:</label>
+                                                    <address class="checkmo-mailing-address">โอนเงินผ่านบัญชีธนาคาร </address>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -188,108 +190,6 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
-                    </div>
-
-
-                    <!-- Table data -->
-                    <div class="container-panel is-table">
-                        <div class="container-panel-segment">
-                            <div class="table-block is-myorder is-scrollable">
-                                <div class="table-header">
-                                    <div class="table-row">
-                                        <div class="table-column is-header">
-                                            <span class="text-table is-small is-bold is-gray-light is-uppercase">
-                                                Date
-                                            </span>
-                                        </div>
-                                        <div class="table-column is-header">
-                                            <span class="text-table is-small is-bold is-gray-light is-uppercase">
-                                                Order number
-                                            </span>
-                                        </div>
-                                        <div class="table-column is-header">
-                                            <span class="text-table is-small is-bold is-gray-light is-uppercase">
-                                                Price
-                                            </span>
-                                        </div>
-                                        <div class="table-column is-header">
-                                            <span class="text-table is-small is-bold is-gray-light is-uppercase">
-                                                Status
-                                            </span>
-                                        </div>
-                                        <div class="table-column is-header">
-                                            <span class="text-table is-small is-bold is-gray-light is-uppercase">
-                                                View detail
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="table-body">
-                                    <div class="table-row">
-                                        <div class="table-column">
-                                            <span class="text-table">
-                                                24-03-2017
-                                            </span>
-                                        </div>
-                                        <div class="table-column">
-                                            <span class="text-table">
-                                                PT000190002922
-                                            </span>
-                                        </div>
-                                        <div class="table-column">
-                                            <span class="text-table">
-                                                $150.00
-                                            </span>
-                                        </div>
-                                        <div class="table-column">
-                                            <a class="button-typography" href="#">
-                                                <span class="button-body">
-                                                    <img class="button-icon is-text-blank is-table" src="../assets/images/icon/icon-goto-page.png" alt="Icon">
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="table-column">
-                                            <a class="button-typography" href="#">
-                                                <span class="button-body">
-                                                    <img class="button-icon is-text-blank is-table" src="../assets/images/icon/icon-list-unorder.png" alt="Icon">
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="table-row">
-                                        <div class="table-column">
-                                            <span class="text-table">
-                                                24-03-2017
-                                            </span>
-                                        </div>
-                                        <div class="table-column">
-                                            <span class="text-table">
-                                                PT000190002922
-                                            </span>
-                                        </div>
-                                        <div class="table-column">
-                                            <span class="text-table">
-                                                $150.00
-                                            </span>
-                                        </div>
-                                        <div class="table-column">
-                                            <a class="button-typography" href="#">
-                                                <span class="button-body">
-                                                    <img class="button-icon is-text-blank is-table" src="../assets/images/icon/icon-goto-page.png" alt="Icon">
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="table-column">
-                                            <a class="button-typography" href="#">
-                                                <span class="button-body">
-                                                    <img class="button-icon is-text-blank is-table" src="../assets/images/icon/icon-list-unorder.png" alt="Icon">
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

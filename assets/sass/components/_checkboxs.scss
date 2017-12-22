@@ -574,3 +574,190 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
 }
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Payment
+// ------------------------------------------------
+
+// Overwrite style magento
+.sp-methods {
+    dt {
+        &:first-child {
+            margin: 0 0 5px;
+        }
+    }
+
+    .form-list {
+        padding-left: 0;
+    }
+}
+
+.select-payment {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    dl,
+    .sp-methods {
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
+        margin-bottom: 0;
+    }
+
+    // Button accordion
+    dt {
+        position: relative;
+        display: block;
+        padding: 0;
+        margin: 0 0 5px;
+        background-color: transparent;
+        border-radius: 0;
+        border: 0;
+        // font-family: font-family(primary);
+        // font-size: font-primary-size(size-8);
+        // font-weight: normal;
+        // color: color-text(default);
+        // text-transform: none;
+        // letter-spacing: 1px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        input[type=checkbox],
+        input[type=radio] {
+            display: none;
+
+            &:checked {
+                + label {
+                    // Box
+                    &:before {
+                        background-color: $color-blue-3;
+                        border: 0;
+                    }
+
+                    // Check icon
+                    &:after {
+                        @include opacity(1);
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        label {
+            position: relative;
+            display: inline-block;
+            padding: 0 0 0 25px;
+            margin: 0;
+            background-color: transparent;
+            font-family: font-family(secondary);
+            font-size: font-secondary-size(size-8);
+            font-weight: normal;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            color: color-text(default);
+            vertical-align: middle;
+            cursor: pointer;
+
+            &:before,
+            &:after {
+                @include translate(0, -50%);
+                content: ' ';
+                display: block;
+                position: absolute;
+                z-index: zindex(lv1);
+            }
+
+            // Box
+            &:before {
+                top: 9px;
+                left: 0;
+                width: 14px;
+                height: 14px;
+                background-color: $color-white;
+                border: 1px solid $color-gray-9;
+                border-radius: 50%;
+            }
+
+            // Check icon
+            &:after {
+                @include transition(all 0.3s ease);
+                @include opacity(0);
+                visibility: hidden;
+                top: 8px;
+                left: -1px;
+                width: 14px;
+                height: 14px;
+                background-image: url('#{path-file(icons)}/icon-check-white.png');
+            }
+
+            .price {
+                font-family: font-family(primary);
+                font-size: font-primary-size(size-8);
+                font-weight: normal;
+            }
+        }
+    }
+
+    // Container list filter option
+    dd {
+        // min-width: 150px;
+        padding: 0;
+        margin: 0 0 0 25px;
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                padding: 0;
+                margin: 0;
+
+                .agreement-content {
+                    max-width: initial;
+                    max-height: initial;
+                    margin-bottom: 0;
+                    padding: 0;
+                    background: transparent;
+                    border: 0;
+                }
+            }
+        }
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
