@@ -122,78 +122,137 @@
                     </div>
 
                     <!-- Select method -->
-                    <div class="container-panel is-form-vertical">
-                        <div class="container-panel-segment is-form-vertical">
-                            <form id="co-shipping-method-form" action="">
-                                <div id="checkout-shipping-method-load" class="select-method">
-                                    <dl class="sp-methods">
-                                        <dt>Select Shipping Method</dt>
+                    <div class="container-panel is-form-vertical is-blank">
+                        <form id="co-shipping-method-form" action="">
+                            <div id="checkout-shipping-method-load" class="select-method">
+                                <!-- Normal select -->
+                                <!-- <dl class="sp-methods">
+                                    <dt>Select Shipping Method</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <input name="shipping_method" type="radio" value="matrixrate_matrixrate_1" id="s_method_matrixrate_matrixrate_1" checked="checked"
+                                                    class="radio">
+                                                <label for="s_method_matrixrate_matrixrate_1">
+                                                    ไปรษณีย์ไทย
+                                                    <span class="price">฿50.00</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                    <dt>Free Shipping</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <input name="shipping_method" type="radio" value="freeshipping_freeshipping" id="s_method_freeshipping_freeshipping" class="radio">
+                                                <label for="s_method_freeshipping_freeshipping">
+                                                    Free
+                                                    <span class="price">฿0.00</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                    <dt>Flat Rate</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <input name="shipping_method" type="radio" value="flatrate_flatrate" id="s_method_flatrate_flatrate" class="radio">
+                                                <label for="s_method_flatrate_flatrate">
+                                                    Fixed
+                                                    <span class="price">฿5.00</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl> -->
+                                <dl class="sp-methods for-checkbox-bar">
+                                    <div class="checkbox-bar">
+                                        <dt>
+                                            Select Shipping Method</dt>
                                         <dd>
                                             <ul>
                                                 <li>
-                                                    <input name="shipping_method" type="radio" value="matrixrate_matrixrate_1" id="s_method_matrixrate_matrixrate_1" checked="checked"
-                                                        class="radio">
+                                                    <input name="shipping_method" type="radio" value="matrixrate_matrixrate_1" id="s_method_matrixrate_matrixrate_1" checked="checked" class="radio">
                                                     <label for="s_method_matrixrate_matrixrate_1">
-                                                        ไปรษณีย์ไทย
+                                                        <span class="method-item">
+                                                            <img class="method-logo" src="../assets/images/icon/shipping/icon-shipping-thailandpost.jpg" alt="Logo">
+                                                            <span class="text-default method-name is-bold is-black">ไปรษณีย์ไทย</span>
+                                                        </span>
                                                         <span class="price">฿50.00</span>
                                                     </label>
+                                                    <div class="checkbox-bar-background"></div>
                                                 </li>
                                             </ul>
                                         </dd>
+                                    </div>
+                                    <div class="checkbox-bar">
                                         <dt>Free Shipping</dt>
                                         <dd>
                                             <ul>
                                                 <li>
                                                     <input name="shipping_method" type="radio" value="freeshipping_freeshipping" id="s_method_freeshipping_freeshipping" class="radio">
                                                     <label for="s_method_freeshipping_freeshipping">
-                                                        Free
+                                                        <span class="method-item">
+                                                            <img class="method-logo" src="../assets/images/icon/shipping/icon-shipping-thailandpost.jpg" alt="Logo">
+                                                            <span class="text-default method-name is-bold is-black">Free</span>
+                                                        </span>
                                                         <span class="price">฿0.00</span>
                                                     </label>
+                                                    <div class="checkbox-bar-background"></div>
                                                 </li>
                                             </ul>
                                         </dd>
+                                    </div>
+                                    <div class="checkbox-bar">
                                         <dt>Flat Rate</dt>
                                         <dd>
                                             <ul>
                                                 <li>
                                                     <input name="shipping_method" type="radio" value="flatrate_flatrate" id="s_method_flatrate_flatrate" class="radio">
                                                     <label for="s_method_flatrate_flatrate">
-                                                        Fixed
+                                                        <span class="method-item">
+                                                            <img class="method-logo" src="../assets/images/icon/shipping/icon-shipping-thailandpost.jpg" alt="Logo">
+                                                            <span class="text-default method-name is-bold is-black">Fixed</span>
+                                                        </span>
                                                         <span class="price">฿5.00</span>
                                                     </label>
+                                                    <div class="checkbox-bar-background"></div>
                                                 </li>
                                             </ul>
                                         </dd>
-                                    </dl>
-                                </div>
+                                    </div>
 
-                                <div class="list-form is-fluid is-footer-button-wizard-partrition">
-                                    <div class="list-item is-button">
-                                        <a class="button-background-image is-wood-blue is-small is-padding-blank" href="#">
-                                            <span class="button-body">
-                                                <span class="button-text is-small">Back</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="list-item is-button">
-                                        <span class="please-wait is-left">
-                                            <img src="http://ptoys.maywz.info/skin/frontend/plan_toys/default/images/opc-ajax-loader.gif" alt="Loading next step..." title="Loading next step..." class="v-middle">
-                                            <span class="text-default is-extra-small">Loading next step...</span>
+
+
+                                </dl>
+                            </div>
+
+                            <div class="list-form is-fluid is-footer-button-wizard-partrition">
+                                <div class="list-item is-button">
+                                    <a class="button-background-image is-wood-blue is-small is-padding-blank" href="#">
+                                        <span class="button-body">
+                                            <span class="button-text is-small">Back</span>
                                         </span>
-                                        <button class="button-background-image is-wood-green is-small is-padding-blank validation-passed" type="button">
-                                            <span class="button-body">
-                                                <span class="button-text is-small">Continue</span>
-                                            </span>
-                                        </button>
-                                    </div>
+                                    </a>
                                 </div>
-                            </form>
-                        </div>
+                                <div class="list-item is-button">
+                                    <span class="please-wait is-left">
+                                        <img src="http://ptoys.maywz.info/skin/frontend/plan_toys/default/images/opc-ajax-loader.gif" alt="Loading next step..." title="Loading next step..." class="v-middle">
+                                        <span class="text-default is-extra-small">Loading next step...</span>
+                                    </span>
+                                    <button class="button-background-image is-wood-green is-small is-padding-blank validation-passed" type="button">
+                                        <span class="button-body">
+                                            <span class="button-text is-small">Continue</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
 
 
                     <!-- Table data -->
-                    <div class="container-panel is-table">
+                    <div class="container-panel is-table hidden">
                         <div class="container-panel-segment">
                             <div class="table-block is-myorder is-scrollable">
                                 <div class="table-header">
