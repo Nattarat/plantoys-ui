@@ -115,6 +115,7 @@ $button-padding-side-deault: 45px;
     }
 
     .button-icon {
+        float: none;
         display: inline-block;
         margin-right: $button-icon-spacing-right;
         vertical-align: middle;
@@ -260,6 +261,10 @@ $button-padding-side-deault: 45px;
         left: 0;
         width: 100%;
         height: 100%;
+    }
+
+    .please-wait {
+        margin: 0;
     }
 
     // STYLES OF STATE
