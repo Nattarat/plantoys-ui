@@ -198,6 +198,10 @@ $button-padding-side-deault: 45px;
         vertical-align: middle;
         letter-spacing: 1px;
 
+        &.is-normal {
+            font-family: font-family(secondary);
+        }
+
         &.is-uppercase {
             text-transform: uppercase;
         }

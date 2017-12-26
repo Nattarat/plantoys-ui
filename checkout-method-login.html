@@ -123,263 +123,158 @@
                     </div>
 
 
-
-
                     <div id="checkout-step-login" class="step a-item">
-                        <div class="container-panel is-form-vertical">
-                            <div class="container-panel-segment is-checkout-account">
-                                <div class="list-form is-fluid">
-                                    <div class="list-item">
-                                        <div id="bt-loginfb">
-                                            <button class="button-background-image is-wood-blue is-small is-fluid" type="button" onclick="login();return false;">
-                                                <span class="button-body">
-                                                    <img class="button-icon is-small" src="http://ptoys.maywz.info/skin/frontend/plan_toys/default//images/icon/icon-facebook-square-white.png" alt="Icon">
-                                                    <span class="button-text is-small">Log in with Facebook</span>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <script src="http://connect.facebook.net/en_US/all.js"></script>
-                                        <script type="text/javascript">
-                                                    var newwindow;
-                                            var intId;
-                                            function login(){
-                                                var  screenX    = typeof window.screenX != 'undefined' ? window.screenX : window.screenLeft;
-                                                var	 screenY    = typeof window.screenY != 'undefined' ? window.screenY : window.screenTop;
-                                                var	 outerWidth = typeof window.outerWidth != 'undefined' ? window.outerWidth : document.body.clientWidth;
-                                                var	 outerHeight = typeof window.outerHeight != 'undefined' ? window.outerHeight : (document.body.clientHeight - 22);
-                                                var	 width    = 500;
-                                                var	 height   = 270;
-                                                var	 left     = parseInt(screenX + ((outerWidth - width) / 2), 10);
-                                                var	 top      = parseInt(screenY + ((outerHeight - height) / 2.5), 10);
-                                                var	 features = (
-                                                        'width=' + width +
-                                                        ',height=' + height +
-                                                        ',left=' + left +
-                                                        ',top=' + top
-                                                    );
-
-                                                newwindow=window.open('https://www.facebook.com/dialog/oauth?client_id=124591101579620&redirect_uri=http%3A%2F%2Fptoys.maywz.info%2Ffblogin%2Findex%2Findex%2Fauth%2F1%2F&state=1a1868240de432185902db9bc4749602&display=popup&scope=email','Login_by_facebook');
-
-                                                if (window.focus) {
-                                                    newwindow.focus()
-                                                }
-                                                return false;
-                                            }
-                                        </script>
-                                    </div>
-                                    <div class="list-item">
-                                        <script src="https://apis.google.com/js/api:client.js" async="" defer="" gapi_processed="true"></script>
-                                        <script>
-                                            function start() {
-                                                gapi.load('auth2', function() {
-                                                auth2 = gapi.auth2.init({
-                                                    client_id: '131550421435-17l1809ji7h30i0n8oqfi7aiboumic0g.apps.googleusercontent.com',
-                                                    cookiepolicy: 'single_host_origin',
-                                                    ux_mode: 'redirect',
-                                                    redirect_uri: 'http://ptoys.maywz.info/customer/account/login'
-                                                });
-                                                });
-                                            }
-
-                                            var startApp = function() {
-                                            gapi.load('auth2', function(){
-                                                // Retrieve the singleton for the GoogleAuth library and set up the client.
-                                                auth2 = gapi.auth2.init({
-                                                client_id: '131550421435-17l1809ji7h30i0n8oqfi7aiboumic0g.apps.googleusercontent.com',
-                                                cookiepolicy: 'single_host_origin',
-                                                ux_mode: 'redirect',
-                                                redirect_uri: 'http://ptoys.maywz.info/customer/account/login'
-                                                });
-
-                                                // Listen for sign-in state changes.
-                                                //auth2.isSignedIn.listen(signinChanged);
-
-                                                // Listen for changes to current user.
-                                                auth2.currentUser.listen(userChanged);
-
-                                                attachSignin(document.getElementById('google_button_login'));
-                                            });
-                                            };
-
-                                            function attachSignin(element) {
-                                            auth2.attachClickHandler(element, {},
-                                                function(googleUser) {
-                                                    id_token = googleUser.getAuthResponse().id_token;
-                                                    url = "http://ptoys.maywz.info/googlelogin/index/index/?id_token=" + id_token;
-                                                    window.location = url;
-
-                                                }, function(error) {
-                                                    alert(JSON.stringify(error, undefined, 2));
-                                                });
-                                            }
-
-                                            var userChanged = function (user) {
-                                                if(user.isSignedIn()){
-                                                    googleUser = user;
-                                                    updateGoogleUser();
-                                                }
-
-                                            };
-
-                                            var updateGoogleUser = function () {
-
-                                                if (googleUser) {
-                                                    id_token = googleUser.getAuthResponse().id_token;
-                                                    googleUser.disconnect();
-                                                    url = "http://ptoys.maywz.info/googlelogin/index/index/?id_token=" + id_token;
-                                                    window.location = url;
-                                                }
-                                            };
-
-
-                                            jQuery(document).ready(function(){
-                                                startApp();
-                                            });
-                                        </script>
-                                        <button id="google_button_login" class="button-background-image is-wood-red is-small is-fluid" type="button">
-                                            <span class="button-body">
-                                                <img class="button-icon is-small" src="http://ptoys.maywz.info/skin/frontend/plan_toys/default//images/icon/icon-google-g-white.png" alt="Icon">
-                                            <span class="button-text is-small">Log in with Google</span>
-                                            </span>
-                                        </button>
-                                        <meta name="google-signin-client_id" content="131550421435-17l1809ji7h30i0n8oqfi7aiboumic0g.apps.googleusercontent.com">
-                                        <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
-                                    </div>
-                                </div>
-                                <div class="partition-or"></div>
-                                <!-- <h3>Returning Customers</h3> -->
-                                <form id="login-form" action="http://ptoys.maywz.info/customer/account/loginPost/" method="post">
-                                    <div class="list-form is-fluid">
-                                        <input name="form_key" type="hidden" value="mT8tu1obOY0lgHH5">
-                                        <!-- <p class="description">Sign in to speed up your checkout process</p>
-                                        <p class="required">* Required Fields</p> -->
-                                        <div class="list-item">
-                                            <input class="field-secondary is-fluid required-entry validate-email" placeholder="Email Address" type="email" id="email" autocapitalize="off" autocorrect="off" spellcheck="false" name="login[username]" value="" title="Email Address">
-                                            <div class="field-validation">
-                                                <span class="text-default is-extra-small is-error">error_meesage</span>
+                        <div class="account is-checkout-login">
+                            <div class="container-content is-checkout-account">
+                                <div class="container-content-row">
+                                    <div class="container-content-column is-column-half">
+                                        <div class="container-panel">
+                                            <div class="container-panel-segment">
+                                                <!-- ============================ -->
+                                                <div class="list-form is-fluid">
+                                                    <div class="list-item">
+                                                        <p class="text-default is-bold is-uppercase">Register to create an account</p>
+                                                        <p class="text-default is-paragraph is-middle-small is-italic">Register with us for future convenience</p>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <button class="button-background-image is-wood-green is-small is-fluid" type="submit">
+                                                            <span class="button-body">
+                                                                <span class="button-text is-small">Register</span>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- ============================ -->
                                             </div>
                                         </div>
-                                        <div class="list-item">
-                                            <input class="field-secondary is-fluid required-entry validate-password" placeholder="Password" type="password" title="Password" id="pass" name="login[password]">
-                                            <div class="field-validation">
-                                                <span class="text-default is-extra-small is-error">error_meesage</span>
-                                            </div>
-                                        </div>
-                                        <div class="list-item">
-                                            <button class="button-background-image is-wood-green is-small is-fluid" type="submit">
-                                                <span class="button-body">
-                                                    <span class="button-text is-small">Log in</span>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input name="context" type="hidden" value="checkout">
                                     </div>
-                                    <div class="account is-background-blank">
-                                        <div class="account-footer">
-                                            <div class="account-footer-segment is-notice">
-                                                <div class="row">
-                                                    <div class="col-xs-6">
-                                                        <div class="checkbox-primary">
-                                                            <input type="checkbox" name="persistent_remember_me" class="checkbox" id="remember_meWOllZpBwGA" checked="checked" title="Remember Me">
-                                                            <label class="checkbox-label" for="remember_meWOllZpBwGA">Remember Me</label>
-                                                            <a class="link-tip" href="#"></a>
-                                                        </div>
-
-                                                        <div class="remember-me-popup">
-                                                            <div class="remember-me-popup-head">
-                                                                <h3>What's this?</h3>
-                                                                <a href="#" class="remember-me-popup-close" title="Close">Close</a>
+                                    <div class="container-content-column is-column-half">
+                                        <div class="container-panel">
+                                            <div class="container-panel-segment">
+                                                <div class="list-form is-fluid">
+                                                    <div class="list-item">
+                                                        <p class="text-default is-bold is-uppercase">Return customers</p>
+                                                        <p class="text-default is-paragraph is-middle-small is-italic">Log in to speed up your checkout process</p>
+                                                    </div>
+                                                    <div class="list-item is-spacingbottom-blank">
+                                                        <div class="list-form-inner">
+                                                            <div class="list-form-inner-item">
+                                                                <div id="bt-loginfb">
+                                                                    <button class="button-background-image is-wood-blue is-small is-fluid" type="button" onclick="login();return false;">
+                                                                        <span class="button-body">
+                                                                            <img class="button-icon is-small" src="http://ptoys.maywz.info/skin/frontend/plan_toys/default//images/icon/icon-facebook-square-white.png" alt="Icon">
+                                                                            <span class="button-text is-small">Log in</span>
+                                                                        </span>
+                                                                    </button>
+                                                                </div>
                                                             </div>
-                                                            <div class="remember-me-popup-body">
-                                                                <p>Checking "Remember Me" will let you access your shopping cart on this computer when you are logged out</p>
-                                                                <div class="remember-me-popup-close-button a-right">
-                                                                    <a href="#" class="remember-me-popup-close button" title="Close"><span>Close</span></a>
+                                                            <div class="list-form-inner-item">
+                                                                <button id="google_button_login" class="button-background-image is-wood-red is-small is-fluid" type="button">
+                                                                    <span class="button-body">
+                                                                        <img class="button-icon is-small" src="http://ptoys.maywz.info/skin/frontend/plan_toys/default//images/icon/icon-google-g-white.png" alt="Icon">
+                                                                    <span class="button-text is-small">Log in</span>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ========================== -->
+                                                <div class="partition-or"></div>
+                                                <!-- <h3>Returning Customers</h3> -->
+                                                <form id="login-form" action="http://ptoys.maywz.info/customer/account/loginPost/" method="post">
+                                                    <div class="list-form is-fluid">
+                                                        <input name="form_key" type="hidden" value="mT8tu1obOY0lgHH5">
+                                                        <!-- <p class="description">Sign in to speed up your checkout process</p>
+                                                        <p class="required">* Required Fields</p> -->
+                                                        <div class="list-item">
+                                                            <input class="field-secondary is-fluid required-entry validate-email" placeholder="Email Address" type="email" id="email" autocapitalize="off" autocorrect="off" spellcheck="false" name="login[username]" value="" title="Email Address">
+                                                            <div class="field-validation">
+                                                                <span class="text-default is-extra-small is-error">error_meesage</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="list-item">
+                                                            <input class="field-secondary is-fluid required-entry validate-password" placeholder="Password" type="password" title="Password" id="pass" name="login[password]">
+                                                            <div class="field-validation">
+                                                                <span class="text-default is-extra-small is-error">error_meesage</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="list-item">
+                                                            <button class="button-background-image is-wood-green is-small is-fluid" type="submit">
+                                                                <span class="button-body">
+                                                                    <span class="button-text is-small">Log in</span>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                        <input name="context" type="hidden" value="checkout">
+                                                    </div>
+                                                    <div class="account is-background-blank">
+                                                        <div class="account-footer">
+                                                            <div class="account-footer-segment is-notice">
+                                                                <div class="row">
+                                                                    <div class="col-xs-6">
+                                                                        <div class="checkbox-primary">
+                                                                            <input type="checkbox" name="persistent_remember_me" class="checkbox" id="remember_meWOllZpBwGA" checked="checked" title="Remember Me">
+                                                                            <label class="checkbox-label" for="remember_meWOllZpBwGA">Remember Me</label>
+                                                                            <a class="link-tip" href="#"></a>
+                                                                        </div>
+
+                                                                        <div class="remember-me-popup">
+                                                                            <div class="remember-me-popup-head">
+                                                                                <h3>What's this?</h3>
+                                                                                <a href="#" class="remember-me-popup-close" title="Close">Close</a>
+                                                                            </div>
+                                                                            <div class="remember-me-popup-body">
+                                                                                <p>Checking "Remember Me" will let you access your shopping cart on this computer when you are logged out</p>
+                                                                                <div class="remember-me-popup-close-button a-right">
+                                                                                    <a href="#" class="remember-me-popup-close button" title="Close"><span>Close</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <script type="text/javascript">
+                                                                        //<![CDATA[
+                                                                        function toggleRememberMePopup() {
+                                                                            var formParent = jQuery(this).parents('form:first');
+                                                                            formParent.find('.remember-me-box a').toggleClass('hide');
+                                                                            formParent.find('.remember-me-popup').toggleClass('show');
+                                                                            return false;
+                                                                        }
+                                                                        var rememberMeToggleSetup = false;
+                                                                        jQuery(document).ready(function(){
+                                                                            if (!rememberMeToggleSetup) {
+                                                                                jQuery('.remember-me-box a, .remember-me-popup a').on('click', toggleRememberMePopup);
+                                                                                rememberMeToggleSetup = true;
+                                                                            }
+                                                                        });
+                                                                        //]]>
+                                                                        </script>
+                                                                    </div>
+                                                                    <div class="col-xs-6 is-text-align-right">
+                                                                        <a class="text-link is-extra-small" href="">Forgot your password?</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="account-footer-segment">
+                                                                <div class="is-text-align-center">
+                                                                    <span class="text-default is-extra-small is-bold">Don’t have an account?</span>
+                                                                    <a class="text-link is-extra-small is-bold" title="Sign up" href=""> Sign up</a>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <script type="text/javascript">
-                                                        //<![CDATA[
-                                                        function toggleRememberMePopup() {
-                                                            var formParent = jQuery(this).parents('form:first');
-                                                            formParent.find('.remember-me-box a').toggleClass('hide');
-                                                            formParent.find('.remember-me-popup').toggleClass('show');
-                                                            return false;
-                                                        }
-                                                        var rememberMeToggleSetup = false;
-                                                        jQuery(document).ready(function(){
-                                                            if (!rememberMeToggleSetup) {
-                                                                jQuery('.remember-me-box a, .remember-me-popup a').on('click', toggleRememberMePopup);
-                                                                rememberMeToggleSetup = true;
-                                                            }
-                                                        });
-                                                        //]]>
-                                                        </script>
                                                     </div>
-                                                    <div class="col-xs-6 is-text-align-right">
-                                                        <a class="text-link is-extra-small" href="">Forgot your password?</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="account-footer-segment">
-                                                <div class="is-text-align-center">
-                                                    <span class="text-default is-extra-small is-bold">Don’t have an account?</span>
-                                                    <a class="text-link is-extra-small is-bold" title="Sign up" href=""> Sign up</a>
-                                                </div>
+                                                </form>
+                                                <!-- ========================== -->
                                             </div>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-
-
-                        <!-- Register button -->
-                        <!-- <div class="col2-set">
-                            <div class="col-1">
-                                <h3>
-                                    Register to Create an Account
-                                </h3>
-                                <p class="description">
-                                    Register and save time!
-                                    <br> Register with us for future convenience:
-                                </p>
-                                <ul>
-                                    <li>Fast and easy check out</li>
-                                    <li>Easy access to your order history and status</li>
-                                </ul>
-                                <input type="hidden" name="checkout_method" id="login:register" value="register" checked="checked">
-                                <div class="buttons-set">
-                                    <p class="required">&nbsp;</p>
-                                    <button id="onepage-guest-register-button" type="button" class="button" onclick="window.location='http://ptoys.maywz.info/customer/account/create/'">
-                                        <span>
-                                            <span>Register</span>
-                                        </span>
-                                    </button>
                                 </div>
                             </div>
-                        </div> -->
-
-                        <script type="text/javascript">
-                        //<![CDATA[
-                            var loginForm = new VarienForm('login-form', true);
-                            $('login-email').observe('keypress', bindLoginPost);
-                            $('login-password').observe('keypress', bindLoginPost);
-                            function bindLoginPost(evt){
-                                if (evt.keyCode == Event.KEY_RETURN) {
-                                    loginForm.submit();
-                                }
-                            }
-                            function onepageLogin(button)
-                            {
-                                if(loginForm.validator && loginForm.validator.validate()){
-                                    button.disabled = true;
-                                    loginForm.submit();
-                                }
-                            }
-                        //]]>
-                        </script>
-                        <!-- asdas -->
+                        </div>
                     </div>
+
+
+
+
                 </div>
             </div>
             <!-- HTML end ============================================================================ -->

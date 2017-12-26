@@ -140,6 +140,7 @@
     }
 
     &.is-myaddress,
+    &.is-checkout-account,
     &.is-confirm {
         max-width: 1050px;
     }
@@ -430,6 +431,11 @@
         &.is-form-vertical {
             background-color: transparent;
             border: 0;
+
+            .container-panel-segment {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
         }
     }
 
@@ -645,6 +651,18 @@
             padding-right: 25px;
         }
     }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Overwrite style magento
+// ------------------------------------------------
+.opc .section .step.a-item {
+    padding: 0;
 }
 
 // Browser variations
