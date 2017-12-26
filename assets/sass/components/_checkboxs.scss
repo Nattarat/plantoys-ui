@@ -940,6 +940,7 @@
         display: block;
         padding: 15px 30px;
         margin: 0 0 10px;
+        cursor: pointer;
 
         &:first-child {
             margin-bottom: 10px;
@@ -967,6 +968,7 @@
             align-items: center;
             width: 100%;
             padding-left: 0;
+            background-color: transparent;
 
             &:before,
             &:after {
