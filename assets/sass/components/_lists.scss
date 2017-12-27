@@ -873,6 +873,9 @@
 
     &.is-checkout {
         .list-item {
+            padding-left: 35px;
+            padding-right: 35px;
+
             &:first-child {
                 border-top: 0;
             }

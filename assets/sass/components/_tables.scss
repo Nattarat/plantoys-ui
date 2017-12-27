@@ -204,24 +204,18 @@
 
         .table-column {
             &:nth-child(1) {
-                // flex: none;
-                // width: 150px;
-                // width: 30%;
+                max-width: 350px;
             }
 
             &:nth-child(2) {
                 flex: none;
                 width: 125px;
-                // width: 30%;
-                // min-width: 50px;
             }
 
             &:nth-child(3) {
                 flex: none;
                 justify-content: center;
                 width: 50px;
-                // width: 10%;
-                // min-width: 125px;
             }
 
             &:nth-child(4) {

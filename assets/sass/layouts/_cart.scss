@@ -155,7 +155,7 @@
     .cart-result-detail {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 7px;
 
         &.is-result-last {
@@ -420,6 +420,10 @@
     &.is-ordersummary-detail {
         flex: 1;
         display: flex;
+
+        .product-content {
+            padding-left: 15px;
+        }
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
