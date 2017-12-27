@@ -117,6 +117,11 @@
             padding-top: 30px;
         }
 
+        &.is-description {
+            display: flex;
+            align-items: center;
+        }
+
         &.is-spacingbottom-small {
             margin-bottom: 5px;
         }

@@ -378,6 +378,16 @@
         &.is-spacing-left {
             padding-left: 20px;
         }
+
+        &.is-promotion-active {
+            display: flex;
+
+            button {
+                &:last-child {
+                    margin-left: 10px;
+                }
+            }
+        }
     }
 
     // STYLES OF STATE

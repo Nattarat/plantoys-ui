@@ -121,109 +121,133 @@
                         </h2>
                     </div>
 
-                    <div id="checkout-step-review" class="step a-item" style="">
-                        <div class="order-review" id="checkout-review-load">
-                            <div id="checkout-review-table-wrapper">
+                    <!-- Table data -->
+                    <div class="container-panel is-form-vertical">
+                        <div class="container-panel-segment">
+                            <div class="table-block is-checkout-review is-scrollable">
+                                <div class="table-header">
+                                    <div class="table-row">
+                                        <div class="table-column is-header">
+                                            <span class="text-table is-middle-small is-bold is-gray-light is-uppercase">
+                                                Product
+                                            </span>
+                                        </div>
+                                        <div class="table-column is-header">
+                                            <span class="text-table is-middle-small is-bold is-gray-light is-uppercase">
+                                                Price
+                                            </span>
+                                        </div>
+                                        <div class="table-column is-header">
+                                            <span class="text-table is-middle-small is-bold is-gray-light is-uppercase">
+                                                Qty
+                                            </span>
+                                        </div>
+                                        <div class="table-column is-header">
+                                            <span class="text-table is-middle-small is-bold is-gray-light is-uppercase">
+                                                Subtotal
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-row">
+                                        <div class="table-column">
+                                            <span class="text-table">
+                                                Rhythm box
+                                            </span>
+                                        </div>
+                                        <div class="table-column">
+                                            <span class="cart-price">
+                                                <span class="price">฿999,999.00</span>
+                                            </span>
+                                        </div>
+                                        <div class="table-column">
+                                            <span class="text-table">
+                                                1
+                                            </span>
+                                        </div>
+                                        <div class="table-column">
+                                            <span class="cart-price">
+                                                <span class="price">฿999,999.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="table-column">
+                                            <span class="text-table">
+                                                Rhythm box
+                                            </span>
+                                            <!-- <h3 class="product-name">RHYTHM BOX</h3> -->
+                                        </div>
+                                        <div class="table-column">
+                                            <!-- <span class="text-table">
+                                                ฿999,999.00
+                                            </span> -->
+                                            <span class="cart-price">
+                                                <span class="price">฿999,999.00</span>
+                                            </span>
+                                        </div>
+                                        <div class="table-column">
+                                            <span class="text-table">
+                                                1
+                                            </span>
+                                        </div>
+                                        <div class="table-column">
+                                            <!-- <span class="text-table">
+                                                ฿999,999.00
+                                            </span> -->
+                                            <span class="cart-price">
+                                                <span class="price">฿999,999.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart">
                                 <div class="cart-result-detail">
-                                    <span class="text-default is-bold is-extra-small is-uppercase">Subtotal</span>
-                                    <span class="text-default is-bold is-extra-small">
+                                    <span class="text-default is-bold is-middle-small is-black is-uppercase">Subtotal</span>
+                                    <span class="text-default is-bold is-middle-small">
                                         <span class="price">฿2,700.00</span>
                                     </span>
                                 </div>
                                 <div class="cart-result-detail">
-                                    <span class="text-default is-bold is-extra-small is-uppercase">Shipping &amp; Handling (Select Shipping Method - ไปรษณีย์ไทย)</span>
-                                    <span class="text-default is-bold is-extra-small">
+                                    <span class="text-default is-bold is-middle-small is-black is-uppercase">Shipping &amp; Handling (Select Shipping Method - ไปรษณีย์ไทย)</span>
+                                    <span class="text-default is-bold is-middle-small">
                                         <span class="price">฿75.00</span>
                                     </span>
                                 </div>
                                 <div class="cart-result-detail">
-                                    <span class="text-default is-bold is-black is-uppercase">Grand Total</span>
-                                    <span class="text-default is-bold is-black">
+                                    <span class="text-default is-medium is-bold is-black is-uppercase">Grand Total</span>
+                                    <span class="text-default is-medium is-bold is-black">
                                         <span class="price">฿2,775.00</span>
                                     </span>
                                 </div>
-                                <table class="data-table linearize-table checkout-review-table" id="checkout-review-table">
-                                    <colgroup>
-                                        <col>
-                                        <col width="1">
-                                        <col width="1">
-                                        <col width="1">
-                                    </colgroup>
-                                    <thead>
-                                        <tr class="first last">
-                                            <th rowspan="1">Product</th>
-                                            <th colspan="1" class="a-center">Price</th>
-                                            <th rowspan="1" class="a-center">Qty</th>
-                                            <th colspan="1" class="a-center">Subtotal</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-
-
-
-                                    </tfoot>
-                                    <tbody>
-                                        <tr class="first odd">
-                                            <td>
-                                                <h3 class="product-name">RHYTHM BOX</h3>
-                                            </td>
-                                            <td class="a-right" data-rwd-label="Price">
-                                                <span class="cart-price">
-
-                                                    <span class="price">฿1,200.00</span>
-                                                </span>
-
-
-                                            </td>
-                                            <td class="a-center" data-rwd-label="Qty">1</td>
-                                            <!-- sub total starts here -->
-                                            <td class="a-right last" data-rwd-label="Subtotal">
-                                                <span class="cart-price">
-
-                                                    <span class="price">฿1,200.00</span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr class="last even">
-                                            <td>
-                                                <h3 class="product-name">CONCERTINA</h3>
-                                            </td>
-                                            <td class="a-right" data-rwd-label="Price">
-                                                <span class="cart-price">
-
-                                                    <span class="price">฿750.00</span>
-                                                </span>
-
-
-                                            </td>
-                                            <td class="a-center" data-rwd-label="Qty">2</td>
-                                            <!-- sub total starts here -->
-                                            <td class="a-right last" data-rwd-label="Subtotal">
-                                                <span class="cart-price">
-
-                                                    <span class="price">฿1,500.00</span>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
                             </div>
 
-                            <div id="checkout-review-submit">
-                                <div class="buttons-set" id="review-buttons-container">
-                                    <button type="submit" title="Place Order" class="button btn-checkout" onclick="review.save();">
-                                        <span>
-                                            <span>Place Order</span>
-                                        </span>
-                                    </button>
-                                    <span class="please-wait" id="review-please-wait" style="display:none;">
-                                        <img src="http://ptoys.maywz.info/skin/frontend/plan_toys/default/images/opc-ajax-loader.gif" alt="Submitting order information..."
-                                            title="Submitting order information..." class="v-middle"> Submitting order information... </span>
-                                    <p class="f-left">Forgot an Item?
-                                        <a href="http://ptoys.maywz.info/checkout/cart/" onclick="return confirm('Are you sure you want to leave this page? You will need to go through the checkout steps again.')">Edit Your Cart</a>
-                                    </p>
+                            <div class="list-form is-fluid is-footer-button-wizard">
+                                <div class="list-row">
+                                    <div class="list-item is-button is-description">
+                                        <!-- <a class="button-background-image is-wood-blue is-small is-padding-blank is-fluid" href="#">
+                                            <span class="button-body">
+                                                <span class="button-text is-small">Back</span>
+                                            </span>
+                                        </a> -->
+                                        <span class="text-default is-extra-small is-bold">Forgot an Item?&nbsp;</span>
+                                        <a class="text-link is-extra-small is-bold" title="Sign up" href="">Edit Your Cart</a>
+                                    </div>
+                                    <div class="list-item is-button">
+                                        <button class="button-background-image is-wood-green is-small is-padding-blank is-fluid validation-passed" type="button">
+                                            <span class="button-body">
+                                                <span class="please-wait">
+                                                    <img class="button-icon is-small" src="http://ptoys.maywz.info/skin/frontend/plan_toys/default/images/opc-ajax-loader.gif" alt="Submitting order information..." title="Loading next step...">
+                                                    <span class="button-text is-small">Submitting order information...</span>
+                                                </span>
+                                                <!-- <span class="button-text is-small">Place Order</span> -->
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>

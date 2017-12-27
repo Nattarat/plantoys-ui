@@ -85,6 +85,14 @@
         }
     }
 
+    .cart-price {
+        .price {
+            @include text-variant(
+                $text-font-size: font-secondary-size(size-11)
+            );
+        }
+    }
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -115,7 +123,9 @@
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @include table-variant;
+    @include table-variant(
+        $table-column-padding: 10px
+    );
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -189,20 +199,44 @@
         }
     }
 
+    &.is-checkout-review {
+        margin-bottom: 30px;
+
+        .table-column {
+            &:nth-child(1) {
+                // flex: none;
+                // width: 150px;
+                // width: 30%;
+            }
+
+            &:nth-child(2) {
+                flex: none;
+                width: 125px;
+                // width: 30%;
+                // min-width: 50px;
+            }
+
+            &:nth-child(3) {
+                flex: none;
+                justify-content: center;
+                width: 50px;
+                // width: 10%;
+                // min-width: 125px;
+            }
+
+            &:nth-child(4) {
+                flex: none;
+                justify-content: flex-end;
+                width: 125px;
+            }
+        }
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    &.is-myorder,
-    &.is-myreturn {
-        .table-column {
-            @media screen and (max-width: screen(labtop-lg)) {
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-        }
-    }
 }
 
 // Browser variations

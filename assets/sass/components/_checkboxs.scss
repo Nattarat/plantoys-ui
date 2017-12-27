@@ -818,7 +818,8 @@
                 overflow: hidden;
                 position: relative;
                 display: block;
-                padding: 15px 30px;
+                padding: 0; // 15px 30px
+                cursor: pointer;
 
                 input[type=checkbox],
                 input[type=radio] {
@@ -838,7 +839,7 @@
                     position: relative;
                     z-index: zindex(lv2);
                     width: 100%;
-                    padding-left: 0;
+                    padding: 15px 30px;
 
                     &:before,
                     &:after {
@@ -969,6 +970,7 @@
             width: 100%;
             padding-left: 0;
             background-color: transparent;
+            cursor: pointer;
 
             &:before,
             &:after {

@@ -169,6 +169,12 @@
         &.is-spacing-bottom-large {
             margin-bottom: 30px;
         }
+
+        * {
+            &:first-child {
+                width: 60%;
+            }
+        }
     }
 
     #minicart-error-message {
