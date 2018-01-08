@@ -28,15 +28,15 @@ $product-container-padding: 0 50px;
 
     .col-left {
         // flex: 0;
-        width: 26%;
+        width: 25%;
         padding-left: 0;
-        padding-right: 0;
+        padding-right: 30px;
     }
 
     .col-main {
         // flex: 1;
-        width: 74%;
-        padding-left: 60px;
+        width: 75%;
+        padding-left: 0;
         padding-right: 0;
 
         .product-segment-inner {
@@ -85,6 +85,10 @@ $product-container-padding: 0 50px;
             width: 100%;
         }
 
+        @media screen and (max-width: screen(tablet-lg)) {
+            padding-right: 0;
+        }
+
         @media (min-width: screen(phablet-sm)) and (max-width: screen(tablet-lg)) {
             width: 50%;
             margin: auto;
@@ -94,7 +98,7 @@ $product-container-padding: 0 50px;
     .col-main {
         @media screen and (max-width: screen(tablet-lg)) {
             width: 100%;
-            padding-left: 0;
+            // padding-left: 0;
         }
     }
 
@@ -133,7 +137,7 @@ $product-container-padding: 0 50px;
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .main {
-        max-width: 1440px;
+        max-width: 1124px; // 1440
         padding: $product-container-padding;
         margin: auto;
     }
