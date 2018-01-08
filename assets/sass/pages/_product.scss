@@ -1139,6 +1139,31 @@ $product-container-padding: 0 50px;
     margin-bottom: 20px;
 }
 
+// jQuery Bar Rating
+.br-wrapper {
+    &.br-theme-fontawesome-stars {
+        .br-widget {
+            height: auto;
+
+            a {
+                margin-right: 0;
+                font-size: 14px;
+
+                &:after {
+                    color: $color-gray-22;
+                }
+
+                &.br-selected {
+                    &:after {
+                        color: $color-orange-2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
