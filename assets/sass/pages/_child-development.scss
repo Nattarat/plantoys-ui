@@ -304,7 +304,12 @@
         .child-thumbnai{
             @include thumb-nail($thumb-head-font-size:16px,$thumb-detail-font-size:14px,$thumb-padding:30px);
         }
-
+        .slick-dots li button:before
+        {
+            font-family: 'slick';
+            font-size: 11px;
+            line-height: 20px;
+        }
     }
 
     // STYLES OF STATE
