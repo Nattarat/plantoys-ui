@@ -632,13 +632,22 @@
         }
     }
 
+    .list-button-collapse {
+        display: block;
+        margin-bottom: 10px;
+    }
+
     .list-container-collapse {
 
     }
 
-    .list-button-collapse {
+    .list-button-sidebar-collapse {
         display: block;
         margin-bottom: 10px;
+    }
+
+    .list-container-sidebar-collapse {
+        // display: none;
     }
 
     // STYLES OF STATE
@@ -724,6 +733,12 @@
                 margin-bottom: 0;
             }
         }
+    }
+
+    &.is-sidebar-collapse {
+        width: 100%;
+        min-height: initial;
+        padding: 0;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -1381,6 +1396,12 @@
     &.is-column-3 {
         > .list-item {
             width: calc(100% / 3);
+        }
+    }
+
+    &.is-column-4 {
+        > .list-item {
+            width: calc(100% / 4);
         }
     }
 
@@ -2141,6 +2162,103 @@
             right: 10px;
         }
     }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Menu level (jQuery Metis Menu)
+// ------------------------------------------------
+.list-menu-level {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    background: #212529;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background: #343a40;
+    }
+
+    .metismenu {
+        background: #212529;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .metismenu li + li {
+      margin-top: 5px;
+    }
+
+    .metismenu li:first-child {
+      margin-top: 5px;
+    }
+    .metismenu li:last-child {
+      margin-bottom: 5px;
+    }
+
+
+    .metismenu > li {
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+    }
+    .metismenu a {
+        position: relative;
+        display: block;
+        padding: 13px 15px;
+        color: #adb5bd;
+        outline-width: 0;
+        transition: all .3s ease-out;
+    }
+
+    .metismenu ul a {
+        padding: 10px 15px 10px 30px;
+    }
+
+    .metismenu ul ul a {
+        padding: 10px 15px 10px 45px;
+    }
+
+    .metismenu a:hover,
+    .metismenu a:focus,
+    .metismenu a:active {
+        color: #f8f9fa;
+        text-decoration: none;
+        background: #0b7285;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations

@@ -8,6 +8,24 @@
 
 @charset 'utf-8';
 
+#button-menu-main {
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(tablet-lg)) {
+        display: none;
+    }
+}
+
+#button-navigation-sidebar {
+    display: none;
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(tablet-lg)) {
+        display: inline-block;
+    }
+}
+
 .navigation-main {
     @include transition(all .3s ease);
     @include translate(0, 15px);
