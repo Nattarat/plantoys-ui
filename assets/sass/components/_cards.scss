@@ -27,7 +27,7 @@
     }
     .card-detail{
         font-family: font-family(primary);
-        font-size: font-primary-size(size-5); // 20px
+        font-size: font-primary-size(size-12); // 20px
         color: $color-black;
         letter-spacing: 1px;
     }
@@ -39,8 +39,8 @@
     }
     .caption{
         width: 100%;
-        min-height: 146px;
-        padding: 30px 38px;
+        min-height: 120px;
+        padding: 20px;
     }
 
     // STYLES OF STATE
