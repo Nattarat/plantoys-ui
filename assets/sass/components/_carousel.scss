@@ -404,9 +404,9 @@
 .carousel-name {
     padding-left: 50px;
     padding-right: 50px;
-    max-width: 1440px;
+    // max-width: 1440px;
     padding-top: 10px;
-    margin: 0 auto 25px;
+    margin: 0 -50px 25px;
 
     @media screen and (max-width: screen(tablet-md-max)) {
         padding-top: 30px;
