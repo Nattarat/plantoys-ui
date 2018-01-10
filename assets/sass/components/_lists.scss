@@ -493,12 +493,12 @@
 .list-navigation {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
-    $navigation-width-lv1: 225px;
-    $navigation-width-lv2: 225px; // 350px
-    $navigation-width-lv3: 225px; // 490px
-    $navigation-width-small-lv1: 225px;
-    $navigation-width-small-lv2: 225px;
-    $navigation-width-small-lv3: 225px;
+    $navigation-width-lv1: 250px;
+    $navigation-width-lv2: 250px; // 350px
+    $navigation-width-lv3: 250px; // 490px
+    $navigation-width-small-lv1: 250px;
+    $navigation-width-small-lv2: 250px;
+    $navigation-width-small-lv3: 250px;
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -578,8 +578,8 @@
 
         &.is-icon-font {
             display: inline-block;
-            margin-right: 20px;
-            font-size: $font-size-11;
+            margin-right: 12px;
+            font-size: $font-size-5;
             color: $color-gray-1;
             vertical-align: middle;
 
@@ -589,7 +589,7 @@
 
             img {
                 width: auto;
-                height: 16px;
+                height: 20px;
             }
         }
     }
@@ -795,7 +795,7 @@
 
             > img {
                 @media screen and (max-width: screen(labtop-lg)) {
-                    width: 70%;
+                    // width: 70%;
                     margin: auto;
                 }
             }
@@ -2216,30 +2216,24 @@
         color: $color-gray-1;
     }
 
-    .accordion {
-        > .accordion-content {
-            padding-left: 15px;
-            padding-right: 15px;
-            background-color: $color-gray-21;
-
-            > .list-item,
-            > [data-accordion] {
-                &:first-child {
-                    padding-top: 10px;
-                }
-
-                &:last-child {
-                    padding-bottom: 10px;
-                }
-            }
-        }
-    }
-
     .accordion,
     .accordion-level-2,
     .accordion-level-3 {
+        .list-item,
+        [data-accordion] {
+            border-top: 1px solid $color-white;
+
+            &[data-control] {
+                border-top: 0;
+            }
+        }
+
         &.open {
             > .list-item {
+                &:first-child {
+                    padding-bottom: 5px;
+                }
+
                 .list-icon {
                     @include rotate(90deg);
                 }
@@ -2247,13 +2241,35 @@
         }
     }
 
-    .accordion-level-2,
-    .accordion-level-3 {
-        .list-item {
-            border-top: 1px solid $color-white;
+    .accordion {
+        > .accordion-content {
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: $color-gray-21;
 
-            &[data-control] {
-                border-top: 0;
+            > * {
+                &:first-child {
+                    padding-top: 10px;
+                    border-top: 0;
+                }
+
+                &:last-child {
+                    padding-bottom: 10px;
+                }
+            }
+
+            > [data-accordion] {
+                padding-top: 0;
+            }
+        }
+    }
+
+    // .accordion,
+    // .accordion-level-3,
+    .accordion-level-2 {
+        > .list-item {
+            &:first-child {
+                padding-bottom: 0;
             }
         }
     }

@@ -316,7 +316,7 @@ $field-padding-side-deault: 20px;
     @include field-variant(
         $field-height: auto,
         $field-padding: 0 0 5px 0,
-        $field-border: 2px solid $color-gray-1,
+        $field-border: 1px solid $color-gray-1,
         $field-border-radius: 0,
         $field-box-shadow: 0 0 0 rgba(0, 0, 0, 0),
         $field-placeholder-color: $color-gray-1,

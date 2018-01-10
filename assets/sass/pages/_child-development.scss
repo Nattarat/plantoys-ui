@@ -25,7 +25,12 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-header{
-        @include text-header($text-header-margin-top:-90px,$text-header-color:$color-gray-15,$text-sub-color:$color-gray-15);
+        // @include text-header($text-header-margin-top:-90px,$text-header-color:$color-gray-15,$text-sub-color:$color-gray-15);
+        @include text-header(
+            $text-header-color: color-text(title-page),
+            $text-header-margin-top: 30px,
+            $text-sub-color: color-text(title-page)
+        );
     }
 
     // STYLES OF STATE

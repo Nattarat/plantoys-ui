@@ -96,7 +96,7 @@
 
     .icon-hamburger {
         display: inline-block;
-        width: 22px;
+        width: 26px;
         margin-right: 20px;
         vertical-align: middle;
 
@@ -105,14 +105,14 @@
         &:after {
             content: ' ';
             display: block;
-            height: 3px;
+            height: 4px;
             background-color: $color-gray-1;
-            border-radius: 5px;
+            border-radius: 3px;
         }
 
         span,
         &:before {
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
     }
 

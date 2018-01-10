@@ -457,6 +457,11 @@
         text-transform: none;
         letter-spacing: 1px;
     }
+
+    &.category-title {
+        visibility: hidden;
+        height: 0;
+    }
 }
 
 // Browser variations

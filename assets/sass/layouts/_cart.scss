@@ -91,11 +91,15 @@
 
     .cart-container-scroll {
         overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         max-height: 400px;
+        min-height: 400px;
     }
 
     .cart-notice {
-        padding: 5px 20px;
+        padding: 2px 20px; // 5px 20px
         background-color: $color-green-5;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
@@ -242,10 +246,10 @@
     }
 
     .product-image {
-        border: 1px solid $color-gray-4;
+        border: 1px solid $color-gray-3;
 
         &:hover {
-            border-color: $color-gray-4;
+            border-color: $color-gray-3;
         }
 
         &.is-small {
@@ -263,6 +267,14 @@
         display: block;
         margin-bottom: 5px;
         text-align: left;
+
+        .text-default {
+            text-transform: lowercase;
+
+            &:first-letter {
+                text-transform: uppercase;
+            }
+        }
     }
 
     .product-counter {
@@ -298,8 +310,8 @@
 
     .product-counter-number {
         display: inline-block;
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: -2px; // 5
+        margin-right: -2px; // 5
         line-height: 1;
         vertical-align: middle;
 

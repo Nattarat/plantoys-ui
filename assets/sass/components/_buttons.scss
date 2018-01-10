@@ -141,12 +141,12 @@ $button-padding-side-deault: 45px;
 
         &.is-size-topbar {
             width: auto;
-            height: 26px;
+            height: 32px; // 26
         }
 
         &.is-search-topbar {
             width: auto;
-            height: 18px;
+            height: 20px;
         }
 
         &.is-product-label {
@@ -843,8 +843,8 @@ $button-padding-side-deault: 45px;
 
     &.is-avatar {
         overflow: hidden;
-        width: 26px;
-        height: 26px;
+        width: 32px;
+        height: 32px;
         background-size: cover;
         border-radius: 50%;
     }
@@ -956,11 +956,11 @@ $button-padding-side-deault: 45px;
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-counternumber {
-        min-width: 14px;
-        height: 14px;
+        min-width: 18px; // 18
+        height: 18px; // 18
 
         .button-icon {
-            width: 6px;
+            width: 8px; // 6
             height: auto;
         }
     }

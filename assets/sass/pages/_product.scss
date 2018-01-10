@@ -203,7 +203,8 @@ $product-container-padding: 0 50px;
     }
 
     .product-segment-title {
-        margin-bottom: 20px;
+        margin-top: 7px;
+        margin-bottom: 30px; // 20
     }
 
     .product-filter {
@@ -590,6 +591,18 @@ $product-container-padding: 0 50px;
                     padding-top: 0;
                     border-top-left-radius: 0;
                     border-top-right-radius: 0;
+                }
+            }
+
+            &.is-visibility-hidden {
+                visibility: hidden;
+                display: block;
+                height: 0;
+
+                + dd {
+                    padding-top: 12px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
                 }
             }
         }
