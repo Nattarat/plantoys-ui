@@ -11,7 +11,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     max-width: 1540px;
     margin: auto;
-    padding: 60px 50px;
+    padding: 60px 150px;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -60,10 +60,11 @@
     }
     .head-title{
         font-family: font-family(primary);
-        font-size: font-primary-size(size-5);
+        font-size: font-primary-size(size-4);
         margin-bottom: 30px;
         padding-left: 33px;
         letter-spacing: 1px;
+        text-transform: none;
     }
     .new-card{
         @include card();
