@@ -460,16 +460,34 @@
     }
 
     .developments-title {
+        .text-carousel {
+            &.is-title {
+                font-size: $font-size-2;
+                text-transform: none;
+            }
+        }
     }
 
     .developments-sub-title {
         padding-top: 5px; // 35px > 1.8vw
         padding-bottom: 10px; // 35px > 1.8vw
+
+        .text-carousel {
+            &.is-large {
+                font-size: $font-size-1;
+            }
+        }
     }
 
     .developments-paragraph {
         padding-right: 30px;
         padding-bottom: 20px; // 75px
+
+        .text-carousel {
+            &.is-paragraph {
+                font-size: $font-size-4;
+            }
+        }
     }
 
     // STYLES OF STATE

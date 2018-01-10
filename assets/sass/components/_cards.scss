@@ -30,12 +30,14 @@
         font-size: font-primary-size(size-12); // 20px
         color: $color-black;
         letter-spacing: 1px;
+        text-align: left;
     }
     .card-sub-detail{
         font-family: font-family(seccondary);
         font-size: font-secondary-size(size-4); // 16px
         color: $color-gray-12;
         letter-spacing: 1px;
+        text-align: left;
     }
     .caption{
         width: 100%;

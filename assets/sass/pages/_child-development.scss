@@ -64,8 +64,8 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    height: 40px;
-    padding: 0px 150px;
+    // height: 40px;
+    padding: 12px 150px;
     background-image:  url('#{path-file(images)}/content/child_development/child-blue-wood.jpg') ;
     background-size: cover;
     background-repeat: repeat-x;
@@ -188,6 +188,10 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-thumbnail{
         @include thumb-nail($thumb-head-font-size: $font-size-4);
+
+        .caption {
+            padding-top: 10px;
+        }
     }
     .text-detail{
         list-style-type: disc;
@@ -197,7 +201,7 @@
             color: $color-gray-17;
             &.is-space-li{
                 &:not(:first-child){
-                    margin-top: 27px;
+                    margin-top: 10px;
                 }
             }
         }
@@ -242,7 +246,7 @@
     .action1{
             .row-month{
                 display: flex;
-                padding: 36px 0px;
+                padding: 26px 0px;
                 &.not-padding{
                     padding: 0px 0px;
                 }
@@ -271,7 +275,7 @@
                         @include child-content($child-padding: 22px);
                     }
                     &.is-detail{
-                        @include child-content($child-padding: 36px 62px);
+                        @include child-content($child-padding: 5px 52px);
                     }
                 }
             }
@@ -282,7 +286,7 @@
                 justify-content: center;
                 position: relative;
                 &.not-padding{
-                    margin: -36px 0px;
+                    margin: -26px 0px;
                 }
                 .font-style{
                     font-family: font-family(tertiary);
