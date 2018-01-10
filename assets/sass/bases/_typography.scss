@@ -102,7 +102,7 @@
     // Display
     &.is-paragraph {
         display: block;
-        margin-bottom: 10px; // 20px
+        margin-bottom: 24px; // 20px
     }
 
     &.is-paragraph-nospacing {
@@ -354,6 +354,10 @@
         padding-top: 10px;
     }
 
+    &.is-register-or {
+        margin-right: 3px;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -396,6 +400,11 @@
     &.is-tabs,
     &.is-tabs-mobile {
         font-size: font-primary-size(size-4);
+    }
+
+    &.is-introduction {
+        font-size: $font-size-5;
+        margin-bottom: 24px;
     }
 
     &.is-tabs,

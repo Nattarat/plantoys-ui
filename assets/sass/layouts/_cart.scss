@@ -86,6 +86,10 @@
 
         &.is-emptycart {
             padding-bottom: 0;
+
+            .cart-container-scroll {
+                min-height: initial;
+            }
         }
     }
 
