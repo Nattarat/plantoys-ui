@@ -1316,7 +1316,7 @@
         left: -1px;
         right: -1px;
         height: 100%;
-        border: 1px solid $color-black;
+        border: 1px solid $color-blue-17;
     }
 
     .list-thumbnail,
@@ -1395,19 +1395,19 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-column-3 {
         > .list-item {
-            width: calc(100% / 3);
+            width: calc((100% / 3) + 1px);
         }
     }
 
     &.is-column-4 {
         > .list-item {
-            width: calc(100% / 4);
+            width: calc((100% / 4) + 1px);
         }
     }
 
     &.is-column-5 {
         > .list-item {
-            width: calc(100% / 5);
+            width: calc((100% / 5) + 1px);
         }
     }
 
