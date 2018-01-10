@@ -24,8 +24,8 @@
     // Box
     $checkbox-box-width: 14px,
     $checkbox-box-height: 14px,
-    $checkbox-box-color: $color-blue-3,
-    $checkbox-box-border: 0,
+    $checkbox-box-color: $color-white,
+    $checkbox-box-border: 1px solid $color-blue-3,
     $checkbox-box-border-radius: 2px,
 
     // Box active
@@ -86,8 +86,16 @@
             display: block;
             position: absolute;
             z-index: zindex(lv1);
+        }
+
+        &:before {
             top: 50%;
             left: 0;
+        }
+
+        &:after {
+            top: calc(50% - 1px);
+            left: -1px;
         }
 
         // Box
