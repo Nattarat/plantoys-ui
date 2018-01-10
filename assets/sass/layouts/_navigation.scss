@@ -27,6 +27,8 @@
 }
 
 .navigation-main {
+    $navigation-container: 225px; // 275
+
     @include transition(all .3s ease);
     @include translate(0, 15px);
     visibility: hidden;
@@ -35,7 +37,7 @@
     z-index: zindex(lv4);
     top: 100%; // 80
     left: 30px;
-    width: 275px;
+    width: $navigation-container;
     padding-top: 36px;
     margin-top: -18px;
 
@@ -60,11 +62,11 @@
     }
 
     &.is-expand-primary {
-        width: 550px;
+        width: $navigation-container * 2; // 275 * 2
     }
 
     &.is-expand-secondary {
-        width: 825px;
+        width: $navigation-container * 3; // 275 * 3
     }
 
     // STYLES OF MODIFIER CLASS

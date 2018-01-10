@@ -65,8 +65,7 @@ body {
         @include transition(transform 0.5s ease);
         position: relative;
         z-index: zindex(lv2);
-        width: calc(100% - 80px);
-        // max-width: 320px;
+        width: 360px;
         background-color: $color-white;
         box-shadow: 0 3px 5px rgba(0, 0, 0, .35);
     }
@@ -131,6 +130,11 @@ body {
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .sidebar-container {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            width: calc(100% - 80px);
+        }
+    }
 }
 
 // Browser variations

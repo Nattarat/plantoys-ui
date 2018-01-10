@@ -46,6 +46,10 @@
             height: 100vh;
         }
 
+        &.is-cover-page {
+            height: 360px;
+        }
+
         &.is-item-horizontal {
             padding-left: 30px;
             padding-right: 30px;
@@ -417,7 +421,7 @@
 
 // Fix layout after integrate with Magento
 .carousel-hero {
-    margin-top: -60px;
+    margin-top: -80px;
 
     &:before {
         content: 'Scroll Down';
