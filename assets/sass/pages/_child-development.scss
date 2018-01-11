@@ -406,6 +406,14 @@
             margin-bottom: 22px;
         }
     }
+    .button-typography {
+        .button-icon {
+            &.is-product-development {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 

@@ -74,6 +74,10 @@
         margin-top: 1px;
 
         &:hover {
+            .logo-brand-blackwhite {
+                opacity: 0;
+            }
+
             .logo-brand-color {
                 opacity: 1;
             }
@@ -82,7 +86,7 @@
 
     .logo-brand-blackwhite,
     .logo-brand-color {
-        @include transition(opacity 0.5s ease);
+        // @include transition(opacity 0.5s ease);
         width: 90px; // 60px
     }
 

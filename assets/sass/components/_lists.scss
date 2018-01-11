@@ -1293,6 +1293,7 @@
 
         .text-product {
             @include ellipsis;
+            color: $color-gray-1;
         }
     }
 
