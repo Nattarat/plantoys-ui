@@ -72,37 +72,37 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    &.range-1 {
+    &.range1 {
         @include container-header(
             $container-background:url('#{path-file(images)}/background/child_development/range-1.jpg')
         );
     }
 
-    &.range-2 {
+    &.range2 {
         @include container-header(
             $container-background:url('#{path-file(images)}/background/child_development/range-2.jpg')
         );
     }
 
-    &.range-3 {
+    &.range3 {
         @include container-header(
             $container-background:url('#{path-file(images)}/background/child_development/range-3.jpg')
         );
     }
 
-    &.range-4 {
+    &.range4 {
         @include container-header(
             $container-background:url('#{path-file(images)}/background/child_development/range-4.jpg')
         );
     }
 
-    &.range-5 {
+    &.range5 {
         @include container-header(
             $container-background:url('#{path-file(images)}/background/child_development/range-5.jpg')
         );
     }
 
-    &.range-6 {
+    &.range6 {
         @include container-header(
             $container-background:url('#{path-file(images)}/background/child_development/range-6.jpg')
         );
