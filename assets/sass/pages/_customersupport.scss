@@ -229,10 +229,13 @@
 .customersupport-segment {
     &.is-recaptcha {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         padding-bottom: 20px;
 
         #captcha-required {
+            padding-top: 5px;
             font-family: font-family(secondary);
             font-size: font-secondary-size(size-8);
             font-weight: normal;
