@@ -44,7 +44,75 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+}
 
+#child-development-banner {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .child-header{
+        // @include text-header($text-header-margin-top:-90px,$text-header-color:$color-gray-15,$text-sub-color:$color-gray-15);
+        @include text-header(
+            $text-header-color: color-text(title-page),
+            $text-header-margin-top: 30px,
+            $text-sub-color: color-text(title-page)
+        );
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.range-1 {
+        @include container-header(
+            $container-background:url('#{path-file(images)}/background/child_development/range-1.jpg')
+        );
+    }
+
+    &.range-2 {
+        @include container-header(
+            $container-background:url('#{path-file(images)}/background/child_development/range-2.jpg')
+        );
+    }
+
+    &.range-3 {
+        @include container-header(
+            $container-background:url('#{path-file(images)}/background/child_development/range-3.jpg')
+        );
+    }
+
+    &.range-4 {
+        @include container-header(
+            $container-background:url('#{path-file(images)}/background/child_development/range-4.jpg')
+        );
+    }
+
+    &.range-5 {
+        @include container-header(
+            $container-background:url('#{path-file(images)}/background/child_development/range-5.jpg')
+        );
+    }
+
+    &.range-6 {
+        @include container-header(
+            $container-background:url('#{path-file(images)}/background/child_development/range-6.jpg')
+        );
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations
@@ -124,6 +192,7 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    img,
     .img-child,
     .img-responsive {
         max-width: 670px;

@@ -458,9 +458,20 @@
         align-content: flex-start;
         height: 100%;
         padding: 30px 10.5%;
-        background-image: url('../images/background/home/home-development-detail.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+
+        &.is-wood-blue {
+            background-image: url('../images/background/home/home-development-detail-blue.jpg');
+        }
+
+        &.is-wood-pink {
+            background-image: url('../images/background/home/home-development-detail-pink.jpg');
+        }
+
+        &.is-wood-green {
+            background-image: url('../images/background/home/home-development-detail-green.jpg');
+        }
     }
 
     .developments-title {

@@ -117,6 +117,10 @@
         max-width: 1280px;
     }
 
+    &.is-storelocator {
+        max-width: 950px;
+    }
+
     &.is-carousel-with-outer-arrow {
         padding-left: 2.5vw;
         padding-right: 2.5vw;
@@ -433,6 +437,10 @@
         padding-right: 100px;
         border: 0;
         border-radius: 0;
+
+        .text-default {
+            font-size: font-secondary-size(size-11);
+        }
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

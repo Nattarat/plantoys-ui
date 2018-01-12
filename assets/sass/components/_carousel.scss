@@ -447,6 +447,11 @@
     }
 }
 
+.carousel-product {
+    overflow: hidden;
+    max-height: 480px;
+}
+
 // Fix size
 .carousel-awards {
     max-width: 1280px;

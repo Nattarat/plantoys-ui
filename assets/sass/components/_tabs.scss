@@ -695,6 +695,13 @@
 
         // Responsive tabs plugin > container content
         .r-tabs-panel {
+            .customersupport-answer {
+                .text-default,
+                .text-link {
+                    font-size: font-secondary-size(size-11);
+                }
+            }
+
             &.r-tabs-state-active {
                 .customersupport-answer {
                     border-bottom: 1px solid $color-gray-10;

@@ -3669,7 +3669,7 @@
             });
             var hash = $j(location).attr('hash');
             console.log("load")
-            var data = (hash == "#0-6months" ?  $j("#tab1").click(): 
+            var data = (hash == "#0-6months" ?  $j("#tab1").click():
                         hash == "#6-12months"?  $j("#tab2").click():
                         hash == "#12-18months"? $j("#tab3").click():
                         hash == "#18-24months"? $j("#tab4").click():
@@ -3681,7 +3681,7 @@
                 if(window.location.hash){
                     var hash = $j(location).attr('hash');
                     console.log(hash)
-                    var data = (hash == "#0-6months" ?  $j("#tab1").click(): 
+                    var data = (hash == "#0-6months" ?  $j("#tab1").click():
                                 hash == "#6-12months"?  $j("#tab2").click():
                                 hash == "#12-18months"? $j("#tab3").click():
                                 hash == "#18-24months"? $j("#tab4").click():
@@ -3711,7 +3711,7 @@
                 // if(cityName == "range1"){
                 //     tab = "tab1"
                 // }
-                tab = (cityName == "range1" ? "tab1" : 
+                tab = (cityName == "range1" ? "tab1" :
                         cityName == "range2"? "tab2" :
                         cityName == "range3"? "tab3" :
                         cityName == "range4"? "tab4" :
@@ -3727,7 +3727,7 @@
             console.log(tab)
             // $j("select option[value="+cityName+"]").prop("selected","selected");
             document.getElementById("selectid").value = cityName;
-        
+
             // document.getElementById(select).selected = "true";
             // console.log(cityName);
         }
