@@ -422,7 +422,8 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    &.is-flag {
+    &.is-flag,
+    &.is-default {
         .ui-selectmenu-button {
             min-width: 200px;
             padding-left: 40px;
@@ -489,6 +490,24 @@
                 &.japan {
                     background-image: url('#{path-file(icons)}/icon-flag-japan.png');
                 }
+            }
+        }
+    }
+
+    &.is-default {
+        position: relative;
+
+        .ui-selectmenu-button {
+            padding-left: $field-padding-side-deault;
+            height: $field-height-deault;
+        }
+
+        .ui-selectmenu-menu {
+            max-width: 100%;
+
+            // List item inner
+            .ui-menu-item-wrapper {
+                padding-left: $field-padding-side-deault;
             }
         }
     }

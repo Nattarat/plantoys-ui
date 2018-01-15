@@ -726,11 +726,12 @@ $button-padding-side-deault: 45px;
         padding: 35px;
 
         .button-icon {
-            margin-bottom: 20px;
+            width: 20px;
+            margin-bottom: 10px;
         }
 
         .button-text {
-            font-size: font-primary-size(size-9);
+            font-size: font-primary-size(size-5);
             color: $color-white;
         }
     }
@@ -893,6 +894,7 @@ $button-padding-side-deault: 45px;
         &.is-table {
             @media screen and (max-width: screen(labtop-lg)) {
                 width: 50%;
+                height: auto;
             }
         }
 

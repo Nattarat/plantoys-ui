@@ -334,6 +334,10 @@
             border-top: 1px solid $color-gray-5;
         }
 
+        &.is-spacing-top-blank {
+            padding-top: 0;
+        }
+
         &.is-spacing-topbottom-small {
             padding-top: 15px;
             padding-bottom: 15px;
@@ -681,6 +685,11 @@
 // ------------------------------------------------
 .opc .section .step.a-item {
     padding: 0;
+}
+
+#review-buttons-container {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 // Browser variations

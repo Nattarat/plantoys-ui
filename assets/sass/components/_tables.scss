@@ -164,6 +164,12 @@
             &:nth-child(5) {
                 flex: none;
                 justify-content: center;
+                width: 150px;
+            }
+
+            &:nth-child(6) {
+                flex: none;
+                justify-content: center;
                 width: 115px;
             }
         }

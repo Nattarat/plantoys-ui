@@ -13,7 +13,7 @@
 
 // Global field variables
 // ==================================================================================================
-$field-height-deault: 57px;
+$field-height-deault: 40px;
 $field-padding-side-deault: 20px;
 
 // Mixins
@@ -39,7 +39,7 @@ $field-padding-side-deault: 20px;
     $field-width: auto,
     $field-min-width: 150px,
     $field-max-width: inherit,
-    $field-height: 40px, // 57 > 48 > 36 >
+    $field-height: $field-height-deault, // 57 > 48 > 36 >
     $field-min-height: inherit,
     $field-max-height: inherit,
     $field-padding: 0 20px,
@@ -177,12 +177,14 @@ $field-padding-side-deault: 20px;
     }
 
     &.is-number {
-        width: 50px;
-        min-width: 50px;
+        width: 27px;
+        min-width: 27px;
         height: 36px;
         padding-left: 0;
         padding-right: 0;
         text-align: center;
+        font-family: font-family(primary);
+        font-size: font-primary-size(size-11);
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -366,7 +368,7 @@ $field-padding-side-deault: 20px;
 // ------------------------------------------------
 @mixin form-icon(
     $form-icon-max-width: 320px,
-    $form-icon-height: 40px,
+    $form-icon-height: $field-height-deault,
     $form-icon-border: none,
     $form-icon-border-radius: 5px,
     $form-icon-font-size: font-secondary-size(size-4),
@@ -493,6 +495,12 @@ $field-padding-side-deault: 20px;
 // ------------------------------------------------
 .input-box {
     padding-top: 0;
+}
+
+#search {
+    &.field-line-bottom {
+        height: auto;
+    }
 }
 
 // Browser variations

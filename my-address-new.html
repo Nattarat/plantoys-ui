@@ -35,6 +35,7 @@
 
     <!-- Plantoys style -->
     <link rel="stylesheet" type="text/css" href="../assets/css/reset.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/jquery-ui-1.12.1/jquery-ui.min.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" media="all" />
 
     <script type="text/javascript" src="http://ptoys.maywz.info/js/prototype/prototype.js"></script>
@@ -140,6 +141,17 @@
                                             <span class="text-default is-extra-small is-error">error_meesage</span>
                                         </div>
                                     </div>
+                                    <div class="list-item">
+                                        <div id="billing-address-select-anchor" class="select-jqueryui is-default">
+                                            <select id="billing-address-select">
+                                                <option value="thailand" data-class="thailand">
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi earum deserunt sint harum quidem repellat fugiat! Accusantium ipsum magnam facilis quae. Quam similique debitis numquam fugiat autem adipisci, ab obcaecati.
+                                                </option>
+                                                <option value="english" data-class="english">USA</option>
+                                                <option value="japan" data-class="japan">Japan</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="myaccount-segment-spacing"></div>
                                 <h3 class="myaccount-segment-title">
@@ -206,12 +218,22 @@
     </div>
 
     <!-- Plantoys javascript -->
-    <!-- <script type="text/javascript" src="../assets/js/..."></script>
+    <!-- <script type="text/javascript" src="../assets/js/..."></script> -->
+    <script type="text/javascript" src="../assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript">
         $j(function() {
-            // script
+            // jQuery UI Selectmenu
+            // =====================================================
+            $j("#billing-address-select").selectmenu({
+                appendTo: "#billing-address-select-anchor",
+                position: {
+                    my: "top+18px",
+                    at: "center",
+                    collision: "flip"
+                }
+            });
         });
-    </script> -->
+    </script>
 </body>
 
 </html>
