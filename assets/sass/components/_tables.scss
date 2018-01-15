@@ -83,6 +83,21 @@
                 padding-right: 0;
             }
         }
+
+        a {
+            @include text-variant(
+                $text-display: inline-block,
+                $text-font-family: font-family(primary),
+                $text-font-size: font-primary-size(size-11),
+                $text-line-height: 1.3,
+                $text-color: color-text(green-secondary)
+            );
+            border-bottom: 1px solid color-text(green-secondary);
+
+            &.button-typography {
+                border-bottom: 0;
+            }
+        }
     }
 
     .cart-price {
@@ -138,6 +153,21 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-myorder,
+    &.is-myreturn {
+        .table-column {
+            &:last-child {
+                a {
+                    display: none;
+                }
+
+                .button-typography {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
     &.is-myorder {
         .table-column {
             &:nth-child(1) {
