@@ -173,7 +173,7 @@
                                             </span>
                                         </div>
                                         <div class="table-column">
-                                            <a id="button-return-detail" class="button-typography" href="#">
+                                            <a id="button-order-detail" class="button-typography" href="#">
                                                 <span class="button-body">
                                                     <img class="button-icon is-text-blank is-table" src="../assets/images/icon/icon-list-unorder.png" alt="Icon">
                                                 </span>
@@ -191,13 +191,13 @@
     </div>
 
     <!-- Modal return detail -->
-    <div class="modal-dialog modal-return-detail">
-        <div class="modal-dialog-container is-large">
+    <div class="modal-dialog modal-order-detail">
+        <div class="modal-dialog-container">
             <div class="modal-dialog-body">
                 <div class="modal-dialog-title">
                     <div class="modal-dialog-title-segment is-title">
                         <img class="modal-dialog-title-icon is-return-detail" src="../assets/images/icon/icon-bag.png" alt="Icon">
-                        <span class="text-default is-middlemore-medium is-bold">PT000190002622</span>
+                        <span class="text-default is-littlemore-medium is-bold">PT000190002622</span>
                     </div>
                     <div class="modal-dialog-title-segment is-button">
                         <a class="button-close-modal-dialog button-typography" href="#">
@@ -219,10 +219,10 @@
                                     </div>
                                     <div class="product is-right">
                                         <a class="product-name" href="#">
-                                            <span class="text-default is-bold is-black">Melody Xylophone</span>
+                                            <span class="text-default is-bold">Melody Xylophone</span>
                                         </a>
                                         <div class="product-counter">
-                                            <span class="text-default is-middlemore-medium is-bold">x 1</span>
+                                            <span class="text-default is-bold">x 1</span>
                                             <span class="text-default">$ 150.00</span>
                                         </div>
                                     </div>
@@ -231,16 +231,16 @@
                             <li class="list-item is-background-gray">
                                 <div class="cart">
                                     <div class="cart-result-detail">
-                                        <span class="text-default is-bold is-uppercase">Subtotal</span>
-                                        <span class="text-default is-bold">$ 300.00</span>
+                                        <span class="text-default is-extra-small is-bold is-uppercase">Subtotal</span>
+                                        <span class="text-default is-extra-small is-bold">$ 300.00</span>
                                     </div>
                                     <div class="cart-result-detail">
-                                        <span class="text-default is-bold is-uppercase">Shipping</span>
-                                        <span class="text-default is-bold">$ 50.00</span>
+                                        <span class="text-default is-extra-small is-bold is-uppercase">Shipping</span>
+                                        <span class="text-default is-extra-small is-bold">$ 50.00</span>
                                     </div>
                                     <div class="cart-result-detail is-result-last">
-                                        <span class="text-default is-bold is-little-large is-black is-uppercase">Total</span>
-                                        <span class="text-default is-bold is-little-large is-black">$ 300.00</span>
+                                        <span class="text-default is-bold is-black is-uppercase">Total</span>
+                                        <span class="text-default is-bold is-black">$ 300.00</span>
                                     </div>
                                 </div>
                             </li>
@@ -260,8 +260,8 @@
             // =====================================================
             // Modal return detail
             // Open
-            $j('#button-return-detail').click(function() {
-                $j('.modal-return-detail').addClass('is-active');
+            $j('#button-order-detail').click(function() {
+                $j('.modal-order-detail').addClass('is-active');
                 $j('body').addClass('is-sidebar-lock');
             });
 

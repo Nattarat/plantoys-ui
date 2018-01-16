@@ -40,6 +40,13 @@ a {
     display: block;
 }
 
+.is-visibility-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
 // Width
 // ------------------------------------------------
 .is-fluid {

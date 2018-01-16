@@ -111,6 +111,7 @@
     }
 
     .cart-item {
+        position: relative;
         display: flex;
         align-items: center;
 
@@ -310,6 +311,12 @@
                 }
             }
         }
+
+        input {
+            &.is-number {
+                border: 0;
+            }
+        }
     }
 
     .product-counter-number {
@@ -440,6 +447,13 @@
         .product-content {
             padding-left: 15px;
         }
+    }
+
+    &.is-control-button {
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 5px;
+        right: 0;
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

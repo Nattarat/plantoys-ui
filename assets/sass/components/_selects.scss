@@ -498,6 +498,7 @@
         position: relative;
 
         .ui-selectmenu-button {
+            width: 100%;
             padding-left: $field-padding-side-deault;
             height: $field-height-deault;
         }
@@ -517,6 +518,11 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+#billing-address-select-anchor {
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 // Browser variations

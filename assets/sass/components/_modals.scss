@@ -317,7 +317,7 @@
 
 // Return
 // ------------------------------------------------
-.modal-return-detail {
+.modal-order-detail {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -328,7 +328,7 @@
         $modal-dialog-align-items: flex-start,
 
         // Container
-        $modal-dialog-container-max-width: 625px,
+        $modal-dialog-container-max-width: 480px,
         $modal-dialog-container-min-height: initial,
         $modal-dialog-container-max-height: initial,
         $modal-dialog-container-padding: 0,
@@ -344,7 +344,7 @@
         $modal-dialog-body-max-height: initial,
 
         // Title
-        $modal-dialog-title-padding: 25px 35px,
+        $modal-dialog-title-padding: 15px,
         $modal-dialog-title-margin: 0,
         $modal-dialog-title-text-align: left
     );
@@ -380,6 +380,16 @@
         &.is-return-detail {
             position: relative;
             top: -3px;
+        }
+    }
+
+    .product {
+        &.is-left {
+            width: 15%;
+        }
+
+        &.is-right {
+            width: 85%;
         }
     }
 
