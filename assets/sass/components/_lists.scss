@@ -1217,7 +1217,7 @@
             }
 
             .list-detail {
-                margin: 0 -1px;
+                // margin: 0 -1px;
                 background-color: $color-blue-17;
             }
 
@@ -1382,7 +1382,8 @@
         z-index: zindex(lv2);
         // bottom: -1px;
         // min-height: 125px;
-        padding: 24px 60px;
+        padding: 24px 24px 30px 24px;
+        margin: 0 -1px;
         text-align: center;
     }
 
