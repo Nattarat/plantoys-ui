@@ -246,21 +246,17 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     padding: $child-padding;
-    background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
-    background-repeat: repeat-y;
-    background-position-y: 5px;
+    border-left-style: dotted;
+    border-width: 5px;
+    border-color: $color-blue-20;
     &.not-border{
-        background-image: none;
+        border: none;
     }
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-thumbnail{
-        @include thumb-nail($thumb-head-font-size: $font-size-4);
-
-        .caption {
-            padding-top: 10px;
-        }
+        @include thumb-nail($thumb-head-font-size: $font-size-4,$thumb-caption-padding:10px);
     }
     .text-detail{
         list-style-type: disc;
@@ -328,9 +324,8 @@
                         }
                         &.is-dot{
                             background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
-                            background-repeat: repeat;
-                            background-position-x: 5px;
-                            background-position-y: 7px;
+                            background-repeat: repeat-x;
+                            background-position-x: 3px;
                         }
                     }
                 }
@@ -380,13 +375,27 @@
             }
         }
         .child-thumbnai{
-            @include thumb-nail($thumb-head-font-size:16px,$thumb-detail-font-size:14px,$thumb-padding:30px);
+            @include thumb-nail($thumb-head-font-size:16px,$thumb-detail-font-size:14px,$thumb-padding:30px,$thumb-caption-padding:10px,$thumb-space-detail:10px 0px 0px 0px);
         }
-        .slick-dots li button:before
-        {
-            font-family: 'slick';
-            font-size: 11px;
-            line-height: 20px;
+        // .slick-dots li button:before
+        // {
+        //     font-family: 'slick';
+        //     font-size: 11px;
+        //     line-height: 20px;
+        // }
+        .slick-button{
+            position: absolute;
+            z-index: 10;
+            top:50%;
+            width: 16px;
+            height: 28px;
+            cursor: pointer;
+            &.is-prev{
+                left: 0px;
+            }
+            &.is-next{
+                right: 0px;
+            }
         }
     }
 
