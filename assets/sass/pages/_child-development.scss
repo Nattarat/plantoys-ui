@@ -386,15 +386,15 @@
         .slick-button{
             position: absolute;
             z-index: 10;
-            bottom: 0px;
+            top:50%;
             width: 16px;
             height: 28px;
             cursor: pointer;
             &.is-prev{
-                left: 40%;
+                left: 0px;
             }
             &.is-next{
-                right: 40%;
+                right: 0px;
             }
         }
     }
