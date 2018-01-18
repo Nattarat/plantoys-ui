@@ -40,6 +40,8 @@
     <link rel="stylesheet" type="text/css" href="../assets/js/responsive-tabs/css/responsive-tabs.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" media="all" />
 
+    <link rel="stylesheet" type="text/css" href="http://ptoys.maywz.info/skin/frontend/rwd/default/css/mana_filters.css" media="all">
+
     <script type="text/javascript" src="http://ptoys.maywz.info/js/prototype/prototype.js"></script>
     <script type="text/javascript" src="http://ptoys.maywz.info/js/lib/jquery/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="http://ptoys.maywz.info/js/lib/jquery/noconflict.js"></script>
@@ -263,6 +265,358 @@
                         <!-- Filter column -->
                         <!-- <div class="product-segment-inner is-filter-option"> -->
                         <div class="col-left">
+                            <div class="block block-layered-nav block-layered-nav--no-filters">
+                                <div class="product-filter test">
+                                    <div class="product-segment-title">
+                                        <span class="text-default is-bold is-small">Filter By:</span>
+                                    </div>
+                                    <div class="block-content toggle-content product-filter-content accordion-open">
+                                        <p class="block-subtitle block-subtitle--filter">Filter</p>
+                                        <dl id="narrow-by-list">
+                                        <dt class="odd current">Category</dt>
+                                        <dd class="category-filter odd current">
+                                            <ol class="m-filter-item-list ">
+                                                <li>
+                                                    <a href="http://ptoys.maywz.info/category.html?cat=17" title="Plan Home™  ">Plan Home™ </a>
+                                                    (22)
+                                                </li>
+                                                <li>
+                                                    <a href="http://ptoys.maywz.info/category.html?cat=18" title="PlanMini™  ">PlanMini™ </a>
+                                                    (6)
+                                                </li>
+                                                <li>
+                                                    <a href="http://ptoys.maywz.info/category.html?cat=19" title="Water Play">Water Play</a>
+                                                    (13)
+                                                </li>
+                                                <li>
+                                                    <a href="http://ptoys.maywz.info/category.html?cat=20" title="Babies">Babies</a>
+                                                    (16)
+                                                </li>
+                                                <li>
+                                                    <a href="http://ptoys.maywz.info/category.html?cat=21" title="Push &amp; Pull">Push &amp; Pull</a>
+                                                    (23)
+                                                </li>
+                                                <li>
+                                                    <a href="http://ptoys.maywz.info/category.html?cat=22" title="Active Play">Active Play</a>
+                                                    (41)
+                                                </li>
+                                                <li>
+                                                    <a href="http://ptoys.maywz.info/category.html?cat=23" title="Learning &amp; Education">Learning &amp; Education</a>
+                                                    (84)
+                                                </li>
+                                                <li>
+                                                    <a href="http://ptoys.maywz.info/category.html?cat=24" title="Games &amp; Puzzle">Games &amp; Puzzle</a>
+                                                    (27)
+                                                </li>
+                                                <li>
+                                                    <a href="http://ptoys.maywz.info/category.html?cat=25" title="Music">Music</a>
+                                                    (28)
+                                                </li>
+                                                <li>
+                                                    <a href="http://ptoys.maywz.info/category.html?cat=26" title="Construction &amp; Creativity">Construction &amp; Creativity</a>
+                                                    (12)
+                                                </li>
+                                                <li>
+                                                    <a href="http://ptoys.maywz.info/category.html?cat=27" title="Pretend Play">Pretend Play</a>
+                                                    (131)
+                                                </li>
+                                            </ol>
+                                        </dd>
+                                        <dt class="current is-visibility-hidden Badge even"></dt>
+                                        <dd class="current even">
+                                            <ol class="m-filter-item-list ">
+                                                <li>
+                                                    <input type="checkbox" checked name="New Products" value="http://ptoys.maywz.info/category.html?badge=328" onclick="window.location=this.value;">
+                                                    <a href="#" title="New Products">
+                                                        New Products </a>
+                                                    <span>(431)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Best Selling" value="http://ptoys.maywz.info/category.html?badge=329" onclick="window.location=this.value;">
+                                                    <a href="#" title="Best Selling">
+                                                        Best Selling </a>
+                                                    <span>(431)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Award Winning" value="http://ptoys.maywz.info/category.html?badge=330" onclick="window.location=this.value;">
+                                                    <a href="#" title="Award Winning">
+                                                        Award Winning </a>
+                                                    <span>(411)</span>
+                                                </li>
+                                            </ol>
+
+                                        </dd>
+                                        <dt class="odd current">Age</dt>
+                                        <dd class="odd current">
+                                            <ol class="m-filter-item-list ">
+                                                <li>
+                                                    <input type="checkbox" name="0m+" value="http://ptoys.maywz.info/category.html?age=341" onclick="window.location=this.value;">
+                                                    <a href="#" title="0m+">
+                                                        0m+ </a>
+                                                    <span>(3)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="10m+" value="http://ptoys.maywz.info/category.html?age=337" onclick="window.location=this.value;">
+                                                    <a href="#" title="10m+">
+                                                        10m+ </a>
+                                                    <span>(5)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="12m+" value="http://ptoys.maywz.info/category.html?age=338" onclick="window.location=this.value;">
+                                                    <a href="#" title="12m+">
+                                                        12m+ </a>
+                                                    <span>(82)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="18m+" value="http://ptoys.maywz.info/category.html?age=336" onclick="window.location=this.value;">
+                                                    <a href="#" title="18m+">
+                                                        18m+ </a>
+                                                    <span>(45)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="2y+" value="http://ptoys.maywz.info/category.html?age=334" onclick="window.location=this.value;">
+                                                    <a href="#" title="2y+">
+                                                        2y+ </a>
+                                                    <span>(35)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="3y+" value="http://ptoys.maywz.info/category.html?age=333" onclick="window.location=this.value;">
+                                                    <a href="#" title="3y+">
+                                                        3y+ </a>
+                                                    <span>(228)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="4m+" value="http://ptoys.maywz.info/category.html?age=343" onclick="window.location=this.value;">
+                                                    <a href="#" title="4m+">
+                                                        4m+ </a>
+                                                    <span>(6)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="4y+" value="http://ptoys.maywz.info/category.html?age=342" onclick="window.location=this.value;">
+                                                    <a href="#" title="4y+">
+                                                        4y+ </a>
+                                                    <span>(1)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="5y+" value="http://ptoys.maywz.info/category.html?age=340" onclick="window.location=this.value;">
+                                                    <a href="#" title="5y+">
+                                                        5y+ </a>
+                                                    <span>(1)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="6m+" value="http://ptoys.maywz.info/category.html?age=335" onclick="window.location=this.value;">
+                                                    <a href="#" title="6m+">
+                                                        6m+ </a>
+                                                    <span>(17)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Non-Toy Product" value="http://ptoys.maywz.info/category.html?age=339" onclick="window.location=this.value;">
+                                                    <a href="#" title="Non-Toy Product">
+                                                        Non-Toy Product </a>
+                                                    <span>(8)</span>
+                                                </li>
+                                            </ol>
+
+                                        </dd>
+                                        <dt class="even current">Child development</dt>
+                                        <dd class="even current">
+                                            <ol class="m-filter-item-list ">
+                                                <li>
+                                                    <input type="checkbox" name="Auditory" value="http://ptoys.maywz.info/category.html?child_development=267" onclick="window.location=this.value;">
+                                                    <a href="#" title="Auditory">
+                                                        Auditory </a>
+                                                    <span>(48)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Cause &amp; Effect" value="http://ptoys.maywz.info/category.html?child_development=264" onclick="window.location=this.value;">
+                                                    <a href="#" title="Cause &amp; Effect">
+                                                        Cause &amp; Effect </a>
+                                                    <span>(35)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Concentration" value="http://ptoys.maywz.info/category.html?child_development=260" onclick="window.location=this.value;">
+                                                    <a href="#" title="Concentration">
+                                                        Concentration </a>
+                                                    <span>(29)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Coordination" value="http://ptoys.maywz.info/category.html?child_development=254" onclick="window.location=this.value;">
+                                                    <a href="#" title="Coordination">
+                                                        Coordination </a>
+                                                    <span>(152)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Creative" value="http://ptoys.maywz.info/category.html?child_development=257" onclick="window.location=this.value;">
+                                                    <a href="#" title="Creative">
+                                                        Creative </a>
+                                                    <span>(35)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Emotion" value="http://ptoys.maywz.info/category.html?child_development=268" onclick="window.location=this.value;">
+                                                    <a href="#" title="Emotion">
+                                                        Emotion </a>
+                                                    <span>(2)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Explore" value="http://ptoys.maywz.info/category.html?child_development=265" onclick="window.location=this.value;">
+                                                    <a href="#" title="Explore">
+                                                        Explore </a>
+                                                    <span>(22)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Fine Motor" value="http://ptoys.maywz.info/category.html?child_development=252" onclick="window.location=this.value;">
+                                                    <a href="#" title="Fine Motor">
+                                                        Fine Motor </a>
+                                                    <span>(294)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Gross Motor" value="http://ptoys.maywz.info/category.html?child_development=253" onclick="window.location=this.value;">
+                                                    <a href="#" title="Gross Motor">
+                                                        Gross Motor </a>
+                                                    <span>(53)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Imagination" value="http://ptoys.maywz.info/category.html?child_development=249" onclick="window.location=this.value;">
+                                                    <a href="#" title="Imagination">
+                                                        Imagination </a>
+                                                    <span>(213)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Language &amp; Communication" value="http://ptoys.maywz.info/category.html?child_development=251"
+                                                        onclick="window.location=this.value;">
+                                                    <a href="#" title="Language &amp; Communication">
+                                                        Language &amp; Communication </a>
+                                                    <span>(259)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Logical" value="http://ptoys.maywz.info/category.html?child_development=259" onclick="window.location=this.value;">
+                                                    <a href="#" title="Logical">
+                                                        Logical </a>
+                                                    <span>(31)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Mathematical" value="http://ptoys.maywz.info/category.html?child_development=255" onclick="window.location=this.value;">
+                                                    <a href="#" title="Mathematical">
+                                                        Mathematical </a>
+                                                    <span>(71)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Memory" value="http://ptoys.maywz.info/category.html?child_development=262" onclick="window.location=this.value;">
+                                                    <a href="#" title="Memory">
+                                                        Memory </a>
+                                                    <span>(1)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Musical" value="http://ptoys.maywz.info/category.html?child_development=269" onclick="window.location=this.value;">
+                                                    <a href="#" title="Musical">
+                                                        Musical </a>
+                                                    <span>(25)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Pre Braille" value="http://ptoys.maywz.info/category.html?child_development=270" onclick="window.location=this.value;">
+                                                    <a href="#" title="Pre Braille">
+                                                        Pre Braille </a>
+                                                    <span>(2)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Problem Solving" value="http://ptoys.maywz.info/category.html?child_development=261" onclick="window.location=this.value;">
+                                                    <a href="#" title="Problem Solving">
+                                                        Problem Solving </a>
+                                                    <span>(34)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Sign Language" value="http://ptoys.maywz.info/category.html?child_development=271" onclick="window.location=this.value;">
+                                                    <a href="#" title="Sign Language">
+                                                        Sign Language </a>
+                                                    <span>(2)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Social" value="http://ptoys.maywz.info/category.html?child_development=250" onclick="window.location=this.value;">
+                                                    <a href="#" title="Social">
+                                                        Social </a>
+                                                    <span>(163)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Tactile" value="http://ptoys.maywz.info/category.html?child_development=258" onclick="window.location=this.value;">
+                                                    <a href="#" title="Tactile">
+                                                        Tactile </a>
+                                                    <span>(28)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="Visual" value="http://ptoys.maywz.info/category.html?child_development=266" onclick="window.location=this.value;">
+                                                    <a href="#" title="Visual">
+                                                        Visual </a>
+                                                    <span>(20)</span>
+                                                </li>
+                                            </ol>
+
+                                        </dd>
+                                        <dt class="last odd">Price</dt>
+                                        <dd class="last odd">
+                                            <ol class="m-filter-item-list ">
+                                                <li>
+                                                    <input type="checkbox" name="฿0.00 - ฿1,000.00" value="http://ptoys.maywz.info/category.html?price=1%2C1000" onclick="window.location=this.value;">
+                                                    <a href="#" title="฿0.00 - ฿1,000.00">
+                                                        ฿0.00 - ฿1,000.00 </a>
+                                                    <span>(323)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="฿1,000.00 - ฿2,000.00" value="http://ptoys.maywz.info/category.html?price=2%2C1000" onclick="window.location=this.value;">
+                                                    <a href="#" title="฿1,000.00 - ฿2,000.00">
+                                                        ฿1,000.00 - ฿2,000.00 </a>
+                                                    <span>(45)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="฿2,000.00 - ฿3,000.00" value="http://ptoys.maywz.info/category.html?price=3%2C1000" onclick="window.location=this.value;">
+                                                    <a href="#" title="฿2,000.00 - ฿3,000.00">
+                                                        ฿2,000.00 - ฿3,000.00 </a>
+                                                    <span>(28)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="฿3,000.00 - ฿4,000.00" value="http://ptoys.maywz.info/category.html?price=4%2C1000" onclick="window.location=this.value;">
+                                                    <a href="#" title="฿3,000.00 - ฿4,000.00">
+                                                        ฿3,000.00 - ฿4,000.00 </a>
+                                                    <span>(6)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="฿4,000.00 - ฿5,000.00" value="http://ptoys.maywz.info/category.html?price=5%2C1000" onclick="window.location=this.value;">
+                                                    <a href="#" title="฿4,000.00 - ฿5,000.00">
+                                                        ฿4,000.00 - ฿5,000.00 </a>
+                                                    <span>(7)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="฿5,000.00 - ฿6,000.00" value="http://ptoys.maywz.info/category.html?price=6%2C1000" onclick="window.location=this.value;">
+                                                    <a href="#" title="฿5,000.00 - ฿6,000.00">
+                                                        ฿5,000.00 - ฿6,000.00 </a>
+                                                    <span>(4)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="฿6,000.00 - ฿7,000.00" value="http://ptoys.maywz.info/category.html?price=7%2C1000" onclick="window.location=this.value;">
+                                                    <a href="#" title="฿6,000.00 - ฿7,000.00">
+                                                        ฿6,000.00 - ฿7,000.00 </a>
+                                                    <span>(1)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="฿7,000.00 - ฿8,000.00" value="http://ptoys.maywz.info/category.html?price=8%2C1000" onclick="window.location=this.value;">
+                                                    <a href="#" title="฿7,000.00 - ฿8,000.00">
+                                                        ฿7,000.00 - ฿8,000.00 </a>
+                                                    <span>(2)</span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="฿8,000.00 - ฿9,000.00" value="http://ptoys.maywz.info/category.html?price=9%2C1000" onclick="window.location=this.value;">
+                                                    <a href="#" title="฿8,000.00 - ฿9,000.00">
+                                                        ฿8,000.00 - ฿9,000.00 </a>
+                                                    <span>(1)</span>
+                                                </li>
+                                            </ol>
+
+                                        </dd>
+                                        </dl>
+                                        <script type="text/javascript">decorateDataList('narrow-by-list')</script>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Magento filter layout structure -->
                             <div class="block-content toggle-content product-filter-content">
                                 <div class="currently">

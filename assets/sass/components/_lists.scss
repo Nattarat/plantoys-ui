@@ -377,6 +377,14 @@
         &.is-cart {
         }
 
+        &.is-cart-link {
+            display: none;
+            margin-right: 0;
+        }
+
+        &.is-search {
+        }
+
         &.is-active {
             z-index: zindex(lv1);
         }
@@ -417,6 +425,14 @@
             }
         }
 
+        &.is-login,
+        &.is-language,
+        &.is-search {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                display: none;
+            }
+        }
+
         &.is-login {
             @media screen and (max-width: screen(phablet-lg-max)) {
                 margin-bottom: 5px;
@@ -432,7 +448,7 @@
 
         &.is-cart {
             @media screen and (max-width: screen(phablet-lg-max)) {
-                margin-right: 0;
+                display: none;
             }
 
             @media screen and (max-width: 991px) {
@@ -442,11 +458,9 @@
             }
         }
 
-        &.is-login,
-        &.is-language,
-        &.is-search {
+        &.is-cart-link {
             @media screen and (max-width: screen(phablet-lg-max)) {
-                display: none;
+                display: block;
             }
         }
     }
@@ -674,6 +688,7 @@
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-sidebar,
     &.is-footer {
         width: auto;
         min-height: initial;
@@ -688,6 +703,11 @@
                 margin-right: 0;
             }
         }
+    }
+
+    &.is-sidebar {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     &.is-navigation-lv2,

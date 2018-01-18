@@ -656,7 +656,19 @@
                                 <div class="button-close-navigation-main"></div>
                             </div>
                         </div>
+                        <div class="topbar-segment-inner is-search">
+                            <a id="button-navigation-sidebar-search" class="button-typography" href="javascript:;">
+                                <span class="button-body">
+                                    <img class="button-icon button-icon-topbar is-search-topbar is-text-blank" src="../assets/images/icon/icon-search.png" alt="Icon">
+                                </span>
+                            </a>
+                        </div>
                     </div>
+                    <!-- Logo -->
+                    <a href="#" class="logo-brand">
+                        <img class="logo-brand-blackwhite" src="../assets/images/logo/logo.jpg" alt="Logo">
+                        <img class="logo-brand-color" src="../assets/images/logo/logo-color.jpg" alt="Logo">
+                    </a>
                     <div class="topbar-segment is-right">
                         <div class="list-activity">
                             <div class="list-item is-login">
@@ -941,6 +953,13 @@
                                     <div class="button-close-navigation-main"></div>
                                 </div>
                             </div>
+                            <div class="list-item is-cart-link">
+                                <a class="button-typography" href="javascript:;">
+                                    <span class="button-body">
+                                        <img class="button-icon button-icon-topbar is-size-topbar" src="../assets/images/icon/icon-cart-circle.png" alt="Icon">
+                                    </span>
+                                </a>
+                            </div>
                             <div class="list-item is-language">
                                 <a id="button-language" class="button-typography is-language" href="javascript:;">
                                     <span class="button-body">
@@ -977,12 +996,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Logo -->
-                <a href="#" class="logo-brand">
-                    <img class="logo-brand-blackwhite" src="../assets/images/logo/logo.jpg" alt="Logo">
-                    <img class="logo-brand-color" src="../assets/images/logo/logo-color.jpg" alt="Logo">
-                </a>
             </div>
 
             <!-- Message bar for notification -->
@@ -1580,617 +1593,6 @@
                 </div>
             </div>
 
-            <!-- Sidebar -->
-            <div id="sidebar-navigation" class="sidebar is-left">
-                <div class="sidebar-container">
-                    <!-- <ul class="list-navigation is-sidebar">
-                        <li class="list-item">
-                            <a class="list-link" href="#">
-                                <span class="text-link is-middle-small is-bold is-gray">
-                                    Home
-                                </span>
-                            </a>
-                        </li>
-                    </ul> -->
-
-                    <button id="button-close-sidebar" class="button-typography" type="button">
-                        <span class="button-body">
-                            <img class="button-icon is-small is-text-blank" src="../assets/images/icon/icon-close.png" alt="Icon">
-                        </span>
-                    </button>
-
-                    <div class="sidebar-segment is-form-search">
-                        <div class="form-search">
-                            <div class="form-search-inner is-field">
-                                <!-- Add class "is-error" for show error field -->
-                                <input class="field-line-bottom is-fluid is-placeholder-color-default" placeholder="Search entire store here..." type="text">
-                                <!-- Add class "is-active" for show validation message -->
-                                <div class="field-validation">
-                                    <span class="text-default is-extra-small is-error">error_meesage</span>
-                                </div>
-                            </div>
-                            <div class="form-search-inner">
-                                <button class="button-background-image is-wood-green is-small is-fluid is-padding-blank" type="button">
-                                    <span class="button-body">
-                                        <span class="button-text is-small">Search</span>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-container-scroll">
-                        <!-- Accordion multi-level menu -->
-                        <div class="list-menu-level" data-accordion-group>
-                            <!-- Menu column -->
-                            <div class="list-column">
-                                <!-- Non accordion menu level 1 -->
-                                <div class="list-item">
-                                    <a class="list-link" href="javascript:;">
-                                        <span class="text-default is-middle-small is-bold is-gray">
-                                            Home
-                                        </span>
-                                    </a>
-                                </div>
-                                <!-- Accordion memu container level 1 -->
-                                <div class="accordion" data-accordion>
-                                    <!-- Accordion parent menu level 1 -->
-                                    <div class="list-item" data-control>
-                                        <a class="list-link" href="javascript:;">
-                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                Our Brand
-                                            </span>
-                                            <i class="list-icon fa fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                    <div class="accordion-content" data-content>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Who we are
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    How we work
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    What awards we got
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Accordion memu container level 1 -->
-                                <div class="accordion" data-accordion>
-                                    <!-- Accordion parent menu level 1 -->
-                                    <div class="list-item" data-control>
-                                        <a class="list-link" href="javascript:;">
-                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                Our Products
-                                            </span>
-                                            <i class="list-icon fa fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                    <div class="accordion-content" data-content>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    View All
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    New Products
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Best Selling
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Award Winning
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Age
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Child Development
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Accordion menu container level 2 -->
-                                        <div class="accordion-level-2" data-accordion>
-                                            <!-- Accordion parent menu level 2 -->
-                                            <div class="list-item" data-control>
-                                                <a class="list-link" href="javascript:;">
-                                                    <span class="text-default is-middle-small is-bold is-gray">
-                                                        Category
-                                                    </span>
-                                                    <i class="list-icon fa fa-angle-right"></i>
-                                                </a>
-                                            </div>
-                                            <div data-content>
-                                                <!-- Accordion menu container level 3 -->
-                                                <div class="accordion-level-3" data-accordion>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                PlanHome
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                PlanMini
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                Water Play
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                Babies
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                Push & Pull
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                Active Play
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                Learning & Education
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                Games & Puzzles
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                Music
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                Blocks & Construction
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                Pretend Play
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                New Products
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                Best Seller
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Non accordion menu -->
-                                                    <div class="list-item">
-                                                        <a class="list-link" href="javascript:;">
-                                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                                Award Winning
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Accordion memu container level 1 -->
-                                <div class="accordion" data-accordion>
-                                    <!-- Accordion parent menu level 1 -->
-                                    <div class="list-item" data-control>
-                                        <a class="list-link" href="javascript:;">
-                                            <span class="text-default is-middle-small is-bold is-gray">
-                                                Child Development
-                                            </span>
-                                            <i class="list-icon fa fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                    <div class="accordion-content" data-content>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    0-6 Months
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    6-12 Months
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    12-18 Months
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    18-24 Months
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    2-3 Years
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 2 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    3 Years+
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Non accordion menu level 1 -->
-                                <div class="list-item">
-                                    <a class="list-link" href="javascript:;">
-                                        <span class="text-default is-middle-small is-bold is-gray">
-                                            Tips for Parent
-                                        </span>
-                                    </a>
-                                </div>
-                                <!-- Non accordion menu level 1 -->
-                                <div class="list-item">
-                                    <a class="list-link" href="javascript:;">
-                                        <span class="text-default is-middle-small is-bold is-gray">
-                                            News
-                                        </span>
-                                    </a>
-                                </div>
-                                <!-- Non accordion menu level 1 -->
-                                <div class="list-item">
-                                    <a class="list-link" href="javascript:;">
-                                        <span class="text-default is-middle-small is-bold is-gray">
-                                            Customer Support
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Menu column -->
-                            <div class="list-column">
-                                <!-- Accordion memu container level 1 -->
-                                <div class="accordion" data-accordion>
-                                    <!-- Accordion parent menu level 1 -->
-                                    <div class="list-item" data-control>
-                                        <a class="list-link" href="javascript:;">
-                                            <span class="text-tertiary is-middle-medium is-uppercase">
-                                                Shop
-                                            </span>
-                                            <i class="list-icon fa fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                    <div class="accordion-content" data-content>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    New Products
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Best Seller
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Award Winning
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Accordion memu container level 1 -->
-                                <div class="accordion" data-accordion>
-                                    <!-- Accordion parent menu level 1 -->
-                                    <div class="list-item" data-control>
-                                        <a class="list-link" href="javascript:;">
-                                            <span class="text-tertiary is-middle-medium is-uppercase">
-                                                Age group
-                                            </span>
-                                            <i class="list-icon fa fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                    <div class="accordion-content" data-content>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    0-6 Months
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    7-12 Months
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    13-18 Months
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    18-24 Months
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    2-3 years
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    3 years+
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Accordion memu container level 1 -->
-                                <div class="accordion" data-accordion>
-                                    <!-- Accordion parent menu level 1 -->
-                                    <div class="list-item" data-control>
-                                        <a class="list-link" href="javascript:;">
-                                            <span class="text-tertiary is-middle-medium is-uppercase">
-                                                HEADING
-                                            </span>
-                                            <i class="list-icon fa fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                    <div class="accordion-content" data-content>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Category
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Plan Home™
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    PlanMini™
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Water Play
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Babies
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Push & Pull
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Active Play
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Learning & Education
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Games & Puzzle
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Music
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Construction & Creativity
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Pretend Play
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    New Products
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Best Seller
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- Non accordion menu level 1 -->
-                                        <div class="list-item">
-                                            <a class="list-link" href="javascript:;">
-                                                <span class="text-default is-middle-small is-bold is-gray">
-                                                    Award Winning
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Scroll ending -->
-                </div>
-                <div class="sidebar-overlay"></div>
-            </div>
-
             <!-- Modal Language -->
             <div class="modal-dialog modal-language">
                 <div class="modal-dialog-container is-medium">
@@ -2268,6 +1670,649 @@
             </a>
             <!-- HTML end ============================================================================ -->
         </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar-navigation" class="sidebar is-left">
+        <div class="sidebar-container">
+            <!-- <ul class="list-navigation is-sidebar">
+                <li class="list-item">
+                    <a class="list-link" href="#">
+                        <span class="text-link is-middle-small is-bold is-gray">
+                            Home
+                        </span>
+                    </a>
+                </li>
+            </ul> -->
+
+            <button id="button-close-sidebar" class="button-typography" type="button">
+                <span class="button-body">
+                    <img class="button-icon is-small is-text-blank" src="../assets/images/icon/icon-close.png" alt="Icon">
+                </span>
+            </button>
+
+            <div class="sidebar-segment is-form-search">
+                <div class="form-search">
+                    <div class="form-search-inner is-field">
+                        <!-- Add class "is-error" for show error field -->
+                        <input class="field-line-bottom is-fluid is-placeholder-color-default" placeholder="Search entire store here..." type="text">
+                        <!-- Add class "is-active" for show validation message -->
+                        <div class="field-validation">
+                            <span class="text-default is-extra-small is-error">error_meesage</span>
+                        </div>
+                    </div>
+                    <div class="form-search-inner">
+                        <button class="button-background-image is-wood-green is-small is-fluid is-padding-blank" type="button">
+                            <span class="button-body">
+                                <span class="button-text is-small">Search</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-segment is-utility">
+                <div class="sidebar-segment-inner is-column-half is-language">
+                    <span class="text-default is-bold is-white">EN</span>
+                </div>
+                <div class="sidebar-segment-inner is-column-half is-account">
+                        <div class="list-activity">
+                            <div class="list-item is-login">
+                                <a id="button-menu-account" class="button-typography is-avatar" style="background-image: url('http://ptoys.maywz.info/media/customer//g/i/girl-setting44.jpg')" href="javascript:void(0);"></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="sidebar-container-scroll">
+                <!-- Accordion multi-level menu -->
+                <div class="list-menu-level" data-accordion-group>
+                    <!-- Menu column -->
+                    <div class="list-column">
+                        <!-- Non accordion menu level 1 -->
+                        <div class="list-item">
+                            <a class="list-link" href="javascript:;">
+                                <span class="text-default is-middle-small is-bold is-gray">
+                                    Home
+                                </span>
+                            </a>
+                        </div>
+                        <!-- Accordion memu container level 1 -->
+                        <div class="accordion" data-accordion>
+                            <!-- Accordion parent menu level 1 -->
+                            <div class="list-item" data-control>
+                                <a class="list-link" href="javascript:;">
+                                    <span class="text-default is-middle-small is-bold is-gray">
+                                        Our Brand
+                                    </span>
+                                    <i class="list-icon fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                            <div class="accordion-content" data-content>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Who we are
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            How we work
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            What awards we got
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion memu container level 1 -->
+                        <div class="accordion" data-accordion>
+                            <!-- Accordion parent menu level 1 -->
+                            <div class="list-item" data-control>
+                                <a class="list-link" href="javascript:;">
+                                    <span class="text-default is-middle-small is-bold is-gray">
+                                        Our Products
+                                    </span>
+                                    <i class="list-icon fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                            <div class="accordion-content" data-content>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            View All
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            New Products
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Best Selling
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Award Winning
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Age
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Child Development
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Accordion menu container level 2 -->
+                                <div class="accordion-level-2" data-accordion>
+                                    <!-- Accordion parent menu level 2 -->
+                                    <div class="list-item" data-control>
+                                        <a class="list-link" href="javascript:;">
+                                            <span class="text-default is-middle-small is-bold is-gray">
+                                                Category
+                                            </span>
+                                            <i class="list-icon fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                    <div data-content>
+                                        <!-- Accordion menu container level 3 -->
+                                        <div class="accordion-level-3" data-accordion>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        PlanHome
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        PlanMini
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        Water Play
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        Babies
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        Push & Pull
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        Active Play
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        Learning & Education
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        Games & Puzzles
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        Music
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        Blocks & Construction
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        Pretend Play
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        New Products
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        Best Seller
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <!-- Non accordion menu -->
+                                            <div class="list-item">
+                                                <a class="list-link" href="javascript:;">
+                                                    <span class="text-default is-middle-small is-bold is-gray">
+                                                        Award Winning
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion memu container level 1 -->
+                        <div class="accordion" data-accordion>
+                            <!-- Accordion parent menu level 1 -->
+                            <div class="list-item" data-control>
+                                <a class="list-link" href="javascript:;">
+                                    <span class="text-default is-middle-small is-bold is-gray">
+                                        Child Development
+                                    </span>
+                                    <i class="list-icon fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                            <div class="accordion-content" data-content>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            0-6 Months
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            6-12 Months
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            12-18 Months
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            18-24 Months
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            2-3 Years
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 2 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            3 Years+
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Non accordion menu level 1 -->
+                        <div class="list-item">
+                            <a class="list-link" href="javascript:;">
+                                <span class="text-default is-middle-small is-bold is-gray">
+                                    Tips for Parent
+                                </span>
+                            </a>
+                        </div>
+                        <!-- Non accordion menu level 1 -->
+                        <div class="list-item">
+                            <a class="list-link" href="javascript:;">
+                                <span class="text-default is-middle-small is-bold is-gray">
+                                    News
+                                </span>
+                            </a>
+                        </div>
+                        <!-- Non accordion menu level 1 -->
+                        <div class="list-item">
+                            <a class="list-link" href="javascript:;">
+                                <span class="text-default is-middle-small is-bold is-gray">
+                                    Customer Support
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Menu column -->
+                    <div class="list-column">
+                        <!-- Accordion memu container level 1 -->
+                        <div class="accordion" data-accordion>
+                            <!-- Accordion parent menu level 1 -->
+                            <div class="list-item" data-control>
+                                <a class="list-link" href="javascript:;">
+                                    <span class="text-tertiary is-middle-medium is-uppercase">
+                                        Shop
+                                    </span>
+                                    <i class="list-icon fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                            <div class="accordion-content" data-content>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            New Products
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Best Seller
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Award Winning
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion memu container level 1 -->
+                        <div class="accordion" data-accordion>
+                            <!-- Accordion parent menu level 1 -->
+                            <div class="list-item" data-control>
+                                <a class="list-link" href="javascript:;">
+                                    <span class="text-tertiary is-middle-medium is-uppercase">
+                                        Age group
+                                    </span>
+                                    <i class="list-icon fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                            <div class="accordion-content" data-content>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            0-6 Months
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            7-12 Months
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            13-18 Months
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            18-24 Months
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            2-3 years
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            3 years+
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion memu container level 1 -->
+                        <div class="accordion" data-accordion>
+                            <!-- Accordion parent menu level 1 -->
+                            <div class="list-item" data-control>
+                                <a class="list-link" href="javascript:;">
+                                    <span class="text-tertiary is-middle-medium is-uppercase">
+                                        HEADING
+                                    </span>
+                                    <i class="list-icon fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                            <div class="accordion-content" data-content>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Category
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Plan Home™
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            PlanMini™
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Water Play
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Babies
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Push & Pull
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Active Play
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Learning & Education
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Games & Puzzle
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Music
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Construction & Creativity
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Pretend Play
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            New Products
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Best Seller
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Non accordion menu level 1 -->
+                                <div class="list-item">
+                                    <a class="list-link" href="javascript:;">
+                                        <span class="text-default is-middle-small is-bold is-gray">
+                                            Award Winning
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list-navigation is-sidebar">
+                        <li class="list-item">
+                            <a class="list-link is-icon-font" href="https://www.facebook.com/PlanToysTH/" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="list-link is-icon-font" href="https://www.instagram.com/plantoysofficial/" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="list-link is-icon-font" href="https://www.youtube.com/user/PlanToysWW/" target="_blank">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                            <a class="list-link is-icon-font" href="https://twitter.com/plantoys" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="list-link is-icon-font" href="http://line.me/ti/p/~plantoysshop" target="_blank">
+                                <img src="<?php echo $this->getSkinUrl('images/icon/social/social-line.svg'); ?>" alt="Icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- Scroll ending -->
+        </div>
+        <div class="sidebar-overlay"></div>
     </div>
 
     <!-- Global loading -->
@@ -2651,7 +2696,7 @@
             // Sidebar
             // =====================================================
             // Open
-            $j('#button-navigation-sidebar').on('click', function() {
+            $j('#button-navigation-sidebar, #button-navigation-sidebar-search').on('click', function() {
                 $j('#sidebar-navigation').addClass('is-active');
                 $j('body').addClass('is-sidebar-lock');
                 $j('#menu-shop').removeClass('is-active');
@@ -2683,7 +2728,7 @@
             // Open
             $j('#button-search').click(function() {
                 $j('.modal-search').addClass('is-active');
-                $j('body').addClass('is-sidebar-lock');
+                // $j('body').addClass('is-sidebar-lock');
             });
 
             // Modal
@@ -2728,6 +2773,15 @@
                     collision: "flip"
                 }
             }).iconselectmenu("menuWidget");
+
+            // $j("#select-country-sidebar").iconselectmenu({
+            //     appendTo: "#select-country-sidebar-anchor",
+            //     position: {
+            //         my: "top+18px",
+            //         at: "center",
+            //         collision: "flip"
+            //     }
+            // }).iconselectmenu("menuWidget");
         });
     </script>
 </body>

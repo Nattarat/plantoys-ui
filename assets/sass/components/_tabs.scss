@@ -700,6 +700,10 @@
                 .text-link {
                     font-size: font-secondary-size(size-11);
                 }
+
+                .text-link {
+                    color: color-text(orange-primary);
+                }
             }
 
             &.r-tabs-state-active {
