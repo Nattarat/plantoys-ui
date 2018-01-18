@@ -328,7 +328,7 @@
                         }
                         &.is-dot{
                             background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
-                            background-repeat: repeat;
+                            background-repeat: repeat-x;
                             background-position-x: 3px;
                         }
                     }
