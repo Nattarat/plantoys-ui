@@ -1424,6 +1424,21 @@
         }
     }
 
+    &.is-carousel {
+        > .list-item {
+            width: 100%;
+            margin: 0;
+
+            .list-thumbnail-default {
+                width: 100%;
+            }
+        }
+
+        .list-link {
+            margin-left: -1px;
+        }
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 

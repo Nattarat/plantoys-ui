@@ -18,7 +18,8 @@
 .carousel-hero,
 .carousel-category,
 .carousel-sustainable,
-.carousel-product {
+.carousel-product,
+.carousel-product-related {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
     $pagination-size: 0.9vw; // 17px
@@ -450,6 +451,31 @@
 .carousel-product {
     overflow: hidden;
     max-height: 480px;
+}
+
+.carousel-product-related {
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .slick-list {
+        border-left: 1px solid $color-gray-10;
+        border-right: 1px solid $color-gray-10;
+    }
+
+    &.is-control-fix-size {
+        // Slick
+        .slick-arrow {
+            top: 50%;
+
+            &.slick-prev {
+                left: 50px;
+            }
+
+            &.slick-next {
+                right: 50px;
+            }
+        }
+    }
 }
 
 // Fix size
