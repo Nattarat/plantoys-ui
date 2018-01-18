@@ -256,11 +256,7 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .child-thumbnail{
-        @include thumb-nail($thumb-head-font-size: $font-size-4);
-
-        .caption {
-            padding-top: 10px;
-        }
+        @include thumb-nail($thumb-head-font-size: $font-size-4,$thumb-caption-padding:10px);
     }
     .text-detail{
         list-style-type: disc;
@@ -379,13 +375,27 @@
             }
         }
         .child-thumbnai{
-            @include thumb-nail($thumb-head-font-size:16px,$thumb-detail-font-size:14px,$thumb-padding:30px);
+            @include thumb-nail($thumb-head-font-size:16px,$thumb-detail-font-size:14px,$thumb-padding:30px,$thumb-caption-padding:10px,$thumb-space-detail:10px 0px 0px 0px);
         }
-        .slick-dots li button:before
-        {
-            font-family: 'slick';
-            font-size: 11px;
-            line-height: 20px;
+        // .slick-dots li button:before
+        // {
+        //     font-family: 'slick';
+        //     font-size: 11px;
+        //     line-height: 20px;
+        // }
+        .slick-button{
+            position: absolute;
+            z-index: 10;
+            bottom: 0px;
+            width: 16px;
+            height: 28px;
+            cursor: pointer;
+            &.is-prev{
+                left: 40%;
+            }
+            &.is-next{
+                right: 40%;
+            }
         }
     }
 
