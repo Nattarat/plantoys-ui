@@ -246,11 +246,11 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     padding: $child-padding;
-    background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
-    background-repeat: repeat-y;
-    background-position-y: 5px;
+    border-left-style: dotted;
+    border-width: 5px;
+    border-color: $color-blue-20;
     &.not-border{
-        background-image: none;
+        border: none;
     }
 
     // STYLES OF CHILD CLASS
@@ -329,8 +329,7 @@
                         &.is-dot{
                             background-image: url('#{path-file(images)}/icon/child_development/child-dot.png');
                             background-repeat: repeat;
-                            background-position-x: 5px;
-                            background-position-y: 7px;
+                            background-position-x: 3px;
                         }
                     }
                 }
