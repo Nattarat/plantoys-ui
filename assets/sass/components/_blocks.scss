@@ -163,6 +163,8 @@
     }
 
     &.for-subscribe-home {
+        position: relative;
+        z-index: zindex(lv2);
         height: auto;
         min-height: initial;
         // min-height: 850px;
