@@ -24,6 +24,10 @@
         width: 100px;
     }
     .caption{
+        .row-width{
+            max-width: 70%;
+            margin: auto;
+        }
         .text-style{
             color: $color-blue-16;
             font-family: font-family(primary);
