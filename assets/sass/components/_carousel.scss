@@ -8,8 +8,19 @@
 
 @charset 'utf-8';
 
-// Container
+// Global
 // ------------------------------------------------
+.slick-slider {
+    a {
+        &:hover {
+            text-decoration: none;
+
+            * {
+                text-decoration: none;
+            }
+        }
+    }
+}
 
 // General
 // ------------------------------------------------
@@ -19,7 +30,8 @@
 .carousel-category,
 .carousel-sustainable,
 .carousel-product,
-.carousel-product-related {
+.carousel-product-related,
+.carousel-blog-related, {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
     $pagination-size: 0.9vw; // 17px
@@ -119,6 +131,10 @@
     }
 
     // Slick
+    .slick-track {
+        margin-left: 0;
+    }
+
     .slick-arrow {
         @include text-hide;
         z-index: zindex(lv2);
@@ -450,7 +466,14 @@
 
 .carousel-product {
     overflow: hidden;
-    max-height: 480px;
+
+    @media screen and (max-width: screen(labtop-lg-max)) {
+        max-height: 360px;
+    }
+
+    @media (min-width: screen(desktop-sm)) and (max-width: screen(labtop-lg-max)) {
+        max-height: 480px;
+    }
 }
 
 .carousel-product-related {
@@ -458,8 +481,34 @@
     padding-right: 100px;
 
     .slick-list {
-        border-left: 1px solid $color-gray-10;
-        border-right: 1px solid $color-gray-10;
+        padding-left: 1px;
+        margin-left: -1px;
+        // border-left: 1px solid $color-gray-10;
+        // border-right: 1px solid $color-gray-10;
+    }
+
+    &.is-control-fix-size {
+        // Slick
+        .slick-arrow {
+            top: 50%;
+
+            &.slick-prev {
+                left: 50px;
+            }
+
+            &.slick-next {
+                right: 50px;
+            }
+        }
+    }
+}
+
+.carousel-blog-related {
+    padding: 30px 60px;
+
+    .recommended-post {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     &.is-control-fix-size {

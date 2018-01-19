@@ -17,7 +17,8 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @include transition(transform 0.5s ease);
+    @include transition(transform 0.5s ease, opacity 0.5s ease 0.5s);
+    @include opacity(1);
     position: fixed;
     z-index: zindex(lv5);
     top: 0;
@@ -40,6 +41,8 @@
 
     .topbar-segment {
         &.is-left {
+            position: relative;
+            z-index: zindex(lv2);
             display: flex;
             align-items: center;
         }
@@ -57,6 +60,10 @@
 
         &.is-shop {
 
+        }
+
+        &.is-search {
+            display: none;
         }
 
         &.is-active {
@@ -152,6 +159,20 @@
         &.is-right {
             @media screen and (max-width: screen(phablet-lg-max)) {
                 // width: 60px;
+            }
+        }
+    }
+
+    .topbar-segment-inner {
+        &.is-shop {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                display: none;
+            }
+        }
+
+        &.is-search {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                display: block;
             }
         }
     }

@@ -10,8 +10,27 @@
 
 body {
     &.is-sidebar-lock {
-        overflow: hidden;
-        // margin-right: 16px;
+        // overflow: hidden;
+
+        .topbar {
+            @include opacity(0);
+        }
+
+        .wrapper {
+            overflow: hidden;
+        }
+
+        .page {
+            @include translateX(320px);
+
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                @include translateX(calc(100vw - 80px));
+            }
+        }
+    }
+
+    .page {
+        @include transition(all 0.5s ease);
     }
 }
 
@@ -79,7 +98,26 @@ body {
     .sidebar-segment {
         &.is-form-search {
             padding: 22px 30px;
+        }
+
+        &.is-utility {
+            display: flex;
             margin-bottom: 15px;
+            background-color: $color-green-5;
+        }
+    }
+
+    .sidebar-segment-inner {
+        &.is-column-half {
+            width: 50%;
+            padding: 10px 30px;
+        }
+
+        &.is-language,
+        &.is-account {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
