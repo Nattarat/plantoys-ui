@@ -416,6 +416,13 @@
             }
         }
     }
+
+    &.is-inner-container {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            margin-left: -25px;
+            margin-right: -25px;
+        }
+    }
 }
 
 .carousel-name {
@@ -424,6 +431,11 @@
     // max-width: 1440px;
     padding-top: 10px;
     margin: 0 -50px 25px;
+
+    @media screen and (max-width: screen(phablet-lg-max)) {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
 
     @media screen and (max-width: screen(tablet-md-max)) {
         padding-top: 30px;
@@ -482,7 +494,7 @@
 
     .slick-list {
         padding-left: 1px;
-        margin-left: -1px;
+        margin-left: -3px; // -1px
         // border-left: 1px solid $color-gray-10;
         // border-right: 1px solid $color-gray-10;
     }

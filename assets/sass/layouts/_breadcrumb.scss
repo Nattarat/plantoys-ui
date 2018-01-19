@@ -139,6 +139,8 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media screen and (max-width: screen(phablet-lg-max)) {
+        padding-left: 0;
+        padding-right: 0;
         margin-left: -25px;
         margin-right: -25px;
     }
