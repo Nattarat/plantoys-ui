@@ -70,6 +70,14 @@
     &.is-checkout-login {
         padding-bottom: 245px;
         margin-bottom: -35px;
+
+        .text-default {
+            &.is-bold {
+                &.is-uppercase {
+                    font-size: font-primary-size(size-11);
+                }
+            }
+        }
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
