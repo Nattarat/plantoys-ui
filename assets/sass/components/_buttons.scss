@@ -644,6 +644,28 @@ $button-padding-side-deault: 45px;
     }
 }
 
+.checkout-onepage-index {
+    #bt-loginfb,
+    #google_button_login {
+        .button-text {
+            font-size: 0;
+
+            &:before {
+                content: 'Log in';
+                display: inline-block;
+                font-family: font-family(primary);
+                font-size: font-primary-size(size-11);
+                font-weight: normal;
+                line-height: 1;
+                vertical-align: middle;
+                color: $color-white;
+                text-transform: none;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
