@@ -81,7 +81,7 @@
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include container-header(
-        $container-background: url('#{path-file(backgrounds)}/about/about-cover-page-howwework.jpg')
+        $container-background: url('#{path-file(backgrounds)}/about/about-cover-page-whoweare.jpg')
     );
 
     // STYLES OF COMPONENT ITSELF
@@ -110,7 +110,7 @@
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include container-header(
-        $container-background: url('#{path-file(backgrounds)}/about/about-cover-page-whatawardswegot.jpg')
+        $container-background: url('#{path-file(backgrounds)}/about/about-cover-page-whoweare.jpg')
     );
 
     // STYLES OF COMPONENT ITSELF

@@ -1366,7 +1366,7 @@
                     </div>
                 </div>
                 <div class="aligator-video">
-                    <video autoplay loop>
+                    <video id="aligator">
                         <source src="../assets/videos/aligator-motion.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -2015,6 +2015,26 @@
                 $j('#navigation-developments').removeClass('is-active');
             });
 
+            // News content
+            // Set selector
+            // ------------------------------
+            var elementContent = document.getElementById("news");
+            // Set scroll monitor to selector (for watching)
+            // ------------------------------
+            var elementContentWatcher = scrollMonitor.create(elementContent, {top: 450, bottom: 450});
+            // Set scroll monitor event (more event see in https://github.com/stutrek/scrollMonitor#events)
+            // ------------------------------
+            // enterViewport
+            elementContentWatcher.fullyEnterViewport(function() {
+                console.log( 'Video in viewport');
+                document.getElementById("aligator").play();
+            });
+            // exitViewport
+            elementContentWatcher.partiallyExitViewport (function() {
+                console.log( 'Video out viewport');
+                document.getElementById("aligator").pause();
+            });
+
             // Smooth scroll
             // =====================================================
             var scroll = new SmoothScroll('.scroll-to[href*="#"]');
@@ -2331,6 +2351,7 @@
                     collision: "flip"
                 }
             }).iconselectmenu("menuWidget");
+
         });
     </script>
 </body>
