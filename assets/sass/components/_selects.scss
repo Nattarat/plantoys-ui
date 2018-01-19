@@ -465,6 +465,12 @@
                     background-image: url('#{path-file(icons)}/icon-flag-japan.png');
                 }
             }
+
+            &.global {
+                &:before {
+                    background-image: url('#{path-file(icons)}/icon-world.png');
+                }
+            }
         }
 
         .ui-selectmenu-menu {
@@ -489,6 +495,10 @@
 
                 &.japan {
                     background-image: url('#{path-file(icons)}/icon-flag-japan.png');
+                }
+
+                &.global {
+                    background-image: url('#{path-file(icons)}/icon-world.png');
                 }
             }
         }
