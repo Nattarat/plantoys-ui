@@ -486,6 +486,16 @@
     @media (min-width: screen(desktop-sm)) and (max-width: screen(labtop-lg-max)) {
         max-height: 480px;
     }
+
+    &.is-product-detail {
+        @media screen and (max-width: screen(labtop-lg-max)) {
+            max-height: initial;
+        }
+
+        @media (min-width: screen(desktop-sm)) and (max-width: screen(labtop-lg-max)) {
+            max-height: initial;
+        }
+    }
 }
 
 .carousel-product-related {
