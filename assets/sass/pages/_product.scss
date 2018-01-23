@@ -1006,6 +1006,12 @@ $product-container-padding: 0 50px;
         &.is-review-comment {
             width: 80%;
             padding-left: 10px;
+
+            .text-default {
+                &.is-paragraph {
+                    margin-bottom: 5px;
+                }
+            }
         }
 
         &.is-align-vertical-center {
