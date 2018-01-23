@@ -1533,15 +1533,22 @@
         }
     }
 
-    &.is-wishlist {
+    &.is-column-wishlist {
         > .list-item {
+            @media screen and (max-width: screen(phablet-xs-max)) {
+                width: 100%;
+            }
 
-            @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-sm-max)) {
+            @media (min-width: screen(phablet-sm)) and (max-width: screen(tablet-sm-max)) {
+                width: 50%;
+            }
+
+            @media (min-width: screen(tablet-md)) and (max-width: screen(labtop-sm-max)) {
                 width: calc((100% / 3) + 1px);
             }
 
-            @media (min-width: screen(tablet-md)) and (max-width: screen(tablet-lg-max)) {
-                width: calc((100% / 5) + 1px);
+            @media (min-width: screen(labtop-md)) {
+                width: calc((100% / 4) + 1px);
             }
         }
     }
