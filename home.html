@@ -981,6 +981,15 @@
                     <img class="logo-brand-color" src="../assets/images/logo/logo-color.svg" alt="Logo">
                 </a>
             </div>
+            <!-- Notice bar -->
+            <div class="notification-bar is-success">
+                <span class="text-default is-middle-small is-bold is-white is-uppercase">Product has been added to your cart.</span>
+                <a class="button-typography is-close-notification" href="#">
+                    <span class="button-body">
+                        <img class="button-icon is-text-blank is-modal-close" src="../assets/images/icon/icon-close-white.png" alt="Icon">
+                    </span>
+                </a>
+            </div>
 
             <!-- Message bar for notification -->
             <ul class="messages">
@@ -1872,7 +1881,7 @@
             </div>
 
             <!-- Button go to top -->
-            <a id="button-gototop" class="button-circle is-gototop scroll-to" href="#body-top">
+            <a id="button-gototop" class="button-circle is-gototop scroll-to-top" href="#body-top">
                 <span class="button-body">
                     <img class="button-icon" src="../assets/images/icon/icon-arrow-line-top.png" alt="Icon">
                 </span>
@@ -2039,6 +2048,7 @@
             // Smooth scroll
             // =====================================================
             var scroll = new SmoothScroll('.scroll-to[href*="#"]');
+            var scroll = new SmoothScroll('.scroll-to-top[body]');
 
             // Scroll spy
             // =====================================================
@@ -2046,7 +2056,7 @@
                     nav: '#navigation-developments .pagination-list-item .pagination-bullet',
                     className: 'is-active',
                     callback: function () {
-				}
+				            }
             });
 
             // Navigation > Outside element action
@@ -2106,13 +2116,13 @@
             //     // console.log('mouseOff');
             // });
 
-            // $j('#menu-cart').mouseover(function() {
-            //     // console.log('mouseOn');
-            // });
-            // $j('#menu-cart').mouseOff(function() {
-            //     $j('#menu-cart').removeClass('is-active');
-            //     // console.log('mouseOff');
-            // });
+            $j('#menu-cart').mouseover(function() {
+                // console.log('mouseOn');
+            });
+            $j('#menu-cart').mouseOff(function() {
+                $j('#menu-cart').removeClass('is-active');
+                // console.log('mouseOff');
+            });
 
             $j('#menu-language').mouseover(function() {
                 // console.log('mouseOn');

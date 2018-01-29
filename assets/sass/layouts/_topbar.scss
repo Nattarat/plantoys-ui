@@ -137,6 +137,12 @@
         @include translate(0, -105%);
     }
 
+    &.headroom--top {
+        + .notification-bar {
+            @include translateY(80px);
+        }
+    }
+
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.page-header {

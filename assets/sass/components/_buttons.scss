@@ -898,6 +898,14 @@ $button-padding-side-deault: 45px;
         border-radius: 50%;
     }
 
+    &.is-close-notification {
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 50%;
+        right: 25px;
+        margin-top: -7px;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-active {

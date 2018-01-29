@@ -817,6 +817,7 @@
                         </div>
                     </div>
                 </div>
+                {{block type="catalog/product_list_random" category_id="11" template="catalog/product/child_development_list.phtml"}}
             </div>
             <!-- 6-12 Months -->
             <div class="tabcontent tab-pane" id="range2">
@@ -1610,6 +1611,7 @@
                         </div>
                     </div>
                 </div>
+                {{block type="catalog/product_list_random" category_id="12" template="catalog/product/child_development_list.phtml"}}
             </div>
             <!-- 12-18 Months -->
             <div class="tabcontent tab-pane" id="range3">
@@ -1856,6 +1858,7 @@
                         </div>
                     </div>
                 </div>
+                {{block type="catalog/product_list_random" category_id="13" template="catalog/product/child_development_list.phtml"}}
             </div>
             <!-- 18-24 Months -->
             <div class="tabcontent tab-pane" id="range4">
@@ -2116,6 +2119,7 @@
                         </div>
                     </div>
                 </div>
+                {{block type="catalog/product_list_random" category_id="14" template="catalog/product/child_development_list.phtml"}}
             </div>
             <!-- 2-3 Years-->
             <div class="tabcontent tab-pane" id="range5">
@@ -2371,6 +2375,7 @@
                         </div>
                     </div>
                 </div>
+                {{block type="catalog/product_list_random" category_id="15" template="catalog/product/child_development_list.phtml"}}
             </div>
             <!-- 3 Years+ -->
             <div class="tabcontent tab-pane" id="range6">
@@ -2761,13 +2766,15 @@
                         $j(hashtopic).fadeIn();
                         $j('#child-development-banner').removeClass();
                         $j('#child-development-banner').addClass(hashtopic.substring(1) + " .container-fluid");
-                        if ($j(hashtopic + ' .carousel-category').length == 1) {
-                            $j(hashtopic + ' .carousel-category').slick("getSlick").refresh();
-                        }
+
                         $j('#selectid').val(hashtopic);
                         setTimeout(function () {
                             window.scrollTo(0, 0); // run it a bit later also for browser compatibility
                         }, 1);
+
+                        if ($j(hashtopic + ' .carousel-category').length == 1) {
+                            $j(hashtopic + ' .carousel-category').slick("getSlick").refresh();
+                        }
                     } else {
                         $j("#range1").show();
                     }

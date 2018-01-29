@@ -121,8 +121,8 @@
         top: 100%;
         left: initial;
         right: -122px; // -155
-        width: 360px; // 300
-        padding-top: 35px;
+        width: 510px; // 300 > 360
+        padding: 35px 0 150px 150px;
         max-width: initial;
 
         .navigation-main-inner {
@@ -247,12 +247,10 @@
             right: -48px;
         }
 
-        @media screen and (max-width: 991px) {
-            // margin-top: 11px;
-        }
-
-        @media screen and (max-width: screen(labtop-lg)) {
-            // width: 550px;
+        @media screen and (max-width: screen(labtop-sm)) {
+            width: 360px;
+            padding-left: 0;
+            padding-bottom: 0;
         }
 
         .navigation-main-inner {
