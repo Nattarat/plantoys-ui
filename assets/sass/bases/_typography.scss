@@ -244,6 +244,10 @@
         border-bottom: 2px solid color-text(link);
     }
 
+    &.is-underline-light-white {
+        border-bottom: 1px solid $color-white;
+    }
+
     &.is-italic {
         font-style: italic;
     }
@@ -604,6 +608,10 @@
         color: color-text(default);
     }
 
+    &.is-white {
+      color: $color-white;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &:hover,
@@ -614,6 +622,10 @@
 
         &.is-black {
             color: $color-black;
+        }
+
+        &.is-white {
+          color: $color-white;
         }
     }
 

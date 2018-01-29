@@ -8,6 +8,19 @@
 
 @charset 'utf-8';
 
+// Animation
+// ------------------------------------------------
+@keyframes fadeOut {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
 // Global
 // ------------------------------------------------
 .notification-bar {
@@ -20,6 +33,8 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include transition(all .5s ease);
+    // visibility: hidden;
+    // opacity: 0;
     position: fixed;
     z-index: zindex(lv3);
     top: 0;
@@ -34,6 +49,16 @@
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-active {
+        visibility: visible;
+        opacity: 1;
+
+        animation-name: fadeOut;
+        animation-fill-mode: forwards;
+        animation-duration: .5s;
+        animation-delay: 10s;
+    }
+
 
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -41,8 +66,8 @@
         background-color: rgba(131, 193, 48, .9);
     }
 
-    &.is-success {
-        background-color: rgba(131, 193, 48, .9);
+    &.is-error {
+        background-color: rgba(226, 25, 55, .9);
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS

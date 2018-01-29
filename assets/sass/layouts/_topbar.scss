@@ -143,6 +143,14 @@
         }
     }
 
+    &.headroom--not-top {
+        &.headroom--pinned {
+            + .notification-bar {
+                @include translateY(80px);
+            }
+        }
+    }
+
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.page-header {
