@@ -33,8 +33,8 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include transition(all .5s ease);
-    // visibility: hidden;
-    // opacity: 0;
+    visibility: hidden;
+    opacity: 0;
     position: fixed;
     z-index: zindex(lv3);
     top: 0;
@@ -56,7 +56,7 @@
         animation-name: fadeOut;
         animation-fill-mode: forwards;
         animation-duration: .5s;
-        animation-delay: 10s;
+        animation-delay: 3s;
     }
 
 
