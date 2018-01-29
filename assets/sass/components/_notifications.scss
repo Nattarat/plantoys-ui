@@ -33,8 +33,9 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include transition(all .5s ease);
-    visibility: hidden;
-    opacity: 0;
+    // visibility: hidden;
+    // opacity: 0;
+    display: none;
     position: fixed;
     z-index: zindex(lv3);
     top: 0;
@@ -50,13 +51,13 @@
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-active {
-        visibility: visible;
-        opacity: 1;
+        // visibility: visible;
+        // opacity: 1;
 
-        animation-name: fadeOut;
-        animation-fill-mode: forwards;
-        animation-duration: .5s;
-        animation-delay: 3s;
+        // animation-name: fadeOut;
+        // animation-fill-mode: forwards;
+        // animation-duration: .5s;
+        // animation-delay: 3s;
     }
 
 
