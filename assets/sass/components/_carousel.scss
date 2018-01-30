@@ -560,6 +560,18 @@
     }
 }
 
+.carousel-news {
+    .slick-dots {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+    }
+}
+
 // Fix size
 .carousel-awards {
     max-width: 1280px;

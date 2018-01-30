@@ -201,7 +201,7 @@
     }
 
     &.for-news-home {
-        @media screen and (max-width: screen(tablet-sm)) {
+        @media screen and (max-width: screen(tablet-lg)) {
             min-height: auto;
         }
     }
