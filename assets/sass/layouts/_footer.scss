@@ -117,7 +117,9 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .footer-segment {
         &.is-right {
-            // padding-left: 0;
+            @media screen and (max-width: 991px) {
+                padding-left: 0;
+            }
         }
     }
 
@@ -130,6 +132,10 @@
             @media screen and (max-width: screen(phablet-sm-max)) {
                 position: static;
                 margin: auto auto 30px auto;
+            }
+
+            @media screen and (max-width: 991px) {
+                top: -25px;
             }
         }
 

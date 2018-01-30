@@ -246,6 +246,10 @@
 
     .subscribe-segment {
         &.is-catalogue {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                min-width: 280px;
+            }
+
             @media screen and (max-width: screen(tablet-lg-max)) {
                 margin-left: 0;
             }
@@ -264,8 +268,9 @@
         }
 
         [class^="field"] {
-            @media screen and (max-width: screen(phablet-lg-max)) {
+            @media screen and (max-width: screen(tablet-lg)) {
                 width: 100%;
+                max-width: 280px;
             }
         }
     }
@@ -402,6 +407,12 @@
     .aligator {
         @media screen and (max-width: screen(tablet-sm)) {
             z-index: zindex(lv2);
+        }
+    }
+
+    .aligator-video {
+        @media screen and (max-width: screen(tablet-sm)) {
+            visibility: hidden;
         }
     }
 }
