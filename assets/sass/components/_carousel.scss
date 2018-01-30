@@ -503,6 +503,7 @@
     padding-right: 100px;
 
     .slick-list {
+        z-index: zindex(lv2);
         // padding-left: 1px;
         // margin-left: -3px; // -1px
         // border-left: 1px solid $color-gray-10;

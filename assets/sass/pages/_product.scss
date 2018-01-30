@@ -719,14 +719,17 @@ $product-container-padding: 0 50px;
 
             // Checkbox
             input {
-                opacity: .5;
+                opacity: 0;
                 position: absolute;
                 z-index: zindex(lv1);
                 top: 4px;
                 left: 0;
+                width: 100%;
                 margin-top: 0;
+                cursor: pointer;
 
-                + a {
+                + a,
+                + .m-selected-filter-item {
                     position: relative;
                     display: inline-block;
 
@@ -761,7 +764,8 @@ $product-container-padding: 0 50px;
                 }
 
                 &:checked {
-                    + a {
+                    + a,
+                    + .m-selected-filter-item {
                         &:before {
                             background-color: $color-blue-3;
                             border: 0;

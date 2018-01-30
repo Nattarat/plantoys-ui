@@ -1884,7 +1884,7 @@
             </div>
 
             <!-- Button go to top -->
-            <a id="button-gototop" class="button-circle is-gototop scroll-to-top" href="#body-top">
+            <a id="button-gototop" class="button-circle is-gototop" href="javascript:;">
                 <span class="button-body">
                     <img class="button-icon" src="../assets/images/icon/icon-arrow-line-top.png" alt="Icon">
                 </span>
@@ -1932,6 +1932,7 @@
     <script type="text/javascript" src="../assets/js/headroomjs/headroom.min.js"></script>
     <script type="text/javascript" src="../assets/js/headroomjs/jQuery.headroom.min.js"></script>
     <script type="text/javascript" src="../assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.scrollTo/jquery.scrollTo.min.js"></script>
     <script type="text/javascript">
         $j(function() {
             // Headroom
@@ -2051,7 +2052,7 @@
             // Smooth scroll
             // =====================================================
             var scroll = new SmoothScroll('.scroll-to[href*="#"]');
-            var scroll = new SmoothScroll('.scroll-to-top[body]');
+            // var scroll = new SmoothScroll('.scroll-to-top[body]');
 
             // Scroll spy
             // =====================================================
@@ -2366,6 +2367,10 @@
                 }
             }).iconselectmenu("menuWidget");
 
+            // jQuery.scrollTo
+            $j('#button-gototop').on("click", function() {
+                $j('body').scrollTo('body', 800);
+            });
         });
     </script>
 </body>
