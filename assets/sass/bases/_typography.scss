@@ -737,9 +737,12 @@
         line-height: font-secondary-size(size-5);
         color: $color-gray-4;
 
-        &:hover,
-        &:focus {
+        &:hover {
             color: color-text(default);
+        }
+
+        &:focus {
+            color: $color-gray-4;
         }
     }
 
