@@ -271,8 +271,8 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media (max-width: screen(tablet-lg)) {
-        flex-direction: column;
-        padding: 0 15px;
+        // flex-direction: column;
+        // padding: 0 15px;
     }
 }
 
@@ -350,6 +350,10 @@
         @include transition(height .5s ease);
         min-height: 140px;
 
+        .text-title {
+            font-size: font-primary-size(size-5);
+        }
+
         .description {
             display: none;
             max-width: 1024px;
@@ -395,14 +399,14 @@
         //     padding-right: 15px;
         // }
 
-        // @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-lg)) {
-        //     padding-left: 50px;
-        //     padding-right: 50px;
-        // }
-
         @media screen and (max-width: screen(phablet-lg-max)) {
             padding-left: 25px;
             padding-right: 25px;
+        }
+
+        @media (min-width: screen(tablet-sm)) and (max-width: screen(labtop-sm-max)) {
+            padding-left: 50px;
+            padding-right: 50px;
         }
     }
 
@@ -643,6 +647,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    padding-top: 3px 25px;
     text-align: center;
 
     // STYLES OF CHILD CLASS
@@ -794,6 +799,17 @@
         &.infographic-3-1 {
             top: 26.5%;
             left: 27.4%;
+            width: 2.5vw;
+            height: 2.5vw;
+
+            &:before {
+                display: none;
+            }
+        }
+
+        &.infographic-3-2 {
+            top: 14.5%;
+            left: 34%;
             width: 2.5vw;
             height: 2.5vw;
 
@@ -973,7 +989,9 @@
         &.is-lightbox {
             &:before {
                 @media screen and (max-width: screen(phablet-lg-max)) {
-                    display: none;
+                    // display: none;
+                    width: 48px;
+                    height: 48px;
                 }
             }
         }
@@ -1006,9 +1024,28 @@
             }
         }
 
+        &.infographic-3-1,
+        &.infographic-3-2 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                position: absolute;
+                width: auto;
+                padding: 0;
+            }
+        }
+
         &.infographic-3-1 {
             @media screen and (max-width: screen(phablet-lg-max)) {
-                // width: 30%;
+                top: 19%;
+                left: 16%;
+                width: 42px;
+            }
+        }
+
+        &.infographic-3-2 {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                top: 15.5%;
+                left: 28%;
+                width: 42px;
             }
         }
 

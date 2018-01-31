@@ -1034,13 +1034,39 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     .list-item {
-        @media screen and (max-width: screen(phablet-lg-max)) {
-            width: 33.33%;
+        // @media screen and (max-width: screen(phablet-lg-max)) {
+        //     width: 33.33%;
+        //     margin-bottom: 30px;
+
+        //     &:last-child {
+        //         margin-bottom: 30px;
+        //     }
+        // }
+
+        @media (min-width: screen(phablet-sm)) and (max-width: screen(tablet-sm-max)) {
             margin-bottom: 30px;
 
             &:last-child {
                 margin-bottom: 30px;
             }
+        }
+
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            width: 33.33%;
+
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (min-width: screen(phablet-sm)) and (max-width: screen(phablet-sm-max)) {
+            width: 25%;
+        }
+
+        @media (min-width: screen(phablet-md)) and (max-width: screen(tablet-sm-max)) {
+            width: 20%;
         }
     }
 }
