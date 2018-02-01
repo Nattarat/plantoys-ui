@@ -378,15 +378,15 @@
 
             }
 
-            &.thailand {
+            &.th {
 
             }
 
-            &.english {
+            &.usa {
 
             }
 
-            &.japan {
+            &.jp {
 
             }
         }
@@ -448,19 +448,19 @@
                 background-size: cover;
             }
 
-            &.thailand {
+            &.th {
                 &:before {
                     background-image: url('#{path-file(icons)}/icon-flag-thai.png');
                 }
             }
 
-            &.english {
+            &.usa {
                 &:before {
                     background-image: url('#{path-file(icons)}/icon-flag-usa.png');
                 }
             }
 
-            &.japan {
+            &.jp {
                 &:before {
                     background-image: url('#{path-file(icons)}/icon-flag-japan.png');
                 }
@@ -485,15 +485,15 @@
                 margin-top: -6px;
                 background-size: cover;
 
-                &.thailand {
+                &.th {
                     background-image: url('#{path-file(icons)}/icon-flag-thai.png');
                 }
 
-                &.english {
+                &.usa {
                     background-image: url('#{path-file(icons)}/icon-flag-usa.png');
                 }
 
-                &.japan {
+                &.jp {
                     background-image: url('#{path-file(icons)}/icon-flag-japan.png');
                 }
 
