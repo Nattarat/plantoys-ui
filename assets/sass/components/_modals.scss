@@ -47,7 +47,7 @@
     visibility: hidden;
     opacity: 0;
     position: fixed;
-    z-index: zindex(lv5);
+    z-index: zindex(lv6);
     top: 0;
     bottom: 0;
     left: 0;
@@ -143,16 +143,16 @@
 // Contextual variations
 // ==================================================================================================
 
-// Language
+// Country
 // ------------------------------------------------
-.modal-language {
+.modal-country {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
 
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include modal-variant(
-        $modal-dialog-container-max-width: 625px,
+        $modal-dialog-container-max-width: 725px,
         $modal-dialog-container-padding: 50px,
 
         // Title
@@ -171,7 +171,7 @@
     }
 
     .language-flag {
-        max-width: 80px;
+        max-width: 100px;
         height: auto;
         margin: auto auto 20px auto;
     }
@@ -187,6 +187,17 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .language-item {
+        @media screen and (max-width: screen(tablet-sm)) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .modal-dialog-container {
+        @media screen and (max-width: screen(tablet-sm)) {
+            padding-bottom: 20px;
+        }
+    }
 }
 
 // Browser variations
