@@ -1873,7 +1873,7 @@
     @include list-variant(
         $list-display: block,
         $list-padding: 0,
-        $list-margin: 0,
+        $list-margin: 0 0 20px,
 
         // List item
         $list-item-display: inline-block,
@@ -1883,6 +1883,13 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &:last-child {
+        margin-bottom: 0;
+
+        > .list-item {
+            border-bottom: 0;
+        }
+    }
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

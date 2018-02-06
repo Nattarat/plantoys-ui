@@ -443,8 +443,8 @@
     }
 
     @media (min-width: screen(tablet-lg)) and (max-width: screen(labtop-md-max)) {
-        padding-left: 0;
-        padding-right: 0;
+        // padding-left: 0;
+        // padding-right: 0;
         // margin-left: 50px;
         // margin-right: 50px;
     }
@@ -553,6 +553,15 @@
         }
     }
 
+    &.is-inner-container {
+        @media screen and (max-width: 614px) {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
     &.is-control-fix-size {
         // Slick
         .slick-arrow {
@@ -568,6 +577,11 @@
                 left: 50px;
                 border-right: 1px solid $color-gray-10;
                 background-position-x: left;
+
+                @media screen and (max-width: 614px) {
+                    width: 26px;
+                    left: 0;
+                }
             }
 
             &.slick-next {
@@ -575,6 +589,11 @@
                 right: 50px;
                 border-left: 1px solid $color-gray-10;
                 background-position-x: right;
+
+                @media screen and (max-width: 614px) {
+                    width: 27px;
+                    right: 1px;
+                }
             }
         }
     }
