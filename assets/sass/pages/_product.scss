@@ -90,7 +90,7 @@ $product-container-padding: 0 50px;
         }
 
         @media (min-width: screen(phablet-sm)) and (max-width: screen(tablet-lg)) {
-            width: 50%;
+            width: 100%; // 50%
             margin: auto;
         }
     }
@@ -108,6 +108,45 @@ $product-container-padding: 0 50px;
                 float: none;
                 display: flex;
                 align-items: center;
+            }
+
+            .text-default {
+                @media screen and (max-width: screen(phablet-xs-max)) {
+                    &.is-label {
+                        min-width: 65px;
+                        text-align: left;
+                    }
+                }
+            }
+
+            .select-arrow {
+                @media screen and (max-width: screen(phablet-xs-max)) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .sorter {
+        > .sort-by {
+            @media screen and (max-width: screen(phablet-xs-max)) {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .text-default {
+            @media screen and (max-width: screen(phablet-xs-max)) {
+                &.is-label {
+                    min-width: 65px;
+                    text-align: left;
+                }
+            }
+        }
+
+        .select-arrow {
+            @media screen and (max-width: screen(phablet-xs-max)) {
+                width: 100%;
             }
         }
     }
@@ -317,7 +356,7 @@ $product-container-padding: 0 50px;
     .product-segment-item-inner {
         &.pager {
             @media screen and (max-width: screen(phablet-xs-max)) {
-                margin-bottom: 20px;
+                margin-bottom: 5px;
             }
 
             @media screen and (max-width: screen(tablet-lg)) {
@@ -850,6 +889,10 @@ $product-container-padding: 0 50px;
         padding: 0;
         border: 0;
     }
+
+    @media screen and (max-width: screen(tablet-lg)) {
+        width: 100%;
+    }
 }
 
 // Browser variations
@@ -1071,10 +1114,6 @@ $product-container-padding: 0 50px;
     .product-detail-segment {
         &.is-preview,
         &.is-detail {
-            @media screen and (max-width: screen(tablet-md-max)) {
-                left: 0;
-            }
-
             @media screen and (max-width: screen(phablet-sm-max)) {
                 width: 100%;
                 max-width: 100%;
@@ -1091,12 +1130,20 @@ $product-container-padding: 0 50px;
         }
 
         &.is-preview {
-            @media screen and (max-width: screen(tablet-md-max)) {
+            @media screen and (max-width: screen(tablet-sm)) {
+                left: 0;
+            }
 
+            @media (min-width: 1025px) and (max-width: screen(labtop-sm)) {
+                left: -50px;
             }
         }
 
         &.is-detail {
+            @media screen and (max-width: screen(tablet-md-max)) {
+                left: 0;
+            }
+
             @media screen and (max-width: screen(tablet-md-max)) {
                 padding-top: 20px;
             }

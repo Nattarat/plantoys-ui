@@ -443,8 +443,10 @@
     }
 
     @media (min-width: screen(tablet-lg)) and (max-width: screen(labtop-md-max)) {
-        margin-left: 50px;
-        margin-right: 50px;
+        padding-left: 0;
+        padding-right: 0;
+        // margin-left: 50px;
+        // margin-right: 50px;
     }
 }
 
@@ -503,11 +505,52 @@
     padding-right: 100px;
 
     .slick-list {
-        z-index: zindex(lv2);
-        // padding-left: 1px;
-        // margin-left: -3px; // -1px
-        // border-left: 1px solid $color-gray-10;
-        // border-right: 1px solid $color-gray-10;
+        // z-index: zindex(lv2); // fix overlap border left of first left card hover state
+        // margin-left: -6px;
+
+        border-left: 1px solid $color-gray-10;
+
+        @media (min-width: screen(labtop-lg)) {
+            // margin-left: -6px;
+        }
+    }
+
+    .slick-slide {
+        > div {
+            max-width: calc(100% - 3px);
+
+            .list-link {
+                margin-left: -3px;
+            }
+        }
+
+        &[data-slick-index='4'] {
+            .list-link {
+
+
+                &:before {
+                    // right: 0;
+                }
+
+                // &:after {
+                //     content: ' ';
+                //     position: absolute;
+                //     z-index: zindex(lv1);
+                //     top: 0;
+                //     right: 0;
+                //     display: block;
+                //     width: 1px;
+                //     height: 100%;
+                //     background-color: $color-gray-10;
+                // }
+            }
+        }
+
+        &[data-slick-index='5'] {
+            .list-link {
+                // border-left: none;
+            }
+        }
     }
 
     &.is-control-fix-size {
@@ -518,6 +561,7 @@
             height: 100%;
             background-size: 15px;
             background-position-y: center;
+            background-color: $color-white;
 
             &.slick-prev {
                 width: 51px;
@@ -527,7 +571,7 @@
             }
 
             &.slick-next {
-                width: 50px;
+                width: 52px;
                 right: 50px;
                 border-left: 1px solid $color-gray-10;
                 background-position-x: right;

@@ -1522,8 +1522,12 @@
                 width: 100%;
             }
 
-            @media (min-width: screen(phablet-sm)) and (max-width: screen(phablet-lg-max)) {
+            @media (min-width: screen(phablet-sm)) and (max-width: screen(phablet-md-max)) {
                 width: 50%;
+            }
+
+            @media (min-width: screen(phablet-lg)) and (max-width: screen(tablet-sm)) {
+                width: 33.33%;
             }
         }
     }

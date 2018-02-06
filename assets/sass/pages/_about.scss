@@ -342,6 +342,7 @@
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-introduction {
+        max-width: 1440px;
         padding-top: 45px;
         padding-bottom: 30px;
     }
@@ -375,10 +376,6 @@
         padding-right: 50px;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    &.is-introduction {
-        max-width: 1440px;
     }
 
     &.is-description,
@@ -427,6 +424,10 @@
         //     min-height: 210px;
         // }
     }
+
+    &.is-introduction {
+
+    }
 }
 
 // Browser variations
@@ -449,6 +450,11 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .paragraph-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -466,6 +472,21 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .paragraph-link {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            flex-direction: column;
+        }
+
+        a {
+            &:first-child {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    display: block;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
 
 // Browser variations

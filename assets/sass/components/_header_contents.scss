@@ -3,7 +3,7 @@
 @mixin container-header(
     $container-background: none,
     $container-height: 50vh, // 540px
-    $container-padding: 0 30px // 0 124px
+    $container-padding: 0 50px // 0 124px
 ) {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -37,11 +37,8 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @media (max-width: screen(tablet-md)) {
-        padding: 0px 50px;
-    }
     @media (max-width: screen(phablet-sm)) {
-        padding: 0px 15px;
+        padding: 0px 25px;
     }
 }
 
