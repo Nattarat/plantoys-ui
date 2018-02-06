@@ -1130,8 +1130,9 @@ $product-container-padding: 0 50px;
         }
 
         &.is-preview {
-            @media screen and (max-width: screen(tablet-sm)) {
+            @media screen and (max-width: screen(tablet-lg)) {
                 left: 0;
+                margin-right: 60px;
             }
 
             @media (min-width: 1025px) and (max-width: screen(labtop-sm)) {
