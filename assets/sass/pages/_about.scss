@@ -345,6 +345,12 @@
         max-width: 1440px;
         padding-top: 45px;
         padding-bottom: 30px;
+
+        .paragraph-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &.is-description {
@@ -450,11 +456,6 @@
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    .paragraph-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>

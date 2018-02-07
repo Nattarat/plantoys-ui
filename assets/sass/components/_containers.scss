@@ -453,6 +453,10 @@
         }
     }
 
+    &.is-forget-password {
+        padding: 30px 45px;
+    }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-blank {
