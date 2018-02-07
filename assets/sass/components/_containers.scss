@@ -592,6 +592,28 @@
                 margin-bottom: 10px;
             }
 
+            a {
+                color: color-text(link);
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    color: color-text(link);
+                    text-decoration: none;
+                }
+
+                * {
+                    color: color-text(link);
+                    text-decoration: none;
+
+                    &:hover,
+                    &:focus {
+                        color: color-text(link);
+                        text-decoration: none;
+                    }
+                }
+            }
+
             // List
             ul {
                 margin-bottom: 10px;

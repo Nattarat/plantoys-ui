@@ -997,6 +997,28 @@
     color: $color-gray-1;
     text-transform: none;
     letter-spacing: 1px;
+
+    a {
+        color: color-text(link);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: color-text(link);
+            text-decoration: none;
+        }
+
+        * {
+            color: color-text(link);
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                color: color-text(link);
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 // Browser variations
