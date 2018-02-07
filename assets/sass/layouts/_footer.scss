@@ -180,9 +180,16 @@
     }
 
     .footer-copyright {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-bottom: 77px; // 30 + height 47
+        }
+
+        @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-md-max)) {
+            padding-bottom: 30px;
+        }
+
         @media screen and (max-width: screen(tablet-md-max)) {
             padding-top: 30px;
-            padding-bottom: 30px;
         }
     }
 

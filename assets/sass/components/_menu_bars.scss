@@ -8,7 +8,7 @@
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
     position: fixed;
-    z-index: zindex(lv2);
+    z-index: zindex(lv3);
     top: 155px;
     right: 0px;
 
@@ -26,13 +26,16 @@
         color: $color-white;
         text-decoration-line: none;
         margin-bottom: 5px;
-        &.is-color-face{
+
+        &.is-color-face {
             background: $color-blue-7;
         }
-        &.is-color-twitter{
+
+        &.is-color-twitter {
             background: $color-blue-8;
         }
-        &.is-color-mail{
+
+        &.is-color-mail {
             background: $color-gray-11;
         }
     }
@@ -48,6 +51,31 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media screen and (max-width: screen(phablet-lg-max)) {
+        top: initial;
+        right: initial;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    ul {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            display: flex;
+        }
+
+        li {
+            flex: 1;
+        }
+    }
+
+    .icon {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            width: 100%;
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+    }
 }
 
 // Browser variations
