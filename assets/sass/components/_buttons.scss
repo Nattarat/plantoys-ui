@@ -395,6 +395,20 @@ $button-padding-side-deault: 45px;
             }
         }
     }
+
+    .please-wait {
+        .button-icon {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                margin-right: 0;
+            }
+        }
+
+        .button-text {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                display: none;
+            }
+        }
+    }
 }
 
 // Browser variations

@@ -225,6 +225,25 @@
             // margin-bottom: 112px;
         }
     }
+
+    .cart-result-inner-row {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            flex-direction: column;
+        }
+    }
+
+    .cart-result-inner {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &:last-child {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 // Browser variations

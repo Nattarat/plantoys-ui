@@ -209,6 +209,50 @@
             padding-right: 50px;
         }
     }
+
+    &.is-confirm {
+        &.my-account.cart {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-lg-max)) {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+
+        .container-content {
+            &.is-confirm {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-lg-max)) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .container-panel {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .container-content-column {
+        &.is-column-half {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                width: 100%;
+                margin-bottom: 22px;
+            }
+        }
+    }
 }
 
 // Browser variations
@@ -521,7 +565,8 @@
         }
     }
 
-    &.is-myaccount-info {
+    &.is-myaccount-info,
+    &.is-form-vertical {
         @media screen and (max-width: screen(phablet-lg-max)) {
             margin-left: 25px;
             margin-right: 25px;
@@ -547,12 +592,52 @@
         }
     }
 
+    &.is-blank {
+        &.is-form-vertical {
+            .container-panel-segment {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
     .container-panel-segment {
         &.is-myaccount-info,
         &.is-form-vertical {
             @media screen and (max-width: screen(phablet-lg-max)) {
                 padding-left: 30px;
                 padding-right: 30px;
+            }
+        }
+    }
+
+    .container-panel-segment-inner {
+        &.is-promocode {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+
+            .container-panel-segment-item {
+                @media screen and (max-width: screen(mobile-lg-max)) {
+                    width: 100%;
+                    padding-left: 0;
+                    margin-bottom: 20px;
+                }
+
+                .button-background-image {
+                    @media screen and (max-width: screen(mobile-lg-max)) {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .field-line-bottom {
+                @media screen and (max-width: screen(tablet-lg)) {
+                    min-width: 100px;
+                }
             }
         }
     }
@@ -777,6 +862,12 @@
 #review-buttons-container {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+#billing-new-address-form {
+    + .list-form {
+        margin-top: 5px;
+    }
 }
 
 // Browser variations

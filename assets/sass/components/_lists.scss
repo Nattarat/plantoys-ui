@@ -964,6 +964,14 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-checkout {
+        .list-item {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
 }
 
 // Browser variations
