@@ -1516,9 +1516,17 @@
     }
 
     &.is-carousel {
+        height: 100%; // fix card height when product have special price
+
         > .list-item {
             width: 100%;
             margin: 0;
+
+            &:hover {
+                .list-link {
+                    background-color: $color-gray-10;
+                }
+            }
 
             .list-thumbnail-default {
                 width: 100%;

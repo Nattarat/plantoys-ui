@@ -560,6 +560,11 @@
             padding-left: 25px;
             padding-right: 25px;
         }
+
+        @media (min-width: 615px) and (max-width: screen(phablet-lg-max)) {
+            margin-left: -50px;
+            margin-right: -50px;
+        }
     }
 
     &.is-control-fix-size {
@@ -590,10 +595,28 @@
                 border-left: 1px solid $color-gray-10;
                 background-position-x: right;
 
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    width: 53px;
+                }
+
                 @media screen and (max-width: 614px) {
                     width: 27px;
                     right: 1px;
                 }
+            }
+        }
+    }
+}
+
+// Fix container padding when responsive
+.tabcontent {
+    .tab-pane {
+        .carousel-product-related {
+            @media screen and (max-width: 614px) {
+                padding-left: 25px;
+                padding-right: 25px;
+                margin-left: 50px;
+                margin-right: 50px;
             }
         }
     }
