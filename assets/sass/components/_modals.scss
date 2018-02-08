@@ -19,7 +19,7 @@
 
     // Container
     $modal-dialog-container-max-width: 50%,
-    $modal-dialog-container-min-height: initial,
+    $modal-dialog-container-min-height: auto,
     $modal-dialog-container-max-height: initial,
     $modal-dialog-container-padding: 30px,
     $modal-dialog-container-margin: 15px,
@@ -30,7 +30,7 @@
     $modal-dialog-overlay-background-color: rgba(0, 0, 0, .5),
 
     // Body
-    $modal-dialog-body-min-height: initial,
+    $modal-dialog-body-min-height: auto,
     $modal-dialog-body-max-height: initial,
 
     // Title
@@ -340,7 +340,7 @@
 
         // Container
         $modal-dialog-container-max-width: 480px,
-        $modal-dialog-container-min-height: initial,
+        $modal-dialog-container-min-height: auto,
         $modal-dialog-container-max-height: initial,
         $modal-dialog-container-padding: 0,
         $modal-dialog-container-margin: 25vh 15px 15px 15px,
@@ -351,7 +351,7 @@
         $modal-dialog-overlay-background-color: rgba(0, 0, 0, .5),
 
         // Body
-        $modal-dialog-body-min-height: initial,
+        $modal-dialog-body-min-height: auto,
         $modal-dialog-body-max-height: initial,
 
         // Title

@@ -25,7 +25,7 @@
     $block-min-width: initial,
     $block-max-width: 1440px,
     $block-height: auto,
-    $block-min-height: initial,
+    $block-min-height: auto,
     $block-max-height: initial,
     $block-padding: 0 15px,
     $block-margin: auto,
@@ -190,6 +190,25 @@
             }
         }
     }
+
+    &.is-wishlist {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
+    &.is-myaddress {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-lg-max)) {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
 }
 
 // Browser variations
@@ -313,7 +332,7 @@
         $block-min-width: initial,
         $block-max-width: initial,
         $block-height: auto,
-        $block-min-height: initial,
+        $block-min-height: auto,
         $block-max-height: initial,
         $block-padding: 0,
         $block-margin: auto,
@@ -499,6 +518,42 @@
         @media screen and (max-width: screen(phablet-lg-max)) {
             margin-left: 0;
             margin-right: 0;
+        }
+    }
+
+    &.is-myaccount-info {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+    }
+
+    &.is-table {
+        @media screen and (max-width: screen(tablet-lg-max)) {
+            min-height: auto;
+        }
+
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        @media screen and (max-width: screen(tablet-sm-max)) {
+            max-width: 668px;
+        }
+
+        @media (min-width: screen(tablet-md)) and (max-width: screen(tablet-lg-max)) {
+            max-width: 768px;
+        }
+    }
+
+    .container-panel-segment {
+        &.is-myaccount-info,
+        &.is-form-vertical {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
         }
     }
 }

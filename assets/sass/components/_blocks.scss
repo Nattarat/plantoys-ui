@@ -159,14 +159,14 @@
     }
 
     &.for-home-developments {
-        // style
+        height: 100vh; // fix ie11
     }
 
     &.for-subscribe-home {
         position: relative;
         z-index: zindex(lv2);
         height: auto;
-        min-height: initial;
+        min-height: auto;
         // min-height: 850px;
         padding: 60px 0;
     }
@@ -189,6 +189,7 @@
         }
 
         @media (min-width: screen(phablet-lg)) and (max-width: screen(tablet-sm)) {
+            height: 50vh;
             min-height: 50vh;
         }
     }

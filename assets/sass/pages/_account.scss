@@ -259,7 +259,41 @@
     }
 
     .list-tabs {
+        .list-item {
+            position: relative;
 
+            &:before,
+            &:after {
+                content: ' ';
+                display: none;
+                pointer-events: none;
+                position: absolute;
+            }
+
+            // Arrow body (for hide default select arrow)
+            &:before {
+                z-index: zindex(lv1);
+                top: 1px;
+                right: 1px;
+                width: 30px;
+                height: 30px;
+                background-color: transparent;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+
+            // Arrow
+            &:after {
+                transform: rotate(-45deg) translateY(-50%);
+                z-index: zindex(lv2);
+                top: 50%;
+                right: 12px;
+                // margin-top: -6px;
+                border: 4px solid;
+                border-color: transparent transparent transparent transparent;
+                box-shadow: 1px 1px 0 $color-gray-4;
+            }
+        }
     }
 
     // STYLES OF STATE
@@ -273,6 +307,30 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .list-tabs {
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .list-item {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255,.5);
+                text-align: left;
+            }
+
+            a,
+            &:before,
+            &:after {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    display: block;
+                }
+            }
+        }
+    }
 }
 
 // Browser variations
