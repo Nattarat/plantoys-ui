@@ -152,7 +152,7 @@ $button-padding-side-deault: 45px;
         &.is-product-label {
             width: 32px;
             height: 32px;
-            max-width: initial;
+            max-width: auto;
         }
 
         &.is-product-category {
@@ -263,7 +263,7 @@ $button-padding-side-deault: 45px;
         &.is-right {
             @include translate(5px, -50%);
             top: 50%;
-            bottom: initial;
+            bottom: auto;
             left: 100%;
 
             &:before {
@@ -341,8 +341,8 @@ $button-padding-side-deault: 45px;
     }
 
     &.is-flexible {
-        width: initial;
-        min-width: initial;
+        width: auto;
+        min-width: auto;
     }
 
     &.is-extra-small {
@@ -414,6 +414,18 @@ $button-padding-side-deault: 45px;
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
+.ie {
+    .button-typography {
+        .button-balloon-tip {
+            display: block;
+
+            &:before {
+                margin-top: -5px;
+            }
+        }
+    }
+}
+
 // Safari
 // Firefox
 
@@ -814,8 +826,8 @@ $button-padding-side-deault: 45px;
 
         &.is-wishlist-inline {
             position: static;
-            bottom: initial;
-            right: initial;
+            bottom: auto;
+            right: auto;
         }
 
         .button-icon {
@@ -978,6 +990,22 @@ $button-padding-side-deault: 45px;
     }
 }
 
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+.ie {
+    .button-typography {
+        &.is-language {
+            .button-text {
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+// Safari
+// Firefox
+
 // Circle
 // ------------------------------------------------
 .button-circle {
@@ -1065,3 +1093,9 @@ $button-padding-side-deault: 45px;
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
 }
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

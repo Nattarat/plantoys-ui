@@ -52,8 +52,8 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media screen and (max-width: screen(phablet-lg-max)) {
-        top: initial;
-        right: initial;
+        top: auto;
+        right: auto;
         bottom: 0;
         left: 0;
         width: 100%;
@@ -81,5 +81,11 @@
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
+.ie {
+    .menu-bar {
+        right: 18px;
+    }
+}
+
 // Safari
 // Firefox

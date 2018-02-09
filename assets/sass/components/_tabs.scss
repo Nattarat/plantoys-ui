@@ -528,11 +528,11 @@
     @include container-variant(
         $block-display: block,
         $block-width: 100%,
-        $block-min-width: initial,
-        $block-max-width: initial,
+        $block-min-width: auto,
+        $block-max-width: auto,
         $block-height: auto,
         $block-min-height: auto,
-        $block-max-height: initial,
+        $block-max-height: auto,
         $block-padding: 0,
         $block-margin: 0,
         $block-background-color: transparent
@@ -580,11 +580,11 @@
     @include container-variant(
         $block-display: block,
         $block-width: 400px,
-        $block-min-width: initial,
-        $block-max-width: initial,
+        $block-min-width: auto,
+        $block-max-width: auto,
         $block-height: auto,
         $block-min-height: auto,
-        $block-max-height: initial,
+        $block-max-height: auto,
         $block-padding: 0,
         $block-margin: 0,
         $block-background-color: transparent

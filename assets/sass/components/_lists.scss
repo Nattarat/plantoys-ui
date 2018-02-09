@@ -945,7 +945,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.in-balloon {
         // max-height: calc(100vh - 700px);
-        max-height: initial;
+        max-height: auto;
     }
 
     &.is-checkout {
@@ -1586,13 +1586,13 @@
         @media screen and (max-width: screen(phablet-xs-max)) {
             height: auto;
             min-height: 250px;
-            max-height: initial;
+            max-height: auto;
         }
 
         @media (min-width: screen(phablet-sm)) and (max-width: screen(tablet-md-max)) {
             height: auto;
             min-height: 200px;
-            max-height: initial;
+            max-height: auto;
         }
     }
 

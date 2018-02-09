@@ -22,11 +22,11 @@
 @mixin container-variant(
     $block-display: block,
     $block-width: 100%,
-    $block-min-width: initial,
+    $block-min-width: auto,
     $block-max-width: 1440px,
     $block-height: auto,
     $block-min-height: auto,
-    $block-max-height: initial,
+    $block-max-height: auto,
     $block-padding: 0 15px,
     $block-margin: auto,
     $block-background-color: transparent
@@ -56,7 +56,7 @@
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     &.is-fluid {
-        max-width: initial;
+        max-width: auto;
         padding: 0;
     }
 
@@ -314,11 +314,11 @@
     @include container-variant(
         $block-display: block,
         $block-width: 100%,
-        $block-min-width: initial,
-        $block-max-width: initial,
+        $block-min-width: auto,
+        $block-max-width: auto,
         $block-height: auto,
         $block-min-height: calc(100vh - 255px),
-        $block-max-height: initial,
+        $block-max-height: auto,
         $block-padding: 0 0 35px,
         $block-margin: 0,
         $block-background-color: $color-gray-10
@@ -373,11 +373,11 @@
     @include container-variant(
         $block-display: block,
         $block-width: auto,
-        $block-min-width: initial,
-        $block-max-width: initial,
+        $block-min-width: auto,
+        $block-max-width: auto,
         $block-height: auto,
         $block-min-height: auto,
-        $block-max-height: initial,
+        $block-max-height: auto,
         $block-padding: 0,
         $block-margin: auto,
         $block-background-color: $color-white

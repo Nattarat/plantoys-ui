@@ -186,11 +186,20 @@
     &.for-home-developments {
         @media screen and (max-width: screen(phablet-md-max)) {
             flex-direction: column;
+            height: auto;
         }
 
         @media (min-width: screen(phablet-lg)) and (max-width: screen(tablet-sm)) {
-            height: 50vh;
-            min-height: 50vh;
+            // height: 50vh;
+            // min-height: 50vh;
+        }
+
+        .developments-segment {
+            &:first-child {
+                @media screen and (max-width: screen(phablet-md-max)) {
+                    height: 50vh;
+                }
+            }
         }
     }
 

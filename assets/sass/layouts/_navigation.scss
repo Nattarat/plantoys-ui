@@ -101,16 +101,16 @@
         z-index: zindex(lv5);
         top: 100%;
         left: 50%;
-        right: initial;
+        right: auto;
         width: 200px;
-        max-width: initial;
+        max-width: auto;
         padding-top: 35px;
         margin-left: -100px;
 
         .navigation-main-inner {
             &:before {
                 left: 50%;
-                right: initial;
+                right: auto;
                 margin-left: -4px;
             }
         }
@@ -119,15 +119,15 @@
     &.is-menu-cart {
         z-index: zindex(lv5);
         top: 100%;
-        left: initial;
+        left: auto;
         right: -122px; // -155
         width: 510px; // 300 > 360
         padding: 35px 0 150px 150px;
-        max-width: initial;
+        max-width: auto;
 
         .navigation-main-inner {
             &:before {
-                left: initial;
+                left: auto;
                 right: 165px;
             }
         }
@@ -137,15 +137,15 @@
         z-index: zindex(lv5);
         top: 100%;
         left: 50%;
-        right: initial;
+        right: auto;
         width: 75px;
-        max-width: initial;
+        max-width: auto;
         margin-left: -35px;
 
         .navigation-main-inner {
             &:before {
                 left: calc(50% - 4px);
-                right: initial;
+                right: auto;
             }
         }
 
@@ -214,7 +214,7 @@
         }
 
         @media screen and (max-width: 991px) {
-            left: initial;
+            left: auto;
             // margin-top: 11px;
             margin-left: 0;
         }
@@ -230,7 +230,7 @@
                 }
 
                 @media screen and (max-width: 991px) {
-                    left: initial;
+                    left: auto;
                     margin-left: 0;
                 }
             }
@@ -314,6 +314,14 @@
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
+.ie {
+    .navigation-main {
+        &.is-menu-cart {
+            right: -106px;
+        }
+    }
+}
+
 // Safari
 // Firefox
 

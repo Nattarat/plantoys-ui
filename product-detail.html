@@ -1488,8 +1488,17 @@
     <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
     <script type="text/javascript" src="../assets/js/jquery-match-height/jquery.matchHeight-min.js"></script>
     <!-- <script type="text/javascript" src="../assets/js/responsive-tabs/js/jquery.responsiveTabs.min.js"></script> -->
+    <script type="text/javascript" src="../assets/js/is_js/is.min.js"></script>
     <script type="text/javascript">
         $j(function() {
+            // Check IE condition
+            // =====================================================
+            if(is.ie()) {
+                $j('html').addClass('ie');
+            } else if (is.edge()) {
+                $j('html').addClass('edge');
+            }
+
             // Carousel
             $j('.carousel-product').slick({
                 dots: true,

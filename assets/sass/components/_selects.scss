@@ -87,7 +87,7 @@
     $select-padding: 2px 2px 2px 18px,
     $select-border-radius: 5px,
     $select-background: $color-white,
-    $select-position-icon:95% ,
+    $select-position-icon: 95% ,
     $space-text-select: 16px
   ){
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
@@ -208,12 +208,12 @@
 
     &.is-fluid {
         width: 100%;
-        max-width: initial;
+        max-width: auto;
     }
 
     &.is-size-itself {
         width: auto;
-        max-width: initial;
+        max-width: auto;
 
         select {
             padding-right: 50px;
@@ -253,7 +253,7 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media screen and (max-width: screen(phablet-md-max))  {
-        max-width: initial;
+        max-width: auto;
     }
 
     select {
@@ -303,6 +303,32 @@
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
+.ie {
+    .select-arrow {
+        border: 1px solid $color-gray-3;
+        border-radius: 5px;
+
+        &.is-default,
+        &.is-size-itself {
+            select {
+                padding-left: 0;
+                padding-right: 0;
+                border: 10px solid $color-white;
+            }
+        }
+    }
+}
+
+// Edge
+.edge {
+    .select-arrow {
+        select {
+            background: $color-white url('#{path-file(images)}/icon/icon-arrow-down.png') no-repeat 85% center;
+            background-size: 10px;
+        }
+    }
+}
+
 // Safari
 // Firefox
 

@@ -178,7 +178,7 @@ body {
         &.is-field {
             .field-line-bottom {
                 @media screen and (max-width: screen(mobile-lg-max)) {
-                    min-width: initial;
+                    min-width: auto;
                 }
             }
         }

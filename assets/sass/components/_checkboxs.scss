@@ -427,7 +427,7 @@
 // Overwrite style magento
 #checkout-shipping-method-load .sp-methods dd label,
 #co-shipping-method-form .sp-methods dd label {
-    min-width: initial;
+    min-width: auto;
     padding: 0 0 0 25px;
     background-color: transparent;
 }
@@ -744,8 +744,8 @@
                 margin: 0;
 
                 .agreement-content {
-                    max-width: initial;
-                    max-height: initial;
+                    max-width: auto;
+                    max-height: auto;
                     margin-bottom: 0;
                     padding: 0;
                     background: transparent;
@@ -925,6 +925,14 @@
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
+.ie {
+    .checkbox-bar {
+        .method-item {
+            width: auto;
+        }
+    }
+}
+
 // Safari
 // Firefox
 

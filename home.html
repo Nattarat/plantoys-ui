@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-
-<!--[if lt IE 7 ]> <html lang="th" id="top" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="th" id="top" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="th" id="top" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="th" id="top" class="no-js ie9"> <![endif]-->
+<!--[if IE 9 ]>
+<html lang="th" class="ie9">
+<![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="th" id="top" class="no-js">
+<html lang="th">
 <!--<![endif]-->
 
 <head>
@@ -1942,8 +1940,15 @@
     <script type="text/javascript" src="../assets/js/headroomjs/jQuery.headroom.min.js"></script>
     <script type="text/javascript" src="../assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../assets/js/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="../assets/js/is_js/is.min.js"></script>
     <script type="text/javascript">
         $j(function() {
+            // Check IE condition
+            // =====================================================
+            if(is.ie()) {
+                $j('html').addClass('ie');
+            }
+
             // Headroom
             // =====================================================
             $j('.topbar').headroom({
