@@ -78,6 +78,13 @@
         }
     }
 
+    .career-segment-inner {
+        &.is-upload-files {
+            display: flex;
+            align-items: center;
+        }
+    }
+
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -89,6 +96,14 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .career-segment-inner {
+        &.is-upload-files {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    }
 }
 
 // Browser variations

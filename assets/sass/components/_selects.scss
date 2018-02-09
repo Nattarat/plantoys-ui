@@ -309,7 +309,8 @@
         border-radius: 5px;
 
         &.is-default,
-        &.is-size-itself {
+        &.is-size-itself,
+        &.is-gender {
             select {
                 padding-left: 0;
                 padding-right: 0;

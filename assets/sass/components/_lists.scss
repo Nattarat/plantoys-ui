@@ -977,6 +977,14 @@
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
+.ie {
+    .list-cart {
+        &.in-balloon {
+            min-height: 245px;
+        }
+    }
+}
+
 // Safari
 // Firefox
 

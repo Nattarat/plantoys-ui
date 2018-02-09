@@ -358,6 +358,7 @@
                     font-size: $font-size-2;
                     transform: rotate(-180deg);
                     writing-mode: vertical-rl;
+                    white-space: no-wrap;
                 }
             }
     }
@@ -425,6 +426,19 @@
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
+.ie {
+    .child-action {
+        .action1 {
+            .font-rotate {
+                .font-style {
+                    position: relative;
+                    left: -12px;
+                }
+            }
+        }
+    }
+}
+
 // Safari
 // Firefox
 

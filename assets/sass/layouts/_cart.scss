@@ -249,6 +249,14 @@
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
+.ie {
+    .cart {
+        .cart-container-scroll {
+            display: block;
+        }
+    }
+}
+
 // Safari
 // Firefox
 
