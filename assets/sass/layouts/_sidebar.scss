@@ -97,7 +97,32 @@ body {
 
     .sidebar-segment {
         &.is-form-search {
-            padding: 22px 30px;
+            padding: 0 30px;
+
+            .modal-dialog {
+                &.modal-search {
+                    visibility: visible;
+                    opacity: 1;
+                    position: static;
+
+                    .modal-dialog-overlay,
+                    .button-close-modal-dialog {
+                        display: none;
+                    }
+
+                    .modal-dialog-container {
+                        @include translate(0, 0);
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+
+                    #search_mini_form {
+                        .field-line-bottom[type=search] {
+                            min-width: 175px;
+                        }
+                    }
+                }
+            }
         }
 
         &.is-utility {
@@ -179,6 +204,20 @@ body {
             .field-line-bottom {
                 @media screen and (max-width: screen(mobile-lg-max)) {
                     min-width: auto;
+                }
+            }
+        }
+    }
+
+    .sidebar-segment {
+        &.is-form-search {
+            .modal-dialog {
+                &.modal-search {
+                    .form-search {
+                        @media (min-width: screen(phablet-md)) {
+                            min-width: 1px;
+                        }
+                    }
                 }
             }
         }

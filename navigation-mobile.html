@@ -1691,7 +1691,7 @@
                 </span>
             </button>
 
-            <div class="sidebar-segment is-form-search">
+            <div class="sidebar-segment is-form-search hidden">
                 <div class="form-search">
                     <div class="form-search-inner is-field">
                         <!-- Add class "is-error" for show error field -->
@@ -1710,6 +1710,58 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+            <div class="sidebar-segment is-form-search">
+                <div class="modal-dialog modal-search">
+                    <div class="modal-dialog-container">
+                        <div class="modal-dialog-body">
+                            <div class="modal-dialog-content">
+                                <form id="search_mini_form" action="http://ptoys.maywz.info/catalogsearch/result/" method="get">
+                                    <div class="form-search">
+                                        <div class="form-search-inner is-field">
+                                            <!-- Add class "is-error" for show error field -->
+                                            <input class="field-line-bottom is-fluid is-placeholder-color-default required-entry" id="search" placeholder="Search entire store here..." value="" name="q" type="search" autocomplete="off">
+                                            <div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
+                                            <!-- Add class "is-active" for show validation message -->
+                                            <div class="field-validation">
+                                                <span class="text-default is-extra-small is-error">error_meesage</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-search-inner">
+                                            <button class="button-background-image is-wood-green is-small is-fluid is-padding-blank" type="submit">
+                                                <span class="button-body">
+                                                    <span class="button-text is-small">Search</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <button class="button-typography button-close-modal-dialog" type="button">
+                                    <span class="button-body">
+                                        <img class="button-icon is-small is-text-blank" src="http://ptoys.maywz.info/skin/frontend/plan_toys/default/images/icon/icon-close.png" alt="Icon">
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-dialog-overlay"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
 
             <div class="sidebar-segment is-utility">
                 <div class="sidebar-segment-inner is-column-half is-language">
