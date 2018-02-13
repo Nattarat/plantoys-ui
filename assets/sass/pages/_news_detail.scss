@@ -28,7 +28,15 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    @media (max-width: screen(phablet-lg-max)) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 
+    @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-lg-max)) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 // Browser variations
@@ -61,8 +69,8 @@
     .head-title{
         font-family: font-family(primary);
         font-size: font-primary-size(size-4);
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 35px;
+        padding-right: 35px;
         letter-spacing: 1px;
         text-transform: none;
     }
@@ -81,11 +89,16 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @media (max-width: screen(phablet-sm)){
+    @media (max-width: screen(phablet-lg-max)){
         .head-title{
-            padding:0px;
-            font-size: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
+    }
+    @media (max-width: screen(phablet-sm)){
+        // .head-title{
+        //     font-size: 30px;
+        // }
     }
     @media (max-width: screen(tablet-sm)){
         .row-flex{
@@ -93,9 +106,9 @@
         }
     }
     @media (max-width: screen(mobile-lg)){
-        .head-title{
-            font-size: 24px;
-        }
+        // .head-title{
+        //     font-size: 24px;
+        // }
     }
 }
 

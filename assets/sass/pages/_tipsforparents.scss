@@ -62,6 +62,11 @@
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    padding-left: 50px;
+    padding-right: 50px;
+
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -70,7 +75,8 @@
     .row-flex{
         display: flex;
         flex-wrap: wrap;
-        padding: 15px;
+        padding: 15px 0;
+
         .is-padding{
             padding: 15px;
         }
@@ -84,9 +90,25 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @media (max-width: screen(tablet-sm)){
-        .row-flex{
-            justify-content: center;
+    @media (max-width: screen(phablet-lg-max)){
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .row-flex{
+        @media (max-width: screen(tablet-sm)){
+            // justify-content: center;
+        }
+
+        @media (max-width: screen(phablet-lg-max)){
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        [class*=col-] {
+            @media (min-width: screen(phablet-xs)) and (max-width: screen(phablet-lg-max)){
+                width: 50%;
+            }
         }
     }
 }
@@ -114,7 +136,7 @@
     min-height: auto;
     display: flex;
     align-items: center;
-    padding: 10px 30px;
+    padding: 10px 50px;
     background-image:  url('#{path-file(images)}/content/tipsforparents/tipsforparents-rubber-wood.jpg') ;
     background-size: cover;
     background-repeat: repeat-x;
@@ -139,9 +161,15 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @media (max-width: screen(phablet-sm)) {
-        padding-right: 15px;
-        padding-left: 15px;
+    @media (max-width: screen(phablet-lg-max)) {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .field-search-with-icon {
+        @media (max-width: screen(phablet-lg-max)) {
+            max-width: 100%;
+        }
     }
 }
 

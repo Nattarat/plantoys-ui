@@ -37,7 +37,7 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @media (max-width: screen(phablet-sm)) {
+    @media (max-width: screen(phablet-lg-max)) {
         padding: 0px 25px;
     }
 }
@@ -144,7 +144,7 @@
     .head-title{
         font-family: font-family(primary);
         text-transform: unset;
-        font-size: font-primary-size(size-5);
+        font-size: font-primary-size(size-14); // size-5
         color: $color-gray-14;
         letter-spacing: 1px;
     }
@@ -213,61 +213,66 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @media (max-width: screen(labtop-lg)){
-        .head-title{
-            display: inline;
-        }
-    }
-    @media (max-width: screen(labtop-md)){
-        .head-title{
-            font-size: 44px;
-        }
-        .text-credit{
-            font-size: 20px;
-        }
-        .text-detail{
-            font-size: 20px;
-        }
-    }
-    @media (max-width: screen(labtop-sm)){
-        .head-title{
-            font-size: 38px;
-        }
-        .text-credit{
-            font-size: 20px;
-        }
-        .text-detail{
-            font-size: 20px;
-        }
-    }
-    @media (max-width: screen(phablet-md)){
-        padding: 60px 15px;
-        .head-title{
-            font-size: 33px;
-        }
-    }
-    @media (max-width: screen(phablet-sm)){
-        .head-title{
-            font-size: 30px;
-        }
-        .text-credit{
-            font-size: 18px;
-        }
-        .text-detail{
-            font-size: 18px;
-        }
-    }
-    @media (max-width: screen(mobile-lg)){
-        .head-title{
-            font-size: 22px;
-        }
-        .text-credit{
-            font-size: 16px;
-        }
-        .text-detail{
-            font-size: 16px;
-        }
-    }
+    // @media (max-width: screen(labtop-lg)){
+    //     .head-title{
+    //         display: inline;
+    //     }
+    // }
+
+    // @media (max-width: screen(labtop-md)){
+    //     .head-title{
+    //         font-size: 44px;
+    //     }
+    //     .text-credit{
+    //         font-size: 20px;
+    //     }
+    //     .text-detail{
+    //         font-size: 20px;
+    //     }
+    // }
+
+    // @media (max-width: screen(labtop-sm)){
+    //     .head-title{
+    //         font-size: 38px;
+    //     }
+    //     .text-credit{
+    //         font-size: 20px;
+    //     }
+    //     .text-detail{
+    //         font-size: 20px;
+    //     }
+    // }
+
+    // @media (max-width: screen(phablet-md)){
+    //     padding: 60px 15px;
+    //     .head-title{
+    //         font-size: 33px;
+    //     }
+    // }
+
+    // @media (max-width: screen(phablet-sm)){
+    //     .head-title{
+    //         font-size: 30px;
+    //     }
+    //     .text-credit{
+    //         font-size: 18px;
+    //     }
+    //     .text-detail{
+    //         font-size: 18px;
+    //     }
+    // }
+
+    // @media (max-width: screen(mobile-lg)){
+    //     .head-title{
+    //         font-size: 22px;
+    //     }
+    //     .text-credit{
+    //         font-size: 16px;
+    //     }
+    //     .text-detail{
+    //         font-size: 16px;
+    //     }
+    // }
 }
 
 // Browser variations
