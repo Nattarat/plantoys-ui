@@ -990,15 +990,6 @@
 // Post content
 // ------------------------------------------------
 .post-content {
-    font-family: font-family(secondary);
-    font-size: font-secondary-size(size-11);
-    font-weight: normal;
-    line-height: 1.5;
-    vertical-align: middle;
-    color: $color-gray-1;
-    text-transform: none;
-    letter-spacing: 1px;
-
     * {
         font-family: font-family(secondary);
         font-size: font-secondary-size(size-11);
@@ -1008,6 +999,11 @@
         color: $color-gray-1;
         text-transform: none;
         letter-spacing: 1px;
+    }
+
+    img {
+        display: inline-block;
+        height: auto;
     }
 
     a {

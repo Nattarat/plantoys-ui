@@ -623,7 +623,7 @@
 }
 
 .carousel-blog-related {
-    padding: 30px 60px;
+    padding: 30px 20px;
 
     .recommended-post {
         padding-left: 15px;
@@ -633,7 +633,7 @@
     &.is-control-fix-size {
         // Slick
         .slick-arrow {
-            top: 50%;
+            top: 35%;
 
             &.slick-prev {
                 left: 50px;
@@ -642,6 +642,18 @@
             &.slick-next {
                 right: 50px;
             }
+        }
+    }
+
+    @media (max-width: screen(phablet-lg-max)) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .recommended-post {
+        @media (max-width: screen(phablet-lg-max)) {
+            padding-left: 10px;
+            padding-right: 10px;
         }
     }
 }

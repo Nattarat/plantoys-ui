@@ -146,6 +146,10 @@ body {
         }
     }
 
+    form {
+        width: 100%;
+    }
+
     .form-search {
         display: flex;
         align-items: flex-end;
@@ -199,6 +203,24 @@ body {
         }
     }
 
+    .sidebar-segment {
+        &.is-form-search {
+            padding: 0 30px;
+
+            .modal-dialog {
+                &.modal-search {
+                    #search_mini_form {
+                        .field-line-bottom[type=search] {
+                            @media screen and (max-width: screen(mobile-lg-max)) {
+                                min-width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .form-search-inner {
         &.is-field {
             .field-line-bottom {
@@ -217,8 +239,20 @@ body {
                         @media (min-width: screen(phablet-md)) {
                             min-width: 1px;
                         }
+
+                        @media (max-width: screen(phablet-lg-max)) {
+                            width: 100%;
+                        }
                     }
                 }
+            }
+        }
+    }
+
+    .list-activity {
+        > .list-item.is-login {
+            @media (max-width: screen(phablet-lg-max)) {
+                display: inline-block;
             }
         }
     }

@@ -277,9 +277,9 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .form-search {
         @media screen and (max-width: screen(mobile-lg-max)) {
-            width: 100%;
-            flex-direction: column;
-            align-items: flex-start;
+            // width: 100%;
+            // flex-direction: column;
+            // align-items: flex-start;
         }
 
         @media (min-width: screen(phablet-sm)) {
@@ -294,9 +294,9 @@
     .form-search-inner {
         &.is-field {
             @media screen and (max-width: screen(mobile-lg-max)) {
-                width: 85%;
-                padding-right: 0;
-                margin-bottom: 10px;
+                // width: 85%;
+                // padding-right: 0;
+                // margin-bottom: 10px;
             }
         }
     }
@@ -316,6 +316,26 @@
     .modal-dialog-content {
         @media screen and (max-width: screen(mobile-lg-max)) {
             align-items: flex-start;
+        }
+    }
+
+    .button-background-image {
+        @media screen and (max-width: screen(mobile-lg-max)) {
+            min-width: auto;
+            background-image: url('../../assets/images/icon/icon-search.png');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            box-shadow: 0 0 0 transparent;
+            width: 20px;
+            height: 20px;
+        }
+
+        .button-text {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                visibility: hidden;
+                font-size: 0;
+            }
         }
     }
 }
@@ -407,6 +427,74 @@
     .list-cart {
         overflow: auto;
         max-height: 50vh;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Language
+// ------------------------------------------------
+.modal-language {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include modal-variant(
+        $modal-dialog-margin: 25px,
+        $modal-dialog-align-items: center,
+
+        // Container
+        $modal-dialog-container-max-width: 480px,
+        $modal-dialog-container-min-height: auto,
+        $modal-dialog-container-max-height: auto,
+        $modal-dialog-container-padding: 30px 15px,
+        $modal-dialog-container-margin: 0,
+        $modal-dialog-container-background-color: $color-white,
+        $modal-dialog-container-box-shadow: 0 3px 5px rgba(0, 0, 0, .5),
+
+        // Overlay
+        $modal-dialog-overlay-background-color: rgba(0, 0, 0, .5),
+
+        // Body
+        $modal-dialog-body-min-height: auto,
+        $modal-dialog-body-max-height: auto,
+
+        // Title
+        $modal-dialog-title-padding: 15px,
+        $modal-dialog-title-margin: 0,
+        $modal-dialog-title-text-align: left
+    );
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .modal-dialog-overlay-language {
+        position: fixed;
+        z-index: zindex(lv1);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .5);
     }
 
     // STYLES OF STATE

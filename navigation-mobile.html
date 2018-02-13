@@ -1593,8 +1593,8 @@
                 </div>
             </div>
 
-            <!-- Modal Language -->
-            <div class="modal-dialog modal-language">
+            <!-- Modal country -->
+            <div class="modal-dialog modal-country">
                 <div class="modal-dialog-container is-medium">
                     <div class="modal-dialog-body">
                         <div class="modal-dialog-title">
@@ -1765,7 +1765,7 @@
 
             <div class="sidebar-segment is-utility">
                 <div class="sidebar-segment-inner is-column-half is-language">
-                    <span class="text-default is-bold is-white">EN</span>
+                    <a id="menu-language-mobile" class="text-link is-bold is-white">EN</a>
                 </div>
                 <div class="sidebar-segment-inner is-column-half is-account">
                         <div class="list-activity">
@@ -2357,6 +2357,28 @@
             </div><!-- Scroll ending -->
         </div>
         <div class="sidebar-overlay"></div>
+
+        <!-- Modal language -->
+        <div class="modal-dialog modal-language">
+            <div class="modal-dialog-container">
+                <div class="modal-dialog-body">
+                    <div class="modal-dialog-content">
+                        <div class="list-language">
+                            <div class="list-item is-title">
+                                <span class="text-default is-bold is-uppercase">Choose your language</span>
+                            </div>
+                            <div class="list-item">
+                                <a href="" class="text-link is-gray">English</a>
+                            </div>
+                            <div class="list-item">
+                                <a href="" class="text-link is-gray">ไทย</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dialog-overlay-language"></div>
+        </div>
     </div>
 
     <!-- Global loading -->
@@ -2826,6 +2848,13 @@
             //         collision: "flip"
             //     }
             // }).iconselectmenu("menuWidget");
+
+            $j('#menu-language-mobile').on('click', function() {
+                $j('.modal-language').addClass('is-active');
+            });
+            $j('.modal-dialog-overlay-language').on('click', function() {
+                $j('.modal-language').removeClass('is-active');
+            });
         });
     </script>
 </body>
