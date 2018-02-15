@@ -491,11 +491,11 @@
 
     &.is-product-detail {
         @media screen and (max-width: screen(labtop-lg-max)) {
-            max-height: auto;
+            max-height: 100%;
         }
 
         @media (min-width: screen(desktop-sm)) {
-            max-height: auto;
+            max-height: 100%;
         }
     }
 }

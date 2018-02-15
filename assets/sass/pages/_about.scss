@@ -149,6 +149,10 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    z-index: 10001;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
     #lg-counter {
         font-family: font-family(secondary);
         font-size: font-primary-size(size-4);
@@ -176,9 +180,6 @@
     .lg-thumb-outer {
         background-color: rgba(0, 0, 0, .25);
     }
-
-    // STYLES OF CHILD CLASS
-    // >>>>>>>>>>>>>>>>>>>>>>>
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -208,6 +209,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    z-index: 10000;
     background-color: $color-white;
 
     // STYLES OF CHILD CLASS
@@ -432,7 +434,21 @@
     }
 
     &.is-introduction {
+        .paragraph-link {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                flex-direction: column;
+            }
 
+            a {
+                &:first-child {
+                    @media screen and (max-width: screen(phablet-lg-max)) {
+                        display: block;
+                        margin-bottom: 15px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
     }
 }
 

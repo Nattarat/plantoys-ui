@@ -138,11 +138,19 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @media screen and (max-width: screen(phablet-lg-max)) {
+    @media (max-width: screen(phablet-lg-max)) {
         padding-left: 0;
         padding-right: 0;
-        margin-left: -50px; // -25
-        margin-right: -50px; // -25
+    }
+
+    @media (max-width: screen(mobile-lg-max)) {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+    @media (min-width: screen(phablet-xs)) and (max-width: screen(phablet-lg-max)) {
+        margin-left: -50px;
+        margin-right: -50px;
     }
 
     @media screen and (max-width: screen(tablet-sm)) {
