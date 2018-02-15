@@ -25,7 +25,7 @@
     }
     .caption{
         .row-width{
-            max-width: 70%;
+            // max-width: 70%;
             margin: auto;
         }
         .text-style{
@@ -37,10 +37,24 @@
         }
     }
     .thumb-text-detail{
+        position: relative;
+        padding-left: 20px;
+        margin: $thumb-space-detail;
         font-family: font-family(secondary);
         font-size: $thumb-detail-font-size;
         color: $color-gray-17;
-        margin: $thumb-space-detail;
+
+        &:before {
+            content: ' ';
+            position: absolute;
+            z-index: 1;
+            top: 7px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            background-color: $color-gray-3;
+            border-radius: 50%;
+        }
     }
 
     // STYLES OF STATE

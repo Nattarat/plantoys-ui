@@ -311,6 +311,17 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
+// Language
+// >>>>>>>>>>>>>>>>>>>>>>>
+[lang=ja] {
+    .navigation-main {
+        &.is-menu-language {
+            width: 100px;
+            margin-left: -50px;
+        }
+    }
+}
+
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE

@@ -369,6 +369,7 @@
         left: 0;
         width: 100%;
         height: 100%;
+        background-color: $color-green-6;
 
         video {
             width: auto;
@@ -398,9 +399,27 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     .news-segment {
-        @media screen and (max-width: screen(tablet-sm)) {
-            width: 95vw;
-            height: 72vw;
+        @media screen and (max-width: screen(tablet-md-max)) {
+            width: 100%;
+            height: auto;
+            padding-top: 45px;
+            padding-bottom: 45px;
+            background-image: url('../images/background/home/home-news-board-mobile.jpg');
+        }
+    }
+
+    .news-segment-inner {
+        @media (max-width: screen(tablet-md-max)) {
+            padding-top: 0;
+            margin: auto;
+        }
+
+        @media (max-width: screen(tablet-sm-max)) {
+            max-width: 80%;
+        }
+
+        @media (min-width: screen(tablet-md)) and (max-width: screen(tablet-md-max)) {
+            max-width: 65%;
         }
     }
 
@@ -411,8 +430,8 @@
     }
 
     .aligator-video {
-        @media screen and (max-width: screen(tablet-sm)) {
-            visibility: hidden;
+        @media screen and (max-width: screen(tablet-md-max)) {
+            display: none;
         }
     }
 }

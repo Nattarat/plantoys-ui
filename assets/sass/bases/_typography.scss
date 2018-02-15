@@ -555,10 +555,10 @@
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
     @media screen and (max-width: screen(tablet-md-max)) {
-        font-size: font-tertiary-size(size-4);
+        // font-size: font-tertiary-size(size-4);
     }
 
-    @media (min-width: screen(tablet-lg)) and (max-width: screen(labtop-md-max)) {
+    @media (max-width: screen(labtop-md-max)) {
         font-size: font-tertiary-size(size-2);
     }
 

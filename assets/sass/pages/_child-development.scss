@@ -148,7 +148,14 @@
         cursor: pointer;
     }
    .child-age-mobile{
-        @include select-form-group($label-font-size: 18px,$select-font-size:17,$form-group-align:center,$label-color:$color-white);
+        @include select-form-group(
+            $label-font-size: 18px,
+            $select-font-size: 17,
+            $form-group-align:center,
+            $label-color:$color-white
+        );
+
+        align-items: center;
    }
 
     // STYLES OF STATE
@@ -162,17 +169,9 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    // @media (max-width: screen(labtop-lg)) {
-    //     .child-age{
-    //         .select-title{
-    //             font-size: 25px;
-    //          }
-    //     }
-    // }
     @media (max-width: screen(phablet-md)) {
-        padding: 0px 15px;
+        padding: 5px 15px 6px 15px;
     }
-
 }
 
 // month detail
@@ -399,6 +398,11 @@
                 right: 0px;
             }
         }
+
+        .carousel-child-development {
+            max-width: 50%;
+            margin: auto;
+        }
     }
 
     // STYLES OF STATE
@@ -412,15 +416,17 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    // @media (max-width: screen(mobile-lg)){
-    //     .action2{
-    //         .accordion-container{
-    //             .font-style{
-    //                 font-size: px;
-    //             }
-    //         }
-    //     }
-    // }
+    .action2 {
+      .carousel-child-development {
+          @media (max-width: screen(phablet-md-max)) {
+              max-width: 100%;
+          }
+
+          @media (min-width: screen(phablet-lg)) and (max-width: screen(tablet-sm)) {
+              max-width: 65%;
+          }
+      }
+    }
 }
 
 // Browser variations

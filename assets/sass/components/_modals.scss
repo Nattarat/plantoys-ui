@@ -193,6 +193,12 @@
         }
     }
 
+    .language-flag {
+        @media (max-width: screen(mobile-lg)) {
+            max-width: 75px;
+        }
+    }
+
     .modal-dialog-container {
         @media screen and (max-width: screen(tablet-sm)) {
             padding-bottom: 20px;
@@ -322,7 +328,7 @@
     .button-background-image {
         @media screen and (max-width: screen(mobile-lg-max)) {
             min-width: auto;
-            background-image: url('../../assets/images/icon/icon-search.png');
+            background-image: url('../images/icon/icon-search.png');
             background-size: 20px;
             background-repeat: no-repeat;
             background-position: right bottom;
@@ -457,11 +463,11 @@
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
     @include modal-variant(
-        $modal-dialog-margin: 25px,
+        $modal-dialog-margin: 0,
         $modal-dialog-align-items: center,
 
         // Container
-        $modal-dialog-container-max-width: 480px,
+        $modal-dialog-container-max-width: 320px,
         $modal-dialog-container-min-height: auto,
         $modal-dialog-container-max-height: auto,
         $modal-dialog-container-padding: 30px 15px,
@@ -484,6 +490,7 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    width: 100vw;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -494,6 +501,7 @@
         bottom: 0;
         left: 0;
         right: 0;
+        width: 100vw;
         background-color: rgba(0, 0, 0, .5);
     }
 

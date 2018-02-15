@@ -673,6 +673,11 @@ $button-padding-side-deault: 45px;
 .checkout-onepage-index {
     #bt-loginfb,
     #google_button_login {
+        button {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
         .button-text {
             font-size: 0;
 

@@ -610,13 +610,13 @@
 
 // Fix container padding when responsive
 .tabcontent {
-    .tab-pane {
+    &.tab-pane {
         .carousel-product-related {
             @media screen and (max-width: 614px) {
                 padding-left: 25px;
                 padding-right: 25px;
-                margin-left: 50px;
-                margin-right: 50px;
+                margin-left: 25px;
+                margin-right: 25px;
             }
         }
     }
@@ -667,6 +667,14 @@
         width: 0;
         height: 0;
         pointer-events: none;
+    }
+
+    .carousel-description {
+        @media (max-width: screen(tablet-md-max)) {
+            padding-top: 15px;
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 
