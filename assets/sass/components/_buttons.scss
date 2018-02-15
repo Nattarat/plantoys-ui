@@ -1099,6 +1099,17 @@ $button-padding-side-deault: 45px;
     // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
+.blog-post-view,
+.catalog-product-view {
+    .button-circle {
+        &.is-gototop {
+            @media (max-width: screen(phablet-lg-max)) {
+                bottom: 60px;
+            }
+        }
+    }
+}
+
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE

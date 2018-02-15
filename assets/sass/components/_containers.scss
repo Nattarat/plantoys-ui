@@ -151,7 +151,7 @@
 
     &.is-blank {
         min-height: calc(100vh - 434px);
-        padding-top: 180px;
+        padding-top: 12vh; // 180px
     }
 
     &.is-information {
@@ -709,7 +709,7 @@
             strong,
             [style*="x-large"] {
                 font-family: font-family(primary);
-                font-weight: bold;
+                font-weight: normal;
             }
 
             // Size
@@ -843,6 +843,20 @@
         @media screen and (max-width: screen(phablet-lg-max)) {
             padding-left: 25px;
             padding-right: 25px;
+        }
+
+        .breadcrumbs {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                margin-left: -25px;
+                margin-right: -25px;
+            }
+        }
+
+        .col-main {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     }
 }

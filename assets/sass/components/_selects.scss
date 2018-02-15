@@ -233,6 +233,7 @@
 
     &.is-gender {
         width: 100%;
+        max-width: 100%;
         // min-width: 80px;
 
         select {
@@ -383,7 +384,12 @@
         }
 
         &:focus {
+            background-color: $color-white;
             outline: none;
+
+            .ui-selectmenu-icon {
+                background-image: url('#{path-file(icons)}/icon-arrow-down.png');
+            }
         }
 
         // Arrow

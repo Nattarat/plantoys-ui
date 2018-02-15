@@ -152,6 +152,14 @@
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    &:before {
+        top: 10px;
+    }
+
+    &:after {
+        top: 9px;
+        left: -1px;
+    }
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>

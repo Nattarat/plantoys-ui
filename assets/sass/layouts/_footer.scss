@@ -180,11 +180,15 @@
     }
 
     .footer-copyright {
-        @media screen and (max-width: screen(phablet-lg-max)) {
-            padding-bottom: 77px; // 30 + height 47
-        }
+        // @media screen and (max-width: screen(phablet-lg-max)) {
+        //     padding-bottom: 77px; // 30 + height 47
+        // }
 
-        @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-md-max)) {
+        // @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-md-max)) {
+        //     padding-bottom: 30px;
+        // }
+
+        @media screen and (max-width: screen(tablet-md-max)) {
             padding-bottom: 30px;
         }
 
@@ -219,6 +223,20 @@
         }
     }
 }
+
+
+.blog-post-view,
+.catalog-product-view {
+    .footer-main {
+        .footer-copyright {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                padding-bottom: 77px; // for social share spacing
+            }
+        }
+    }
+}
+
+
 
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
