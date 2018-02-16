@@ -479,7 +479,7 @@
 
             .button-typography {
                 .button-text {
-                    @media screen and (max-width: screen(phablet-lg-max)) {
+                    @media screen and (max-width: screen(tablet-lg)) {
                         color: $color-white;
                     }
                 }
