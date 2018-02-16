@@ -22,10 +22,10 @@
 @mixin container-variant(
     $block-display: block,
     $block-width: 100%,
-    $block-min-width: auto,
+    $block-min-width: 1px, // auto
     $block-max-width: 1440px,
     $block-height: auto,
-    $block-min-height: auto,
+    $block-min-height: 1px, // auto
     $block-max-height: auto,
     $block-padding: 0 15px,
     $block-margin: auto,
@@ -575,7 +575,7 @@
 
     &.is-table {
         @media screen and (max-width: screen(tablet-lg-max)) {
-            min-height: auto;
+            min-height: 1px;
         }
 
         @media screen and (max-width: screen(phablet-lg-max)) {

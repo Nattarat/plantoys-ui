@@ -166,7 +166,7 @@
         position: relative;
         z-index: zindex(lv2);
         height: auto;
-        min-height: auto;
+        min-height: 1px;
         // min-height: 850px;
         padding: 60px 0;
     }
@@ -217,7 +217,7 @@
         }
 
         @media screen and (max-width: screen(tablet-lg)) {
-            min-height: auto;
+            min-height: 1px;
         }
     }
 }
@@ -226,4 +226,17 @@
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
 // Safari
+.safari-mobile {
+    .block-viewport {
+        &.for-home-developments {
+            .developments-segment {
+                height: auto;
+            }
+        }
+
+        &.for-news-home {
+            min-height: 1px;
+        }
+    }
+}
 // Firefox

@@ -57,7 +57,7 @@
 
     &.is-flexible-height {
         height: auto;
-        min-height: auto;
+        min-height: 1px;
     }
 
     &.is-vertical {
@@ -345,7 +345,7 @@
     .list-item {
         @media screen and (max-width: screen(phablet-lg-max)) {
             width: 100%;
-            min-height: auto;
+            min-height: 1px;
         }
 
         @media (min-width: screen(tablet-sm)) and (max-width: screen(tablet-lg-max)) {
@@ -714,7 +714,7 @@
     &.is-sidebar,
     &.is-footer {
         width: auto;
-        min-height: auto;
+        min-height: 1px;
         padding: 0;
 
         .list-item {
@@ -743,7 +743,7 @@
         z-index: zindex(1);
         top: 0;
         bottom: 0;
-        min-height: auto;
+        min-height: 1px;
         border-left: 1px solid $color-gray-5;
 
         &.is-active {
@@ -799,7 +799,7 @@
 
     &.is-sidebar-collapse {
         width: 100%;
-        min-height: auto;
+        min-height: 1px;
         padding: 0;
     }
 

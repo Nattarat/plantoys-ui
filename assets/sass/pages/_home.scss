@@ -611,4 +611,12 @@
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
 // Safari
+.safari-mobile {
+    .developments-image {
+        @media screen and (max-width: screen(phablet-md-max)) {
+            background-attachment: initial;
+        }
+    }
+}
+
 // Firefox

@@ -1947,6 +1947,10 @@
             // =====================================================
             if(is.ie()) {
                 $j('html').addClass('ie');
+            } else if (is.iphone() && is.safari()) {
+                $j('html').addClass('safari-mobile');
+            } else if (is.ipad() && is.safari()) {
+                $j('html').addClass('safari-mobile');
             }
 
             // Headroom
