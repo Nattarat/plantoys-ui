@@ -195,7 +195,7 @@
                                                                   </a>
                                                                   <div class="product-content is-checkout">
                                                                       <div class="product-name">
-                                                                          <a class="text-link is-bold is-black" href="#">Melody Xylophone</a>
+                                                                          <a class="text-link is-bold is-black" href="#">Melody Xylophone Melody Xylophone</a>
                                                                       </div>
                                                                       <div class="product-counter is-alignitems-center">
                                                                           <div class="product-counter-inner">
@@ -341,6 +341,25 @@
             // script
         });
     </script> -->
+
+    <script type="text/javascript" src="../assets/js/is_js/is.min.js"></script>
+    <script type="text/javascript">
+        $j(function() {
+            // Check Browser condition
+            // =====================================================
+            if(is.ie()) {
+                $j('html').addClass('ie');
+            } else if (is.edge()) {
+                $j('html').addClass('edge');
+            } else if (is.iphone() && is.safari()) {
+                $j('html').addClass('safari-mobile');
+            } else if (is.ipad() && is.safari()) {
+                $j('html').addClass('safari-mobile');
+            } else if (is.android()) {
+                $j('html').addClass('android');
+            }
+        });
+    </script>
 </body>
 
 </html>

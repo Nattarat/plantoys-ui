@@ -103,6 +103,7 @@ $field-padding-side-deault: 20px;
     &[type=password],
     &[type=tel],
     &[type=text] {
+        -webkit-appearance: none; // Remove inner shadow on Mobile Safari (iPhone) but be careful when adding this property on input type checkbox and radio button selectors, because it hides the checkboxes and radio buttons
         display: $field-display;
         width: $field-width;
         min-width: $field-min-width;

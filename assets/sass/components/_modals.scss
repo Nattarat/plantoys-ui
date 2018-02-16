@@ -187,21 +187,36 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
+    .modal-dialog-title {
+        .text-tertiary {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                line-height: 1;
+            }
+        }
+    }
+
     .language-item {
         @media screen and (max-width: screen(tablet-sm)) {
             margin-bottom: 30px;
+        }
+
+        .text-default {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                font-size: $font-size-11;
+            }
         }
     }
 
     .language-flag {
         @media (max-width: screen(mobile-lg)) {
-            max-width: 75px;
+            max-width: 60px;
         }
     }
 
     .modal-dialog-container {
         @media screen and (max-width: screen(tablet-sm)) {
-            padding-bottom: 20px;
+            padding: 20px 20px 0 20px;
+            margin: 0 35px;
         }
     }
 }

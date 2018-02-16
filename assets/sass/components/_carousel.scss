@@ -478,6 +478,12 @@
     }
 }
 
+.android {
+    .carousel-hero {
+        margin-top: -135px; // top bar (80) + chrome url bar (55)
+    }
+}
+
 .carousel-product {
     overflow: hidden;
 

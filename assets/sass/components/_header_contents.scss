@@ -54,12 +54,12 @@
 @mixin text-header(
     $text-header-font: font-family(primary),
     $text-header-size: font-primary-size(size-1),
-    $text-header-color: $color-white,
+    $text-header-color: color-text(title-page),
     $text-header-margin-top: 0px,
     $text-header-margin-bottom: 12px,
     $text-sub-font: font-family(secondary),
     $text-sub-size: font-secondary-size(size-3),
-    $text-sub-color: $color-white
+    $text-sub-color: color-text(title-page)
 ) {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
     // >>>>>>>>>>>>>>>>>>>>>>>
