@@ -2394,6 +2394,25 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        // &:focus {
+        //     text-decoration: none;
+        //     outline: none;
+        // }
+
+        // * {
+        //     border: 1px solid red;
+        //     text-decoration: underline;
+
+        //     &:hover,
+        //     &:focus,
+        //     &:active,
+        //     &:visited {
+        //         border: 0;
+        //         text-decoration: none;
+        //         outline: none;
+        //     }
+        // }
     }
 
     .list-icon {
@@ -2613,3 +2632,10 @@
 // IE
 // Safari
 // Firefox
+
+// Fix link blue underline at Safari in iPhone/iPad
+.safari-mobile {
+    a:-webkit-any-link {
+        text-decoration: none;
+    }
+}

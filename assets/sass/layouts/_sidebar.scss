@@ -262,4 +262,35 @@ body {
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
 // Safari
+.safari-mobile {
+    .sidebar {
+        .sidebar-segment {
+            &.is-form-search {
+                .modal-dialog {
+                    &.modal-search {
+                        #search_mini_form {
+                            .field-line-bottom[type=search] {
+                                @media (min-width: screen(mobile-xs)) and (max-width: screen(mobile-xs-max)) {
+                                    min-width: 145px;
+                                }
+
+                                @media (min-width: screen(mobile-md)) and (max-width: screen(mobile-md-max)) {
+                                    min-width: 200px;
+                                }
+
+                                @media (min-width: screen(mobile-lg)) and (max-width: screen(mobile-lg-max)) {
+                                    min-width: 239px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
+
 // Firefox

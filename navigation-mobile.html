@@ -15,6 +15,7 @@
     <meta name="keywords" content="Plan toys" />
     <meta name="robots" content="INDEX,FOLLOW" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta content="telephone=no" name="format-detection">
     <link rel="icon" href="http://ptoys.maywz.info/skin/frontend/base/default/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="http://ptoys.maywz.info/skin/frontend/base/default/favicon.ico" type="image/x-icon" />
     <!--[if lt IE 7]>
@@ -2424,8 +2425,19 @@
     <script type="text/javascript" src="../assets/js/headroomjs/jQuery.headroom.min.js"></script>
     <script type="text/javascript" src="../assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../assets/js/jquery_accordion/jquery-accordion.js"></script>
+    <script type="text/javascript" src="../assets/js/is_js/is.min.js"></script>
     <script type="text/javascript">
         $j(function() {
+            // Check IE condition
+            // =====================================================
+            if(is.ie()) {
+                $j('html').addClass('ie');
+            } else if (is.iphone() && is.safari()) {
+                $j('html').addClass('safari-mobile');
+            } else if (is.ipad() && is.safari()) {
+                $j('html').addClass('safari-mobile');
+            }
+
             // Headroom
             // =====================================================
             $j('.topbar').headroom({
