@@ -1002,6 +1002,8 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
+            min-width: 1px;
+            min-height: 72px;
             padding-left: 0;
             background-color: transparent;
             cursor: pointer;
@@ -1009,6 +1011,18 @@
             &:before,
             &:after {
                 display: none;
+            }
+
+            &[for=p_method_p2c2p] {
+                .method-logo {
+                    background-image: url('../images/icon/payment/icon-2c2p.gif');
+                }
+            }
+
+            &[for=p_method_cashondelivery] {
+                .method-logo {
+                    background-image: url('../images/icon/payment/icon-cash-delivery.gif');
+                }
             }
         }
     }
@@ -1073,18 +1087,36 @@
     // }
 
     .method-logo {
-        flex: none;
-        position: relative;
-        z-index: zindex(lv2);
+        // flex: none;
+        // position: relative;
+        // z-index: zindex(lv2);
 
-        img {
-            margin-left: 10px;
-        }
+        // img {
+        //     margin-left: 10px;
+        // }
+
+
+        // display: block;
+
+        @include translate(0, -50%);
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        right: 0;
+        width: 90px;
+        height: 55px;
+        margin-left: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
-    // .method-name {
-    //     padding-left: 15px;
-    // }
+    .method-name {
+        display: block;
+
+        @media screen and (max-width: screen(phablet-lg-max)) {
+            max-width: calc(100% - 105px);
+        }
+    }
 
     // .price {
     //     font-family: font-family(primary);

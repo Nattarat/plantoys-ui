@@ -237,7 +237,7 @@ body {
                 &.modal-search {
                     .form-search {
                         @media (min-width: screen(phablet-md)) {
-                            min-width: 1px;
+                            min-width: 300px; // 1px
                         }
 
                         @media (max-width: screen(phablet-lg-max)) {
