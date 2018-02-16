@@ -167,7 +167,9 @@
 
 .catalog-category-view {
     .breadcrumbs {
-        padding: 2px 25px 3px 25px;
+        @media screen and (max-width: screen(tablet-sm)) {
+            padding: 2px 25px 3px 25px;
+        }
 
         ul {
             @media screen and (max-width: screen(tablet-sm)) {
