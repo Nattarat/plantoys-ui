@@ -216,6 +216,22 @@ $field-padding-side-deault: 20px;
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
 // Safari
+.safari-mobile {
+    .field-primary,
+    .field-secondary,
+    .field-line-bottom,
+    .field-search-with-icon {
+        &[type=email],
+        &[type=search],
+        &[type=number],
+        &[type=password],
+        &[type=tel],
+        &[type=text] {
+            font-size: $font-size-4; // Fix zoom in iPhone/iPad
+        }
+    }
+
+}
 // Firefox
 
 // Contextual variations
@@ -501,6 +517,14 @@ $field-padding-side-deault: 20px;
 #search {
     &.field-line-bottom {
         height: auto;
+    }
+}
+
+#search_mini_form {
+    .field-line-bottom {
+        &[type=search] {
+            min-width: 1px;
+        }
     }
 }
 

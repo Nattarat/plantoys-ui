@@ -100,16 +100,15 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @media (max-width: screen(tablet-lg)) {
-        // padding: 0px 30px;
+    @media (max-width: screen(mobile-lg-max)) {
         .head-title {
-            // font-size: 55px;
+            font-size: font-primary-size(size-9);
         }
         .sub-title {
-            display: inline;
-            // font-size: 25px;
+            font-size: font-secondary-size(size-12);
         }
     }
+
     @media (max-width: screen(phablet-xs)) {
         .head-title {
             // font-size: 45px;

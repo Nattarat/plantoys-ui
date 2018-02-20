@@ -147,6 +147,12 @@
             }
         }
     }
+
+    &.is-checkout-login {
+        @media (max-width: screen(mobile-lg-max)) {
+            padding-bottom: 135px;
+        }
+    }
 }
 
 // Browser variations

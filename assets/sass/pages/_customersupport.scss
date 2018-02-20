@@ -26,7 +26,10 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .customersupport-header {
-        @include text-header;
+        @include text-header(
+            $text-header-color: $color-white,
+            $text-sub-color: $color-white
+        );
     }
 
     // STYLES OF STATE

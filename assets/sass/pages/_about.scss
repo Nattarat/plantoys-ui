@@ -502,6 +502,12 @@
                     text-align: center;
                 }
             }
+
+            &:last-child {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    margin-left: 0;
+                }
+            }
         }
     }
 }

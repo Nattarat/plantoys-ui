@@ -1112,10 +1112,11 @@
 
     .method-name {
         display: block;
+        max-width: calc(100% - 105px);
 
-        @media screen and (max-width: screen(phablet-lg-max)) {
-            max-width: calc(100% - 105px);
-        }
+        // @media screen and (max-width: screen(phablet-lg-max)) {
+
+        // }
     }
 
     // .price {

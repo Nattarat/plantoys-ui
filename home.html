@@ -1248,14 +1248,14 @@
                 <div id="navigation-developments" class="pagination-carousel for-home-developments">
                     <div class="pagination-list">
                         <div class="pagination-list-item">
-                            <a href="#developments-1" class="pagination-bullet scroll-to"></a>
+                            <a id="developments-anchor-1" href="#developments-1" class="pagination-bullet scroll-to"></a>
                         </div>
                         <div class="pagination-list-item">
-                            <a href="#developments-2" class="pagination-bullet scroll-to"></a>
+                            <a id="developments-anchor-2" href="#developments-2" class="pagination-bullet scroll-to"></a>
                         </div>
-                        <div class="pagination-list-item">
+                        <!-- <div class="pagination-list-item">
                             <a href="#developments-3" class="pagination-bullet scroll-to"></a>
-                        </div>
+                        </div> -->
                         <div class="pagination-list-item">
                             <a href="#news" class="pagination-bullet is-square scroll-to"></a>
                         </div>
@@ -1318,7 +1318,7 @@
                     </div>
                 </div>
                 <!-- Segment -->
-                <div id="developments-3" class="block-viewport for-home-developments">
+                <!-- <div id="developments-3" class="block-viewport for-home-developments">
                     <div class="developments-segment">
                         <div class="developments-image" style="background-image: url('../assets/images/content/home/home-development-parallax-1.jpg');"></div>
                     </div>
@@ -1344,7 +1344,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- News -->
@@ -1933,7 +1933,7 @@
     <!-- Plantoys javascript -->
     <script type="text/javascript" src="../assets/js/slick/slick.js"></script>
     <script type="text/javascript" src="../assets/js/scrollmonitor/scrollMonitor.js"></script>
-    <script type="text/javascript" src="../assets/js/scrollspy-js/scrollspy.js"></script>
+    <!-- <script type="text/javascript" src="../assets/js/scrollspy-js/scrollspy.js"></script> -->
     <script type="text/javascript" src="../assets/js/smooth-scroll/smooth-scroll.min.js"></script>
     <script type="text/javascript" src="../assets/js/aos/aos.js"></script>
     <script type="text/javascript" src="../assets/js/headroomjs/headroom.min.js"></script>
@@ -2051,6 +2051,44 @@
                 $j('#navigation-developments').removeClass('is-active');
             });
 
+            // Developments 1
+            // Set selector
+            // ------------------------------
+            var elementContentFirst = document.getElementById("developments-1");
+            // Set scroll monitor to selector (for watching)
+            // ------------------------------
+            var elementContentWatcherFirst = scrollMonitor.create(elementContentFirst, {top: 150, bottom: 150});
+            // Set scroll monitor event (more event see in https://github.com/stutrek/scrollMonitor#events)
+            // ------------------------------
+            // enterViewport
+            elementContentWatcherFirst.fullyEnterViewport(function() {
+                $j('#developments-anchor-1').addClass('is-active');
+                $j('#developments-anchor-2').removeClass('is-active');
+            });
+            // exitViewport
+            elementContentWatcherFirst.partiallyExitViewport (function() {
+                $j('#developments-anchor-1').removeClass('is-active');
+            });
+
+            // Developments 2
+            // Set selector
+            // ------------------------------
+            var elementContentSecond = document.getElementById("developments-2");
+            // Set scroll monitor to selector (for watching)
+            // ------------------------------
+            var elementContentWatcherSecond = scrollMonitor.create(elementContentSecond, {top: 300, bottom: 300});
+            // Set scroll monitor event (more event see in https://github.com/stutrek/scrollMonitor#events)
+            // ------------------------------
+            // enterViewport
+            elementContentWatcherSecond.fullyEnterViewport(function() {
+                $j('#developments-anchor-2').addClass('is-active');
+                $j('#developments-anchor-1').removeClass('is-active');
+            });
+            // exitViewport
+            elementContentWatcherSecond.partiallyExitViewport (function() {
+                $j('#developments-anchor-2').removeClass('is-active');
+            });
+
             // News content
             // Set selector
             // ------------------------------
@@ -2078,12 +2116,12 @@
 
             // Scroll spy
             // =====================================================
-            var developmentSpy = new ScrollSpy('#developments-container', {
-                    nav: '#navigation-developments .pagination-list-item .pagination-bullet',
-                    className: 'is-active',
-                    callback: function () {
-				            }
-            });
+            // var developmentSpy = new ScrollSpy('#developments-container', {
+            //         nav: '#navigation-developments .pagination-list-item .pagination-bullet',
+            //         className: 'is-active',
+            //         callback: function () {
+				    //         }
+            // });
 
             // Navigation > Outside element action
             // =====================================================
