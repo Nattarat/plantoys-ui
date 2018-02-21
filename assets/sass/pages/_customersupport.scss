@@ -156,13 +156,15 @@
         height: 100%;
         min-height: 215px;
         background-size: cover;
+        background-position: center;
     }
 
     .customersupport-office-contact {
         display: flex;
         height: 100%;
         padding: 25px;
-        background-color: $color-white;
+        background-color: $color-gray-23;
+        border-left: 2px solid $color-gray-10;
     }
 
     .customersupport-answer {

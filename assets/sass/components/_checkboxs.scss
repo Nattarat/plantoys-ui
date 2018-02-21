@@ -889,6 +889,7 @@
     }
 
     .price {
+        flex: none;
         font-family: font-family(primary);
         font-size: font-primary-size(size-11);
         font-weight: normal;

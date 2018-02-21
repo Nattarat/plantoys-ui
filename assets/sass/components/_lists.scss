@@ -2206,6 +2206,19 @@
         &:last-child {
             margin-bottom: 2px;
         }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            .customersupport-office-contact {
+                background-color: $color-white;
+            }
+        }
+
+        &:nth-child(even) {
+            .customersupport-office-image {
+                border-left: 2px solid $color-gray-10;
+            }
+        }
     }
 
     // STYLES OF STATE
@@ -2226,6 +2239,14 @@
 
         @media screen and (max-width: screen(phablet-lg-max)) {
             width: 100%;
+        }
+
+        &:nth-child(even) {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+              .customersupport-office-image {
+                  border-left: 0;
+              }
+            }
         }
     }
 
