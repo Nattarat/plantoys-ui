@@ -3,7 +3,7 @@
 <html lang="th" class="ie9">
 <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="ja">
+<html lang="th">
 <!--<![endif]-->
 
 <head>
@@ -1297,7 +1297,7 @@
                     <div class="developments-segment">
                         <div class="developments-content is-wood-green animation-sequences" data-aos="animation">
                             <h2 class="developments-title">
-                                <span class="text-carousel is-title is-white">Child Development</span>
+                                <span class="text-carousel is-title is-white">สวัสดีปีน้องงงงงง</span>
                             </h2>
                             <h3 class="developments-sub-title">
                                 <span class="text-carousel is-large">Birth to 6 months</span>
@@ -1955,6 +1955,12 @@
                 $j('html').addClass('safari-mobile');
             } else if (is.android()) {
                 $j('html').addClass('android');
+            }
+
+            // Embed Thai font
+            var languageThai = $j('html').filter('[lang="th"]');
+            if(languageThai.length > 0) {
+                $j('head').append('<link rel="stylesheet" type="text/css" href="../assets/css/thai-font.css" />');
             }
 
             // Headroom
