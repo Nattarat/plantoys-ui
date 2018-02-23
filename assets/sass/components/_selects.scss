@@ -339,6 +339,155 @@
 }
 
 // Safari
+.safari-mobile {
+    .select-arrow {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        $select-padding-left: 45px;
+        $select-padding-right: 35px;
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include select-icon(
+            $select-width: 290px,
+            $select-height: 40px, // 48 > 36 > 30
+            $select-font-size: $font-size-4,
+            $select-padding: 0 $select-padding-right 0 $select-padding-left,
+            $select-border-radius: 5px,
+            $select-background: $color-white,
+            $select-position-icon: calc(100% - 10px),
+            $space-text-select: 30px
+        );
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        display: inline-block;
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        select {
+            margin-top: 0;
+            margin-left: 0;
+            border: 1px solid $color-gray-3;
+            background-size: 10px; // 16 > 12
+            font-family: font-family(primary);
+            letter-spacing: 1px;
+        }
+
+        // STYLES OF STATE
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-default {
+            select {
+                padding-left: 20px; // 15
+                font-size: font-secondary-size(size-8);
+            }
+        }
+
+        &.is-fluid {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &.is-size-itself {
+            width: auto;
+            max-width: auto;
+
+            select {
+                padding-right: 50px;
+            }
+        }
+
+        &.is-country {
+            width: auto;
+            min-width: 260px;
+            margin-left: 30px;
+
+            select {
+                background: url('#{path-file(images)}/icon/icon-arrow-down-gray.png') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
+            }
+        }
+
+        &.is-gender {
+            width: 100%;
+            max-width: 100%;
+            // min-width: 80px;
+
+            select {
+                padding-left: 20px;
+            }
+        }
+
+        &.is-transparent-background {
+            background-color: transparent;
+
+            select {
+                background-color: transparent;
+            }
+        }
+
+        &.is-border-less {
+            select {
+                border: 0;
+            }
+        }
+
+        // STYLES OF STATE WITH MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MEDIA QUERY
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @media screen and (max-width: screen(phablet-md-max))  {
+            max-width: auto;
+        }
+
+        select {
+            @media screen and (max-width: screen(labtop-lg))  {
+                // padding-left: $select-padding-left * $font-size-reduce-primary;
+                // padding-right: $select-padding-right * $font-size-reduce-primary;
+                // font-size: font-primary-size(size-11) * $font-size-reduce-primary;
+                // background-size: 10%;
+            }
+        }
+
+        &.is-country {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                margin-top: 10px;
+                margin-left: 0;
+
+                select {
+                    margin-left: 0;
+                }
+            }
+
+            @media screen and (max-width: screen(labtop-lg)) {
+                min-width: 200px;
+
+                select {
+                    background-size: 12px, 14px; // arrow, world
+                }
+            }
+        }
+
+        &.is-gender {
+            @media screen and (max-width: screen(labtop-lg)) {
+                // height: $button-height-deault * $font-size-reduce-primary;
+            }
+
+            select {
+                @media screen and (max-width: screen(labtop-lg)) {
+                    // padding-left: $field-padding-side-deault * $font-size-reduce-primary;
+                    // padding-right: $field-padding-side-deault * $font-size-reduce-primary;
+                    // font-size: font-primary-size(size-11) * $font-size-reduce-primary;
+                    // background-size: 10%;
+                }
+            }
+        }
+    }
+}
+
 // Firefox
 
 // jQuery UI Selectmenu

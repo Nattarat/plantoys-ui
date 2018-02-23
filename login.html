@@ -116,7 +116,7 @@
                             <div class="list-form is-fluid">
                                 <div class="list-item">
                                     <!-- Add class "is-error" for show error field -->
-                                    <input class="field-secondary is-fluid" placeholder="Email" type="email" />
+                                    <input class="field-secondary is-fluid" placeholder="อีเมล์" type="email" />
                                     <!-- Add class "is-active" for show validation message -->
                                     <div class="field-validation">
                                         <span class="text-default is-extra-small is-error">error_meesage</span>
@@ -124,7 +124,7 @@
                                 </div>
                                 <div class="list-item">
                                     <!-- Add class "is-error" for show error field -->
-                                    <input class="field-secondary is-fluid" placeholder="Password" type="password" />
+                                    <input class="field-secondary is-fluid" placeholder="รหัสผ่าน" type="password" />
                                     <!-- Add class "is-active" for show validation message -->
                                     <div class="field-validation">
                                         <span class="text-default is-extra-small is-error">error_meesage</span>
@@ -168,12 +168,30 @@
     </div>
 
     <!-- Plantoys javascript -->
-    <!-- <script type="text/javascript" src="../assets/js/..."></script>
+    <script type="text/javascript" src="../assets/js/is_js/is.min.js"></script>
     <script type="text/javascript">
         $j(function() {
-            // Script...
+            // Check Browser condition
+            // =====================================================
+            if(is.ie()) {
+                $j('html').addClass('ie');
+            } else if (is.edge()) {
+                $j('html').addClass('edge');
+            } else if (is.iphone() && is.safari()) {
+                $j('html').addClass('safari-mobile');
+            } else if (is.ipad() && is.safari()) {
+                $j('html').addClass('safari-mobile');
+            } else if (is.android()) {
+                $j('html').addClass('android');
+            }
+
+            // Embed Thai font
+            var languageThai = $j('html').filter('[lang="th"]');
+            if(languageThai.length > 0) {
+                $j('head').append('<link rel="stylesheet" type="text/css" href="../assets/css/thai-font.css" />');
+            }
         });
-    </script> -->
+    </script>
 </body>
 
 </html>

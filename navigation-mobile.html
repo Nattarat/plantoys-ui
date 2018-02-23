@@ -1403,7 +1403,8 @@
                             <span class="text-default is-middle-small">new product releases & much more…</span>
                         </div>
                         <div class="subscribe-field">
-                            <input class="field-primary is-fluid" placeholder="Your Email Address" type="text" />
+                            <!-- <input class="field-primary is-fluid" placeholder="Your Email Address" type="text" /> -->
+                            <input class="field-primary is-fluid" placeholder="สมัครสมาชิกจดหมายข่าวของเรา" type="text" />
                         </div>
                         <div class="subscribe-button">
                             <button class="button-primary-light is-small" type="button">
@@ -1456,7 +1457,8 @@
                                     <div class="footer-subscribe-form">
                                         <form class="footer-subscribe-field">
                                             <!-- Add class "is-error" for show error field -->
-                                            <input class="field-line-bottom is-fluid" placeholder="Your E-mail Address" type="email" />
+                                            <!-- <input class="field-line-bottom is-fluid" placeholder="Your E-mail Address" type="email" /> -->
+                                            <input class="field-line-bottom is-fluid" placeholder="สมัครสมาชิกจดหมายข่าวของเรา" type="email" />
                                             <!-- Add class "is-active" for show validation message -->
                                             <div class="field-validation">
                                                 <span class="text-default is-extra-small is-error">error_meesage</span>
@@ -1727,7 +1729,8 @@
                                     <div class="form-search">
                                         <div class="form-search-inner is-field">
                                             <!-- Add class "is-error" for show error field -->
-                                            <input class="field-line-bottom is-fluid is-placeholder-color-default required-entry" id="search" placeholder="Search entire store here..." value="" name="q" type="search" autocomplete="off">
+                                            <!-- <input class="field-line-bottom is-fluid is-placeholder-color-default required-entry" id="search" placeholder="Search entire store here..." value="" name="q" type="search" autocomplete="off"> -->
+                                            <input class="field-line-bottom is-fluid is-placeholder-color-default required-entry" id="search" placeholder="ค้นหาสินค้าที่นี่..." value="" name="q" type="search" autocomplete="off">
                                             <div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
                                             <!-- Add class "is-active" for show validation message -->
                                             <div class="field-validation">
@@ -2440,14 +2443,24 @@
     <script type="text/javascript" src="../assets/js/is_js/is.min.js"></script>
     <script type="text/javascript">
         $j(function() {
-            // Check IE condition
+            // Check Browser condition
             // =====================================================
             if(is.ie()) {
                 $j('html').addClass('ie');
+            } else if (is.edge()) {
+                $j('html').addClass('edge');
             } else if (is.iphone() && is.safari()) {
                 $j('html').addClass('safari-mobile');
             } else if (is.ipad() && is.safari()) {
                 $j('html').addClass('safari-mobile');
+            } else if (is.android()) {
+                $j('html').addClass('android');
+            }
+
+            // Embed Thai font
+            var languageThai = $j('html').filter('[lang="th"]');
+            if(languageThai.length > 0) {
+                $j('head').append('<link rel="stylesheet" type="text/css" href="../assets/css/thai-font.css" />');
             }
 
             // Headroom
