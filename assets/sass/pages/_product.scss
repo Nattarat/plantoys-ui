@@ -729,7 +729,9 @@ $product-container-padding: 0 50px;
     .m-filter-item-list  {
         li {
             position: relative;
-            display: inline-block;
+            // display: inline-block;
+            display: flex;
+            justify-content: space-between;
             width: 100%;
             padding: 0 0 0 25px;
             margin: 0 0 6px 0;
@@ -880,7 +882,8 @@ $product-container-padding: 0 50px;
 
             // Label selected
             span {
-
+                width: 30px;
+                text-align: right;
             }
         }
     }

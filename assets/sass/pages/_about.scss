@@ -744,18 +744,33 @@
     margin-right: auto;
     margin-top: 20px;
 
-    &:before {
-        content: ' ';
-        position: absolute;
-        z-index: zindex(lv2);
-        top: 100px;
-        bottom: 100px;
-        left: 50%;
-        display: none;
-        width: 4px;
-        margin-left: -2px;
-        background: url('#{path-file(images)}/content/about/road-line.png') repeat-y;
-    }
+    // CSS road line
+    // &:before {
+    //     content: ' ';
+    //     position: absolute;
+    //     z-index: zindex(lv2);
+    //     top: 100px;
+    //     bottom: 100px;
+    //     left: 50%;
+    //     display: none;
+    //     width: 4px;
+    //     margin-left: -2px;
+    //     background: url('#{path-file(images)}/content/about/road-line.png') repeat-y;
+    // }
+
+    // CSS road
+    // &:after {
+    //     content: ' ';
+    //     position: absolute;
+    //     z-index: zindex(lv1);
+    //     top: 100px;
+    //     bottom: 100px;
+    //     left: 50%;
+    //     display: none;
+    //     width: 30px;
+    //     margin-left: -15px;
+    //     background-color: $color-gray-7;
+    // }
 
     &:after {
         content: ' ';
@@ -764,10 +779,10 @@
         top: 100px;
         bottom: 100px;
         left: 50%;
-        display: none;
-        width: 30px;
-        margin-left: -15px;
-        background-color: $color-gray-7;
+        width: 210px;
+        margin-left: -105px;
+        background: url('../images/content/about/roadmap-road-mobile.png') no-repeat center;
+        background-size: 100px 100%;
     }
 
     // STYLES OF CHILD CLASS
