@@ -127,6 +127,10 @@
         .price {
             font-family: font-family(primary);
         }
+
+        &.is-underline {
+            border-bottom: 1px solid color-text(link);
+        }
     }
 
     // Colors

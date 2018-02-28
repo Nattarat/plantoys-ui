@@ -320,11 +320,13 @@
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .list-item {
+        pointer-events: none;
         width: 20%;
         min-height: 250px;
         padding-left: 15px;
         padding-right: 15px;
         text-align: center;
+        cursor: default;
 
         &:hover {
             text-decoration: none;

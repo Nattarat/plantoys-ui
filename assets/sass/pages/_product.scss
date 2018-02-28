@@ -614,6 +614,7 @@ $product-container-padding: 0 50px;
 
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
+    width: 100%;
 
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -784,6 +785,8 @@ $product-container-padding: 0 50px;
                 + .m-selected-filter-item {
                     position: relative;
                     display: inline-block;
+                    width: auto;
+                    text-align: left;
 
                     &:before,
                     &:after {
@@ -1046,6 +1049,13 @@ $product-container-padding: 0 50px;
             display: flex;
             flex-wrap: wrap;
             // align-items: center;
+
+            .product-detail-segment-item-inner {
+                &.is-column-half {
+                    width: auto;
+                    flex: 1;
+                }
+            }
         }
 
         &.is-icon-category {
@@ -1191,6 +1201,19 @@ $product-container-padding: 0 50px;
 
             @media screen and (max-width: screen(tablet-md-max)) {
                 padding-top: 20px;
+            }
+        }
+    }
+
+    .product-detail-segment-item {
+        &.is-specification {
+            .product-detail-segment-item-inner {
+                &.is-column-half {
+                    @media screen and (max-width: screen(phablet-lg-max)) {
+                        width: 100%;
+                        flex: none;
+                    }
+                }
             }
         }
     }
