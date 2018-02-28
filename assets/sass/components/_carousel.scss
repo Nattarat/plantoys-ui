@@ -465,7 +465,7 @@
         height: 44px;
         margin-left: -50px;
         background-image: url('#{path-file(icons)}/icon-mousescroll-down.gif');
-        background-size: cover;
+        // background-size: cover;
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -475,6 +475,12 @@
         white-space: nowrap;
         text-align: center;
         line-height: 105px;
+    }
+
+    .carousel-image {
+        &.is-cover {
+            background-position: center top;
+        }
     }
 }
 
