@@ -210,6 +210,13 @@
         }
     }
 
+    .customersupport-office-contact {
+        @media (min-width: screen(desktop-sm)) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
     // .button-upload-files {
     //     @media screen and (max-width: screen(phablet-lg-max)) {
     //         margin-right: 0;
