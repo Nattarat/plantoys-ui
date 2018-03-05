@@ -27,7 +27,7 @@
 }
 
 .navigation-main {
-    $navigation-container: 250px; // 275
+    $navigation-container: 275px; // 275 > 250 > 275
 
     @include transition(all .3s ease);
     @include translate(0, 15px);

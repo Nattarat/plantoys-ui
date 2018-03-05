@@ -171,6 +171,20 @@
 
     .topbar-segment {
         &.is-right {
+            .list-activity {
+                > .list-item {
+                    &.is-login {
+                        .button-typography {
+                            .button-text {
+                                @media screen and (max-width: screen(tablet-lg)) {
+                                    color: $color-gray-1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             @media screen and (max-width: screen(phablet-lg-max)) {
                 // width: 60px;
             }
