@@ -38,7 +38,9 @@
 
     // MEDIA QUERY
     // >>>>>>>>>>>>>>>>>>>>>>>
-
+    @media (min-width: screen(desktop-md)) {
+        background-position: center -50px;
+    }
 }
 
 // Browser variations

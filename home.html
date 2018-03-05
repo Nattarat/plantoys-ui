@@ -1955,6 +1955,8 @@
                 $j('html').addClass('safari-mobile');
             } else if (is.android()) {
                 $j('html').addClass('android');
+            } else if (is.androidTablet()) {
+                $j('html').addClass('android-tablet');
             }
 
             // Embed Thai font
