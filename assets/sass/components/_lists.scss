@@ -1326,7 +1326,8 @@
                 opacity: 1;
             }
 
-            .list-thumbnail-default {
+            .list-thumbnail-default,
+            .carousel-image-item {
                 @include scale(1.1);
             }
 
@@ -1477,7 +1478,8 @@
         position: relative;
     }
 
-    .list-thumbnail-default {
+    .list-thumbnail-default,
+    .carousel-image-item {
         @include transition(all .3s ease);
         @include scale(1);
     }
@@ -1562,7 +1564,8 @@
                 }
             }
 
-            .list-thumbnail-default {
+            .list-thumbnail-default,
+            .carousel-image-item {
                 width: 100%;
             }
         }
