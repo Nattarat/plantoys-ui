@@ -479,7 +479,7 @@
 
     .carousel-image {
         &.is-cover {
-            background-position: center top;
+            background-position: center 80px; // center top
         }
     }
 }
