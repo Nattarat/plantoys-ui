@@ -792,6 +792,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    min-height: 105px;
     padding: 15px 30px;
 
     @media screen and (max-width: screen(mobile-lg-max)) {
@@ -878,6 +879,7 @@
     }
 
     .method-logo {
+        display: none; // hide shiping logo
         float: none;
         width: auto;
         height: 75px;
@@ -885,7 +887,7 @@
     }
 
     .method-name {
-        padding-left: 15px;
+        // padding-left: 15px;
     }
 
     .price {
