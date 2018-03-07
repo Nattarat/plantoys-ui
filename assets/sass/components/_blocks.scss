@@ -195,6 +195,12 @@
             // min-height: 50vh;
         }
 
+        // Fix bg size in Tablet portrait
+        @media (min-width: screen(tablet-sm)) and (max-width: screen(labtop-md)) and (orientation: portrait) {
+            height: 50vh;
+            min-height: 50vh;
+        }
+
         .developments-segment {
             &:first-child {
                 @media screen and (max-width: screen(phablet-md-max)) {
@@ -242,11 +248,3 @@
 }
 // Firefox
 // Android
-.android {
-    .block-viewport {
-        &.for-home-developments {
-
-        }
-    }
-}
-

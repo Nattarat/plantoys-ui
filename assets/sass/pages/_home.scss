@@ -576,6 +576,18 @@
             background-size: 100%;
             background-position: -25vw center;
         }
+
+        // Fix bg size in Tablet portrait
+        @media (min-width: screen(tablet-sm)) and (max-width: screen(labtop-md)) and (orientation: portrait) {
+            background-size: 100%;
+            background-position: center;
+        }
+
+        // Fix bg size in Tablet landscape
+        @media (min-width: screen(tablet-sm)) and (max-width: screen(labtop-md)) and (orientation: landscape) {
+            background-size: cover;
+            background-position: center;
+        }
     }
 
     .developments-title {
@@ -622,3 +634,20 @@
 }
 
 // Firefox
+.firefox {
+    .developments {
+        .developments-image {
+            // Fix bg size in Tablet portrait
+              @media (min-width: screen(tablet-sm)) and (max-width: screen(labtop-md)) and (orientation: portrait) {
+                background-size: 51%;
+                background-position: left center;
+            }
+
+            // Fix bg size in Tablet landscape
+            @media (min-width: screen(tablet-sm)) and (max-width: screen(labtop-md)) and (orientation: landscape) {
+                background-size: 51%;
+                background-position: left center;
+            }
+        }
+    }
+}
