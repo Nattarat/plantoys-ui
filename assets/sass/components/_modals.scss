@@ -677,4 +677,82 @@
         // >>>>>>>>>>>>>>>>>>>>>>>
         font-size: $font-thai-size-11;
     }
+
+    // Country
+    // ------------------------------------------------
+    .modal-country {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include modal-variant(
+            $modal-dialog-container-max-width: 725px,
+            $modal-dialog-container-padding: 50px,
+
+            // Title
+            $modal-dialog-title-margin: 0 0 40px 0,
+            $modal-dialog-title-text-align: center
+        );
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .language-item {
+            display: block;
+            text-align: center;
+        }
+
+        .language-flag {
+            max-width: 100px;
+            height: auto;
+            margin: auto auto 20px auto;
+        }
+
+        // STYLES OF STATE
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF STATE WITH MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MEDIA QUERY
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .modal-dialog-title {
+            .text-tertiary {
+                @media screen and (max-width: screen(mobile-lg-max)) {
+                    line-height: 1;
+                }
+            }
+        }
+
+        .language-item {
+            @media screen and (max-width: screen(tablet-sm)) {
+                margin-bottom: 30px;
+            }
+
+            .text-default {
+                @media screen and (max-width: screen(mobile-lg-max)) {
+                    font-size: $font-thai-size-11;
+                }
+            }
+        }
+
+        .language-flag {
+            @media (max-width: screen(mobile-lg)) {
+                max-width: 60px;
+            }
+        }
+
+        .modal-dialog-container {
+            @media screen and (max-width: screen(tablet-sm)) {
+                padding: 20px 20px 0 20px;
+                margin: 0 35px;
+            }
+        }
+    }
 }

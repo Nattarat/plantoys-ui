@@ -441,4 +441,40 @@
             }
         }
     }
+
+    .myaccount {
+        .myaccount-address-inner,
+        .myaccount-content-inner {
+            &.is-form {
+                span,
+                p {
+                    &.text-default {
+                        font-size: $font-thai-size-11;
+                    }
+                }
+            }
+        }
+
+        // MEDIA QUERY
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .myaccount-header-title {
+            .text-tertiary {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    font-size: $font-thai-size-14;
+                }
+            }
+        }
+
+        .list-tabs {
+            .text-submenu {
+                &.is-page {
+                    @media screen and (max-width: screen(phablet-lg-max)) {
+                        padding-top: 0;
+                        font-size: $font-size-4;
+                    }
+                }
+            }
+        }
+    }
+
 }

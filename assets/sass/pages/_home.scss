@@ -657,6 +657,48 @@
 .thai-language {
     .developments {
         .developments-title {
+            margin-bottom: 10px;
+
+            .text-carousel {
+                &.is-title {
+                    font-size: $font-thai-size-2;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .developments-sub-title {
+            padding-top: 5px; // 35px > 1.8vw
+            padding-bottom: 10px; // 35px > 1.8vw
+
+            .text-carousel {
+                &.is-large {
+                    font-size: $font-thai-size-1;
+                }
+            }
+        }
+
+        .developments-paragraph {
+            max-width: 100%;
+            padding-right: 30px;
+            padding-bottom: 20px; // 75px
+
+            &.text-carousel {
+                &.is-paragraph {
+                    font-size: $font-thai-size-4;
+                }
+            }
+        }
+
+        .button-secondary {
+            .button-text {
+                &.is-small {
+                    font-size: $font-thai-size-4;
+                }
+            }
+        }
+
+        .developments-title {
             .text-carousel {
                 &.is-title {
                     @media screen and (max-width: screen(tablet-sm)) {
@@ -672,6 +714,18 @@
                     @media screen and (max-width: screen(tablet-sm)) {
                         font-size: $font-thai-size-2;
                     }
+                }
+            }
+        }
+    }
+
+    // Subscribe
+    // ------------------------------------------------
+    .subscribe {
+        .subscribe-description {
+            .text-default {
+                &.is-extra-small {
+                    font-size: $font-thai-size-11;
                 }
             }
         }

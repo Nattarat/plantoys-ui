@@ -656,6 +656,22 @@
         }
     }
 
+    .child-detail {
+        .month-detail{
+            font-size: $font-thai-size-4;
+        }
+    }
+
+    .child-action {
+      .action1{
+            .font-rotate{
+                .font-style{
+                    font-size: $font-thai-size-2;
+                }
+            }
+        }
+    }
+
     #child-development-banner {
         .child-header{
             @include text-header(

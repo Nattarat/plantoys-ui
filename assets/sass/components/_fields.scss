@@ -666,7 +666,7 @@ $field-padding-side-deault: 20px;
             &[type=password],
             &[type=tel],
             &[type=text] {
-                font-size: $font-size-4; // Fix zoom in iPhone/iPad
+                font-size: $font-thai-size-4; // Fix zoom in iPhone/iPad
             }
         }
     }

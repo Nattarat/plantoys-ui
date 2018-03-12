@@ -540,7 +540,7 @@ $button-padding-side-deault: 45px;
         &.is-iconfont-arrow {
             position: relative;
             top: -1px;
-            font-size: $font-size-2;
+            font-size: $font-thai-size-2;
             color: $color-white;
         }
 
@@ -1833,7 +1833,7 @@ $button-padding-side-deault: 45px;
 
             &.is-language-thai,
             &.is-language-japan {
-                font-size: $font-size-12;
+                font-size: $font-thai-size-12;
                 font-weight: bold;
             }
 

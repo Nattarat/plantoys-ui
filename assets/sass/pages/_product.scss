@@ -1512,6 +1512,12 @@ $product-container-padding: 0 50px;
                 .label {
                     font-size: $font-thai-size-15;
                 }
+
+                .btn-remove {
+                    &:after {
+                        font-size: $font-thai-size-15;
+                    }
+                }
             }
         }
 
@@ -1555,6 +1561,20 @@ $product-container-padding: 0 50px;
     .main-container.product-detail {
         .product-detail-segment-item {
             font-size: $font-thai-size-11;
+        }
+
+        h2 {
+            &.text-default {
+                font-size: $font-thai-size-12;
+            }
+        }
+
+        &.is-price {
+            .price-format {
+                .price {
+                    font-size: $font-thai-size-11;
+                }
+            }
         }
     }
 
