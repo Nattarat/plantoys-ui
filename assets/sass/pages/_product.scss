@@ -791,8 +791,9 @@ $product-container-padding: 0 50px;
                 + .m-selected-filter-item {
                     position: relative;
                     display: inline-block;
-                    width: auto;
+                    width: calc(100% -30px); // auto
                     text-align: left;
+                    word-break: break-all;
 
                     &:before,
                     &:after {
@@ -1550,6 +1551,17 @@ $product-container-padding: 0 50px;
                 a,
                 span {
                     font-size: $font-thai-size-8;
+                }
+
+                // Checkbox
+                input {
+                    + a,
+                    + .m-selected-filter-item {
+                        &:before,
+                        &:after {
+                            top: 3px;
+                        }
+                    }
                 }
             }
         }

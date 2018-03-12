@@ -176,6 +176,12 @@
                 border-bottom: 0;
             }
         }
+
+        &.is-header {
+            .text-table {
+                @include ellipsis;
+            }
+        }
     }
 
     .cart-price {

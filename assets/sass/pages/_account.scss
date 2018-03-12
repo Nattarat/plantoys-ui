@@ -449,8 +449,24 @@
                 span,
                 p {
                     &.text-default {
-                        font-size: $font-thai-size-11;
+                        font-size: $font-thai-size-8;
                     }
+                }
+            }
+        }
+
+        .myaccount-header-title {
+            .text-tertiary {
+                &.is-middle-large {
+                    font-size: $font-thai-size-2;
+                }
+            }
+        }
+
+        .myaccount-segment-title {
+            .text-title {
+                &.is-littlemore-medium {
+                    font-size: $font-thai-size-4;
                 }
             }
         }
@@ -460,7 +476,7 @@
         .myaccount-header-title {
             .text-tertiary {
                 @media screen and (max-width: screen(phablet-lg-max)) {
-                    font-size: $font-thai-size-14;
+                    font-size: $font-thai-size-4;
                 }
             }
         }
@@ -476,5 +492,4 @@
             }
         }
     }
-
 }

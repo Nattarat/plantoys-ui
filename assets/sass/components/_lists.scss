@@ -2693,6 +2693,16 @@
 // Thai language
 // ==================================================================================================
 .thai-language {
+    // Product
+    // ------------------------------------------------
+    .list-product {
+        .list-item {
+            .text-product {
+                font-size: $font-thai-size-4;
+            }
+        }
+    }
+
     // Navigation
     // ------------------------------------------------
     .list-navigation {
@@ -2714,7 +2724,7 @@
             // List item
             $list-item-display: block,
             $list-item-padding: 0 0 0 0,
-            $list-item-margin: 0 0 10px 0
+            $list-item-margin: 0 0 0 0
         );
 
         // STYLES OF COMPONENT ITSELF
@@ -2784,7 +2794,7 @@
             &.is-icon-font {
                 display: inline-block;
                 margin-right: 12px;
-                font-size: $font-thai-size-5;
+                font-size: $font-size-5;
                 color: $color-gray-1;
                 vertical-align: middle;
 

@@ -1277,11 +1277,11 @@
       // >>>>>>>>>>>>>>>>>>>>>>>
       .checkbox-label {
           &:before {
-              top: 9px;
+              top: 12px; // 9
           }
 
           &:after {
-              top: 8px;
+              top: 11px; // 8
               left: -1px;
           }
       }

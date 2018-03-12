@@ -557,4 +557,13 @@
             }
         }
     }
+
+    .product {
+        .product-name,
+        .product-counter {
+            .text-default {
+                font-size: $font-thai-size-4;
+            }
+        }
+    }
 }

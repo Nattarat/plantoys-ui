@@ -755,4 +755,139 @@
             }
         }
     }
+
+    // Search
+    // ------------------------------------------------
+    .modal-search {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include modal-variant(
+            $modal-dialog-align-items: flex-start,
+
+            // Container
+            $modal-dialog-container-max-width: 100%,
+            $modal-dialog-container-min-height: 80px,
+            $modal-dialog-container-padding: 0 50px,
+            $modal-dialog-container-margin: 0,
+            $modal-dialog-container-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+        );
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .modal-dialog-container {
+            @include translate(0, -100%);
+            display: flex;
+            align-items: center;
+        }
+
+        .modal-dialog-body {
+            width: 100%;
+        }
+
+        .modal-dialog-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-search {
+            display: flex;
+            align-items: flex-end;
+            width: 40%;
+        }
+
+        .form-search-inner {
+            &.is-field {
+                flex-grow: 1;
+                padding-right: 15px;
+                width: 100%;
+            }
+        }
+
+        // STYLES OF STATE
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-active {
+
+            .modal-dialog-container {
+                @include translate(0, 0);
+            }
+        }
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF STATE WITH MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MEDIA QUERY
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .form-search {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                // width: 100%;
+                // flex-direction: column;
+                // align-items: flex-start;
+            }
+
+            @media (min-width: screen(phablet-sm)) {
+                min-width: 350px;
+            }
+
+            @media (min-width: screen(phablet-lg)) and (max-width: screen(phablet-lg-max)) {
+                width: calc(100% - 150px);
+            }
+        }
+
+        .form-search-inner {
+            &.is-field {
+                @media screen and (max-width: screen(mobile-lg-max)) {
+                    // width: 85%;
+                    // padding-right: 0;
+                    // margin-bottom: 10px;
+                }
+            }
+        }
+
+        .modal-dialog-container {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+        }
+
+        .modal-dialog-content {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                align-items: flex-start;
+            }
+        }
+
+        .button-background-image {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                min-width: auto;
+                background-image: url('../images/icon/icon-search.png');
+                background-size: 20px;
+                background-repeat: no-repeat;
+                background-position: right bottom;
+                box-shadow: 0 0 0 transparent;
+                width: 20px;
+                height: 20px;
+            }
+
+            .button-text {
+                @media screen and (max-width: screen(mobile-lg-max)) {
+                    visibility: hidden;
+                    font-size: 0;
+                }
+            }
+        }
+    }
 }
