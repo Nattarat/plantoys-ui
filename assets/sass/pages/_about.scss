@@ -1431,3 +1431,69 @@
 // IE
 // Safari
 // Firefox
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    // Cover page
+    // ------------------------------------------------
+    .about-whoweare,
+    .about-howwework,
+    .about-whatawardswegot {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .about-header {
+            @include text-header(
+                $text-header-color: color-text(title-page),
+                $text-header-margin-top: 30px,
+                $text-sub-color: color-text(title-page),
+                $text-header-size: $font-thai-size-1,
+                $text-sub-size: $font-thai-size-3
+            );
+
+            // MEDIA QUERY
+            // >>>>>>>>>>>>>>>>>>>>>>>
+            @media (max-width: screen(mobile-lg-max)) {
+                .head-title {
+                    font-size: $font-thai-size-9;
+                }
+
+                .sub-title {
+                    font-size: $font-thai-size-12;
+                }
+            }
+        }
+    }
+
+
+    // Lightbox gallery
+    // ------------------------------------------------
+    .lg-slide {
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        #lg-counter {
+            font-size: $font-thai-size-4;
+        }
+
+        .lg-sub-html {
+            font-size: $font-thai-size-4;
+        }
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-description {
+            .text-title {
+                font-size: $font-thai-size-5;
+            }
+        }
+    }
+}

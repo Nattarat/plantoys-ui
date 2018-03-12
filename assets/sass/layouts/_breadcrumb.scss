@@ -223,3 +223,24 @@
 // IE
 // Safari
 // Firefox
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    // Magento structure
+    // ------------------------------------------------
+    .breadcrumbs {
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        ul {
+            a,
+            span {
+                font-size: $font-thai-size-8;
+            }
+
+            strong {
+                font-size: $font-thai-size-8;
+            }
+        }
+    }
+}

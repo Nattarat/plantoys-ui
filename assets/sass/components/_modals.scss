@@ -660,3 +660,21 @@
 // IE
 // Safari
 // Firefox
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    // Modal after loading success message
+    // ------------------------------------------------
+    #after-loading-success-message {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        font-size: $font-thai-size-11;
+    }
+}

@@ -325,6 +325,224 @@
     }
 }
 
+@mixin text-thai-variant(
+    $text-display: inline-block,
+    $text-font-family: font-family(secondary),
+    $text-font-size: font-secondary-size(size-4),
+    $text-line-height: 1.3, // 1.5
+    $text-color: color-text(default)
+) {
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    display: $text-display;
+    font-family: $text-font-family;
+    font-size: $text-font-size;
+    font-weight: normal;
+    line-height: $text-line-height;
+    vertical-align: middle;
+    color: $text-color;
+    text-transform: none;
+    letter-spacing: 1px;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .price {
+        font-family: font-family(secondary);
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &.is-error {
+        color: color-validation(error);
+    }
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // Display
+    &.is-paragraph {
+        display: block;
+        margin-bottom: 24px; // 20px
+    }
+
+    &.is-paragraph-nospacing {
+        display: block;
+    }
+
+    &.is-label {
+        margin-right: 5px; // 10px
+        margin-bottom: 0;
+    }
+
+    &.for-paragraph-about {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // Weight
+    &.is-bold {
+        font-family: font-family(primary);
+
+        .price {
+            font-family: font-family(primary);
+        }
+
+        &.is-underline {
+            border-bottom: 1px solid color-text(link);
+        }
+    }
+
+    // Colors
+    &.is-black {
+        color: $color-black;
+    }
+
+    &.is-white {
+        color: $color-white;
+    }
+
+    &.is-gray {
+        color: color-text(default);
+    }
+
+    &.is-gray-light {
+        color: color-text(gray-light);
+    }
+
+    &.is-gray-lighter {
+        color: color-text(gray-lighter);
+    }
+
+    &.is-red {
+        color: color-text(red-secondary);
+    }
+
+    &.is-green {
+        color: color-text(green-primary);
+    }
+
+    &.is-green-light {
+        color: color-text(green-secondary);
+    }
+
+    &.is-blue {
+        color: color-text(blue-primary);
+    }
+
+    &.is-blue-light {
+        color: color-text(blue-secondary);
+    }
+
+    &.is-orange {
+        color: color-text(orange-secondary);
+    }
+
+    // Sizes
+    &.is-super-small {
+        font-size: $font-thai-size-15;
+    }
+
+    &.is-extra-small {
+        font-size: $font-thai-size-8;
+    }
+
+    &.is-middle-small {
+        font-size: $font-thai-size-11;
+    }
+
+    &.is-small {
+        font-size: $font-thai-size-4;
+    }
+
+    &.is-middle-medium {
+        font-size: $font-thai-size-12;
+    }
+
+    &.is-littlemore-medium {
+        font-size: $font-thai-size-5;
+    }
+
+    &.is-middlemore-medium {
+        font-size: $font-thai-size-3;
+    }
+
+    &.is-medium {
+        font-size: $font-thai-size-2;
+    }
+
+    &.is-little-large {
+        font-size: $font-thai-size-14;
+    }
+
+    &.is-large {
+        font-size: $font-thai-size-9;
+    }
+
+    &.is-middle-large {
+        font-size: $font-thai-size-1;
+    }
+
+    &.is-extra-large {
+        font-size: $font-thai-size-6;
+    }
+
+    // Transform
+    &.is-uppercase {
+        text-transform: uppercase;
+    }
+
+    &.is-super {
+        vertical-align: super;
+    }
+
+    &.is-sub {
+        vertical-align: sub;
+    }
+
+    &.is-linethrough {
+        text-decoration: line-through;
+    }
+
+    &.is-underline {
+        border-bottom: 2px solid color-text(link);
+    }
+
+    &.is-underline-light-white {
+        border-bottom: 1px solid $color-white;
+    }
+
+    &.is-italic {
+        font-style: italic;
+    }
+
+    &.is-word-break-all {
+        word-break: break-all;
+    }
+
+    // Line height
+    &.is-lineheight-self {
+        line-height: 1;
+    }
+
+    &.is-nowrap {
+        white-space: nowrap;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
@@ -1059,29 +1277,719 @@
     }
 }
 
-// Calibration
-// - Base
-// - Window
-// - Mac
-// - iPhone/iPad
-// - Android
-// - 2 font in 2 language
+// Thai language
 // ==================================================================================================
+.thai-language {
+    // Default
+    // ------------------------------------------------
+    .text-default {
+      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+      // >>>>>>>>>>>>>>>>>>>>>>>
 
-// Base
-// ------------------------------------------------
+      // MIXINS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @include text-thai-variant;
 
-// Window
-// ------------------------------------------------
+      // STYLES OF COMPONENT ITSELF
+      // >>>>>>>>>>>>>>>>>>>>>>>
 
-// Mac
-// ------------------------------------------------
+      // STYLES OF CHILD CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
 
-// iPhone/iPad
-// ------------------------------------------------
+      // STYLES OF STATE
+      // >>>>>>>>>>>>>>>>>>>>>>>
 
-// Android
-// ------------------------------------------------
+      // STYLES OF MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-trademark {
+          font-size: 0.625vw;
+          position: absolute;
+          top: 0;
+          left: 100%;
+      }
 
-// 2 font in 2 language
-// ------------------------------------------------
+      &.is-field-notice {
+          padding-top: 10px;
+          font-size: $font-thai-size-8;
+      }
+
+      &.is-register-or {
+          margin-right: 3px;
+      }
+
+      // STYLES OF STATE WITH MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MEDIA QUERY
+      // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Title
+    // ------------------------------------------------
+    .text-title {
+      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MIXINS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @include text-thai-variant(
+          $text-font-family: font-family(primary),
+          $text-font-size: $font-thai-size-2,
+          $text-line-height: 1.2
+      );
+
+      // STYLES OF COMPONENT ITSELF
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF CHILD CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF STATE
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-introduction,
+      &.is-tabs,
+      &.is-tabs-mobile {
+          font-size: $font-thai-size-4;
+      }
+
+      &.is-introduction {
+          font-size: $font-size-5;
+          margin-bottom: 24px;
+      }
+
+      &.is-tabs,
+      &.is-tabs-mobile {
+          margin-bottom: 35px;
+      }
+
+      &.is-tabs-mobile {
+          display: none;
+      }
+
+      &.is-cover {
+          font-family: font-family(tertiary);
+      }
+
+      // STYLES OF STATE WITH MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MEDIA QUERY
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-introduction,
+      &.is-tabs,
+      &.is-tabs-mobile {
+          @media screen and (max-width: screen(labtop-lg)) {
+              // font-size: font-primary-size(size-9) * $font-size-reduce-primary;
+          }
+      }
+
+      &.is-tabs {
+          @media screen and (max-width: screen(phablet-lg-max)) {
+              display: none;
+          }
+      }
+
+      &.is-tabs-mobile {
+          @media screen and (max-width: screen(phablet-lg-max)) {
+              display: block;
+          }
+      }
+
+      &.is-cover {
+          @media screen and (max-width: screen(labtop-lg)) {
+              // font-size: font-primary-size(size-1) * $font-size-reduce-primary;
+          }
+      }
+    }
+
+    // Overwrite magento style
+    .page-title {
+      h1 {
+          display: inline-block;
+          padding-bottom: 0;
+          font-family: font-family(primary);
+          font-size: $font-thai-size-5;
+          font-weight: normal;
+          line-height: 1.3;
+          vertical-align: middle;
+          color: $color-gray-1;
+          text-transform: none;
+          letter-spacing: 1px;
+      }
+
+      &.category-title {
+          visibility: hidden;
+          height: 0;
+      }
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Carousel
+    // ------------------------------------------------
+    .text-carousel {
+      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MIXINS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @include text-thai-variant(
+          $text-font-family: font-family(tertiary),
+          $text-font-size: $font-thai-size-9,
+          $text-line-height: 1,
+          $text-color: color-text(yellow-primary)
+      );
+
+      // STYLES OF COMPONENT ITSELF
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF CHILD CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF STATE
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-big {
+          font-size: 3.75vw;
+      }
+
+      &.is-large {
+          font-size: 3.1vw;
+      }
+
+      &.is-title {
+          font-family: font-family(primary);
+          font-size: 2.25vw;
+          line-height: 1.5;
+      }
+
+      &.is-title-icon {
+          position: relative;
+          font-family: font-family(primary);
+          font-size: $font-thai-size-4;
+          line-height: 1.5;
+          color: color-text(default);
+      }
+
+      &.is-paragraph {
+          font-family: font-family(secondary);
+          font-size: $font-thai-size-8;
+          line-height: 1.5;
+      }
+
+      &.for-hero-banner {
+          margin-top: 125px;
+          font-size: 3.1vw;
+      }
+
+      // STYLES OF STATE WITH MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MEDIA QUERY
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @media screen and (max-width: screen(tablet-md-max)) {
+          // font-size: font-tertiary-size(size-4);
+      }
+
+      @media (max-width: screen(labtop-md-max)) {
+          font-size: $font-thai-size-2;
+      }
+
+      &.for-hero-banner {
+          @media screen and (max-width: screen(tablet-lg-max)) {
+              font-size: $font-thai-size-1;
+          }
+      }
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Link
+    // ------------------------------------------------
+    .text-link {
+      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MIXINS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @include text-thai-variant(
+          $text-color: color-text(link)
+      );
+
+      // STYLES OF COMPONENT ITSELF
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF CHILD CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF STATE
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &:hover,
+      &:focus {
+          color: color-text(link);
+      }
+
+      // STYLES OF MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-gray {
+          color: color-text(default);
+      }
+
+      &.is-white {
+        color: $color-white;
+      }
+
+      // STYLES OF STATE WITH MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &:hover,
+      &:focus {
+          &.is-gray {
+              color: color-text(default-hover);
+          }
+
+          &.is-black {
+              color: $color-black;
+          }
+
+          &.is-white {
+            color: $color-white;
+          }
+      }
+
+      // MEDIA QUERY
+      // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // bevel
+    // ------------------------------------------------
+    .text-bevel {
+      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MIXINS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @include text-thai-variant(
+          $text-font-family: font-family(primary),
+          $text-font-size: $font-thai-size-9,
+          $text-color: rgba(124, 197, 118, 0.75)
+      );
+
+      // STYLES OF COMPONENT ITSELF
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      text-shadow: -2px -1px 0 rgba(0, 0, 0, 0.3);
+
+      // STYLES OF CHILD CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF STATE
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-active,
+      &:hover,
+      &:focus {
+          color: $color-white;
+          text-shadow: 0 0 0 transparent;
+      }
+
+      // STYLES OF MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-specification {
+          color: $color-brown-1;
+          text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+
+          &:hover {
+              color: $color-brown-1;
+              text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+          }
+      }
+
+      // STYLES OF STATE WITH MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MEDIA QUERY
+      // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Submenu
+    // ------------------------------------------------
+    .text-submenu {
+      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MIXINS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @include text-thai-variant(
+          $text-font-family: font-family(secondary),
+          $text-font-size: $font-thai-size-12,
+          $text-line-height: $font-thai-size-12,
+          $text-color: color-text(submenu)
+      );
+
+      // STYLES OF COMPONENT ITSELF
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF CHILD CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF STATE
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &:hover,
+      &:focus {
+          color: $color-white;
+      }
+
+      &.is-active {
+          font-family: font-family(primary);
+          // font-size: font-secondary-size(size-9);
+          color: $color-white;
+      }
+
+      // STYLES OF MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-page {
+          @include transition(color .3s ease);
+          font-family: font-family(primary);
+          font-size: $font-thai-size-5;
+          line-height: $font-thai-size-5;
+          color: $color-gray-4;
+
+          &:hover {
+              color: color-text(default);
+          }
+
+          &:focus {
+              color: $color-gray-4;
+          }
+      }
+
+      // STYLES OF STATE WITH MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-page {
+          &.is-active {
+              color: color-text(default);
+          }
+      }
+
+      // MEDIA QUERY
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @media screen and (max-width: screen(phablet-lg-max)) {
+          padding-top: 15px;
+          padding-bottom: 15px;
+      }
+
+      @media screen and (max-width: screen(labtop-lg)) {
+      }
+
+      &.is-active {
+          @media screen and (max-width: screen(labtop-lg)) {
+          }
+      }
+
+      &.is-page {
+          @media screen and (max-width: screen(labtop-lg)) {
+          }
+      }
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Tertiary
+    // ------------------------------------------------
+    .text-tertiary {
+      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MIXINS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @include text-thai-variant(
+          $text-font-family: font-family(tertiary),
+          $text-font-size: $font-thai-size-3,
+          $text-line-height: $font-thai-size-3,
+          $text-color: color-text(green-secondary)
+      );
+
+      // STYLES OF COMPONENT ITSELF
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF CHILD CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF STATE
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF STATE WITH MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MEDIA QUERY
+      // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Table
+    // ------------------------------------------------
+    .text-table {
+      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MIXINS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @include text-thai-variant(
+          $text-font-size: $font-thai-size-11
+      );
+
+      // STYLES OF COMPONENT ITSELF
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF CHILD CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF STATE
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF STATE WITH MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MEDIA QUERY
+      // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Product price
+    // ------------------------------------------------
+    .price-format {
+      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MIXINS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF COMPONENT ITSELF
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      // STYLES OF CHILD CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      .price-number {
+          @include text-thai-variant(
+              $text-display: inline-block,
+              $text-font-family: font-family(secondary),
+              $text-font-size: $font-thai-size-11,
+              $text-line-height: 1.3,
+              $text-color: color-text(default)
+          );
+
+          position: relative;
+          top: 0;
+          min-height: 20px;
+
+          &.is-dismiss {
+              margin-left: 10px;
+              margin-right: 10px;
+              text-decoration: line-through;
+          }
+
+          &.is-discount {
+              top: 0;
+              color: color-text(red-secondary);
+          }
+
+          .price {
+              font-family: font-family(secondary);
+          }
+      }
+
+      // STYLES OF STATE
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-product-card {
+          justify-content: center;
+
+          .price-number {
+              &.is-discount {
+                  font-size: $font-thai-size-4;
+              }
+          }
+      }
+
+      &.is-product-card-detail {
+          .price-number {
+              font-size: $font-thai-size-12;
+
+              &.is-discount {
+                  font-size: $font-thai-size-5;
+              }
+          }
+      }
+
+      &.is-product-card-carousel {
+          justify-content: center;
+          min-height: 23px;
+
+          .price-number {
+              &.is-discount {
+                  font-size: $font-thai-size-12;
+              }
+          }
+      }
+
+      // STYLES OF STATE WITH MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MEDIA QUERY
+      // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Datetime card
+    // ------------------------------------------------
+    .date {
+      padding-bottom: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: left;
+
+      .created-time {
+          font-family: font-family(secondary);
+          font-size: $font-thai-size-8;
+          font-weight: normal;
+          line-height: 1.3;
+          vertical-align: middle;
+          color: $color-gray-1;
+          text-transform: none;
+          letter-spacing: 1px;
+      }
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Post content
+    // ------------------------------------------------
+    .post-content {
+      * {
+          font-family: font-family(secondary);
+          font-size: $font-thai-size-11;
+          font-weight: normal;
+          line-height: 1.5;
+          vertical-align: middle;
+          color: $color-gray-1;
+          text-transform: none;
+          letter-spacing: 1px;
+      }
+
+      img {
+          display: inline-block;
+          height: auto;
+      }
+
+      a {
+          color: color-text(link);
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+              color: color-text(link);
+              text-decoration: none;
+          }
+
+          * {
+              color: color-text(link);
+              text-decoration: none;
+
+              &:hover,
+              &:focus {
+                  color: color-text(link);
+                  text-decoration: none;
+              }
+          }
+      }
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Validation message (Magento)
+    // ------------------------------------------------
+    .validation-advice {
+      font-family: font-family(secondary);
+      font-size: $font-thai-size-8;
+      font-weight: normal;
+      line-height: 1.3;
+      vertical-align: middle;
+      text-transform: none;
+      letter-spacing: 1px;
+    }
+
+    // Loading message
+    // ------------------------------------------------
+    .please-wait {
+      &.is-left {
+          margin-right: 10px;
+      }
+    }
+}

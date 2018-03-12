@@ -651,3 +651,29 @@
         }
     }
 }
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    .developments {
+        .developments-title {
+            .text-carousel {
+                &.is-title {
+                    @media screen and (max-width: screen(tablet-sm)) {
+                        font-size: $font-thai-size-4;
+                    }
+                }
+            }
+        }
+
+        .developments-sub-title {
+            .text-carousel {
+                &.is-large  {
+                    @media screen and (max-width: screen(tablet-sm)) {
+                        font-size: $font-thai-size-2;
+                    }
+                }
+            }
+        }
+    }
+}

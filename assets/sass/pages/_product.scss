@@ -1486,3 +1486,87 @@ $product-container-padding: 0 50px;
 // IE
 // Safari
 // Firefox
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    // Filter magento structure
+    // ------------------------------------------------
+    .product-filter-content {
+        .currently {
+            .block-subtitle {
+                span {
+                    font-size: $font-thai-size-8;
+                }
+            }
+
+            ol {
+                li {
+                    font-size: $font-thai-size-8;
+
+                    &:after {
+                        font-size: $font-thai-size-8;
+                    }
+                }
+
+                .label {
+                    font-size: $font-thai-size-15;
+                }
+            }
+        }
+
+        // Button filter clear tags
+        .actions {
+            a {
+                font-size: $font-thai-size-8;
+            }
+        }
+    }
+
+    #narrow-by-list {
+        dt {
+            font-size: $font-thai-size-8;
+            line-height: $font-thai-size-8;
+        }
+
+        dd {
+            &.category-filter {
+              .m-filter-item-list  {
+                    li {
+                        font-size: $font-thai-size-8;
+                    }
+                }
+            }
+        }
+
+        .m-filter-item-list  {
+            li {
+                a,
+                span {
+                    font-size: $font-thai-size-8;
+                }
+            }
+        }
+    }
+
+    // Product detail
+    // ------------------------------------------------
+    .product-detail,
+    .main-container.product-detail {
+        .product-detail-segment-item {
+            font-size: $font-thai-size-11;
+        }
+    }
+
+    // Rating link
+    .product-view {
+        .ratings {
+            .rating-links {
+                a,
+                span {
+                    font-size: $font-thai-size-8;
+                }
+            }
+        }
+    }
+}

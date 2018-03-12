@@ -620,7 +620,6 @@
             border-radius: 8px;
             font-family: font-family(primary);
             font-size: font-primary-size(size-4);
-            // line-height: font-primary-size(size-4);
             color: color-text(default);
 
             &:hover {
@@ -726,3 +725,159 @@
 // IE
 // Safari
 // Firefox
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    // Filter
+    // ------------------------------------------------
+    .tabs-filter {
+      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MIXINS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @include container-variant(
+          $block-display: block,
+          $block-width: 400px,
+          $block-min-width: auto,
+          $block-max-width: auto,
+          $block-height: auto,
+          $block-min-height: auto,
+          $block-max-height: auto,
+          $block-padding: 0,
+          $block-margin: 0,
+          $block-background-color: transparent
+      );
+
+      // STYLES OF COMPONENT ITSELF
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF CHILD CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      // Responsive tabs plugin style > Reset
+      &.r-tabs {
+          .r-tabs-nav {
+              display: none;
+          }
+
+          .r-tabs-accordion-title {
+              display: block;
+          }
+
+          .r-tabs-panel {
+              padding: 0;
+          }
+      }
+
+      // Responsive tabs plugin > Accordion button
+      .r-tabs-accordion-title {
+          .r-tabs-anchor {
+              position: relative;
+              display: block;
+              padding: 15px 100px 15px 30px;
+              background-color: $color-gray-10;
+              border-radius: 8px;
+              font-family: font-family(primary);
+              font-size: $font-thai-size-4;
+              color: color-text(default);
+
+              &:hover {
+                  text-decoration: none;
+              }
+
+              // Arrow
+              &:after {
+                  content: ' ';
+                  position: absolute;
+                  z-index: zindex(lv1);
+                  top: 50%;
+                  right: 31px;
+                  display: block;
+                  width: 17px;
+                  height: 11px;
+                  margin-top: -5px;
+                  background-image: url('#{path-file(icons)}/icon-arrow-down.png');
+                  background-size: cover;
+              }
+          }
+
+          &.r-tabs-state-active {
+              .r-tabs-anchor {
+                  border-bottom-left-radius: 0;
+                  border-bottom-right-radius: 0;
+
+                  // Arrow
+                  &:after {
+                      @include rotate(180deg);
+                  }
+              }
+          }
+      }
+
+      // Responsive tabs plugin > container content
+      .r-tabs-panel {
+          &.r-tabs-state-active {
+
+          }
+      }
+
+      // STYLES OF STATE
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-faqs {
+          width: auto;
+
+          // Responsive tabs plugin > Accordion button
+          .r-tabs-accordion-title {
+              .r-tabs-anchor {
+                  background-color: transparent;
+                  border-bottom: 1px solid $color-gray-10;
+                  border-radius: 0;
+                  // color: $color-black;
+
+                  // Arrow
+                  &:after {
+                      right: 42px;
+                      background-image: url('#{path-file(icons)}/icon-arrow-down-gray.png');
+                  }
+              }
+
+              &.r-tabs-state-active {
+                  .r-tabs-anchor {
+                      border-bottom: 0;
+                  }
+              }
+          }
+
+          // Responsive tabs plugin > container content
+          .r-tabs-panel {
+              .customersupport-answer {
+                  .text-default,
+                  .text-link {
+                      font-size: $font-thai-size-11;
+                  }
+
+                  .text-link {
+                      color: color-text(orange-primary);
+                  }
+              }
+
+              &.r-tabs-state-active {
+                  .customersupport-answer {
+                      border-bottom: 1px solid $color-gray-10;
+                  }
+              }
+          }
+      }
+
+      // STYLES OF STATE WITH MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MEDIA QUERY
+      // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+}
+

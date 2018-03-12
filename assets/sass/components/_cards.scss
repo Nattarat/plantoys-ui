@@ -1,4 +1,4 @@
-// Secondary
+// Card
 // ------------------------------------------------
 @mixin card {
     // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
@@ -35,6 +35,85 @@
     .card-sub-detail{
         font-family: font-family(seccondary);
         font-size: font-secondary-size(size-4); // 16px
+        color: $color-gray-12;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+    .caption{
+        width: 100%;
+        min-height: 120px;
+        padding: 20px;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-hover:hover{
+        cursor: pointer;
+        &.is-blue{
+            background: $color-blue-9;
+        }
+        &.is-pink{
+            background: $color-pink-1;
+        }
+        .card-detail,
+        .card-sub-detail,
+        .created-time {
+            color: $color-white;
+        }
+    }
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Card
+// ------------------------------------------------
+@mixin card-thai {
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    $card-border-width: 30px;
+
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    max-width: 480px;
+    margin: auto;
+    height: 100%;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    a {
+        text-decoration: none;
+    }
+    .thumbnail-img{
+        width: 100%;
+        max-height: 380px;
+        overflow: hidden;
+    }
+    .card-detail{
+        font-family: font-family(primary);
+        font-size: $font-thai-size-12;
+        color: $color-gray-1;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+    .card-sub-detail{
+        font-family: font-family(seccondary);
+        font-size: $font-thai-size-4;
         color: $color-gray-12;
         letter-spacing: 1px;
         text-align: left;

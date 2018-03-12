@@ -896,3 +896,73 @@
 // IE
 // Safari
 // Firefox
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    // Page
+    // ------------------------------------------------
+    .container-page {
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include container-variant(
+            $block-display: block,
+            $block-width: 100%,
+            $block-min-width: auto,
+            $block-max-width: auto,
+            $block-height: auto,
+            $block-min-height: calc(100vh - 255px),
+            $block-max-height: auto,
+            $block-padding: 0 0 35px,
+            $block-margin: 0,
+            $block-background-color: $color-gray-10
+        );
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-storelocator {
+            position: relative;
+            height: 100%;
+            padding-right: 100px;
+            border: 0;
+            border-radius: 0;
+
+            .text-default {
+                font-size: $font-thai-size-11;
+            }
+        }
+    }
+
+    // Static content
+    // ------------------------------------------------
+    .main-container {
+          // STYLES OF MODIFIER CLASS
+          // >>>>>>>>>>>>>>>>>>>>>>>
+          &.content-static {
+            .main {
+                // Family
+                p, ol, ul, li, span {
+                    font-size: $font-thai-size-11;
+                }
+
+                // Size
+                strong {
+                    font-size: $font-thai-size-4;
+                }
+
+                [style*="x-large"] {
+                    font-size: $font-thai-size-5 !important;
+                }
+
+                ol {
+                    li {
+                        &:before {
+                            font-size: $font-thai-size-8;
+                            line-height: $font-thai-size-8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

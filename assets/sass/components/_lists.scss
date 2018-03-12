@@ -2689,3 +2689,83 @@
         text-decoration: none;
     }
 }
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    // Form
+    // ------------------------------------------------
+    .list-form {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include list-variant(
+            // List item
+            $list-item-display: block,
+            $list-item-margin: 0 0 15px 0
+        );
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .list-item {
+            label {
+                &.text-default {
+                    font-size: $font-thai-size-8;
+                }
+            }
+        }
+    }
+
+    // Number
+    // ------------------------------------------------
+    .list-number {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include list-variant(
+            $list-display: block,
+            $list-padding: 0,
+            $list-margin: 0,
+
+            // List item
+            $list-item-display: block,
+            $list-item-padding: 0 0 0 15px,
+            $list-item-margin: 0
+        );
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        counter-reset: order;
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .list-item {
+            position: relative;
+
+            &:before {
+                counter-increment: order;
+                content: ""counter(order)".";
+                position: absolute;
+                z-index: zindex(lv1);
+                top: 1px;
+                left: 0;
+                font-family: font-family(secondary);
+                font-size: $font-thai-size-8;
+                line-height: $font-thai-size-8;
+            }
+
+            .text-default {
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+

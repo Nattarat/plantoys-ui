@@ -514,3 +514,47 @@
 }
 
 // Firefox
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    .cart {
+        .minicart-message {
+            font-size: $font-thai-size-8;
+        }
+
+        .product-counter-inner {
+            &.is-text-price {
+                .cart-price {
+                    .price {
+                        font-size: $font-thai-size-11;
+                    }
+                }
+            }
+        }
+
+        .product-counter-number {
+            .cart-item-quantity {
+                font-size: $font-thai-size-11;
+            }
+        }
+
+        .product-price {
+            .price {
+                font-size: $font-thai-size-11;
+            }
+
+            &.is-result {
+                .price {
+                    font-size: $font-thai-size-8;
+                }
+            }
+
+            &.is-total {
+                .price {
+                    font-size: $font-thai-size-4;
+                }
+            }
+        }
+    }
+}

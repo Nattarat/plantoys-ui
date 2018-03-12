@@ -108,3 +108,29 @@
 // IE
 // Safari
 // Firefox
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    .tip-detail-recomment {
+        .head-title {
+            font-size: $font-thai-size-5;
+        }
+
+        .new-card{
+            @include card-thai();
+        }
+    }
+
+    .tipsforparents-detail-container {
+        .head-title {
+            font-size: $font-thai-size-14;
+        }
+        .text-credit {
+            font-size: $font-thai-size-11;
+        }
+        .text-detail {
+            font-size: $font-thai-size-4;
+        }
+    }
+}

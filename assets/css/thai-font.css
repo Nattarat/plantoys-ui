@@ -13,22 +13,22 @@
 
 @font-face {
     font-family: 'VAG-Rounded-BT';
-    src: url('../fonts/db-admanrounded-x-regular/db-admanrounded-x-regular.eot');
-    src: url('../fonts/db-admanrounded-x-regular/db-admanrounded-x-regular.eot') format('embedded-opentype'),
-        url('../fonts/db-admanrounded-x-regular/db-admanrounded-x-regular.woff2') format('woff2'),
-        url('../fonts/db-admanrounded-x-regular/db-admanrounded-x-regular.woff') format('woff'),
-        url('../fonts/db-admanrounded-x-regular/db-admanrounded-x-regular.ttf') format('truetype');
+    src: url('../fonts/db-admanrounded-x-bold/db-admanrounded-x-bold.eot');
+    src: url('../fonts/db-admanrounded-x-bold/db-admanrounded-x-bold.eot') format('embedded-opentype'),
+        url('../fonts/db-admanrounded-x-bold/db-admanrounded-x-bold.woff2') format('woff2'),
+        url('../fonts/db-admanrounded-x-bold/db-admanrounded-x-bold.woff') format('woff'),
+        url('../fonts/db-admanrounded-x-bold/db-admanrounded-x-bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'VAG-Rounded-Light-Ssi-Light';
-    src: url('../fonts/db-admanrounded-x-bold/db-admanrounded-x-bold.eot');
-    src: url('../fonts/db-admanrounded-x-bold/db-admanrounded-x-bold.eot') format('embedded-opentype'),
-        url('../fonts/db-admanrounded-x-bold/db-admanrounded-x-bold.woff2') format('woff2'),
-        url('../fonts/db-admanrounded-x-bold/db-admanrounded-x-bold.woff') format('woff'),
-        url('../fonts/db-admanrounded-x-bold/db-admanrounded-x-bold.ttf') format('truetype');
+    src: url('../fonts/db-admanrounded-x-regular/db-admanrounded-x-regular.eot');
+    src: url('../fonts/db-admanrounded-x-regular/db-admanrounded-x-regular.eot') format('embedded-opentype'),
+        url('../fonts/db-admanrounded-x-regular/db-admanrounded-x-regular.woff2') format('woff2'),
+        url('../fonts/db-admanrounded-x-regular/db-admanrounded-x-regular.woff') format('woff'),
+        url('../fonts/db-admanrounded-x-regular/db-admanrounded-x-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

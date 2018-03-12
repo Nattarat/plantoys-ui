@@ -426,3 +426,19 @@
 #profile-image {
     width: 0;
 }
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    .account {
+        &.is-checkout-login {
+            .text-default {
+                &.is-bold {
+                    &.is-uppercase {
+                        font-size: $font-thai-size-11;
+                    }
+                }
+            }
+        }
+    }
+}

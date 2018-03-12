@@ -111,3 +111,31 @@
 // IE
 // Safari
 // Firefox
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    // Customer Cover
+    // ------------------------------------------------
+    .career-cover {
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .career-header {
+            @include text-header(
+                $text-header-size: $font-thai-size-1,
+                $text-sub-size: $font-thai-size-3
+            );
+
+            // MEDIA QUERY
+            // >>>>>>>>>>>>>>>>>>>>>>>
+            @media (max-width: screen(mobile-lg-max)) {
+                .head-title {
+                    font-size: $font-thai-size-9;
+                }
+                .sub-title {
+                    font-size: $font-thai-size-12;
+                }
+            }
+        }
+    }
+}

@@ -274,3 +274,50 @@
         margin-bottom: 10px;
     }
 }
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    // Sort-by
+    // ------------------------------------------------
+    .customersupport-container-sortby {
+        .customersupport-answer {
+            .text-dafault {
+                font-size: $font-thai-size-11;
+            }
+        }
+    }
+
+    .customersupport-segment {
+        &.is-recaptcha {
+            #captcha-required {
+                font-size: $font-thai-size-8;
+            }
+        }
+    }
+
+    // Customer Cover
+    // ------------------------------------------------
+    .customersupport-cover {
+        .customersupport-header {
+            @include text-header(
+                $text-header-color: $color-white,
+                $text-sub-color: $color-white,
+                $text-header-size: $font-thai-size-1,
+                $text-sub-size: $font-thai-size-3
+            );
+
+            // MEDIA QUERY
+            // >>>>>>>>>>>>>>>>>>>>>>>
+            @media (max-width: screen(mobile-lg-max)) {
+                .head-title {
+                    font-size: $font-thai-size-9;
+                }
+
+                .sub-title {
+                    font-size: $font-thai-size-12;
+                }
+            }
+        }
+    }
+}

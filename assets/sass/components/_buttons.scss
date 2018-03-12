@@ -411,6 +411,373 @@ $button-padding-side-deault: 45px;
     }
 }
 
+@mixin button-thai-variant(
+    // Body
+    $button-width: 110px,
+    $button-height: 72px,
+    $button-padding: 0 25px,
+    $button-background-color: color-button(primary),
+    $button-border-width: 0,
+    $button-border-color: color-button(primary),
+    $button-border-radius: border-radius(size-1),
+    $button-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35),
+
+    // Body hover
+    $button-background-color-hover: color-button(primary-hover),
+    $button-border-width-hover: 0,
+    $button-border-color-hover: color-button(primary-hover),
+
+    // Text
+    $button-text-font-family: font-family(primary),
+    $button-text-font-size: font-primary-size(size-3),
+    $button-text-line-height: 1,
+    $button-text-color: $color-white,
+
+    // Text hover
+    $button-text-color-hover: $color-white,
+
+    // Button icon
+    $button-icon-spacing-right: 15px,
+    $button-icon-spacing-left: 15px
+) {
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    position: relative;
+    display: inline-block;
+    min-width: $button-width;
+    height: $button-height;
+    padding: $button-padding;
+    background-color: $button-background-color;
+    border-style: solid;
+    border-width: $button-border-width;
+    border-color: $button-border-color;
+    border-radius: $button-border-radius;
+    vertical-align: middle;
+    box-shadow: $button-box-shadow;
+    cursor: pointer;
+
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .button-body {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        &.is-item-column {
+            flex-direction: column;
+        }
+
+        &.is-item-left {
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+    }
+
+    .button-icon {
+        float: none;
+        display: inline-block;
+        margin-right: $button-icon-spacing-right;
+        vertical-align: middle;
+
+        &.is-text-blank {
+            margin-right: 0;
+        }
+
+        &.is-text-left {
+            margin-right: 0;
+            margin-left: $button-icon-spacing-left;
+        }
+
+        &.is-super-small {
+            width: auto;
+            height: 10px;
+        }
+
+        &.is-small {
+            width: 16px;
+            height: auto;
+        }
+
+        &.is-size-topbar {
+            width: auto;
+            height: 32px; // 26
+        }
+
+        &.is-search-topbar {
+            width: auto;
+            height: 20px;
+        }
+
+        &.is-product-label {
+            width: 32px;
+            height: 32px;
+            max-width: auto;
+        }
+
+        &.is-product-category {
+            width: 40px;
+            height: 40px;
+        }
+
+        &.is-product-development {
+            width: 50px; // 50
+            height: 50px; // 50
+        }
+
+        &.is-modal-close {
+            width: 12px;
+            height: auto;
+        }
+
+        &.is-iconfont-arrow {
+            position: relative;
+            top: -1px;
+            font-size: $font-size-2;
+            color: $color-white;
+        }
+
+        &.is-checkout-delete {
+            opacity: 0.5;
+            width: 10px;
+            height: auto;
+        }
+
+        &.is-checkout-control {
+            width: 10px;
+            height: auto;
+        }
+    }
+
+    .button-text {
+        display: inline-block;
+        font-family: $button-text-font-family;
+        font-size: $button-text-font-size;
+        line-height: $button-text-line-height;
+        color: $button-text-color;
+        vertical-align: middle;
+        letter-spacing: 1px;
+
+        &.is-normal {
+            font-family: font-family(secondary);
+        }
+
+        &.is-uppercase {
+            text-transform: uppercase;
+        }
+
+        &.is-super-small {
+            font-size: $font-thai-size-15;
+        }
+
+        &.is-extra-small {
+            font-size: $font-thai-size-8;
+        }
+
+        &.is-small {
+            font-size: $font-thai-size-11;
+        }
+
+        &.is-medium {
+            font-size: $font-thai-size-5;
+        }
+
+        &.is-language-active {
+            color: color-text(blue-primary);
+        }
+    }
+
+    .button-balloon-tip {
+        @include transition(all .5s ease);
+        @include translate(-50%, 5px);
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        z-index: zindex(lv4);
+        bottom: 100%;
+        left: 50%;
+        display: flex;
+        padding: 5px 12px;
+        background-color: $color-white;
+        border-radius: 12px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); // Border triangle with shadow
+
+        &:before {
+            @include rotate(315deg);
+            content: ' ';
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: 50%;
+            margin-top: -4px;
+            margin-left: -4px;
+            border: 4px solid;
+            border-color: transparent transparent $color-white $color-white;
+            box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.075); // same number for hide unwanted shadow
+        }
+
+        .text-default {
+            color: $color-gray-1;
+        }
+
+        &.is-right {
+            @include translate(5px, -50%);
+            top: 50%;
+            bottom: auto;
+            left: 100%;
+
+            &:before {
+                @include rotate(45deg);
+                top: 50%;
+                left: 2px;
+                margin-top: -4px;
+                margin-left: -4px;
+                border: 4px solid;
+                border-color: transparent transparent $color-white $color-white;
+                box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.075); // same number for hide unwanted shadow
+            }
+        }
+    }
+
+    input[type=file] {
+        opacity: 0;
+        position: absolute;
+        z-index: zindex(lv1);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .please-wait {
+        height: auto;
+        margin: 0;
+        line-height: 1;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &:hover {
+        background-color: $button-background-color-hover;
+        border-width: $button-border-width-hover;
+        border-color: $button-border-color-hover;
+        text-decoration: none;
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .button-text {
+            color: $button-text-color-hover;
+        }
+
+        .button-balloon-tip {
+            @include translate(-50%, -10px);
+            visibility: visible;
+            opacity: 1;
+
+            &.is-right {
+                @include translate(10px, -50%);
+            }
+        }
+    }
+
+    &:active,
+    &:focus {
+        box-shadow: $button-box-shadow;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &.is-padding-blank {
+        padding: 0;
+    }
+
+    // Sizes
+    &.is-fluid {
+        width: 100%;
+    }
+
+    &.is-flexible {
+        width: auto;
+        min-width: auto;
+    }
+
+    &.is-extra-small {
+        height: 28px;
+    }
+
+    &.is-small {
+        height: 36px; // 48px
+    }
+
+    // Spacing
+    &.is-text-left {
+        margin-left: 15px;
+    }
+
+    &.is-text-right {
+        margin-right: 15px;
+    }
+
+    &.is-text-left-small {
+        margin-left: 5px;
+    }
+
+    &.is-text-right-small {
+        margin-right: 5px;
+    }
+
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .button-text {
+        @media screen and (max-width: screen(labtop-lg)) {
+            // font-size: $button-text-font-size * $font-size-reduce-primary;
+        }
+
+
+        &.is-small {
+            @media screen and (max-width: screen(labtop-lg)) {
+                // font-size: font-primary-size(size-5) * $font-size-reduce-primary;
+            }
+        }
+    }
+
+    .button-icon {
+        &.is-size-topbar {
+            @media screen and (max-width: screen(phablet-lg-max)) {
+                // height: 18px;
+            }
+        }
+    }
+
+    .please-wait {
+        .button-icon {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                margin-right: 0;
+            }
+        }
+
+        .button-text {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                display: none;
+            }
+        }
+    }
+}
+
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
@@ -1115,3 +1482,689 @@ $button-padding-side-deault: 45px;
 // IE
 // Safari
 // Firefox
+
+// Thai language
+// ==================================================================================================
+.thai-language {
+    // Primary
+    // ------------------------------------------------
+    .button-primary {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include button-thai-variant(
+            $button-height: $button-height-deault
+        );
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF STATE
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF STATE WITH MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MEDIA QUERY
+        // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Primary light
+    // ------------------------------------------------
+    .button-primary-light {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include button-thai-variant(
+            // Body
+            $button-background-color: color-button(primary-light),
+            $button-border-color: color-button(primary-light),
+
+            // Body hover
+            $button-background-color-hover: color-button(primary-light-hover),
+            $button-border-color-hover: color-button(primary-light-hover)
+        );
+        // @include button-size-scale-down;
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF STATE
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF STATE WITH MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MEDIA QUERY
+        // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Secondary
+    // ------------------------------------------------
+    .button-secondary {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include button-thai-variant(
+            // Body
+            $button-background-color: color-button(secondary),
+            $button-border-color: color-button(secondary),
+
+            // Body hover
+            $button-background-color-hover: color-button(secondary-hover),
+            $button-border-color-hover: color-button(secondary-hover)
+        );
+        // @include button-size-scale-down;
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF STATE
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF STATE WITH MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MEDIA QUERY
+        // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Tertiary
+    // ------------------------------------------------
+    .button-tertiary {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include button-thai-variant(
+            // Body
+            $button-background-color: color-button(tertiary),
+            $button-border-color: color-button(tertiary),
+
+            // Body hover
+            $button-background-color-hover: color-button(tertiary-hover),
+            $button-border-color-hover: color-button(tertiary-hover)
+        );
+        // @include button-size-scale-down;
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF STATE
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF STATE WITH MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MEDIA QUERY
+        // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Background image
+    // ------------------------------------------------
+    .button-background-image {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include button-thai-variant(
+            // Body
+            $button-background-color: transparent,
+            $button-border-color: transparent,
+
+            // Body hover
+            $button-background-color-hover: transparent,
+            $button-border-width-hover: 0,
+            $button-border-color-hover: transparent
+        );
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        background-size: 100% 100%;
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF STATE
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-wood-blue {
+            background-image: url('#{path-file(backgrounds)}/button/button-wood-blue.jpg');
+        }
+
+        &.is-wood-red {
+            background-image: url('#{path-file(backgrounds)}/button/button-wood-red.jpg');
+        }
+
+        &.is-wood-green {
+            background-image: url('#{path-file(backgrounds)}/button/button-wood-green.jpg');
+        }
+
+        &.is-wood-green-light {
+            background-image: url('#{path-file(backgrounds)}/button/button-wood-green-light.jpg');
+        }
+
+        &.is-wood-brown {
+            background-image: url('#{path-file(backgrounds)}/button/button-wood-brown.jpg');
+        }
+
+        &.is-recaptcha {
+            width: 304px;
+        }
+
+        // STYLES OF STATE WITH MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MEDIA QUERY
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-recaptcha {
+            @media screen and (max-width: screen(mobile-md-max)) {
+                width: 243px;
+            }
+        }
+    }
+
+    .checkout-onepage-index {
+        #bt-loginfb,
+        #google_button_login {
+            button {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .button-text {
+                font-size: 0;
+
+                &:before {
+                    content: 'Log in';
+                    display: inline-block;
+                    font-family: font-family(primary);
+                    font-size: $font-thai-size-11;
+                    font-weight: normal;
+                    line-height: 1;
+                    vertical-align: middle;
+                    color: $color-white;
+                    text-transform: none;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+
+    // Text
+    // ------------------------------------------------
+    .button-typography {
+        // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MIXINS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        @include button-thai-variant(
+            // Body
+            $button-width: auto,
+            $button-height: auto,
+            $button-padding: 0,
+            $button-background-color: transparent,
+            $button-border-width: 0,
+            $button-border-color: transparent,
+            $button-border-radius: 0,
+            $button-box-shadow: 0 0 0 rgba(0, 0, 0, 0),
+
+            // Body hover
+            $button-background-color-hover: transparent,
+            $button-border-width-hover: 0,
+            $button-border-color-hover: transparent,
+
+            // Text
+            $button-text-font-family: font-family(primary),
+            $button-text-font-size: $font-thai-size-4,
+            $button-text-line-height: 1,
+            $button-text-color: $color-gray-1,
+
+            // Text hover
+            $button-text-color-hover: $color-gray-1,
+
+            // Button icon
+            $button-icon-spacing-right: 10px,
+            $button-icon-spacing-left: 10px
+        );
+
+        // STYLES OF COMPONENT ITSELF
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF CHILD CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .button-icon {
+            &.is-text-left-large {
+                margin-left: 20px;
+                margin-right: 0;
+            }
+
+            &.is-language {
+                width: auto;
+                height: 24px;
+            }
+
+            &.is-avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            &.is-table {
+                width: auto;
+                height: 16px;
+            }
+
+            &.is-googlemap {
+                width: 48px;
+                height: auto;
+            }
+        }
+
+        .button-text {
+            &.is-normal {
+                font-family: font-family(secondary);
+            }
+
+            &.is-language-thai,
+            &.is-language-japan {
+                font-size: $font-size-12;
+                font-weight: bold;
+            }
+
+            &.is-link {
+                color: color-text(link);
+            }
+        }
+
+        // STYLES OF STATE
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-address-add {
+            width: 100%;
+            height: 100%;
+            padding: 35px;
+
+            .button-icon {
+                width: 20px;
+                margin-bottom: 10px;
+            }
+
+            .button-text {
+                font-size: $font-thai-size-5;
+                color: $color-white;
+            }
+        }
+
+        &.is-wishlist {
+            position: absolute;
+            z-index: zindex(lv3);
+            bottom: 15px;
+            right: 15px;
+
+            &:hover {
+                .button-icon {
+                    &.is-blank {
+                        display: none;
+                    }
+
+                    &.is-selected {
+                        display: block;
+                    }
+                }
+            }
+
+            &.is-wishlist-inline {
+                position: static;
+                bottom: auto;
+                right: auto;
+            }
+
+            .button-icon {
+                width: auto;
+                height: 16px;
+
+                &.is-hover {
+                    &.is-blank,
+                    &.is-selected {
+                        display: none;
+                    }
+                }
+
+                &.is-blank {
+                    display: block;
+                }
+
+                &.is-selected {
+                    display: none;
+                }
+            }
+        }
+
+        &.is-category {
+            position: absolute;
+            z-index: zindex(lv1);
+            top: 15px;
+            left: 15px;
+
+            .button-icon {
+                width: 80px;
+                height: auto;
+            }
+        }
+
+        &.is-addcart {
+            position: absolute;
+            z-index: zindex(lv2);
+            bottom: 15px;
+            right: 43px;
+
+            .button-body {
+                // width: 50px;
+                // height: 50px;
+                // background-color: $color-blue-17;
+                // border-radius: 50%;
+            }
+
+            .button-icon {
+                width: auto;
+                height: 16px;
+
+                &.is-hover {
+                    display: none;
+                }
+            }
+        }
+
+        &.is-rating {
+            &:hover {
+                .button-icon {
+                    &.is-rating-active {
+                        display: block;
+                    }
+
+                    &.is-rating-inactive {
+                        display: none;
+                    }
+                }
+            }
+
+            .button-icon {
+                &.is-rating-active {
+                    display: none;
+                }
+
+                &.is-rating-inactive {
+                    display: block;
+                }
+            }
+        }
+
+        &.is-language {
+            .button-body {
+                min-height: 24px;
+            }
+        }
+
+        &.is-avatar {
+            overflow: hidden;
+            width: 32px;
+            height: 32px;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        &.is-close-notification {
+            position: absolute;
+            z-index: zindex(lv1);
+            top: 50%;
+            right: 25px;
+            margin-top: -7px;
+        }
+
+        // STYLES OF STATE WITH MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-active {
+            .button-icon {
+                &.is-blank {
+                    display: none;
+                }
+
+                &.is-selected {
+                    display: block;
+                }
+            }
+        }
+
+        &.is-rating-selected {
+            &.is-rating {
+                .button-icon {
+                    &.is-rating-active {
+                        display: block;
+                    }
+
+                    &.is-rating-inactive {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        // MEDIA QUERY
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        .button-text {
+            @media screen and (max-width: screen(labtop-lg)) {
+                // font-size: font-primary-size(size-4) * $font-size-reduce-primary;
+            }
+        }
+
+        .button-icon {
+            &.is-table {
+                @media screen and (max-width: screen(labtop-lg)) {
+                    width: 50%;
+                    height: auto;
+                }
+            }
+
+            &.is-language {
+                @media screen and (max-width: screen(phablet-lg-max)) {
+                    height: 18px;
+                }
+            }
+
+            &.is-googlemap {
+                @media screen and (max-width: screen(mobile-lg-max)) {
+                    width: 32px;
+                }
+            }
+        }
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    .ie {
+        .button-typography {
+            &.is-language {
+                .button-text {
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+    // Safari
+    // Firefox
+
+    // Circle
+    // ------------------------------------------------
+    .button-circle {
+      // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // MIXINS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      @include button-thai-variant(
+          // Body
+          $button-width: 40px,
+          $button-height: 40px,
+          $button-padding: 0,
+          $button-background-color: $color-gray-9,
+          $button-border-width: 0,
+          $button-border-color: transparent,
+          $button-border-radius: 50%,
+          $button-box-shadow: 0 0 0 rgba(0, 0, 0, 0),
+
+          // Body hover
+          $button-background-color-hover: $color-gray-9,
+          $button-border-width-hover: 0,
+          $button-border-color-hover: transparent,
+
+          // Text
+          $button-text-font-family: font-family(primary),
+          $button-text-font-size: $font-thai-size-6,
+          $button-text-line-height: 1,
+          $button-text-color: $color-white,
+
+          // Text hover
+          $button-text-color-hover: $color-white,
+
+          // Button icon
+          $button-icon-spacing-right: 0,
+          $button-icon-spacing-left: 0
+      );
+
+      // STYLES OF COMPONENT ITSELF
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF CHILD CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF STATE
+      // >>>>>>>>>>>>>>>>>>>>>>>
+
+      // STYLES OF MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-counternumber {
+          min-width: 18px; // 18
+          height: 18px; // 18
+
+          .button-icon {
+              width: 8px; // 6
+              height: auto;
+          }
+      }
+
+      &.is-gototop {
+          @include transition(all .5s ease);
+          @include translate(0, 15px);
+          visibility: hidden;
+          opacity: 0;
+          position: fixed;
+          z-index: zindex(lv5);
+          bottom: 50px; // 15px
+          right: 15px;
+          width: 60px;
+          height: 60px;
+          background-color: $color-white;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      }
+
+      // STYLES OF STATE WITH MODIFIER CLASS
+      // >>>>>>>>>>>>>>>>>>>>>>>
+      &.is-active {
+          &.is-gototop {
+              @include translate(0, 0);
+              visibility: visible;
+              opacity: 1;
+          }
+      }
+
+      // MEDIA QUERY
+      // >>>>>>>>>>>>>>>>>>>>>>>
+    }
+
+    .blog-post-view,
+    .catalog-product-view {
+        .button-circle {
+            &.is-gototop {
+                @media (max-width: screen(phablet-lg-max)) {
+                    bottom: 60px;
+                }
+            }
+        }
+    }
+
+    // Browser variations
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    // IE
+    // Safari
+    // Firefox
+}
