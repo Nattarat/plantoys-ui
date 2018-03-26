@@ -637,7 +637,7 @@
                 width: 17px;
                 height: 11px;
                 margin-top: -5px;
-                background-image: url('#{path-file(icons)}/icon-arrow-down.png');
+                background-image: url('#{path-file(icons)}/icon-arrow-down.svg');
                 background-size: cover;
             }
         }
@@ -681,7 +681,7 @@
                 // Arrow
                 &:after {
                     right: 42px;
-                    background-image: url('#{path-file(icons)}/icon-arrow-down-gray.png');
+                    background-image: url('#{path-file(icons)}/icon-arrow-down-gray.svg');
                 }
             }
 
@@ -797,7 +797,7 @@
                   width: 17px;
                   height: 11px;
                   margin-top: -5px;
-                  background-image: url('#{path-file(icons)}/icon-arrow-down.png');
+                  background-image: url('#{path-file(icons)}/icon-arrow-down.svg');
                   background-size: cover;
               }
           }
@@ -841,7 +841,7 @@
                   // Arrow
                   &:after {
                       right: 42px;
-                      background-image: url('#{path-file(icons)}/icon-arrow-down-gray.png');
+                      background-image: url('#{path-file(icons)}/icon-arrow-down-gray.svg');
                   }
               }
 

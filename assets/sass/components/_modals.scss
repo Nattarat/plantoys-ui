@@ -344,7 +344,7 @@
     .button-background-image {
         @media screen and (max-width: screen(mobile-lg-max)) {
             min-width: auto;
-            background-image: url('../images/icon/icon-search.png');
+            background-image: url('../images/icon/icon-search.svg');
             background-size: 20px;
             background-repeat: no-repeat;
             background-position: right bottom;
@@ -873,7 +873,7 @@
         .button-background-image {
             @media screen and (max-width: screen(mobile-lg-max)) {
                 min-width: auto;
-                background-image: url('../images/icon/icon-search.png');
+                background-image: url('../images/icon/icon-search.svg');
                 background-size: 20px;
                 background-repeat: no-repeat;
                 background-position: right bottom;

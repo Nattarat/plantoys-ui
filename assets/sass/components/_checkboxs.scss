@@ -35,7 +35,7 @@
     // icon
     $checkbox-icon-width: 14px,
     $checkbox-icon-height: 14px,
-    $checkbox-icon-image: url('#{path-file(icons)}/icon-check-white.png')
+    $checkbox-icon-image: url('#{path-file(icons)}/icon-check-white.svg')
 ) {
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
@@ -319,7 +319,7 @@
         // icon
         $checkbox-icon-width: 16px,
         $checkbox-icon-height: 16px,
-        $checkbox-icon-image: url('#{path-file(icons)}/icon-check-white.png')
+        $checkbox-icon-image: url('#{path-file(icons)}/icon-check-white.svg')
     );
 
     // STYLES OF COMPONENT ITSELF
@@ -569,7 +569,7 @@
                         left: -1px;
                         width: 14px;
                         height: 14px;
-                        background-image: url('#{path-file(icons)}/icon-check-white.png');
+                        background-image: url('#{path-file(icons)}/icon-check-white.svg');
                     }
 
                     .price {
@@ -723,7 +723,7 @@
                 left: -1px;
                 width: 14px;
                 height: 14px;
-                background-image: url('#{path-file(icons)}/icon-check-white.png');
+                background-image: url('#{path-file(icons)}/icon-check-white.svg');
             }
 
             .price {
@@ -1337,7 +1337,7 @@
           // icon
           $checkbox-icon-width: 16px,
           $checkbox-icon-height: 16px,
-          $checkbox-icon-image: url('#{path-file(icons)}/icon-check-white.png')
+          $checkbox-icon-image: url('#{path-file(icons)}/icon-check-white.svg')
       );
 
       // STYLES OF COMPONENT ITSELF
@@ -1532,7 +1532,7 @@
                             left: -1px;
                             width: 14px;
                             height: 14px;
-                            background-image: url('#{path-file(icons)}/icon-check-white.png');
+                            background-image: url('#{path-file(icons)}/icon-check-white.svg');
                         }
                     }
                 }
@@ -1655,7 +1655,7 @@
                     left: -1px;
                     width: 14px;
                     height: 14px;
-                    background-image: url('#{path-file(icons)}/icon-check-white.png');
+                    background-image: url('#{path-file(icons)}/icon-check-white.svg');
                 }
 
                 .price {

@@ -658,7 +658,7 @@ $product-container-padding: 0 50px;
             width: 12px;
             height: 8px;
             margin-top: -4px;
-            background-image: url('#{path-file(icons)}/icon-arrow-down.png');
+            background-image: url('#{path-file(icons)}/icon-arrow-down.svg');
             background-size: cover;
             border: 0;
         }
@@ -820,7 +820,7 @@ $product-container-padding: 0 50px;
                         visibility: hidden;
                         width: 12px;
                         height: 12px;
-                        background-image: url('#{path-file(icons)}/icon-check-white.png');
+                        background-image: url('#{path-file(icons)}/icon-check-white.svg');
                         background-size: cover;
                     }
                 }
@@ -878,7 +878,7 @@ $product-container-padding: 0 50px;
                         visibility: hidden;
                         width: 12px;
                         height: 12px;
-                        background-image: url('#{path-file(icons)}/icon-check-white.png');
+                        background-image: url('#{path-file(icons)}/icon-check-white.svg');
                         background-size: cover;
                     }
                 }

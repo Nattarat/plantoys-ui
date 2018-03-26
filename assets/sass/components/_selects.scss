@@ -41,7 +41,7 @@
         padding: $select-padding;
         margin-left: $space-text-select;
         border-radius: $select-border-radius;
-        background: $select-background url('#{path-file(images)}/icon/icon-arrow-down.png') no-repeat $select-position-icon;
+        background: $select-background url('#{path-file(images)}/icon/icon-arrow-down.svg') no-repeat $select-position-icon;
 
         &:focus {
             outline: 0;
@@ -227,7 +227,7 @@
         margin-left: 30px;
 
         select {
-            background: url('#{path-file(images)}/icon/icon-arrow-down-gray.png') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
+            background: url('#{path-file(images)}/icon/icon-arrow-down-gray.svg') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
         }
     }
 
@@ -332,7 +332,7 @@
 .edge {
     .select-arrow {
         select {
-            background: $color-white url('#{path-file(images)}/icon/icon-arrow-down.png') no-repeat 85% center;
+            background: $color-white url('#{path-file(images)}/icon/icon-arrow-down.svg') no-repeat 85% center;
             background-size: 10px;
         }
     }
@@ -406,7 +406,7 @@
             margin-left: 30px;
 
             select {
-                background: url('#{path-file(images)}/icon/icon-arrow-down-gray.png') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
+                background: url('#{path-file(images)}/icon/icon-arrow-down-gray.svg') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
             }
         }
 
@@ -523,7 +523,7 @@
 
         &:hover {
             .ui-selectmenu-icon {
-                background-image: url('#{path-file(icons)}/icon-arrow-down.png');
+                background-image: url('#{path-file(icons)}/icon-arrow-down.svg');
             }
         }
 
@@ -537,7 +537,7 @@
             outline: none;
 
             .ui-selectmenu-icon {
-                background-image: url('#{path-file(icons)}/icon-arrow-down.png');
+                background-image: url('#{path-file(icons)}/icon-arrow-down.svg');
             }
         }
 
@@ -551,7 +551,7 @@
             width: 10px;
             height: 6px;
             margin-top: -3px;
-            background-image: url('#{path-file(icons)}/icon-arrow-down.png');
+            background-image: url('#{path-file(icons)}/icon-arrow-down.svg');
             background-position: center;
             background-size: cover;
         }
@@ -801,7 +801,7 @@
           margin-left: 30px;
 
           select {
-              background: url('#{path-file(images)}/icon/icon-arrow-down-gray.png') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
+              background: url('#{path-file(images)}/icon/icon-arrow-down-gray.svg') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
           }
       }
 
@@ -906,7 +906,7 @@
     .edge {
       .select-arrow {
           select {
-              background: $color-white url('#{path-file(images)}/icon/icon-arrow-down.png') no-repeat 85% center;
+              background: $color-white url('#{path-file(images)}/icon/icon-arrow-down.svg') no-repeat 85% center;
               background-size: 10px;
           }
       }
@@ -980,7 +980,7 @@
               margin-left: 30px;
 
               select {
-                  background: url('#{path-file(images)}/icon/icon-arrow-down-gray.png') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
+                  background: url('#{path-file(images)}/icon/icon-arrow-down-gray.svg') no-repeat calc(100% - 10px), url('#{path-file(images)}/icon/icon-world.png') no-repeat 10px;
               }
           }
 
