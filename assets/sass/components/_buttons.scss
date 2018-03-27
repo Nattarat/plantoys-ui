@@ -1450,6 +1450,11 @@ $button-padding-side-deault: 45px;
         height: 60px;
         background-color: $color-white;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+        .button-icon {
+            width: 24px;
+            height: auto;
+        }
     }
 
     // STYLES OF STATE WITH MODIFIER CLASS
@@ -2135,6 +2140,11 @@ $button-padding-side-deault: 45px;
           height: 60px;
           background-color: $color-white;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+          .button-icon {
+              width: 24px;
+              height: auto;
+          }
       }
 
       // STYLES OF STATE WITH MODIFIER CLASS
