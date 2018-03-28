@@ -621,14 +621,14 @@
             }
 
             .container-panel-segment-item {
-                @media screen and (max-width: screen(mobile-lg-max)) {
+                @media screen and (max-width: screen(phablet-lg-max)) {
                     width: 100%;
                     padding-left: 0;
                     margin-bottom: 20px;
                 }
 
                 .button-background-image {
-                    @media screen and (max-width: screen(mobile-lg-max)) {
+                    @media screen and (max-width: screen(phablet-lg-max)) {
                         margin-left: 0;
                     }
                 }
