@@ -936,7 +936,7 @@ $product-container-padding: 0 50px;
                     right: 0;
 
                     &.m-selected-filter-item {
-                        position: static;
+                        position: relative;
                     }
                 }
             }
