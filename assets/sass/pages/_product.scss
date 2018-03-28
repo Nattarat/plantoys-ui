@@ -934,6 +934,10 @@ $product-container-padding: 0 50px;
                     z-index: zindex(lv1);
                     top: 0;
                     right: 0;
+
+                    &.m-selected-filter-item {
+                        position: static;
+                    }
                 }
             }
         }
