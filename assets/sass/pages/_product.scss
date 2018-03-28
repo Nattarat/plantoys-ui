@@ -821,7 +821,10 @@ $product-container-padding: 0 50px;
                         width: 12px;
                         height: 12px;
                         background-image: url('#{path-file(icons)}/icon-check-white.svg');
-                        background-size: cover;
+                        // background-size: cover;
+                        background-size: 8px;
+                        background-position: center;
+                        background-repeat: no-repeat;
                     }
                 }
 
