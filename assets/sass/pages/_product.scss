@@ -656,7 +656,7 @@ $product-container-padding: 0 50px;
             right: 20px;
             display: block;
             width: 12px;
-            height: 8px;
+            height: 10px; // 8
             margin-top: -4px;
             background-image: url('#{path-file(icons)}/icon-arrow-down.svg');
             background-size: cover;
@@ -937,6 +937,18 @@ $product-container-padding: 0 50px;
 
                     &.m-selected-filter-item {
                         position: relative;
+                    }
+                }
+            }
+        }
+
+        .category-filter {
+            .m-filter-item-list {
+                li {
+                    padding-right: 0;
+
+                    a {
+                        float: 1;
                     }
                 }
             }
