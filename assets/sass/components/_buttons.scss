@@ -806,7 +806,26 @@ $button-padding-side-deault: 45px;
     z-index: zindex(lv3);
     top: 50%;
     left: 50%;
+    width: 100%;
     margin-top: 55px;
+    text-align: center;
+
+    button {
+        min-width: 175px;
+    }
+
+    &:before {
+        content: 'Our products';
+        display: block;
+        margin-bottom: 30px;
+        font-family: font-family(tertiary);
+        font-size: 3.1vw;
+        font-weight: normal;
+        line-height: 1;
+        letter-spacing: 1px;
+        text-transform: none;
+        text-align: center;
+    }
 }
 
 // Primary
