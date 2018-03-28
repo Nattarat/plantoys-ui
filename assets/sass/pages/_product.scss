@@ -922,6 +922,23 @@ $product-container-padding: 0 50px;
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
+.ie {
+    #narrow-by-list {
+        .m-filter-item-list {
+            li {
+                justify-content: flex-start;
+                padding-right: 30px;
+
+                span {
+                    position: absolute;
+                    z-index: zindex(lv1);
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
 // Safari
 // Firefox
 
