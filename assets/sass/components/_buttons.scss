@@ -799,6 +799,16 @@ $button-padding-side-deault: 45px;
 // Contextual variations
 // ==================================================================================================
 
+// Spacific
+#button-shop-now {
+    @include translate(-50%, -50%);
+    position: absolute;
+    z-index: zindex(lv3);
+    top: 50%;
+    left: 50%;
+    margin-top: 55px;
+}
+
 // Primary
 // ------------------------------------------------
 .button-primary {
