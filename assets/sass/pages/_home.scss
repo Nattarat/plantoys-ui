@@ -624,6 +624,18 @@
 // Browser variations
 // >>>>>>>>>>>>>>>>>>>>>>>
 // IE
+.ie {
+    .developments {
+        .developments-image {
+            // Fix bg size in Tablet landscape
+            @media (min-width: screen(tablet-sm)) and (max-width: screen(labtop-md)) and (orientation: landscape) {
+                background-size: 51%;
+                background-position: left center;
+            }
+        }
+    }
+}
+
 // Safari
 .safari-mobile {
     .developments-image {

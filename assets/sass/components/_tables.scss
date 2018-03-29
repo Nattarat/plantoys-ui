@@ -59,6 +59,7 @@
     .table-column {
         flex-grow: 1;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         padding: $table-column-padding;
         border-bottom: 1px solid $color-gray-5;

@@ -115,6 +115,9 @@
             width: $checkbox-icon-width;
             height: $checkbox-icon-height;
             background-image: $checkbox-icon-image;
+            background-size: 8px;
+            background-position: 4px 4px;
+            background-repeat: no-repeat;
         }
     }
 
@@ -941,6 +944,11 @@
         .method-item {
             width: auto;
         }
+    }
+
+    #checkout-shipping-method-load .sp-methods.for-checkbox-bar dd label,
+    #co-shipping-method-form .sp-methods.for-checkbox-bar dd label {
+        height: 105px;
     }
 }
 

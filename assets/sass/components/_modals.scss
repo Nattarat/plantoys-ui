@@ -653,6 +653,16 @@
 .messages {
     position: relative;
     z-index: 9;
+
+    li {
+        ul {
+            li {
+                span {
+                    font-family: $font-family-primary, sans-serif;
+                }
+            }
+        }
+    }
 }
 
 // Browser variations

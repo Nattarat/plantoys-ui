@@ -130,13 +130,13 @@ $button-padding-side-deault: 45px;
         }
 
         &.is-super-small {
-            width: auto;
+            width: 10px; // auto
             height: 10px;
         }
 
         &.is-small {
             width: 16px;
-            height: auto;
+            height: auto; // auto
         }
 
         &.is-size-topbar {
