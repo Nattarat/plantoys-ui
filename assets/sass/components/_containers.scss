@@ -149,6 +149,12 @@
         max-width: 1050px;
     }
 
+    &.is-confirm {
+        button[onclick^='setLocation'] .button-text {
+          min-height: 18px;
+        }
+    }
+
     &.is-blank {
         min-height: calc(100vh - 434px);
         padding-top: 12vh; // 180px
@@ -615,7 +621,7 @@
 
     .container-panel-segment-inner {
         &.is-promocode {
-            @media screen and (max-width: screen(phablet-lg-max)) {
+            @media screen and (max-width: screen(tablet-sm-max)) {
                 flex-direction: column;
                 margin-bottom: 0;
             }
@@ -630,6 +636,33 @@
                 .button-background-image {
                     @media screen and (max-width: screen(phablet-lg-max)) {
                         margin-left: 0;
+                    }
+                }
+
+                &.is-promotion-active {
+                    @media screen and (max-width: screen(mobile-lg)) {
+                      flex-direction: column;
+                    }
+
+                    @media (min-width: screen(phablet-lg-max)) and (max-width: screen(tablet-sm-max)) {
+                      width: 100%;
+                      padding-top: 15px;
+                      padding-bottom: 30px;
+                      padding-left: 0;
+                    }
+
+                    .button-background-image {
+                        @media (min-width: 415px) and (max-width: screen(phablet-lg-max)) {
+                            margin-left: 20px;
+                        }
+
+                        &:first-child {
+                            margin-left: 0;
+
+                            @media screen and (max-width: screen(mobile-lg)) {
+                                margin-bottom: 20px;
+                            }
+                        }
                     }
                 }
             }
