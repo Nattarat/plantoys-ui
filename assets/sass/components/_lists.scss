@@ -201,6 +201,7 @@
 
     &.is-job-type {
         margin-bottom: 20px;
+        flex-wrap: wrap;
 
         .list-item {
             margin-right: 60px;
@@ -3318,6 +3319,7 @@
 
         &.is-job-type {
             margin-bottom: 20px;
+            flex-wrap: wrap;
 
             .list-item {
                 margin-right: 60px;
