@@ -964,6 +964,28 @@
                 font-size: $font-thai-size-11;
             }
         }
+
+        // STYLES OF MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-customersupport,
+        &.is-career {
+            // padding: 65px 25px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        // STYLES OF STATE WITH MODIFIER CLASS
+        // >>>>>>>>>>>>>>>>>>>>>>>
+
+        // MEDIA QUERY
+        // >>>>>>>>>>>>>>>>>>>>>>>
+        &.is-customersupport,
+        &.is-career {
+            @media screen and (max-width: screen(mobile-lg-max)) {
+                padding-top: 35px;
+                padding-bottom: 35px;
+            }
+        }
     }
 
     // Static content
