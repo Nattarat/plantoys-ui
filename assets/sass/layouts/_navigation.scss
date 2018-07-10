@@ -120,7 +120,7 @@
         z-index: zindex(lv5);
         top: 100%;
         left: auto;
-        right: -122px; // -155
+        right: -122px; // -155 > -122
         width: 510px; // 300 > 360
         padding: 35px 0 150px 150px;
         max-width: auto;
@@ -260,11 +260,30 @@
                 }
 
                 @media (min-width: screen(tablet-sm)) and (max-width: 991px) {
-                    right: 50px;
+                    right: 55px; // 50
                 }
             }
         }
     }
+}
+
+// Country variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+.usa {
+  .navigation-main {
+    &.is-menu-cart {
+      right: -80px;
+
+      .navigation-main-inner {
+        &:before {
+          right: 130px;
+        }
+      }
+    }
+  }
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 .navigation-main-inner {
